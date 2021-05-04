@@ -28,6 +28,11 @@ _QT5_DISTS=		3d activeqt androidextras base charts connectivity datavis3d \
 			serialport speech svg tools translations virtualkeyboard wayland \
 			webchannel webengine webglplugin websockets webview winextras \
 			x11extras xmlpatterns
+_QT6_DISTS=		3d 5compat base declarative doc imageformats quick3d quickcontrols2 quicktimeline networkauth shadertools svg tools translations wayland
+
+_QT6_DIST_base_TAGNAME=	39d99c7
+_QT6_DIST_declarative_TAGNAME=	0efc634
+
 _QT_DISTS=		${_QT${_QT_VER}_DISTS}
 
 # We only accept one item as an argument. The fetch target further below works
@@ -45,9 +50,7 @@ IGNORE=		cannot be installed: different Qt dists specified via qt-dist:[${qt-dis
 
 # Fall back to sensible defaults for _QT_DIST
 .  if empty(_QT_DIST)
-.    if ${_QT_VER:M5}
 _QT_DIST=		${PORTNAME} # don't force qt-dist to be set for Qt5 ports which 75% of time are ${PORTNAME}
-.    endif
 .  endif
 
 # Check validitiy
@@ -56,16 +59,35 @@ IGNORE=			Unsupported qt-dist ${_QT_DIST} for qt:${_QT_VER}
 .  endif
 ################################################################################
 
-# Set standard bsd.port.mk variables
+# Set standard bsd.port.mk variables -- for Qt5 just set up master sites and the shared distinfo file.
+# For Qt6 for the moment use github, as there are no proper snapshots releases provided by upstream.
+.  if ${_QT_VER:M6}
+MASTER_SITES=		${MASTER_SITE_QT}
+#DISTINFO_FILE?=		${PORTSDIR}/devel/${_QT_RELNAME}/distinfo
+.  else
+MASTER_SITES=		${MASTER_SITE_QT}
+DISTINFO_FILE?=		${PORTSDIR}/devel/${_QT_RELNAME}/distinfo
+.  endif
+
+# TOOD: This is likely no longer quite valid for Qt6?
 LICENSE?=		LGPL21
 
 .  if !exists(${PKGDIR}/pkg-descr)
 DESCR?=			${PORTSDIR}/devel/${_QT_RELNAME}/pkg-descr
 .  endif
 
+. if ${_QT_VER:M5}
 # Stage support.
 DESTDIRNAME=		INSTALL_ROOT
+.else
+DESTDIRNAME=		DESTDIR
+.endif
 
+.  if ${_QT_VER:M6}
+DISTNAME=		${_QT_DIST:S,^,qt,:S,$,-everywhere-src-${DISTVERSION},}
+MASTER_SITE_SUBDIR?=	official_releases/qt/${_QT_VERSION:R}/${_QT_VERSION}/submodules/ \
+			official_releases/additional_libraries/${_QT_VERSION:R}/${_QT_VERSION}/
+.  endif
 .  if ${_QT_VER:M5}
 
 # KDE maintains a repository with a patched Qt5 distribution.
@@ -118,6 +140,7 @@ MASTER_SITE_SUBDIR?=	official_releases/qt/${_QT_VERSION:R}/${_QT_VERSION}/submod
 DISTNAME=		${_QT_DIST:S,^,qt,:S,$,-everywhere-src-${DISTVERSION},}
 .    endif
 
+.  endif
 DISTFILES=		${DISTNAME:S,$,${EXTRACT_SUFX},}
 DIST_SUBDIR=		KDE/Qt/${_QT_VERSION}
 
@@ -128,30 +151,71 @@ DIST_SUBDIR=		KDE/Qt/${_QT_VERSION}
 # have to declare a lot of unnecessary dependencies in USE_QT5.
 LDFLAGS+=		-Wl,--as-needed
 
+# For Qt5 setup a single distinfo file
+.  if ${_QT_VER:M5}
 .    if ${.TARGETS:Mmakesum} || ${.TARGETS:Mfetch} && \
 	defined(DISABLE_SIZE) && defined(NO_CHECKSUM)
 # Ensure that the "makesum" target (with its inner "fetch" one) uses
 # devel/qt*/distinfo for every port.
 .    endif
+.  endif
 
-# Qt5's tarballs are xz compressed.
-.    if empty(USES:Mtar)
+
+# Qt's tarballs are xz compressed.
+. if empty(USES:Mtar)
 EXTRACT_SUFX?=		.tar.xz
-.    endif
+.  endif
 
+.  if ${_QT_VER:M5}
 .    if ${_QT_DIST} == "base" && ${PORTNAME} != "qmake"
 # Qt configure requires pkg-config to detect dependencies.
 .include "${USESDIR}/pkgconfig.mk"
 .    endif
+.  endif
 
+.  if ${_QT_VER:M5}
 # -nomake is only used by qtbase's configure script.
 # Other ports from other Qt modules will automatically build examples and
 # tests if the directories exist because of mkspecs/features/qt_parts.prf.
 EXTRACT_AFTER_ARGS?=	${DISTNAME:S,$,/examples,:S,^,--exclude ,} \
 			${DISTNAME:S,$,/tests,:S,^,--exclude ,} \
 			--no-same-owner --no-same-permissions
-.  endif # ! ${_QT_VER:M5}
+.  endif # ${_QT_VER:M5}
 
+PLIST_SUB+=		SHORTVER=${DISTVERSION:R} \
+			FULLVER=${DISTVERSION:C/-.*//}
+
+# Handle additional PLIST directories, which should only be used for Qt-dist ports.
+.      for dir in CMAKE ETC
+# Export QT_CMAKEDIR and QT_ETCDIR.
+PLIST_SUB+=		QT_${dir}DIR="${QT_${dir}DIR_REL}"
+.      endfor
+
+
+
+.  if ${_QT_VER:M6}
+CMAKE_ARGS+=		-DINSTALL_ARCHDATADIR=${PREFIX}/${QT_ARCHDIR_REL} \
+			-DINSTALL_BINDIR=${PREFIX}/${QT_BINDIR_REL} \
+			-DINSTALL_DATADIR=${PREFIX}/${QT_DATADIR_REL} \
+			-DINSTALL_DESCRIPTIONSDIR=${PREFIX}/${QT_DESCRIPTIONSDIR_REL} \
+			-DINSTALL_DOCDIR=${PREFIX}/${QT_DOCDIR_REL} \
+			-DINSTALL_EXAMPLESDIR=${PREFIX}/${QT_EXAMPLEDIR_REL} \
+			-DINSTALL_INCLUDEDIR=${PREFIX}/${QT_INCDIR_REL} \
+			-DINSTALL_LIBDIR=${PREFIX}/${QT_LIBDIR_REL} \
+			-DINSTALL_LIBEXECDIR=${PREFIX}/${QT_LIBEXECDIR_REL} \
+			-DINSTALL_MKSPECSDIR=${PREFIX}/${QT_MKSPECDIR_REL} \
+			-DINSTALL_PLUGINSDIR=${PREFIX}/${QT_PLUGINDIR_REL} \
+			-DINSTALL_QMLDIR=${PREFIX}/${QT_QMLDIR_REL} \
+			-DINSTALL_SYSCONFDIR=${PREFIX}/${QT_ETCDIR_REL} \
+			-DINSTALL_TESTSDIR=${PREFIX}/${QT_TESTDIR_REL} \
+			-DINSTALL_TRANSLATIONSDIR=${PREFIX}/${QT_L10NDIR_REL} \
+			-DCMAKE_MODULE_PATH="${LOCALBASE};${PREFIX}/${QT_LIBDIR_REL}" \
+			-DQT_QMAKE_TARGET_MKSPEC:String=freebsd-clang \
+			-DCMAKE_PREFIX_PATH=${PREFIX}/${QT_LIBDIR_REL}/cmake \
+			-DCMAKE_MODULE_PATH=${PREFIX}/${QT_LIBDIR_REL}/cmake
+.  endif
+
+.  if ${_QT_VER:M5}
 CONFIGURE_ENV+=		MAKE="${MAKE:T}"
 
 CONFIGURE_ARGS+=	-opensource -confirm-license \
@@ -165,10 +229,8 @@ CONFIGURE_ARGS+=	-opensource -confirm-license \
 			-datadir ${PREFIX}/${QT_DATADIR_REL} \
 			-docdir ${PREFIX}/${QT_DOCDIR_REL} \
 			-translationdir ${PREFIX}/${QT_L10NDIR_REL} \
-			-sysconfdir ${PREFIX}/${QT_ETCDIR_REL}
-
-.  if ${_QT_VER:M5}
-CONFIGURE_ARGS+=	-nomake examples -nomake tests \
+			-sysconfdir ${PREFIX}/${QT_ETCDIR_REL} \
+			-nomake examples -nomake tests \
 			-platform ${QMAKESPECNAME} \
 			-archdatadir ${PREFIX}/${QT_ARCHDIR_REL} \
 			-libexecdir ${PREFIX}/${QT_LIBEXECDIR_REL} \
@@ -186,26 +248,26 @@ CONFIGURE_ARGS+=	-no-use-gold-linker
 # Pass -recheck-all so that multiple calls to the configure script really
 # re-run all checks.
 CONFIGURE_ARGS+=	-recheck-all
-.  endif # ${_QT_VER:M5}
 
-.  if defined(WANT_QT_DEBUG) || defined(WITH_DEBUG)
+.    if defined(WANT_QT_DEBUG) || defined(WITH_DEBUG)
 WITH_DEBUG=		yes
 STRIP=			# It's done prior to bsd.qt.mk inclusion.
 CONFIGURE_ARGS+=	-debug -separate-debug-info
 # Override configuration in global qconfig.pri.
 QMAKE_ARGS+=		QT_CONFIG+="debug separate_debug_info" \
 			QT_CONFIG-="release"
-.  else
+.    else
 CONFIGURE_ARGS+=	-release -no-separate-debug-info
 QMAKE_ARGS+=		QT_CONFIG+="release" \
 			QT_CONFIG-="debug separate_debug_info"
-.  endif # defined(WANT_QT_DEBUG) || defined(WITH_DEBUG)
+.    endif # defined(WANT_QT_DEBUG) || defined(WITH_DEBUG)
 
-.  if defined(WANT_QT_VERBOSE_CONFIGURE)
+.    if defined(WANT_QT_VERBOSE_CONFIGURE)
 CONFIGURE_ARGS+=	-verbose
-.  endif
+.    endif
 
-.  if ${_QT_DIST} == "base"
+.    if ${_QT_VER:M5}
+.      if ${_QT_DIST} == "base"
 _EXTRA_PATCHES_QT5=	${PORTSDIR}/devel/${_QT_RELNAME}/files/extrapatch-mkspecs_features_create__cmake.prf \
 			${PORTSDIR}/devel/${_QT_RELNAME}/files/extrapatch-mkspecs_features_qt__module.prf \
 			${PORTSDIR}/devel/${_QT_RELNAME}/files/extrapatch-mkspecs_common_bsd_bsd.conf \
@@ -223,7 +285,7 @@ _EXTRA_PATCHES_QT5+=	${PORTSDIR}/devel/${_QT_RELNAME}/files/extra-patch-mkspecs_
 EXTRA_PATCHES?=		${PORTSDIR}/devel/${_QT_RELNAME}/files/extrapatch-configure \
 			${PORTSDIR}/devel/${_QT_RELNAME}/files/extrapatch-sync.profiles \
 			${_EXTRA_PATCHES_QT5}
-.  endif #  ${_QT_DIST} == "base"
+.      endif #  ${_QT_DIST} == "base"
 
 # Override settings installed in qconfig.h and *.pri files. The flags will be
 # installed along with the port, but have to be passed as arguments while
@@ -261,28 +323,28 @@ PLIST_SUB+=		QT_${dir}DIR="${QT_${dir}DIR_REL}"
 .    if ${_QT_DIST} == "base"
 # qtbase requires some tools to be symlinked to the build directory.
 _QT_TOOLS=		# empty
-.      if ${PORTNAME} != "qmake"
+.          if ${PORTNAME} != "qmake"
 _QT_TOOLS+=		${QMAKE}
-.      endif
-.      if ${PORTNAME} != "buildtools"
+.          endif
+.          if ${PORTNAME} != "buildtools"
 _QT_TOOLS+=		${MOC} ${RCC}
-.      endif
-.      if ${PORTNAME} != "qdoc"
+.          endif
+.          if ${PORTNAME} != "qdoc"
 _QT_TOOLS+=		qdoc
-.      endif
-.      if ${PORTNAME} != "dbus"
+.          endif
+.          if ${PORTNAME} != "dbus"
 _QT_TOOLS+=		qdbuscpp2xml qdbusxml2cpp
-.      endif
-.      if ${PORTNAME} != "widgets"
+.          endif
+.          if ${PORTNAME} != "widgets"
 _QT_TOOLS+=		${UIC}
-.      endif
+.          endif
 
 # The list of QtBase components that need to be linked into WRKSRC/lib for
 # other QtBase ports. See below.
 _QT5_BASE=		core dbus gui network sql widgets
 _QT5_ADDITIONAL_LINK?=	# Ensure definition
 
-.      if ${_QT_VER:M5}
+.          if ${_QT_VER:M5}
 post-patch: gcc-post-patch
 gcc-post-patch:
 	${REINPLACE_CMD} 's|%%LOCALBASE%%|${LOCALBASE}|g' \
@@ -293,15 +355,15 @@ gcc-post-patch:
 		${WRKSRC}/mkspecs/common/g++-base.conf \
 		${WRKSRC}/mkspecs/common/bsd/bsd.conf \
 		${WRKSRC}/mkspecs/freebsd-g++/qmake.conf
-.      endif
+.          endif
 
 pre-configure: qtbase-pre-configure
 qtbase-pre-configure:
-.      for tool in ${_QT_TOOLS}
+.          for tool in ${_QT_TOOLS}
 	@${TEST} -e ${QT_BINDIR}/${tool:T} && \
 		${LN} -sf ${QT_BINDIR}/${tool:T} ${CONFIGURE_WRKSRC}/bin/${tool:T} || \
 		${TRUE}
-.      endfor
+.          endfor
 
 # The following is a fix for the inplace upgrade problem we faced (see
 # QTBUG-40825 and ports bugs 194088, 195105 and 198720) previously,
@@ -314,13 +376,13 @@ qtbase-pre-configure:
 #   now no longer can find their depending QtBase libraries. We fix this by
 #   linking these into ${CONFIGURE_WRKSRC}/lib if the given QtBase port depends
 #   on them.
-.      if ${_QT_DIST:Mbase}
-.        for basedep in ${_QT5_BASE}
-.          if ! empty(USE_QT:M${basedep})
+.          if ${_QT_DIST:Mbase}
+.            for basedep in ${_QT5_BASE}
+.              if ! empty(USE_QT:M${basedep})
 	${LN} -sf ${QT_LIBDIR}/${${basedep}_LIB} ${CONFIGURE_WRKSRC}/lib
+.              endif
+.            endfor
 .          endif
-.        endfor
-.      endif
 
 #
 # **** THIS PART IS OBSOLETE FOR THE NEXT QT UPGRADE ****
@@ -336,10 +398,10 @@ qtbase-post-patch:
 		${WRKSRC}/mkspecs/common/bsd/bsd.conf \
 		${WRKSRC}/mkspecs/freebsd-clang/qmake.conf
 
-.      if ${PORTNAME} != "qmake"
+.          if ${PORTNAME} != "qmake"
 _QMAKE=			${CONFIGURE_WRKSRC}/bin/qmake
-.      endif
-.    endif
+.          endif
+.        endif
 
 pre-configure: qt5-pre-configure
 qt5-pre-configure:
@@ -375,14 +437,14 @@ qt5-pre-configure:
 	${ECHO_CMD} 'QMAKE_DEFAULT_INCDIRS += ${LOCALBASE}/include /usr/include' >> ${CONFIGURE_WRKSRC}/.qmake.cache
 
 # Allow linking of further libraries to the configure directory.
-.    if !empty(_QT5_ADDITIONAL_LINK)
-.      for dep in ${_QT5_ADDITIONAL_LINK}
+.        if !empty(_QT5_ADDITIONAL_LINK)
+.          for dep in ${_QT5_ADDITIONAL_LINK}
 	${MKDIR} ${CONFIGURE_WRKSRC}/lib
-.        if ! empty(USE_QT:M${dep})
+.            if ! empty(USE_QT:M${dep})
 	${LN} -sf ${QT_LIBDIR}/${qt-${dep}_LIB} ${CONFIGURE_WRKSRC}/lib
+.            endif
+.          endfor
 .        endif
-.      endfor
-.    endif
 
 .    if ${QT_DEFINES:N-*}
 # There **are** defines, so we need to **add** this port to the
