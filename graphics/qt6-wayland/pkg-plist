@@ -1,4 +1,6 @@
 %%QT_BINDIR%%/qtwaylandscanner
+%%QT_CMAKEDIR%%/Qt6/FindWaylandkms.cmake
+%%QT_CMAKEDIR%%/Qt6/FindXComposite.cmake
 %%QT_CMAKEDIR%%/Qt6BuildInternals/StandaloneTests/QtWaylandTestsConfig.cmake
 %%QT_CMAKEDIR%%/Qt6Gui/Qt6QWaylandEglPlatformIntegrationPluginAdditionalTargetInfo.cmake
 %%QT_CMAKEDIR%%/Qt6Gui/Qt6QWaylandEglPlatformIntegrationPluginConfig.cmake
