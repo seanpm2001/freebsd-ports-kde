@@ -1,3 +1,14 @@
+bin/assistant6
+bin/designer6
+bin/linguist6
+bin/pixeltool6
+bin/qdbus6
+bin/qdbusviewer6
+bin/qdistancefieldgenerator6
+bin/qdoc6
+bin/qtdiag6
+bin/qtpaths6
+bin/qtplugininfo6
 %%QT_BINDIR%%/assistant
 %%QT_BINDIR%%/designer
 %%QT_BINDIR%%/lrelease

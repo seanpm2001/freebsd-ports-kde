@@ -62,6 +62,11 @@ USE_LDCONFIG=	${PREFIX}/${QT_LIBDIR_REL}
 # TODO: do this cleaner
 post-install:
 	${RM} -vr ${STAGEDIR}${PREFIX}/${QT_LIBDIR_REL}/cmake
-
+	# Install symlinks for user-facing tools
+	${REINPLACE_CMD} -e "s#^#${STAGEDIR}#" -e "s# # ${STAGEDIR}#" \
+		${WRKDIR}/.build/user_facing_tool_links.txt
+	while read t; do \
+		${RLN} $$t; \
+	done <${WRKDIR}/.build/user_facing_tool_links.txt
 
 .include <bsd.port.mk>
