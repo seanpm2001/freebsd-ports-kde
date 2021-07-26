@@ -23,7 +23,7 @@ _QT_MK_INCLUDED=	qt.mk
 # Qt versions currently supported by the framework.
 _QT_SUPPORTED?=		5 6
 QT5_VERSION?=		5.15.2
-QT6_VERSION?=		6.1.0
+QT6_VERSION?=		6.1.1
 
 # We accept the Qt version to be passed by either or all of the three mk files.
 .  if empty(qt_ARGS) && empty(qmake_ARGS) && empty(qt-dist_ARGS)
@@ -55,7 +55,6 @@ IGNORE?=		cannot decide what Qt version to use: specify one via qt:[${_QT_SUPPOR
 _QT_RELNAME=		qt${_QT_VER}
 _QT_VERSION=		${QT${_QT_VER}_VERSION}
 
-# A wrapper (qtchooser) is used to invoke binaries.
 QT_BINDIR_REL?=		${QT_ARCHDIR_REL}/bin
 QT_INCDIR_REL?=		include/${_QT_RELNAME}
 QT_LIBDIR_REL?=		lib/${_QT_RELNAME}
@@ -109,7 +108,6 @@ PLIST_SUB+=		QT_${dir}DIR="${QT_${dir}DIR_REL}"
 .    endif
 .  endfor
 
-# Pass the chosen Qt version to the environment for qtchooser.
 CONFIGURE_ENV+=		QT_SELECT=${_QT_RELNAME}
 MAKE_ENV+=		QT_SELECT=${_QT_RELNAME}
 
@@ -137,7 +135,7 @@ _USE_QT_ALL=		assistant dbus declarative declarative-test designer doc gui help 
 			xml xmlpatterns
 .if ${ARCH} == amd64 || ${ARCH} == i386
 _USE_QT_ALL+=	sql-ibase
-.endif
+.  endif
 
 _USE_QT5_ONLY=		3d buildtools charts concurrent connectivity \
 			core datavis3d diag examples gamepad \

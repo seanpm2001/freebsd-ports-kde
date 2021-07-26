@@ -1,9 +1,6 @@
-%%QT_PLUGINDIR%%/imageformats/libqicns.so
-%%QT_PLUGINDIR%%/imageformats/libqjp2.so
-%%QT_PLUGINDIR%%/imageformats/libqtga.so
-%%QT_PLUGINDIR%%/imageformats/libqtiff.so
-%%QT_PLUGINDIR%%/imageformats/libqwbmp.so
-%%QT_PLUGINDIR%%/imageformats/libqwebp.so
+%%QT_CMAKEDIR%%/Qt6/FindLibmng.cmake
+%%QT_CMAKEDIR%%/Qt6/FindWrapJasper.cmake
+%%QT_CMAKEDIR%%/Qt6/FindWrapWebP.cmake
 %%QT_CMAKEDIR%%/Qt6Gui/Qt6QICNSPluginAdditionalTargetInfo.cmake
 %%QT_CMAKEDIR%%/Qt6Gui/Qt6QICNSPluginConfig.cmake
 %%QT_CMAKEDIR%%/Qt6Gui/Qt6QICNSPluginConfigVersion.cmake
@@ -40,3 +37,9 @@
 %%QT_CMAKEDIR%%/Qt6Gui/Qt6QWebpPluginDependencies.cmake
 %%QT_CMAKEDIR%%/Qt6Gui/Qt6QWebpPluginTargets-%%CMAKE_BUILD_TYPE%%.cmake
 %%QT_CMAKEDIR%%/Qt6Gui/Qt6QWebpPluginTargets.cmake
+%%QT_PLUGINDIR%%/imageformats/libqicns.so
+%%QT_PLUGINDIR%%/imageformats/libqjp2.so
+%%QT_PLUGINDIR%%/imageformats/libqtga.so
+%%QT_PLUGINDIR%%/imageformats/libqtiff.so
+%%QT_PLUGINDIR%%/imageformats/libqwbmp.so
+%%QT_PLUGINDIR%%/imageformats/libqwebp.so
