@@ -1,6 +1,6 @@
 %%QT_BINDIR%%/assistant
 %%QT_BINDIR%%/designer
-%%QT_BINDIR%%/l%%CMAKE_BUILD_TYPE%%
+%%QT_BINDIR%%/lrelease
 %%QT_BINDIR%%/lconvert
 %%QT_BINDIR%%/linguist
 %%QT_BINDIR%%/lupdate
@@ -364,7 +364,7 @@
 %%QT_LIBDIR%%/libQt6UiTools.so
 %%QT_LIBDIR%%/libQt6UiTools.so.%%FULLVER%%
 %%QT_LIBDIR%%/libQt6UiTools.so.6
-%%QT_LIBEXECDIR%%/l%%CMAKE_BUILD_TYPE%%-pro
+%%QT_LIBEXECDIR%%/lrelease-pro
 %%QT_LIBEXECDIR%%/lprodump
 %%QT_LIBEXECDIR%%/lupdate-pro
 %%QT_MKSPECDIR%%/modules/qt_lib_designer.pri

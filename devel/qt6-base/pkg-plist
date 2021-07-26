@@ -3248,7 +3248,7 @@
 %%QT_MKSPECDIR%%/features/include_source_dir.prf
 %%QT_MKSPECDIR%%/features/incredibuild_xge.prf
 %%QT_MKSPECDIR%%/features/java.prf
-%%QT_MKSPECDIR%%/features/l%%CMAKE_BUILD_TYPE%%.prf
+%%QT_MKSPECDIR%%/features/lrelease.prf
 %%QT_MKSPECDIR%%/features/lex.prf
 %%QT_MKSPECDIR%%/features/link_ltcg.prf
 %%QT_MKSPECDIR%%/features/link_pkgconfig.prf
