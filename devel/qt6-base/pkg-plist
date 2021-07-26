@@ -1,3 +1,6 @@
+bin/androiddeployqt6
+bin/androidtestrunner6
+bin/qmake6
 %%QT_BINDIR%%/androiddeployqt
 %%QT_BINDIR%%/androidtestrunner
 %%QT_BINDIR%%/qdbuscpp2xml

@@ -22,4 +22,12 @@ USE_LDCONFIG=	${PREFIX}/${QT_LIBDIR_REL}
 CMAKE_ARGS+=	-DClang_DIR:PATH="${LOCALBASE}/llvm${LLVM_DEFAULT}/lib/cmake/clang" \
 		-DLLVM_DIR:PATH="${LOCALBASE}/llvm${LLVM_DEFAULT}/lib/cmake/llvm"
 
+post-install:
+	# Install symlinks for user-facing tools
+	${REINPLACE_CMD} -e "s#^#${STAGEDIR}#" -e "s# # ${STAGEDIR}#" \
+		${WRKDIR}/.build/user_facing_tool_links.txt
+	while read t; do \
+		${RLN} $$t; \
+	done <${WRKDIR}/.build/user_facing_tool_links.txt
+
 .include <bsd.port.mk>
