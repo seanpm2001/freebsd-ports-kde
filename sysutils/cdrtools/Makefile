@@ -6,6 +6,10 @@ COMMENT=	Tools for ripping from and recording to CDs and DVDs
 LAME_RUN_DEPENDS=	lame:audio/lame
 VORBIS_RUN_DEPENDS=	oggenc:audio/vorbis-tools
 
+USES=		cpe
+
+CPE_VENDOR=	cdrtools_project
+
 OPTIONS_DEFINE=	DOCS LAME VORBIS SETUID
 OPTIONS_DEFAULT=DOCS LAME VORBIS
 OPTIONS_SUB=	yes
@@ -25,6 +29,9 @@ COMPONENTS=	cdda2wav \
 		readcd \
 		scgcheck \
 		scgskeleton
+
+post-install:
+	${RM} ${STAGEDIR}${PREFIX}/share/doc/cdrecord/README.rscsi
 
 post-install-LAME-off:
 	${RM} ${STAGEDIR}${PREFIX}/bin/cdda2mp3 ${STAGEDIR}${PREFIX}share/man/man1/cdda2mp3.1

@@ -4,7 +4,7 @@ PORTNAME=	gstreamer
 PORTVERSION?=	${BASE_PORTVERSION}
 # When chasing a shared library for a plug-in bump the PORTREVISION in the
 # plug-in port instead, like ${category}/gstreamer1-plugin-${PLUGIN}.
-PORTREVISION?=	2
+PORTREVISION?=	3
 CATEGORIES?=	multimedia audio
 MASTER_SITES=	GNOME/sources/gst-plugins-base/${PORTVERSION:R}:base \
 		GNOME/sources/gst-plugins-good/${PORTVERSION:R}:good \
@@ -43,12 +43,15 @@ UGLY_DISTNAME=		gst-plugins-ugly-${UGLY_PORTVERSION}
 UGLY_DISTFILE=		${UGLY_DISTNAME}${EXTRACT_SUFX}
 DIST?=		base
 
-USES+=		gettext gmake gnome libtool pathfix pkgconfig python tar:xz
+USES+=		cpe gettext gmake gnome libtool pathfix pkgconfig python tar:xz
 USE_GNOME+=	glib20 introspection:build libxml2
 GNU_CONFIGURE=	yes
 INSTALL_TARGET=	install-strip
 GST_PLUGIN?=	base
 USE_LDCONFIG=	yes
+
+CPE_VENDOR=	gstreamer_project
+CPE_PRODUCT=	gstreamer
 
 CFLAGS+=	-Wno-format
 CPPFLAGS+=	-I${LOCALBASE}/include

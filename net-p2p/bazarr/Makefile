@@ -1,10 +1,10 @@
 PORTNAME=	bazarr
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.9.5
+DISTVERSION=	1.0.0
 CATEGORIES=	net-p2p python
-# Grab the asset as it contains built frontend and some extra files
 MASTER_SITES=	https://github.com/morpheus65535/bazarr/releases/download/${DISTVERSIONPREFIX}${DISTVERSION}/
 DISTNAME=	bazarr
+DIST_SUBDIR=	${PORTNAME}/${DISTVERSION}
 
 MAINTAINER=	michiel@vanbaak.eu
 COMMENT=	Automatic subtitle downloader for Radarr and Sonarr
@@ -12,6 +12,8 @@ COMMENT=	Automatic subtitle downloader for Radarr and Sonarr
 LICENSE=	GPLv3
 
 RUN_DEPENDS=	${PYNUMPY} \
+		${PYTHON_PKGNAMEPREFIX}gevent-websocket>=0.10.1:www/py-gevent-websocket@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}gevent>=21:devel/py-gevent@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}lxml>=4.3.0:devel/py-lxml@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}webrtcvad>=2.0.10:audio/py-webrtcvad@${PY_FLAVOR} \
@@ -22,7 +24,6 @@ USES=		python:3.7+ zip
 
 USE_RC_SUBR=	bazarr
 
-NO_ARCH=	yes
 SUB_LIST=	PYTHON_CMD=${PYTHON_CMD} \
 		USERS=${USERS}
 

@@ -3,6 +3,7 @@
 PORTNAME=	jack_umidi
 DISTVERSIONPREFIX=	v
 PORTVERSION=		1.1.1
+PORTREVISION=	1
 CATEGORIES=	audio
 
 MAINTAINER=	hselasky@FreeBSD.org
@@ -21,7 +22,7 @@ PLIST_FILES=	sbin/jack_umidi \
 		man/man8/jack_umidi.8.gz
 SUB_FILES=	jack_umidi.conf
 
-OPTIONS_DEFINE=        DEBUG DEVD_SCRIPT
+OPTIONS_DEFINE=	DEBUG DEVD_SCRIPT
 
 DEVD_SCRIPT_DESC=	Install devd script to auto-launch jack_umidi
 

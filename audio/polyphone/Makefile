@@ -1,6 +1,6 @@
 PORTNAME=	polyphone
 DISTVERSION=	2.2.0.20210109
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	audio
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -35,8 +35,6 @@ CXXFLAGS+=	-D__UNIX_JACK__
 LIBS+=		-lssl -lcrypto
 
 WRKSRC_SUBDIR=	sources
-
-INSTALLS_ICONS=	yes
 
 post-extract: # unbundle
 	@${RM} -r ${WRKSRC}/lib/_option_qcustomplot ${WRKSRC}/lib/_option_rtmidi ${WRKSRC}/lib/_option_stk

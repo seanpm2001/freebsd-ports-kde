@@ -34,7 +34,9 @@
     SUBDIR += arti
     SUBDIR += asignify
     SUBDIR += assh
+    SUBDIR += authenticator
     SUBDIR += autossh
+    SUBDIR += aws-c-auth
     SUBDIR += aws-c-cal
     SUBDIR += aws-iam-authenticator
     SUBDIR += aws-vault
@@ -72,6 +74,7 @@
     SUBDIR += certmgr
     SUBDIR += cfs
     SUBDIR += cfssl
+    SUBDIR += cfv
     SUBDIR += chaosreader
     SUBDIR += checkpassword
     SUBDIR += checkpassword-pam
@@ -86,6 +89,7 @@
     SUBDIR += cl-md5-sbcl
     SUBDIR += clamassassin
     SUBDIR += clamav
+    SUBDIR += clamav-lts
     SUBDIR += clamav-unofficial-sigs
     SUBDIR += clamd-stream-client
     SUBDIR += clamfs
@@ -187,6 +191,7 @@
     SUBDIR += gnupg1
     SUBDIR += gnutls
     SUBDIR += go-cve-dictionary
+    SUBDIR += gokart
     SUBDIR += gonepass
     SUBDIR += gopass
     SUBDIR += gorilla
@@ -218,6 +223,7 @@
     SUBDIR += heaan
     SUBDIR += heimdal
     SUBDIR += helib
+    SUBDIR += hexl
     SUBDIR += highwayhash
     SUBDIR += hitch
     SUBDIR += hlfl
@@ -307,6 +313,7 @@
     SUBDIR += libmcrypt
     SUBDIR += libnitrokey
     SUBDIR += libntlm
+    SUBDIR += liboqs
     SUBDIR += libotr
     SUBDIR += libotr3
     SUBDIR += libp11
@@ -332,6 +339,7 @@
     SUBDIR += libwhisker
     SUBDIR += libyubikey
     SUBDIR += libzrtpcppcore
+    SUBDIR += linux-bitwarden-cli
     SUBDIR += linux-c7-cyrus-sasl2
     SUBDIR += linux-c7-gnutls
     SUBDIR += linux-c7-libgcrypt
@@ -380,6 +388,8 @@
     SUBDIR += nettle
     SUBDIR += nextcloud-end_to_end_encryption
     SUBDIR += nextcloud-passman
+    SUBDIR += nextcloud-twofactor_admin
+    SUBDIR += nextcloud-twofactor_nextcloud_notification
     SUBDIR += nextcloud-twofactor_totp
     SUBDIR += nextcloud-twofactor_u2f
     SUBDIR += nextcloud-twofactor_webauthn
@@ -404,7 +414,6 @@
     SUBDIR += onionscan
     SUBDIR += op
     SUBDIR += openbsm
-    SUBDIR += openca-tools-forked
     SUBDIR += openconnect
     SUBDIR += openconnect-freebsd-daemon
     SUBDIR += openconnect-gui
@@ -891,6 +900,7 @@
     SUBDIR += py-dfdatetime
     SUBDIR += py-dfvfs
     SUBDIR += py-dfwinreg
+    SUBDIR += py-django-auth-kerberos
     SUBDIR += py-docker-pycreds
     SUBDIR += py-ecdsa
     SUBDIR += py-ed25519ll
@@ -919,6 +929,7 @@
     SUBDIR += py-kerberos
     SUBDIR += py-keyring
     SUBDIR += py-keyrings.alt
+    SUBDIR += py-krb5
     SUBDIR += py-libnacl
     SUBDIR += py-m2crypto
     SUBDIR += py-maec
@@ -927,6 +938,7 @@
     SUBDIR += py-mnemonic
     SUBDIR += py-msoffcrypto-tool
     SUBDIR += py-muacrypt
+    SUBDIR += py-netbox-secretstore
     SUBDIR += py-netmiko
     SUBDIR += py-ntlm-auth
     SUBDIR += py-oauth2client
@@ -936,7 +948,6 @@
     SUBDIR += py-ospd
     SUBDIR += py-ospd-openvas
     SUBDIR += py-paramiko
-    SUBDIR += py-paramiko1
     SUBDIR += py-pass-audit
     SUBDIR += py-passlib
     SUBDIR += py-pbkdf2
@@ -1084,6 +1095,7 @@
     SUBDIR += rubygem-hkdf
     SUBDIR += rubygem-hkdf0
     SUBDIR += rubygem-hrr_rb_ssh
+    SUBDIR += rubygem-hrr_rb_ssh-ed25519
     SUBDIR += rubygem-lockbox
     SUBDIR += rubygem-metasploit-aggregator
     SUBDIR += rubygem-metasploit-concern
@@ -1169,6 +1181,7 @@
     SUBDIR += rubygem-timfel-krb5
     SUBDIR += rubygem-tpm-key_attestation
     SUBDIR += rubygem-twitter_oauth
+    SUBDIR += rubygem-unix-crypt
     SUBDIR += rubygem-webauthn
     SUBDIR += rubygem-webpush
     SUBDIR += rustscan
@@ -1304,6 +1317,7 @@
     SUBDIR += vlock
     SUBDIR += vm-to-tor
     SUBDIR += vnccrack
+    SUBDIR += vouch-proxy
     SUBDIR += vpnc
     SUBDIR += vuls
     SUBDIR += vuxml
@@ -1312,6 +1326,7 @@
     SUBDIR += wazuh-agent
     SUBDIR += webfwlog
     SUBDIR += webscarab
+    SUBDIR += weggli
     SUBDIR += whatweb
     SUBDIR += wipe
     SUBDIR += wolfssh

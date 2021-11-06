@@ -1,7 +1,6 @@
 PORTNAME=	kodi
-DISTVERSION=	19.1
+DISTVERSION=	19.3
 DISTVERSIONSUFFIX=	-${KODI_CODENAME}
-PORTREVISION=	4
 CATEGORIES=	multimedia java
 
 MAINTAINER=	yzrh@noema.org
@@ -42,7 +41,7 @@ LIB_DEPENDS=	libass.so:multimedia/libass \
 		libtinyxml.so:textproc/tinyxml \
 		libuuid.so:misc/e2fsprogs-libuuid
 
-USES=		cmake compiler:c++14-lang gettext \
+USES=		cpe cmake compiler:c++14-lang gettext \
 		gnome iconv jpeg pkgconfig python:3.5+ sqlite ssl
 
 KODI_CODENAME=	Matrix
@@ -61,7 +60,6 @@ KODI_ARCH_powerpc64le=	powerpc64le
 
 PLIST_SUB=	ARCH=${KODI_ARCH_${ARCH}}
 
-INSTALLS_ICONS=	yes
 USE_LDCONFIG=	yes
 USE_JAVA=	yes
 JAVA_BUILD=	jre

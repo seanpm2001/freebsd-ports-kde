@@ -1,6 +1,6 @@
 PORTNAME=		webkit
 DISTVERSION=		5.212.0-alpha4
-PORTREVISION=		6
+PORTREVISION=		7
 CATEGORIES=		www
 MASTER_SITES=		https://github.com/qt${PORTNAME}/qt${PORTNAME}/releases/download/${DISTNAME}/
 PKGNAMEPREFIX=		qt5-
@@ -26,7 +26,7 @@ USE_GNOME=		glib20 libxml2 libxslt
 USE_PERL5=		build
 USE_QT=			core declarative gui location network opengl printsupport \
 			sensors webchannel widgets \
-			buildtools_build qmake_build testlib_build
+			buildtools_build declarative-test_build qmake_build testlib_build
 USE_RUBY=		yes
 USE_XORG=		x11 xcomposite xrender
 

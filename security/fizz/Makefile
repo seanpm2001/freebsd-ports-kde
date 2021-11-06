@@ -1,7 +1,6 @@
 PORTNAME=	fizz
 DISTVERSIONPREFIX=	v
-DISTVERSION=	2021.07.19.00
-PORTREVISION=	1
+DISTVERSION=	2021.10.04.00
 CATEGORIES=	security
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -17,7 +16,8 @@ LIB_DEPENDS=	libdouble-conversion.so:devel/double-conversion \
 		libglog.so:devel/glog \
 		libsodium.so:security/libsodium
 
-USES=		cmake compiler:c++14-lang ssl
+USES=		cmake compiler:c++14-lang ssl cpe
+CPE_VENDOR=	facebook
 USE_GITHUB=	yes
 GH_ACCOUNT=	facebookincubator
 USE_LDCONFIG=	yes

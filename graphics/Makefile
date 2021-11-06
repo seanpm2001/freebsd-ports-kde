@@ -43,6 +43,7 @@
     SUBDIR += acidwarp
     SUBDIR += acidwarp-sdl
     SUBDIR += agg
+    SUBDIR += airsaned
     SUBDIR += akira
     SUBDIR += alembic
     SUBDIR += aloadimage
@@ -107,6 +108,7 @@
     SUBDIR += comical
     SUBDIR += compupic
     SUBDIR += converseen
+    SUBDIR += corrupter
     SUBDIR += cosmoplayer
     SUBDIR += cptutils
     SUBDIR += crw
@@ -143,7 +145,6 @@
     SUBDIR += drawpile
     SUBDIR += drm-current-kmod
     SUBDIR += drm-devel-kmod
-    SUBDIR += drm-fbsd11.2-kmod
     SUBDIR += drm-fbsd12.0-kmod
     SUBDIR += drm-fbsd13-kmod
     SUBDIR += drm-kmod
@@ -151,6 +152,7 @@
     SUBDIR += dspdfviewer
     SUBDIR += dssim
     SUBDIR += duhdraw
+    SUBDIR += dust3d
     SUBDIR += dynamechs
     SUBDIR += ebsynth
     SUBDIR += edje_viewer
@@ -456,6 +458,7 @@
     SUBDIR += libgphoto2
     SUBDIR += libgxps
     SUBDIR += libheif
+    SUBDIR += libimagequant
     SUBDIR += libimg
     SUBDIR += libiptcdata
     SUBDIR += libjpeg-turbo
@@ -568,6 +571,7 @@
     SUBDIR += nomacs
     SUBDIR += nplot
     SUBDIR += npretty
+    SUBDIR += nsxiv
     SUBDIR += nurbs++
     SUBDIR += nvidia-texture-tools
     SUBDIR += ocaml-images
@@ -793,6 +797,7 @@
     SUBDIR += povray-meta
     SUBDIR += povray36
     SUBDIR += povray37
+    SUBDIR += povray38
     SUBDIR += ppmcaption
     SUBDIR += ppminfo
     SUBDIR += ppsei
@@ -893,6 +898,7 @@
     SUBDIR += py-pyx
     SUBDIR += py-qrencode
     SUBDIR += py-qt5-svg
+    SUBDIR += py-railroad-diagrams
     SUBDIR += py-rasterio
     SUBDIR += py-rasterstats
     SUBDIR += py-rawkit
@@ -942,6 +948,7 @@
     SUBDIR += quat-gui
     SUBDIR += quesa
     SUBDIR += quesoglc
+    SUBDIR += quickqanava
     SUBDIR += qvge
     SUBDIR += radiance
     SUBDIR += radius-engine
@@ -960,6 +967,7 @@
     SUBDIR += rigsofrods-caelum
     SUBDIR += rigsofrods-pagedgeometry
     SUBDIR += ristretto
+    SUBDIR += rlottie
     SUBDIR += ruby-gd
     SUBDIR += rubygem-cairo
     SUBDIR += rubygem-captcha
@@ -979,7 +987,6 @@
     SUBDIR += rubygem-gemojione32
     SUBDIR += rubygem-geokit
     SUBDIR += rubygem-gitlab_emoji
-    SUBDIR += rubygem-goocanvas
     SUBDIR += rubygem-gruff
     SUBDIR += rubygem-histogram
     SUBDIR += rubygem-image_processing
@@ -1005,6 +1012,7 @@
     SUBDIR += sage
     SUBDIR += sam2p
     SUBDIR += sampleicc
+    SUBDIR += sane-airscan
     SUBDIR += sane-backends
     SUBDIR += sane-epkowa
     SUBDIR += scale2x
@@ -1034,6 +1042,7 @@
     SUBDIR += simage
     SUBDIR += simpleviewer
     SUBDIR += skanlite
+    SUBDIR += skanpage
     SUBDIR += spectacle
     SUBDIR += spirv-tools
     SUBDIR += springgraph
@@ -1079,6 +1088,7 @@
     SUBDIR += urho3d
     SUBDIR += urt
     SUBDIR += vapoursynth-fmtconv
+    SUBDIR += vapoursynth-waifu2x-ncnn-vulkan
     SUBDIR += vapoursynth-waifu2x-w2xc
     SUBDIR += variety
     SUBDIR += vcg
@@ -1092,6 +1102,7 @@
     SUBDIR += vp
     SUBDIR += vpaint
     SUBDIR += vulkan-caps-viewer
+    SUBDIR += vulkan-extension-layer
     SUBDIR += vulkan-headers
     SUBDIR += vulkan-loader
     SUBDIR += vulkan-tools
@@ -1109,6 +1120,7 @@
     SUBDIR += webp-pixbuf-loader
     SUBDIR += wings
     SUBDIR += wmicons
+    SUBDIR += wrapland
     SUBDIR += wxsvg
     SUBDIR += xaos
     SUBDIR += xbmbrowser

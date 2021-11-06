@@ -1,5 +1,6 @@
 PORTNAME=	river
-PORTVERSION=	s20210721
+DISTVERSIONPREFIX=	v
+DISTVERSION=	0.1.0
 CATEGORIES=	x11-wm
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -20,12 +21,11 @@ LIB_DEPENDS=	libevdev.so:devel/libevdev \
 USES=		pkgconfig xorg
 USE_GITHUB=	yes
 USE_XORG=	pixman
-GH_ACCOUNT=	ifreund
-GH_TAGNAME=	b7e15a8
-GH_TUPLE=	ifreund:zig-pixman:135f223:zig_pixman/deps/zig-pixman \
+GH_ACCOUNT=	riverwm
+GH_TUPLE=	ifreund:zig-pixman:88520f2:zig_pixman/deps/zig-pixman \
 		ifreund:zig-wayland:a8e1efc:zig_wayland/deps/zig-wayland \
 		ifreund:zig-xkbcommon:10cdca6:zig_xkbcommon/deps/zig-xkbcommon \
-		swaywm:zig-wlroots:4c4e598:zig_wlroots/deps/zig-wlroots
+		swaywm:zig-wlroots:9bb6b03:zig_wlroots/deps/zig-wlroots
 MAKE_ENV=	DESTDIR="${STAGEDIR}"
 CONFIGURE_ARGS=	--prefix "${PREFIX}" \
 		${WITH_DEBUG:U-Drelease-fast=true} \
@@ -34,6 +34,8 @@ NO_INSTALL=	yes # strip(1) breaks runtime
 PLIST_FILES=	bin/${PORTNAME} \
 		bin/${PORTNAME}ctl \
 		bin/${PORTNAME}tile \
+		libdata/pkgconfig/${PORTNAME}-protocols.pc \
+		share/${PORTNAME}-protocols/${PORTNAME}-layout-v3.xml \
 		share/bash-completion/completions/${PORTNAME}ctl \
 		share/fish/vendor_completions.d/${PORTNAME}ctl.fish \
 		share/zsh/site-functions/_${PORTNAME}ctl \
@@ -54,6 +56,9 @@ X11_CONFIGURE_ON=	-Dxwayland=true
 X11_CONFIGURE_OFF=	-Dxwayland=false
 
 post-patch:
+# Respect devel/pkgconf default search
+	@${REINPLACE_CMD} -e '/pkgconfig/s/share/libdata/' \
+		${WRKSRC}/build.zig
 # Respect PREFIX in path references
 	@${REINPLACE_CMD} -e 's,/usr,${LOCALBASE},' \
 		${WRKSRC}/doc/${PORTNAME}ctl.1.scd

@@ -21,6 +21,7 @@
     SUBDIR += aqbanking
     SUBDIR += beancount
     SUBDIR += beanie
+    SUBDIR += chiapos
     SUBDIR += cointop
     SUBDIR += electrum
     SUBDIR += expense
@@ -110,6 +111,7 @@
     SUBDIR += rubygem-money
     SUBDIR += skrooge
     SUBDIR += sql-ledger
+    SUBDIR += ticker
     SUBDIR += tickrs
     SUBDIR += vanitygen
     SUBDIR += venice

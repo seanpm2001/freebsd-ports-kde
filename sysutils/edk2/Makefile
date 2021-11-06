@@ -8,13 +8,14 @@ COMMENT=	EDK2 Firmware for ${FLAVOR}
 LICENSE=	BSD3CLAUSE
 
 ONLY_FOR_ARCHS=		aarch64 amd64
-ONLY_FOR_ARCHS_REASON=	This port only provides firmware for aarch64 and amd64 machine
+ONLY_FOR_ARCHS_REASON=	only provides firmware for aarch64 and amd64
 
 PKGNAMESUFFIX=	-${FLAVOR:C/_/-/g}
-FLAVORS=	macchiatobin rpi3 rpi4 xen_x64
+FLAVORS=	macchiatobin fvp rpi3 rpi4 xen_x64
 FLAVOR?=	macchiatobin
 
-USES=	gmake python:3.7+,build
+USES=	cpe gmake python:3.7+,build
+CPE_VENDOR=	tianocore
 USE_GCC=	yes:build
 
 BUILD_DEPENDS+=	dtc>=1.4.1:sysutils/dtc \
@@ -40,6 +41,16 @@ BINARY_ALIAS=	make=${LOCALBASE}/bin/gmake \
 		gcc-ar=${LOCALBASE}/bin/gcc-ar${GCC_DEFAULT} \
 		g++=${LOCALBASE}/bin/g++${GCC_DEFAULT} \
 		python3=${PYTHON_CMD} python=${PYTHON_CMD}
+
+.if ${FLAVOR} == fvp
+PLAT=		fvp
+PLAT_ARCH=	AARCH64
+PLAT_ARGS=	-D X64EMU_ENABLE=FALSE -D CAPSULE_ENABLE=FALSE
+PLAT_TARGET=	RELEASE
+PLATFILE=	Platform/ARM/VExpressPkg/ArmVExpress-FVP-AArch64.dsc
+PLAT_RESULT=	ArmVExpress-FVP-AArch64/${PLAT_TARGET}_GCC5/FV/FVP_AARCH64_EFI.fd
+PLAT_FILENAME=	FVP_AARCH64_EFI.fd
+.endif
 
 .if ${FLAVOR} == macchiatobin
 PLAT=		macchiatobin

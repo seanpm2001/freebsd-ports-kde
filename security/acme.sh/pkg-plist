@@ -3,6 +3,7 @@ sbin/acme.sh
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/deploy/README.md
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/deploy/apache.sh
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/deploy/cleverreach.sh
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/deploy/consul.sh
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/deploy/cpanel_uapi.sh
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/deploy/docker.sh
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/deploy/dovecot.sh
@@ -13,6 +14,7 @@ sbin/acme.sh
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/deploy/haproxy.sh
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/deploy/keychain.sh
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/deploy/kong.sh
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/deploy/lighttpd.sh
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/deploy/mailcow.sh
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/deploy/myapi.sh
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/deploy/mydevil.sh
@@ -44,6 +46,7 @@ sbin/acme.sh
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/dnsapi/dns_aurora.sh
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/dnsapi/dns_autodns.sh
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/dnsapi/dns_aws.sh
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/dnsapi/dns_azion.sh
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/dnsapi/dns_azure.sh
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/dnsapi/dns_cf.sh
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/dnsapi/dns_clouddns.sh
@@ -123,6 +126,7 @@ sbin/acme.sh
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/dnsapi/dns_nsone.sh
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/dnsapi/dns_nsupdate.sh
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/dnsapi/dns_nw.sh
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/dnsapi/dns_oci.sh
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/dnsapi/dns_one.sh
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/dnsapi/dns_online.sh
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/dnsapi/dns_openprovider.sh
@@ -148,6 +152,7 @@ sbin/acme.sh
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/dnsapi/dns_transip.sh
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/dnsapi/dns_unoeuro.sh
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/dnsapi/dns_variomedia.sh
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/dnsapi/dns_veesp.sh
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/dnsapi/dns_vscale.sh
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/dnsapi/dns_vultr.sh
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/dnsapi/dns_websupport.sh
@@ -162,6 +167,7 @@ sbin/acme.sh
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/notify/mailgun.sh
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/notify/pop.sh
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/notify/postmark.sh
+%%PORTEXAMPLES%%%%EXAMPLESDIR%%/notify/pushbullet.sh
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/notify/pushover.sh
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/notify/sendgrid.sh
 %%PORTEXAMPLES%%%%EXAMPLESDIR%%/notify/slack.sh

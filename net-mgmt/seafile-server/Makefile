@@ -2,7 +2,6 @@ PORTNAME=	seafile-server
 DISTVERSIONPREFIX=	v
 DISTVERSION=	${SEAFILE_VER}
 DISTVERSIONSUFFIX=	-server
-PORTREVISION=	1
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	ultima@FreeBSD.org
@@ -25,7 +24,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}sqlite3>0:databases/py-sqlite3@${PY_FLAVOR} 
 		${PYTHON_PKGNAMEPREFIX}urllib3>0:net/py-urllib3@${PY_FLAVOR} \
 		bash:shells/bash
 
-CONFLICTS=	seafile-[0-9]*
+CONFLICTS=	seafile
 
 USES=		autoreconf compiler:c11 gnome iconv libarchive libtool localbase mysql \
 		pathfix pgsql pkgconfig python:3.6+ shebangfix sqlite ssl
