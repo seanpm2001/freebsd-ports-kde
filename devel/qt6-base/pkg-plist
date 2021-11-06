@@ -2801,11 +2801,6 @@ bin/qmake6
 %%QT_CMAKEDIR%%/Qt6Sql/Qt6QODBCDriverPluginConfigVersion.cmake
 %%QT_CMAKEDIR%%/Qt6Sql/Qt6QODBCDriverPluginTargets-%%CMAKE_BUILD_TYPE%%.cmake
 %%QT_CMAKEDIR%%/Qt6Sql/Qt6QODBCDriverPluginTargets.cmake
-%%QT_CMAKEDIR%%/Qt6Sql/Qt6QPSQLDriverPluginAdditionalTargetInfo.cmake
-%%QT_CMAKEDIR%%/Qt6Sql/Qt6QPSQLDriverPluginConfig.cmake
-%%QT_CMAKEDIR%%/Qt6Sql/Qt6QPSQLDriverPluginConfigVersion.cmake
-%%QT_CMAKEDIR%%/Qt6Sql/Qt6QPSQLDriverPluginTargets-%%CMAKE_BUILD_TYPE%%.cmake
-%%QT_CMAKEDIR%%/Qt6Sql/Qt6QPSQLDriverPluginTargets.cmake
 %%QT_CMAKEDIR%%/Qt6Sql/Qt6QSQLiteDriverPluginAdditionalTargetInfo.cmake
 %%QT_CMAKEDIR%%/Qt6Sql/Qt6QSQLiteDriverPluginConfig.cmake
 %%QT_CMAKEDIR%%/Qt6Sql/Qt6QSQLiteDriverPluginConfigVersion.cmake
@@ -3460,7 +3455,6 @@ bin/qmake6
 %%QT_PLUGINDIR%%/printsupport/libcupsprintersupport.so
 %%QT_PLUGINDIR%%/sqldrivers/libqsqlite.so
 %%QT_PLUGINDIR%%/sqldrivers/libqsqlodbc.so
-%%QT_PLUGINDIR%%/sqldrivers/libqsqlpsql.so
 %%QT_PLUGINDIR%%/tls/libqcertonlybackend.so
 %%QT_PLUGINDIR%%/tls/libqopensslbackend.so
 %%QT_PLUGINDIR%%/xcbglintegrations/libqxcb-egl-integration.so
