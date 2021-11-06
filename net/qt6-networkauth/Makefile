@@ -1,5 +1,3 @@
-# $FreeBSD$
-
 PORTNAME=	networkauth
 DISTVERSION=	${QT6_VERSION}
 CATEGORIES=	net

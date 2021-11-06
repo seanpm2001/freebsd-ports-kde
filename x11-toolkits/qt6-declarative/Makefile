@@ -1,5 +1,3 @@
-# $FreeBSD$
-
 PORTNAME=	declarative
 DISTVERSION=	${QT6_VERSION}
 CATEGORIES=	x11-toolkits
@@ -13,7 +11,7 @@ BUILD_DEPENDS=	${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers
 USES=		cmake compiler:c++17-lang gl python:3.5+ \
 		qt-dist:6
 USE_GL=		gl
-USE_QT=		base
+USE_QT=		base shadertools
 USE_LDCONFIG=	${PREFIX}/${QT_LIBDIR_REL}
 
 post-patch:

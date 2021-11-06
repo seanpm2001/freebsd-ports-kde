@@ -1,6 +1,6 @@
---- src/3rdparty/assimp/src/contrib/zip/src/miniz.h.orig	2020-12-12 07:14:54 UTC
+--- src/3rdparty/assimp/src/contrib/zip/src/miniz.h.orig	2021-10-21 09:07:21 UTC
 +++ src/3rdparty/assimp/src/contrib/zip/src/miniz.h
-@@ -4118,8 +4118,8 @@ static FILE *mz_freopen(const char *pPath, const char 
+@@ -4201,8 +4201,8 @@ static FILE *mz_freopen(const char *pPath, const char 
  #define MZ_FWRITE fwrite
  #define MZ_FTELL64 ftello64
  #define MZ_FSEEK64 fseeko64

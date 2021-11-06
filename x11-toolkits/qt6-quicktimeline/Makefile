@@ -1,5 +1,3 @@
-# $FreeBSD$
-
 PORTNAME=	quicktimeline
 DISTVERSION=	${QT6_VERSION}
 CATEGORIES=	x11-toolkits

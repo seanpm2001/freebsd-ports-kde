@@ -1,5 +1,3 @@
-# $FreeBSD$
-
 PORTNAME=	imageformats
 DISTVERSION=	${QT6_VERSION}
 CATEGORIES=	graphics

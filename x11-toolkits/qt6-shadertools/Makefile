@@ -1,5 +1,3 @@
-# $FreeBSD$
-
 PORTNAME=	shadertools
 DISTVERSION=	${QT6_VERSION}
 CATEGORIES=	x11-toolkits
