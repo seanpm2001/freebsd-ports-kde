@@ -1,9 +1,3 @@
-@dir %%QT_LIBDIR%%/cmake/Qt6BuildInternals/StandaloneTests
-@dir %%QT_LIBDIR%%/cmake/Qt6ShaderTools
-@dir %%QT_LIBDIR%%/cmake/Qt6ShaderToolsTools
-%%QT_BINDIR%%/qsb
-%%QT_DATADIR%%/modules/ShaderTools.json
-%%QT_CMAKEDIR%%/Qt6ShaderToolsTools/Qt6ShaderToolsMacros.cmake
 %%QT_INCDIR%%/QtShaderTools/%%FULLVER%%/QtShaderTools/private/qshaderbaker_p.h
 %%QT_INCDIR%%/QtShaderTools/%%FULLVER%%/QtShaderTools/private/qshaderbatchablerewriter_p.h
 %%QT_INCDIR%%/QtShaderTools/%%FULLVER%%/QtShaderTools/private/qspirvcompiler_p.h
@@ -12,16 +6,9 @@
 %%QT_INCDIR%%/QtShaderTools/%%FULLVER%%/QtShaderTools/private/qtshadertoolsglobal_p.h
 %%QT_INCDIR%%/QtShaderTools/QtShaderTools
 %%QT_INCDIR%%/QtShaderTools/QtShaderToolsDepends
-%%QT_INCDIR%%/QtShaderTools/qtshadertoolsglobal.h
 %%QT_INCDIR%%/QtShaderTools/QtShaderToolsVersion
+%%QT_INCDIR%%/QtShaderTools/qtshadertoolsglobal.h
 %%QT_INCDIR%%/QtShaderTools/qtshadertoolsversion.h
-%%QT_LIBDIR%%/libQt6ShaderTools.prl
-%%QT_LIBDIR%%/libQt6ShaderTools.so
-%%QT_LIBDIR%%/libQt6ShaderTools.so.%%FULLVER%%
-%%QT_LIBDIR%%/libQt6ShaderTools.so.6
-%%QT_LIBDIR%%/metatypes/qt6shadertools_%%CMAKE_BUILD_TYPE%%_metatypes.json
-%%QT_MKSPECDIR%%/modules/qt_lib_shadertools_private.pri
-%%QT_MKSPECDIR%%/modules/qt_lib_shadertools.pri
 %%QT_CMAKEDIR%%/Qt6BuildInternals/StandaloneTests/QtShaderToolsTestsConfig.cmake
 %%QT_CMAKEDIR%%/Qt6ShaderTools/Qt6ShaderToolsAdditionalTargetInfo.cmake
 %%QT_CMAKEDIR%%/Qt6ShaderTools/Qt6ShaderToolsConfig.cmake
@@ -30,6 +17,7 @@
 %%QT_CMAKEDIR%%/Qt6ShaderTools/Qt6ShaderToolsTargets-%%CMAKE_BUILD_TYPE%%.cmake
 %%QT_CMAKEDIR%%/Qt6ShaderTools/Qt6ShaderToolsTargets.cmake
 %%QT_CMAKEDIR%%/Qt6ShaderTools/Qt6ShaderToolsVersionlessTargets.cmake
+%%QT_CMAKEDIR%%/Qt6ShaderToolsTools/Qt6ShaderToolsMacros.cmake
 %%QT_CMAKEDIR%%/Qt6ShaderToolsTools/Qt6ShaderToolsToolsAdditionalTargetInfo.cmake
 %%QT_CMAKEDIR%%/Qt6ShaderToolsTools/Qt6ShaderToolsToolsConfig.cmake
 %%QT_CMAKEDIR%%/Qt6ShaderToolsTools/Qt6ShaderToolsToolsConfigVersion.cmake
@@ -37,3 +25,15 @@
 %%QT_CMAKEDIR%%/Qt6ShaderToolsTools/Qt6ShaderToolsToolsTargets-%%CMAKE_BUILD_TYPE%%.cmake
 %%QT_CMAKEDIR%%/Qt6ShaderToolsTools/Qt6ShaderToolsToolsTargets.cmake
 %%QT_CMAKEDIR%%/Qt6ShaderToolsTools/Qt6ShaderToolsToolsVersionlessTargets.cmake
+%%QT_BINDIR%%/qsb
+%%QT_LIBDIR%%/libQt6ShaderTools.prl
+%%QT_LIBDIR%%/libQt6ShaderTools.so
+%%QT_LIBDIR%%/libQt6ShaderTools.so.6
+%%QT_LIBDIR%%/libQt6ShaderTools.so.%%FULLVER%%
+%%QT_LIBDIR%%/metatypes/qt6shadertools_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_MKSPECDIR%%/modules/qt_lib_shadertools.pri
+%%QT_MKSPECDIR%%/modules/qt_lib_shadertools_private.pri
+%%QT_DATADIR%%/modules/ShaderTools.json
+@dir %%QT_LIBDIR%%/cmake/Qt6BuildInternals/StandaloneTests
+@dir %%QT_LIBDIR%%/cmake/Qt6ShaderTools
+@dir %%QT_LIBDIR%%/cmake/Qt6ShaderToolsTools
