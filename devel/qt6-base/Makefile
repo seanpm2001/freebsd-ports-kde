@@ -1,6 +1,3 @@
-# TODO:
-# - How should Database backend be handled in Qt6?
-
 PORTNAME=	base
 DISTVERSION=	${QT6_VERSION}
 CATEGORIES=	devel
@@ -10,7 +7,7 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Qt base (core, gui, widgets, network,...)
 
 BUILD_DEPENDS=	xml:textproc/xmlstarlet \
-		 ${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers
+		${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers
 LIB_DEPENDS=	libcups.so:print/cups \
 		libdrm.so:graphics/libdrm \
 		libfontconfig.so:x11-fonts/fontconfig \
@@ -39,14 +36,12 @@ LIB_DEPENDS=	libcups.so:print/cups \
 		libxkbcommon.so:x11/libxkbcommon
 
 USES=		cmake compiler:c++17-lang gl gnome jpeg perl5 pkgconfig python shebangfix \
-		sqlite qt-dist:6 xorg
+		qt-dist:6 xorg
 USE_GL=		egl gl
 USE_GNOME=	glib20 gtk30 pango
 USE_XORG=	x11 xrender xcb ice sm xext xi
 CMAKE_ON=	QT_AVOID_CMAKE_ARCHIVING_API \
-		QT_FIND_ALL_PACKAGES_ALWAYS \
-		QT_FEATURE_system_sqlite \
-		CMAKE_DISABLE_FIND_PACKAGE_Interbase
+		QT_FIND_ALL_PACKAGES_ALWAYS
 CMAKE_OFF=	QT_FEATURE_eglfs \
 		QT_FEATURE_gssapi
 SHEBANG_FILES=	${WRKSRC}/mkspecs/features/uikit/device_destinations.sh \
@@ -58,12 +53,41 @@ USE_LDCONFIG=	${PREFIX}/${QT_LIBDIR_REL}
 # zstd from base fails to compress files during the build (error 11: unsupported argument)
 BINARY_ALIAS=	zstd=${LOCALBASE}/bin/zstd
 
-# post-patch:
-# 	TODO: is it useful ?
-# 	It builds up, but we have to look at the ones that are really necessary.
-#	${FIND} -name "*.cpp" ${WRKSSRC} | xargs ${REINPLACE_CMD} -e "s/Q_OS_LINUX/Q_OS_FREEBSD/g"
-#	${FIND} -name "*.h" ${WRKSSRC} | xargs ${REINPLACE_CMD} -e "s/Q_OS_LINUX/Q_OS_FREEBSD/g"
-# TODO: do this cleaner
+#== Option handling
+OPTIONS_GROUP=		SQL
+OPTIONS_GROUP_SQL=	IBASE MYSQL ODBC PSQL SQLITE
+OPTIONS_DEFAULT=	SQLITE
+OPTIONS_SUB=		yes
+
+IBASE_DESC=		InterBase database support
+IBASE_CMAKE_ON=		-DFEATURE_sql_ibase=ON
+IBASE_CMAKE_OFF=	-DFEATURE_sql_ibase=OFF
+IBASE_USES=		firebird:4.0
+IBASE_BROKEN=		IBASE: fatal error: 'gen/iberror.h' file not found
+
+MYSQL_DESC=		MySQL database support
+MYSQL_CMAKE_ON=		-DFEATURE_sql_mysql=ON
+MYSQL_CMAKE_OFF=	-DFEATURE_sql_mysql=OFF
+MYSQL_USES=		mysql
+
+ODBC_DESC=		ODBC database support
+ODBC_CMAKE_ON=		-DFEATURE_sql_odbc=ON
+ODBC_CMAKE_OFF=		-DFEATURE_sql_odbc=OFF
+ODBC_LIB_DEPENDS=	libodbc.so:databases/unixODBC
+
+PSQL_DESC=		PostgreSQL database support
+PSQL_CMAKE_ON=		-DFEATURE_sql_psql=ON
+PSQL_CMAKE_OFF=		-DFEATURE_sql_psql=OFF
+PSQL_USES=		pgsql
+
+SQLITE_DESC=		Sqlite database support
+SQLITE_CMAKE_ON=	-DFEATURE_sql_sqlite=ON \
+			-DQT_FEATURE_system_sqlite=ON
+SQLITE_CMAKE_OFF=	-DFEATURE_sql_sqlite=OFF
+SQLITE_USES=		sqlite:3
+
+# TODO: do this cleaner -- somewhere cmake/qmake still creates empty directories
+# for the cmake files in INSTALL_PREFIX/lib/cmake
 post-install:
 	${RM} -vr ${STAGEDIR}${PREFIX}/${QT_LIBDIR_REL}/cmake
 	# Install symlinks for user-facing tools
