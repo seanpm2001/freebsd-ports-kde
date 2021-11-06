@@ -8,38 +8,62 @@ COMMENT=	Qt base (core, gui, widgets, network,...)
 
 BUILD_DEPENDS=	xml:textproc/xmlstarlet \
 		${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers
-LIB_DEPENDS=	libcups.so:print/cups \
+LIB_DEPENDS=	\
+		libatk-bridge-2.0.so:accessibility/at-spi2-atk \
+		libatspi.so:accessibility/at-spi2-core \
+		libatk-1.0.so:accessibility/atk \
+		libzstd.so:archivers/zstd \
+		libfribidi.so:converters/fribidi \
+		libdbus-1.so:devel/dbus \
+		libdouble-conversion.so:devel/double-conversion \
+		libintl.so:devel/gettext-runtime \
+		libicui18n.so:devel/icu \
+		libepoll-shim.so:devel/libepoll-shim \
+		libevdev.so:devel/libevdev \
+		libffi.so:devel/libffi \
+		libgudev-1.0.so:devel/libgudev \
+		libmtdev.so:devel/libmtdev \
+		libudev.so:devel/libudev-devd \
+		libunistring.so:devel/libunistring \
+		libpcre.so:devel/pcre \
+		libpcre2-16.so:devel/pcre2 \
+		libidn2.so:dns/libidn2 \
+		libgraphite2.so:graphics/graphite2 \
+		libjpeg.so:graphics/jpeg-turbo \
 		libdrm.so:graphics/libdrm \
-		libfontconfig.so:x11-fonts/fontconfig \
+		libepoxy.so:graphics/libepoxy \
+		libEGL.so:graphics/libglvnd \
+		libGL.so:graphics/libglvnd \
+		libpng16.so:graphics/png \
+		libvulkan.so:graphics/vulkan-loader \
+		libwayland-client.so:graphics/wayland \
+		libgmp.so:math/gmp \
+		libavahi-client.so:net/avahi-app \
+		libcups.so:print/cups \
 		libfreetype.so:print/freetype2 \
 		libharfbuzz.so:print/harfbuzz \
-		libicui18n.so:devel/icu \
-		libicuuc.so:devel/icu \
+		libgnutls.so:security/gnutls \
+		libtasn1.so:security/libtasn1 \
+		libnettle.so:security/nettle \
+		libp11-kit.so:security/p11-kit \
+		libexpat.so:textproc/expat2 \
+		libfontconfig.so:x11-fonts/fontconfig \
 		libinput.so:x11/libinput \
-		libmtdev.so:devel/libmtdev \
-		libodbc.so:databases/unixODBC \
-		libpcre2-16.so:devel/pcre2 \
-		libpng16.so:graphics/png \
-		libudev.so:devel/libudev-devd \
-		libzstd.so:archivers/zstd \
-		libdouble-conversion.so:devel/double-conversion \
-		libvulkan.so:graphics/vulkan-loader \
-		libxcb-ewmh.so:x11/xcb-util-wm \
-		libxcb-icccm.so:x11/xcb-util-wm \
-		libxcb-image.so:x11/xcb-util-image \
+		libwacom.so:x11/libwacom \
+		libxkbcommon.so:x11/libxkbcommon \
 		libxcb-util.so:x11/xcb-util \
-		libxcb-render-util.so:x11/xcb-util-renderutil \
 		libxcb-cursor.so:x11/xcb-util-cursor \
+		libxcb-image.so:x11/xcb-util-image \
 		libxcb-keysyms.so:x11/xcb-util-keysyms \
-		libxcb-xrm.so:x11/xcb-util-xrm \
-		libXcursor.so:x11/libXcursor \
-		libxkbcommon.so:x11/libxkbcommon
+		libxcb-render-util.so:x11/xcb-util-renderutil \
+		libxcb-ewmh.so:x11/xcb-util-wm
 
-USES=		cmake compiler:c++17-lang gl gnome jpeg perl5 pkgconfig python shebangfix \
-		qt-dist:6 xorg
+USES=		cmake compiler:c++17-lang gl gnome jpeg perl5 pkgconfig python \
+		qt-dist:6 shebangfix xorg
 USE_GL=		egl gl
-USE_GNOME=	glib20 gtk30 pango
-USE_XORG=	x11 xrender xcb ice sm xext xi
+USE_GNOME=	cairo gdkpixbuf2 glib20 gtk30 pango
+USE_XORG=	ice pixman sm x11 xau xcb xcomposite xcursor xdamage xdmcp \
+		xext xfixes xi xinerama xrandr xrender
 CMAKE_ON=	QT_AVOID_CMAKE_ARCHIVING_API \
 		QT_FIND_ALL_PACKAGES_ALWAYS
 CMAKE_OFF=	QT_FEATURE_eglfs \
