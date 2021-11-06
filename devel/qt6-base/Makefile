@@ -32,8 +32,6 @@ LIB_DEPENDS=	\
 		libjpeg.so:graphics/jpeg-turbo \
 		libdrm.so:graphics/libdrm \
 		libepoxy.so:graphics/libepoxy \
-		libEGL.so:graphics/libglvnd \
-		libGL.so:graphics/libglvnd \
 		libpng16.so:graphics/png \
 		libvulkan.so:graphics/vulkan-loader \
 		libwayland-client.so:graphics/wayland \
