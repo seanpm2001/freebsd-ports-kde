@@ -1,5 +1,3 @@
-# $FreeBSD$
-#
 # TODO:
 # - How should Database backend be handled in Qt6?
 
@@ -34,18 +32,21 @@ LIB_DEPENDS=	libcups.so:print/cups \
 		libxcb-image.so:x11/xcb-util-image \
 		libxcb-util.so:x11/xcb-util \
 		libxcb-render-util.so:x11/xcb-util-renderutil \
-                libxcb-cursor.so:x11/xcb-util-cursor \
-                libxcb-keysyms.so:x11/xcb-util-keysyms \
-                libxcb-xrm.so:x11/xcb-util-xrm \
+		libxcb-cursor.so:x11/xcb-util-cursor \
+		libxcb-keysyms.so:x11/xcb-util-keysyms \
+		libxcb-xrm.so:x11/xcb-util-xrm \
 		libXcursor.so:x11/libXcursor \
-                libxkbcommon.so:x11/libxkbcommon
+		libxkbcommon.so:x11/libxkbcommon
 
-USES=		cmake compiler:c++17-lang gl gnome jpeg perl5 pkgconfig python shebangfix qt-dist:6 xorg
+USES=		cmake compiler:c++17-lang gl gnome jpeg perl5 pkgconfig python shebangfix \
+		sqlite qt-dist:6 xorg
 USE_GL=		egl gl
 USE_GNOME=	glib20 gtk30 pango
 USE_XORG=	x11 xrender xcb ice sm xext xi
 CMAKE_ON=	QT_AVOID_CMAKE_ARCHIVING_API \
-		QT_FIND_ALL_PACKAGES_ALWAYS
+		QT_FIND_ALL_PACKAGES_ALWAYS \
+		QT_FEATURE_system_sqlite \
+		CMAKE_DISABLE_FIND_PACKAGE_Interbase
 CMAKE_OFF=	QT_FEATURE_eglfs \
 		QT_FEATURE_gssapi
 SHEBANG_FILES=	${WRKSRC}/mkspecs/features/uikit/device_destinations.sh \
@@ -53,6 +54,9 @@ SHEBANG_FILES=	${WRKSRC}/mkspecs/features/uikit/device_destinations.sh \
 		${WRKSRC}/mkspecs/features/data/mac/objc_namespace.sh \
 		${WRKSRC}/util/android/android_emulator_launcher.sh
 USE_LDCONFIG=	${PREFIX}/${QT_LIBDIR_REL}
+
+# zstd from base fails to compress files during the build (error 11: unsupported argument)
+BINARY_ALIAS=	zstd=${LOCALBASE}/bin/zstd
 
 # post-patch:
 # 	TODO: is it useful ?

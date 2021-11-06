@@ -1,5 +1,3 @@
-# $FreeBSD$
-
 PORTNAME=	tools
 DISTVERSION=	${QT6_VERSION}
 CATEGORIES=	devel

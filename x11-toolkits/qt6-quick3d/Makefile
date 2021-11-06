@@ -1,5 +1,3 @@
-# $FreeBSD$
-
 PORTNAME=	quick3d
 DISTVERSION=	${QT6_VERSION}
 CATEGORIES=	x11-toolkits
@@ -15,5 +13,7 @@ USES=		cmake compiler:c++17-lang gl python:build \
 USE_GL=		gl
 USE_QT=		base declarative shadertools
 USE_LDCONFIG=	${PREFIX}/${QT_LIBDIR_REL}
+
+INSTALL_TARGET=	install
 
 .include <bsd.port.mk>

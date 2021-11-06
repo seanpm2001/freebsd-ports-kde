@@ -1,5 +1,3 @@
-# $FreeBSD$
-
 PORTNAME=	svg
 DISTVERSION=	${QT6_VERSION}
 CATEGORIES=	graphics

@@ -1,5 +1,3 @@
-# $FreeBSD$
-
 PORTNAME=	5compat
 DISTVERSION=	${QT6_VERSION}
 CATEGORIES=	devel
