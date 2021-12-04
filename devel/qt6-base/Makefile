@@ -7,7 +7,8 @@ MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Qt base (core, gui, widgets, network,...)
 
 BUILD_DEPENDS=	xml:textproc/xmlstarlet \
-		${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers
+		${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers \
+		${LOCALBASE}/include/linux/input.h:devel/evdev-proto
 LIB_DEPENDS=	\
 		libatk-bridge-2.0.so:accessibility/at-spi2-atk \
 		libatspi.so:accessibility/at-spi2-core \
