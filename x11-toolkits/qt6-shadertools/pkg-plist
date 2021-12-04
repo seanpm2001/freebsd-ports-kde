@@ -13,6 +13,7 @@
 %%QT_CMAKEDIR%%/Qt6ShaderTools/Qt6ShaderToolsAdditionalTargetInfo.cmake
 %%QT_CMAKEDIR%%/Qt6ShaderTools/Qt6ShaderToolsConfig.cmake
 %%QT_CMAKEDIR%%/Qt6ShaderTools/Qt6ShaderToolsConfigVersion.cmake
+%%QT_CMAKEDIR%%/Qt6ShaderTools/Qt6ShaderToolsConfigVersionImpl.cmake
 %%QT_CMAKEDIR%%/Qt6ShaderTools/Qt6ShaderToolsDependencies.cmake
 %%QT_CMAKEDIR%%/Qt6ShaderTools/Qt6ShaderToolsTargets-%%CMAKE_BUILD_TYPE%%.cmake
 %%QT_CMAKEDIR%%/Qt6ShaderTools/Qt6ShaderToolsTargets.cmake
@@ -21,6 +22,7 @@
 %%QT_CMAKEDIR%%/Qt6ShaderToolsTools/Qt6ShaderToolsToolsAdditionalTargetInfo.cmake
 %%QT_CMAKEDIR%%/Qt6ShaderToolsTools/Qt6ShaderToolsToolsConfig.cmake
 %%QT_CMAKEDIR%%/Qt6ShaderToolsTools/Qt6ShaderToolsToolsConfigVersion.cmake
+%%QT_CMAKEDIR%%/Qt6ShaderToolsTools/Qt6ShaderToolsToolsConfigVersionImpl.cmake
 %%QT_CMAKEDIR%%/Qt6ShaderToolsTools/Qt6ShaderToolsToolsDependencies.cmake
 %%QT_CMAKEDIR%%/Qt6ShaderToolsTools/Qt6ShaderToolsToolsTargets-%%CMAKE_BUILD_TYPE%%.cmake
 %%QT_CMAKEDIR%%/Qt6ShaderToolsTools/Qt6ShaderToolsToolsTargets.cmake
