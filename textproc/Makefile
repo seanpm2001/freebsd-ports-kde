@@ -235,6 +235,7 @@
     SUBDIR += gnugrep
     SUBDIR += go-md2man
     SUBDIR += go-yq
+    SUBDIR += gojq
     SUBDIR += goldendict
     SUBDIR += google-ctemplate
     SUBDIR += google-translate-cli
@@ -244,6 +245,7 @@
     SUBDIR += greple
     SUBDIR += groff
     SUBDIR += gron
+    SUBDIR += gron.awk
     SUBDIR += groonga
     SUBDIR += gsed
     SUBDIR += gspell
@@ -277,6 +279,7 @@
     SUBDIR += htmldoc
     SUBDIR += htmlise
     SUBDIR += htmlq
+    SUBDIR += htmltest
     SUBDIR += htmltolatex
     SUBDIR += humanzip
     SUBDIR += hunspell
@@ -822,6 +825,7 @@
     SUBDIR += p5-Template-Plugin-HTML-SuperForm
     SUBDIR += p5-Template-Plugin-Lingua-EN-Inflect
     SUBDIR += p5-Template-Plugin-XML-Escape
+    SUBDIR += p5-Template-Plugin-YAML
     SUBDIR += p5-Template-Semantic
     SUBDIR += p5-Template-Tiny
     SUBDIR += p5-Term-QRCode
@@ -1588,7 +1592,9 @@
     SUBDIR += rubygem-asciidoctor-plantuml
     SUBDIR += rubygem-asciidoctor-plantuml0010
     SUBDIR += rubygem-autoprefixer-rails
+    SUBDIR += rubygem-autoprefixer-rails-node16
     SUBDIR += rubygem-autoprefixer-rails1020
+    SUBDIR += rubygem-autoprefixer-rails1025
     SUBDIR += rubygem-babel-source
     SUBDIR += rubygem-babel-transpiler
     SUBDIR += rubygem-babosa
@@ -1947,6 +1953,7 @@
     SUBDIR += word2x
     SUBDIR += wordnet
     SUBDIR += words
+    SUBDIR += write-good
     SUBDIR += wv
     SUBDIR += wv2
     SUBDIR += xalan-c

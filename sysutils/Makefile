@@ -165,11 +165,9 @@
     SUBDIR += cfengine-devel
     SUBDIR += cfengine-masterfiles
     SUBDIR += cfengine-masterfiles-devel
-    SUBDIR += cfengine-masterfiles315
     SUBDIR += cfengine-masterfiles316
     SUBDIR += cfengine-masterfiles317
     SUBDIR += cfengine-masterfiles318
-    SUBDIR += cfengine315
     SUBDIR += cfengine316
     SUBDIR += cfengine317
     SUBDIR += cfengine318
@@ -255,6 +253,8 @@
     SUBDIR += desktop-installer
     SUBDIR += detox
     SUBDIR += devcpu-data
+    SUBDIR += devcpu-data-amd
+    SUBDIR += devcpu-data-intel
     SUBDIR += devstat
     SUBDIR += dfc
     SUBDIR += di
@@ -616,6 +616,7 @@
     SUBDIR += libg15render
     SUBDIR += libgksu
     SUBDIR += libieee1284
+    SUBDIR += libptytty
     SUBDIR += libretto-config
     SUBDIR += libsunacl
     SUBDIR += libsysstat
@@ -1484,6 +1485,7 @@
     SUBDIR += vchanger
     SUBDIR += vcp
     SUBDIR += vector
+    SUBDIR += viddy
     SUBDIR += videogen
     SUBDIR += vii
     SUBDIR += vils
@@ -1586,6 +1588,7 @@
     SUBDIR += znapzend
     SUBDIR += zogftw
     SUBDIR += zoxide
+    SUBDIR += zpool-iostat-viz
     SUBDIR += zrep
     SUBDIR += zrepl
     SUBDIR += zsd

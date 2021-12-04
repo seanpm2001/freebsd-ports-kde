@@ -1,6 +1,6 @@
 PORTNAME=	mesa
-DISTVERSION=	21.3-branchpoint-725
-DISTVERSIONSUFFIX=	-gc4d904101c0
+DISTVERSION=	21.3-branchpoint-1187
+DISTVERSIONSUFFIX=	-gcdeecadcb6e
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
@@ -14,6 +14,7 @@ MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Bleeding edge Mesa drivers (OpenGL, Vulkan)
 
 LICENSE=	MIT
+LICENSE_FILE=	${WRKSRC}/docs/license.rst
 
 ONLY_FOR_ARCHS=	aarch64 amd64 i386 powerpc64 powerpc64le
 ONLY_FOR_ARCHS_REASON=	Limited scope: no old drivers and no software rendering. \

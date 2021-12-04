@@ -1,8 +1,7 @@
 # Created by: Bernard Spil <brnrd@freebsd.org>
 
 PORTNAME=	appointments
-PORTVERSION=	1.10.2
-PORTREVISION=	1
+PORTVERSION=	1.11.4
 CATEGORIES=	www
 MASTER_SITES=	https://github.com/${GH_ACCOUNT}/${PORTNAME}/raw/${GH_TAGNAME}/build/artifacts/appstore/
 PKGNAMEPREFIX=	nextcloud-
@@ -23,7 +22,7 @@ NO_BUILD=	yes
 NO_ARCH=	yes
 
 GH_ACCOUNT=	SergeyMosin
-GH_TAGNAME=	bc0867d78b0717a36d0dd4eac8d3d77b57cba347
+GH_TAGNAME=	08fbb2a56af8719f2d65920ad938ae9e53acb5b5
 
 WWWDIR=		${PREFIX}/www/nextcloud/apps-pkg/${PORTNAME}
 
