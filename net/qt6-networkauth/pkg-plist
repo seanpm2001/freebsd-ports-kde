@@ -40,6 +40,7 @@
 %%QT_CMAKEDIR%%/Qt6NetworkAuth/Qt6NetworkAuthAdditionalTargetInfo.cmake
 %%QT_CMAKEDIR%%/Qt6NetworkAuth/Qt6NetworkAuthConfig.cmake
 %%QT_CMAKEDIR%%/Qt6NetworkAuth/Qt6NetworkAuthConfigVersion.cmake
+%%QT_CMAKEDIR%%/Qt6NetworkAuth/Qt6NetworkAuthConfigVersionImpl.cmake
 %%QT_CMAKEDIR%%/Qt6NetworkAuth/Qt6NetworkAuthDependencies.cmake
 %%QT_CMAKEDIR%%/Qt6NetworkAuth/Qt6NetworkAuthTargets-%%CMAKE_BUILD_TYPE%%.cmake
 %%QT_CMAKEDIR%%/Qt6NetworkAuth/Qt6NetworkAuthTargets.cmake
