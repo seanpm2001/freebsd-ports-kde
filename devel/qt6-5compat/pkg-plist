@@ -3,6 +3,7 @@
 %%QT_CMAKEDIR%%/Qt6Core5Compat/Qt6Core5CompatAdditionalTargetInfo.cmake
 %%QT_CMAKEDIR%%/Qt6Core5Compat/Qt6Core5CompatConfig.cmake
 %%QT_CMAKEDIR%%/Qt6Core5Compat/Qt6Core5CompatConfigVersion.cmake
+%%QT_CMAKEDIR%%/Qt6Core5Compat/Qt6Core5CompatConfigVersionImpl.cmake
 %%QT_CMAKEDIR%%/Qt6Core5Compat/Qt6Core5CompatDependencies.cmake
 %%QT_CMAKEDIR%%/Qt6Core5Compat/Qt6Core5CompatTargets-%%CMAKE_BUILD_TYPE%%.cmake
 %%QT_CMAKEDIR%%/Qt6Core5Compat/Qt6Core5CompatTargets.cmake
