@@ -248,8 +248,8 @@ QMAKE_ARGS+=		QT_CONFIG+="${QT_CONFIG:N-*:O:u}"
 QMAKE_ARGS+=		QT_CONFIG-="${QT_CONFIG:M-*:O:u:C/^-//}"
 .  endif
 
-PLIST_SUB+=		SHORTVER=${DISTVERSION:R} \
-			FULLVER=${DISTVERSION:C/-.*//}
+PLIST_SUB+=		SHORTVER=${_QT_VERSION:R} \
+			FULLVER=${_QT_VERSION:C/-.*//}
 
 # Handle additional PLIST directories, which should only be used for Qt-dist ports.
 .  for dir in CMAKE ETC
