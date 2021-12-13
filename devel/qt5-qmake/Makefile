@@ -1,6 +1,5 @@
 PORTNAME=	qmake
-DISTVERSION=	${QT5_VERSION}
-PORTREVISION=	1
+PORTVERSION=	${QT5_VERSION}${QT5_KDE_PATCH}
 CATEGORIES=	devel
 PKGNAMEPREFIX=	qt5-
 
@@ -36,6 +35,7 @@ QT_BINARIES=	yes
 post-patch:
 # Clean up files created by patching
 	@${RM} ${WRKSRC}/mkspecs/*/*.orig
+	 cd ${WRKSRC} && bin/syncqt.pl -version ${QT5_VERSION}
 
 post-build:
 # Complete configure stage to generate *.pri files.
