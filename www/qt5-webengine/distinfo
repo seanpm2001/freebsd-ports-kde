@@ -1,3 +1,3 @@
-TIMESTAMP = 1606050276
-SHA256 (KDE/Qt/5.15.2/qtwebengine-everywhere-src-5.15.2.tar.xz) = c8afca0e43d84f7bd595436fbe4d13a5bbdb81ec5104d605085d07545b6f91e0
-SIZE (KDE/Qt/5.15.2/qtwebengine-everywhere-src-5.15.2.tar.xz) = 280142544
+TIMESTAMP = 1639414523
+SHA256 (KDE/Qt/5.15.2/qtwebengine-5.15.2_p784.tar.xz) = 742a2bcb75ccfbadfb5c2947a3f79a9e008a30728c728b10e811d0b626900a50
+SIZE (KDE/Qt/5.15.2/qtwebengine-5.15.2_p784.tar.xz) = 2463384
