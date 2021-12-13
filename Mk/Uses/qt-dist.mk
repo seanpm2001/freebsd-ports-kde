@@ -57,8 +57,12 @@ IGNORE=			Unsupported qt-dist ${_QT_DIST} for qt:${_QT_VER}
 ################################################################################
 
 # Set standard bsd.port.mk variables
+.  if ${_QT_VER:M5}
+MASTER_SITES=		LOCAL/tcberner/KDE/Qt/${_QT_VERSION}
+.  else
 MASTER_SITES=		${MASTER_SITE_QT}
 DISTINFO_FILE?=		${PORTSDIR}/devel/${_QT_RELNAME}/distinfo
+.  endif
 
 LICENSE?=		LGPL21
 
@@ -70,13 +74,48 @@ DESCR?=			${PORTSDIR}/devel/${_QT_RELNAME}/pkg-descr
 DESTDIRNAME=		INSTALL_ROOT
 
 .  if ${_QT_VER:M5}
-MASTER_SITE_SUBDIR?=	official_releases/qt/${_QT_VERSION:R}/${_QT_VERSION}/submodules/
-# www/qt5-webengine hackery: The tarballs of 5.9.5 had a different naming scheme.
-.    if ${QT5_VERSION} == "5.9.5"
-DISTNAME=		${_QT_DIST:S,^,qt,:S,$,-opensource-src-${DISTVERSION},}
-.    else
-DISTNAME=		${_QT_DIST:S,^,qt,:S,$,-everywhere-src-${DISTVERSION},}
-.    endif
+
+# KDE maintains a repository with a patched Qt5 distribution.
+_KDE_3d=39
+_KDE_base=263
+_KDE_charts=2
+_KDE_connectivity=1
+_KDE_datavis3d=2
+_KDE_declarative=41
+_KDE_gamepad=2
+_KDE_graphicaleffects=2
+_KDE_imageformats=3
+_KDE_location=6
+_KDE_multimedia=3
+_KDE_networkauth=2
+_KDE_quick3d=19
+_KDE_quickcontrols=3
+_KDE_quickcontrols2=8
+_KDE_quicktimeline=3
+_KDE_remoteobjects=3
+_KDE_script=4
+_KDE_scxml=1
+_KDE_sensors=2
+_KDE_serialbus=2
+_KDE_serialport=2
+_KDE_speech=2
+_KDE_svg=13
+_KDE_tools=17
+_KDE_translations=22
+_KDE_virtualkeyboard=4
+_KDE_wayland=37
+_KDE_webchannel=2
+_KDE_webglplugin=2
+_KDE_websockets=4
+_KDE_webview=2
+_KDE_x11extras=1
+_KDE_xmlpatterns=2
+_KDE_3d=		28
+
+_KDE_PATCH=		_p${_KDE_${_QT_DIST}}
+
+MASTER_SITE_SUBDIR=	KDE/Qt/${_QT_VERSION}/
+DISTNAME=		${_QT_DIST:S,^,qt,:S,$,-${DISTVERSION}${_KDE_PATCH},}
 DISTFILES=		${DISTNAME:S,$,${EXTRACT_SUFX},}
 DIST_SUBDIR=		KDE/Qt/${_QT_VERSION}
 
@@ -91,9 +130,6 @@ LDFLAGS+=		-Wl,--as-needed
 	defined(DISABLE_SIZE) && defined(NO_CHECKSUM)
 # Ensure that the "makesum" target (with its inner "fetch" one) uses
 # devel/qt*/distinfo for every port.
-.      if ${DISTINFO_FILE:H} == ${PORTSDIR}/devel/${_QT_RELNAME}
-_QT_DIST=		${_QT5_DISTS}
-.      endif
 .    endif
 
 # Qt5's tarballs are xz compressed.
