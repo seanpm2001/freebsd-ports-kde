@@ -112,10 +112,12 @@ _KDE_x11extras=1
 _KDE_xmlpatterns=2
 _KDE_3d=		28
 
-_KDE_PATCH=		_p${_KDE_${_QT_DIST}}
+.if defined(_KDE_${_QT_DIST})
+QT5_KDE_PATCH=		p${_KDE_${_QT_DIST}}
+.endif
 
 MASTER_SITE_SUBDIR=	KDE/Qt/${_QT_VERSION}/
-DISTNAME=		${_QT_DIST:S,^,qt,:S,$,-${DISTVERSION}${_KDE_PATCH},}
+DISTNAME=		${_QT_DIST:S,^,kde-qt,:S,$,-${DISTVERSION},}
 DISTFILES=		${DISTNAME:S,$,${EXTRACT_SUFX},}
 DIST_SUBDIR=		KDE/Qt/${_QT_VERSION}
 
