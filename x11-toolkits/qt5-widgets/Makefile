@@ -7,7 +7,8 @@ PKGNAMEPREFIX=	qt5-
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Qt C++ widgets module
 
-USES=		compiler:c++11-lang qmake:no_env qt-dist:5,base xorg
+USES=		compiler:c++11-lang perl5 qmake:no_env qt-dist:5,base xorg
+USE_PERL5=	extract
 USE_QT=		core gui qmake_build buildtools_build
 USE_XORG=	x11
 HAS_CONFIGURE=	yes

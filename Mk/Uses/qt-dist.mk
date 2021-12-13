@@ -337,6 +337,8 @@ qtbase-post-patch:
 		${WRKSRC}/mkspecs/common/bsd/bsd.conf \
 		${WRKSRC}/mkspecs/freebsd-clang/qmake.conf
 
+	cd ${WRKSRC} && bin/syncqt.pl -version ${QT5_VERSION}
+
 .      if ${PORTNAME} != "qmake"
 _QMAKE=			${CONFIGURE_WRKSRC}/bin/qmake
 .      endif

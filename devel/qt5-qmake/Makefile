@@ -36,7 +36,6 @@ QT_BINARIES=	yes
 post-patch:
 # Clean up files created by patching
 	@${RM} ${WRKSRC}/mkspecs/*/*.orig
-	 cd ${WRKSRC} && bin/syncqt.pl -version ${QT5_VERSION}
 
 post-build:
 # Complete configure stage to generate *.pri files.
