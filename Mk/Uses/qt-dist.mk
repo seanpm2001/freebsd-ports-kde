@@ -357,8 +357,9 @@ qt5-pre-configure:
 	touch ${WRKSRC}/.git
 	# As the patch collection was created after a version bump, all module verisions
 	# are tagged as 5.15.3
-	${REINPLACE_CMD} -e '/MODULE_VERSION/s|5.15.3|${_QT_VERSION}|g' \
-		${CONFIGURE_WRKSRC}/.qmake.conf
+	touch ${WRKSRC}/.qmake.conf # easier than to -f before the sed
+	${REINPLACE_CMD} -e '/MODULE_VERSION/s|5\.15\.[0-9]|${_QT_VERSION}|g' \
+		${WRKSRC}/.qmake.conf
 
 # **** THIS PART IS OBSOLETE FOR THE NEXT QT UPGRADE ****
 #
