@@ -7,9 +7,10 @@ PKGNAMEPREFIX=	qt5-
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Accessibilty features for Qt5
 
-USES=		compiler:c++11-lang gl pkgconfig qmake:outsource,norecursive \
+USES=		compiler:c++11-lang gl pkgconfig perl5 qmake:outsource,norecursive \
 		qt-dist:5,speech xorg
 USE_GL=		gl
+USE_PERL5=	extract
 USE_QT=		core gui buildtools_build qmake_build
 
 OPTIONS_DEFINE=		ALSA
