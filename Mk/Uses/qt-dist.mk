@@ -110,7 +110,6 @@ _KDE_websockets=4
 _KDE_webview=2
 _KDE_x11extras=1
 _KDE_xmlpatterns=2
-_KDE_3d=		28
 
 .if defined(_KDE_${_QT_DIST})
 QT5_KDE_PATCH=		p${_KDE_${_QT_DIST}}

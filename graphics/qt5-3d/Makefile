@@ -9,7 +9,8 @@ COMMENT=	Qt3D module
 
 LIB_DEPENDS=	libassimp.so:multimedia/assimp
 
-USES=		compiler:c++11-lang pkgconfig qmake:norecursive qt-dist:5,3d
+USES=		compiler:c++11-lang perl5 pkgconfig qmake:norecursive qt-dist:5,3d
+USE_PERL5=	extract
 USE_QT=		concurrent core declarative gui network buildtools_build
 
 QT_BINARIES=	yes
