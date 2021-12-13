@@ -337,9 +337,6 @@ qtbase-post-patch:
 		${WRKSRC}/mkspecs/common/bsd/bsd.conf \
 		${WRKSRC}/mkspecs/freebsd-clang/qmake.conf
 
-	# configure will run syncqt.pl if it finds a .git entry in the working directory
-	touch ${WRKSRC}/.git
-
 .      if ${PORTNAME} != "qmake"
 _QMAKE=			${CONFIGURE_WRKSRC}/bin/qmake
 .      endif
@@ -355,7 +352,14 @@ qt5-pre-configure:
 # value through to the configure script in qtbase).
 	${MKDIR} ${CONFIGURE_WRKSRC}
 	${ECHO_CMD} 'CMAKE_MODULE_TESTS = -' > ${CONFIGURE_WRKSRC}/.qmake.cache
-#
+
+	# configure will run syncqt.pl if it finds a .git entry in the working directory
+	touch ${WRKSRC}/.git
+	# As the patch collection was created after a version bump, all module verisions
+	# are tagged as 5.15.3
+	${REINPLACE_CMD} -e '/MODULE_VERSION/s|5.15.3|${_QT_VERSION}|g' \
+		${CONFIGURE_WRKSRC}/.qmake.conf
+
 # **** THIS PART IS OBSOLETE FOR THE NEXT QT UPGRADE ****
 #
 # We piggyback on QMAKE_LIBDIR_FLAGS to make sure -L${WRKSRC}/lib is passed to
