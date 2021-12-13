@@ -337,7 +337,8 @@ qtbase-post-patch:
 		${WRKSRC}/mkspecs/common/bsd/bsd.conf \
 		${WRKSRC}/mkspecs/freebsd-clang/qmake.conf
 
-	cd ${WRKSRC} && bin/syncqt.pl -version ${QT5_VERSION}
+	# configure will run syncqt.pl if it finds a .git entry in the working directory
+	touch ${WRKSRC}/.git
 
 .      if ${PORTNAME} != "qmake"
 _QMAKE=			${CONFIGURE_WRKSRC}/bin/qmake
