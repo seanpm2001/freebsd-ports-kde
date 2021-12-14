@@ -111,12 +111,12 @@ _KDE_webview=		2
 _KDE_x11extras=		1
 _KDE_xmlpatterns=	2
 
-
 .if defined(_KDE_${_QT_DIST})
 # KDE patched Qt parts
 QT5_KDE_PATCH=		p${_KDE_${_QT_DIST}}
 MASTER_SITES=		LOCAL/tcberner/KDE/Qt/${_QT_VERSION}
 DISTNAME=		${_QT_DIST:S,^,kde-qt,:S,$,-${DISTVERSION},}
+COMMENT+=		(KDE patched)
 .else
 # non KDE patched Qt parts
 QT5_KDE_PATCH=		#
