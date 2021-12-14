@@ -3,7 +3,7 @@
 # needed; this port only installs some static files.
 
 PORTNAME=	qdoc-data
-PORTVERSION=	${QT5_VERSION}${QT5_KDE_PATCH}
+DISTVERSION=	${QT5_VERSION}
 CATEGORIES=	devel textproc
 MASTER_SITES=	QT/official_releases/qt/${QT5_VERSION:R}/${QT5_VERSION}/submodules/
 PKGNAMEPREFIX=	qt5-
@@ -26,7 +26,6 @@ NO_ARCH=	yes
 NO_BUILD=	yes
 
 DESCR=		${.CURDIR:H:H}/devel/qt5/pkg-descr
-DISTINFO_FILE=	${.CURDIR:H:H}/devel/qt5/distinfo
 
 do-install:
 	${MKDIR} ${STAGEDIR}${QT_DOCDIR} && \
