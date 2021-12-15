@@ -57,13 +57,6 @@ IGNORE=			Unsupported qt-dist ${_QT_DIST} for qt:${_QT_VER}
 ################################################################################
 
 # Set standard bsd.port.mk variables
-.  if ${_QT_VER:M5}
-MASTER_SITES=		LOCAL/tcberner/KDE/Qt/${_QT_VERSION}
-.  else
-MASTER_SITES=		${MASTER_SITE_QT}
-DISTINFO_FILE?=		${PORTSDIR}/devel/${_QT_RELNAME}/distinfo
-.  endif
-
 LICENSE?=		LGPL21
 
 .  if !exists(${PKGDIR}/pkg-descr)
