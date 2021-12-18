@@ -457,4 +457,10 @@ qt-post-install:
 		>> ${TMPPLIST}
 .    endif # ${QT_CONFIG:N-*}
 .  endif # M5
+
+qt-create-kde-distfile:
+	${SH} ${PORTSDIR}/devel/${_QT_RELNAME}/files/create_kde-qt_release.sh \
+		${_QT_DIST} \
+		${DISTDIR}/${DIST_SUBDIR}
+
 .endif # defined(_QT_DIST_MK_INCLUDED)
