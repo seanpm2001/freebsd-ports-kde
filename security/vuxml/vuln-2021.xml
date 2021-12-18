@@ -1,10 +1,225 @@
+  <vuln vid="1ea05bb8-5d74-11ec-bb1e-001517a2e1a4">
+    <topic>serviio -- affected by log4j vulnerability</topic>
+    <affects>
+      <package>
+	<name>serviio</name>
+	<range><lt>2.2.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Serviio reports:</p>
+	<blockquote cite="https://serviio.org/news/124-version-2-2-1-released">
+	  <p>Serviio is affectred by the log4j vulnerability.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-44228</cvename>
+    </references>
+    <dates>
+      <discovery>2021-12-13</discovery>
+      <entry>2021-12-15</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="897e1962-5d5a-11ec-a3ed-040e3c3cf7e7">
+    <topic>Privoxy -- Multiple vulnerabilities (memory leak, XSS)</topic>
+    <affects>
+      <package>
+	<name>dropbear</name>
+	<range><lt>3.0.33</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Privoxy reports:</p>
+	<blockquote cite="https://lists.privoxy.org/pipermail/privoxy-announce/2021-December/000009.html">
+	<p>cgi_error_no_template(): Encode the template name to prevent
+	    XSS (cross-site scripting) when Privoxy is configured to servce
+	    the user-manual itself.</p>
+	<p>Commit 0e668e9409c. OVE-20211102-0001. CVE-2021-44543.
+	    Reported by: Artem Ivanov</p>
+	<p>get_url_spec_param(): Free memory of compiled pattern spec
+	    before bailing.
+	    Reported by Joshua Rogers (Opera) who also provided the fix.
+	    Commit 652b4b7cb0. OVE-20211201-0003. CVE-2021-44540.</p>
+	<p>process_encrypted_request_headers(): Free header memory when
+	    failing to get the request destination.
+	    Reported by Joshua Rogers (Opera) who also provided the fix.
+	    Commit 0509c58045. OVE-20211201-0002. CVE-2021-44541.</p>
+	<p>send_http_request(): Prevent memory leaks when handling errors
+	    Reported by Joshua Rogers (Opera) who also provided the fix.
+	    Commit c48d1d6d08. OVE-20211201-0001. CVE-2021-44542.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-44540</cvename>
+      <cvename>CVE-2021-44541</cvename>
+      <cvename>CVE-2021-44542</cvename>
+      <cvename>CVE-2021-44543</cvename>
+      <url>https://lists.privoxy.org/pipermail/privoxy-announce/2021-December/000009.html</url>
+    </references>
+    <dates>
+      <discovery>2021-12-09</discovery>
+      <entry>2021-12-15</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="0132ca5b-5d11-11ec-8be6-d4c9ef517024">
+    <topic>OpenSSL -- Certificate validation issue</topic>
+    <affects>
+      <package>
+	<name>openssl-devel</name>
+	<range><lt>3.0.1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>The OpenSSL project reports:</p>
+	<blockquote cite="https://www.openssl.org/news/secadv/20211214.txt">
+	  <p>Invalid handling of X509_verify_cert() internal errors in libssl
+	    (Moderate)</p>
+	  <p>Internally libssl in OpenSSL calls X509_verify_cert() on the client
+	    side to verify a certificate supplied by a server. That function may
+	    return a negative return value to indicate an internal error (for
+	    example out of memory). Such a negative return value is mishandled by
+	    OpenSSL and will cause an IO function (such as SSL_connect() or
+	    SSL_do_handshake()) to not indicate success and a subsequent call to
+	    SSL_get_error() to return the value SSL_ERROR_WANT_RETRY_VERIFY.
+	    This return value is only supposed to be returned by OpenSSL if the
+	    application has previously called SSL_CTX_set_cert_verify_callback().
+	    Since most applications do not do this the
+	    SSL_ERROR_WANT_RETRY_VERIFY return value from SSL_get_error() will be
+	    totally unexpected and applications may not behave correctly as a
+	    result. The exact behaviour will depend on the application but it
+	    could result in crashes, infinite loops or other similar incorrect
+	    responses.</p>
+	  </blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-4044</cvename>
+      <url>https://www.openssl.org/news/secadv/20211214.txt</url>
+    </references>
+    <dates>
+      <discovery>2021-12-14</discovery>
+      <entry>2021-12-14</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="515df85a-5cd7-11ec-a16d-001517a2e1a4">
+    <topic>bastillion -- log4j vulnerability</topic>
+    <affects>
+      <package>
+	<name>bastillion</name>
+	<range><lt>3.10.00_1</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>FreeBSD port maintainer reports:</p>
+	<blockquote>
+	  <p>Bastillion uses log4j.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-44228</cvename>
+    </references>
+    <dates>
+      <discovery>2021-12-10</discovery>
+      <entry>2021-12-14</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="fb9ba490-5cc4-11ec-aac7-3065ec8fd3ec">
+    <topic>chromium -- multiple vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>chromium</name>
+	<range><lt>96.0.4664.110</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Chrome Releases reports:</p>
+	<blockquote cite="https://chromereleases.googleblog.com/2021/12/stable-channel-update-for-desktop_13.html">
+	  <p>This release contains 5 security fixes, including:</p>
+	  <ul>
+	    <li>[1263457] Critical CVE-2021-4098: Insufficient data validation
+	      in Mojo. Reported by Sergei Glazunov of Google Project Zero on
+	      2021-10-26</li>
+	    <li>[1270658] High CVE-2021-4099: Use after free in Swiftshader.
+	      Reported by Aki Helin of Solita on 2021-11-16</li>
+	    <li>[1272068] High CVE-2021-4100: Object lifecycle issue in ANGLE.
+	      Reported by Aki Helin of Solita on 2021-11-19</li>
+	    <li>[1262080] High CVE-2021-4101: Heap buffer overflow in
+	      Swiftshader. Reported by Abraruddin Khan and Omair on
+	      2021-10-21</li>
+	    <li>[1278387] High CVE-2021-4102: Use after free in V8. Reported by
+	      Anonymous on 2021-12-09</li>
+	  </ul>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <cvename>CVE-2021-4098</cvename>
+      <cvename>CVE-2021-4099</cvename>
+      <cvename>CVE-2021-4100</cvename>
+      <cvename>CVE-2021-4101</cvename>
+      <cvename>CVE-2021-4102</cvename>
+      <url>https://chromereleases.googleblog.com/2021/12/stable-channel-update-for-desktop_13.html</url>
+    </references>
+    <dates>
+      <discovery>2021-12-13</discovery>
+      <entry>2021-12-14</entry>
+    </dates>
+  </vuln>
+
+  <vuln vid="0dcf68fa-5c31-11ec-875e-901b0e9408dc">
+    <topic>Matrix clients -- several vulnerabilities</topic>
+    <affects>
+      <package>
+	<name>cinny</name>
+	<range><lt>1.6.0</lt></range>
+      </package>
+      <package>
+	<name>element-web</name>
+	<range><lt>1.9.7</lt></range>
+      </package>
+    </affects>
+    <description>
+      <body xmlns="http://www.w3.org/1999/xhtml">
+	<p>Matrix developers report:</p>
+	<blockquote cite="https://matrix.org/blog/2021/12/13/disclosure-buffer-overflow-in-libolm-and-matrix-js-sdk">
+	  <p>Today we are releasing security updates to libolm, matrix-js-sdk,
+	  and several clients including Element Web / Desktop. Users are
+	  encouraged to upgrade as soon as possible.</p>
+	  <p>These releases mitigate a buffer overflow in olm_session_describe,
+	  a libolm debugging function used by matrix-js-sdk in its end-to-end
+	  encryption (E2EE) implementation. If you rely on matrix-js-sdk for
+	  E2EE, you are affected.</p>
+	</blockquote>
+      </body>
+    </description>
+    <references>
+      <url>https://matrix.org/blog/2021/12/13/disclosure-buffer-overflow-in-libolm-and-matrix-js-sdk</url>
+    </references>
+    <dates>
+      <discovery>2021-12-03</discovery>
+      <entry>2021-12-13</entry>
+    </dates>
+  </vuln>
+
   <vuln vid="93a1c9a7-5bef-11ec-a47a-001517a2e1a4">
     <topic>openhab -- log4j remote code injection</topic>
     <affects>
       <package>
-        <name>openhab2</name>
+	<name>openhab2</name>
 	<name>openhab</name>
-        <range><le>2.5.12</le></range>
+	<range><le>2.5.12</le></range>
 	<range><lt>3.1.1</lt></range>
       </package>
     </affects>
@@ -41,7 +256,7 @@
 	<p>Solr reports:</p>
 	<blockquote cite="https://solr.apache.org/security.html">
 	  <p>Apache Solr affected by Apache Log4J</p>
-        </blockquote>
+	</blockquote>
       </body>
     </description>
     <references>
