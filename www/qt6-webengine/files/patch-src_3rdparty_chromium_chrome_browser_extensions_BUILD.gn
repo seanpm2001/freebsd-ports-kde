@@ -1,0 +1,15 @@
+--- src/3rdparty/chromium/chrome/browser/extensions/BUILD.gn.orig	2021-11-25 09:20:12 UTC
++++ src/3rdparty/chromium/chrome/browser/extensions/BUILD.gn
+@@ -1249,6 +1249,12 @@ static_library("extensions") {
+     ]
+   }
+ 
++  if (is_bsd) {
++    sources -= [
++      "api/image_writer_private/removable_storage_provider_linux.cc",
++    ]
++  }
++
+   if (enable_service_discovery) {
+     sources += [
+       "api/mdns/mdns_api.cc",

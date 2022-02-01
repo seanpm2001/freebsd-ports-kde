@@ -1,0 +1,10 @@
+--- src/3rdparty/chromium/content/common/common_sandbox_support_linux.cc.orig	2021-11-25 09:20:12 UTC
++++ src/3rdparty/chromium/content/common/common_sandbox_support_linux.cc
+@@ -5,6 +5,7 @@
+ #include "content/public/common/common_sandbox_support_linux.h"
+ 
+ #include <sys/stat.h>
++#include <unistd.h>
+ 
+ #include <limits>
+ #include <memory>

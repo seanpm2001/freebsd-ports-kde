@@ -1,0 +1,95 @@
+--- src/3rdparty/chromium/base/BUILD.gn.orig	2021-11-25 09:20:12 UTC
++++ src/3rdparty/chromium/base/BUILD.gn
+@@ -956,7 +956,7 @@ jumbo_component("base") {
+       "timer/hi_res_timer_manager_posix.cc",
+     ]
+ 
+-    if (!is_nacl && !is_apple) {
++    if (!is_nacl && !is_apple && !is_bsd) {
+       sources += [
+         "cpu_affinity_posix.cc",
+         "cpu_affinity_posix.h",
+@@ -967,6 +967,11 @@ jumbo_component("base") {
+         "profiler/thread_delegate_posix.h",
+       ]
+     }
++    if (is_bsd) {
++      sources += [
++        "profiler/stack_sampler_posix.cc",
++      ]
++    }
+   }
+ 
+   jumbo_excluded_sources = [
+@@ -1283,7 +1288,8 @@ jumbo_component("base") {
+       "process/process_metrics_linux.cc",
+       "threading/platform_thread_linux.cc",
+     ]
+-    jumbo_excluded_sources += [ "process/memory_linux.cc" ]
++    # XXX: Hmm...
++    #jumbo_excluded_sources += [ "process/memory_linux.cc" ]
+   }
+ 
+   if (!is_nacl) {
+@@ -1430,7 +1436,7 @@ jumbo_component("base") {
+           "allocator/allocator_shim_default_dispatch_to_mac_zoned_malloc.cc",
+         ]
+       }
+-      if (is_chromeos || is_linux) {
++      if ((is_chromeos || is_linux) && !is_bsd) {
+         sources += [ "allocator/allocator_shim_default_dispatch_to_glibc.cc" ]
+       }
+       if (is_win) {
+@@ -2069,6 +2075,34 @@ jumbo_component("base") {
+     }
+   }
+ 
++  if (is_bsd) {
++    sources -= [
++      "files/file_path_watcher_linux.cc",
++      "files/file_util_linux.cc",
++      "process/memory_linux.cc",
++      "process/process_handle_linux.cc",
++      "process/process_iterator_linux.cc",
++      "process/process_metrics_linux.cc",
++      "system/sys_info_linux.cc"
++    ]
++    sources += [
++      "files/file_path_watcher_freebsd.cc",
++      "files/file_path_watcher_kqueue.cc",
++      "files/file_path_watcher_kqueue.h",
++      "process/memory_stubs.cc",
++      "process/process_handle_freebsd.cc",
++      "process/process_iterator_freebsd.cc",
++      "process/process_metrics_freebsd.cc",
++      "system/sys_info_freebsd.cc",
++    ]
++    libs = [
++      "execinfo", # logging.cc
++      "kvm",      # process_metrics_freebsd
++      "util"      # process_metrics_freebsd
++    ]
++  }
++
++
+   # iOS
+   if (is_ios) {
+     sources -= [
+@@ -3255,7 +3289,7 @@ if (build_base_unittests) {
+       }
+     }
+ 
+-    if (is_linux || is_chromeos) {
++    if ((is_linux || is_chromeos) && !is_bsd) {
+       sources += [ "debug/proc_maps_linux_unittest.cc" ]
+     }
+ 
+@@ -3296,7 +3330,7 @@ if (build_base_unittests) {
+         "posix/unix_domain_socket_unittest.cc",
+         "task/thread_pool/task_tracker_posix_unittest.cc",
+       ]
+-      if (!is_nacl && !is_apple) {
++      if (!is_nacl && !is_apple && !is_bsd) {
+         sources += [
+           "cpu_affinity_posix_unittest.cc",
+           "profiler/stack_copier_signal_unittest.cc",

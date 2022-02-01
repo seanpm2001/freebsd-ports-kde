@@ -1,0 +1,18 @@
+--- src/3rdparty/chromium/content/browser/BUILD.gn.orig	2021-11-25 09:20:12 UTC
++++ src/3rdparty/chromium/content/browser/BUILD.gn
+@@ -2178,6 +2178,15 @@ jumbo_static_library("browser") {
+     deps += [ "//third_party/speech-dispatcher" ]
+   }
+ 
++  if (is_bsd) {
++    sources -= [
++      "sandbox_host_linux.cc",
++      "sandbox_host_linux.h",
++      "sandbox_ipc_linux.cc",
++      "sandbox_ipc_linux.h",
++    ]
++  }
++
+   # ChromeOS also defines linux but their memory-monitors conflict.
+   if (is_chromeos_ash) {
+     sources += [

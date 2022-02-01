@@ -1,0 +1,20 @@
+--- src/pdf/CMakeLists.txt.orig	2021-12-19 13:49:12 UTC
++++ src/pdf/CMakeLists.txt
+@@ -54,7 +54,7 @@ qt_internal_add_docs(Pdf
+ #   TOOLCHAIN SETUP
+ ##
+ 
+-if(LINUX)
++if(LINUX OR FREEBSD)
+     setup_toolchains()
+ endif()
+ 
+@@ -105,7 +105,7 @@ foreach(arch ${archs})
+           chrome_pgo_phase=0
+         )
+ 
+-        if(LINUX)
++        if(LINUX OR FREEBSD)
+           list(APPEND gnArgArg
+               use_x11=false
+               is_cfi=false
