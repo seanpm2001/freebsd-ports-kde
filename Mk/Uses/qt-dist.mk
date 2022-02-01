@@ -28,7 +28,7 @@ _QT5_DISTS=		3d activeqt androidextras base charts connectivity datavis3d \
 			serialport speech svg tools translations virtualkeyboard wayland \
 			webchannel webengine webglplugin websockets webview winextras \
 			x11extras xmlpatterns
-_QT6_DISTS=		3d 5compat base declarative doc imageformats quick3d quickcontrols2 quicktimeline networkauth shadertools svg tools translations wayland
+_QT6_DISTS=		3d 5compat base declarative doc imageformats quick3d quickcontrols2 quicktimeline networkauth shadertools svg tools translations webengine wayland
 
 _QT6_DIST_base_TAGNAME=	39d99c7
 _QT6_DIST_declarative_TAGNAME=	0efc634
@@ -140,6 +140,9 @@ MASTER_SITE_SUBDIR?=	official_releases/qt/${_QT_VERSION:R}/${_QT_VERSION}/submod
 DISTNAME=		${_QT_DIST:S,^,qt,:S,$,-everywhere-src-${DISTVERSION},}
 .    endif
 
+.  endif
+.  if ${_QT_VER:M6}
+DISTNAME=		${_QT_DIST:S,^,qt,:S,$,-everywhere-src-${DISTVERSION},}
 .  endif
 DISTFILES=		${DISTNAME:S,$,${EXTRACT_SUFX},}
 DIST_SUBDIR=		KDE/Qt/${_QT_VERSION}
