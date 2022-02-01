@@ -1,0 +1,36 @@
+--- src/3rdparty/chromium/content/common/BUILD.gn.orig	2021-11-25 09:20:12 UTC
++++ src/3rdparty/chromium/content/common/BUILD.gn
+@@ -352,7 +352,7 @@ jumbo_static_library("common") {
+     sources -= [ "cursors/webcursor_aura.cc" ]
+   }
+ 
+-  if (is_linux || is_chromeos) {
++  if ((is_linux || is_chromeos) && !is_bsd) {
+     sources += [
+       "common_sandbox_support_linux.cc",
+       "sandbox_init_linux.cc",
+@@ -367,6 +367,15 @@ jumbo_static_library("common") {
+     ]
+   }
+ 
++  if (is_bsd) {
++    sources += [
++      "common_sandbox_support_linux.cc",
++    ]
++    deps += [
++      "//third_party/fontconfig",
++    ]
++  }
++
+   if (use_zygote_handle) {
+     sources += [
+       "zygote/zygote_handle_impl_linux.h",
+@@ -418,7 +427,7 @@ jumbo_static_library("common") {
+   }
+ }
+ 
+-if (is_linux || is_chromeos) {
++if ((is_linux || is_chromeos) && !is_bsd) {
+   source_set("set_process_title_linux") {
+     public = [ "set_process_title_linux.h" ]
+     sources = [ "set_process_title_linux.cc" ]

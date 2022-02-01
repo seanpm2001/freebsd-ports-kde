@@ -1,0 +1,11 @@
+--- src/3rdparty/chromium/ui/gl/BUILD.gn.orig	2021-11-25 09:20:12 UTC
++++ src/3rdparty/chromium/ui/gl/BUILD.gn
+@@ -223,7 +223,7 @@ jumbo_component("gl") {
+       ]
+     }
+ 
+-    if (is_posix && !is_fuchsia && !is_mac) {
++    if (is_posix && !is_fuchsia && !is_mac && !is_bsd) {
+       # Windows has USE_EGL but doesn't support base::FileDescriptor.
+       # libsync isn't supported or needed on MacOSX.
+       # Fuchsia is excluded due to a libsync dependency and because it's

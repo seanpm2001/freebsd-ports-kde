@@ -1,0 +1,38 @@
+--- src/core/CMakeLists.txt.orig	2021-11-25 09:20:12 UTC
++++ src/core/CMakeLists.txt
+@@ -18,7 +18,7 @@ add_subdirectory(tools)
+ #   TOOLCHAIN SETUP
+ ##
+ 
+-if(LINUX)
++if(LINUX OR FREEBSD)
+     setup_toolchains()
+ endif()
+ 
+@@ -337,12 +337,13 @@ foreach(arch ${archs})
+             CONDITION QT_FEATURE_webengine_native_spellchecker
+         )
+ 
+-        if(LINUX)
++        if(LINUX OR FREEBSD)
+             list(APPEND gnArgArg
+                 use_cups=false
+                 use_gio=false
+                 use_gnome_keyring=false
+-                use_udev=true
++		# XXX Hmm... true or false?
++                use_udev=false
+                 use_bundled_fontconfig=false
+                 enable_session_service=false
+                 is_cfi=false
+@@ -391,6 +392,10 @@ foreach(arch ${archs})
+             extend_gn_list(gnArgArg
+                 ARGS use_pulseaudio
+                 CONDITION QT_FEATURE_webengine_system_pulseaudio
++            )
++            extend_gn_list(gnArgArg
++                ARGS use_sndio
++                CONDITION QT_FEATURE_webengine_system_sndio
+             )
+             extend_gn_list(gnArgArg
+                 ARGS ozone_platform_x11 use_xkbcommon

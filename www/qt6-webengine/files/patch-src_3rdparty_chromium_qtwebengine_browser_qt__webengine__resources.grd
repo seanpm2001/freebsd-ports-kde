@@ -1,0 +1,11 @@
+--- src/3rdparty/chromium/qtwebengine/browser/qt_webengine_resources.grd.orig	2021-12-22 21:41:53 UTC
++++ src/3rdparty/chromium/qtwebengine/browser/qt_webengine_resources.grd
+@@ -17,7 +17,7 @@
+       <if expr="enable_plugins">
+         <include name="IDR_PDF_MANIFEST" file="../../chrome/browser/resources/pdf/manifest.json" type="BINDATA" />
+       </if>
+-      <if expr="is_android or is_linux">
++      <if expr="is_android or is_posix">
+         <include name="IDR_SANDBOX_INTERNALS_HTML" file="../../chrome/browser/resources/sandbox_internals/sandbox_internals.html" preprocess="true" type="BINDATA" />
+         <include name="IDR_SANDBOX_INTERNALS_JS" file="../../chrome/browser/resources/sandbox_internals/sandbox_internals.js" preprocess="true" type="BINDATA"  />
+       </if>
