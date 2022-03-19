@@ -1,0 +1,35 @@
+From 2dc734aab2fc289320d7156f321eddb220dbf537 Mon Sep 17 00:00:00 2001
+From: "Tobias C. Berner" <tcberner@FreeBSD.org>
+Date: Sat, 19 Mar 2022 10:40:07 +0100
+Subject: [PATCH] FreeBSD: add KF5::AkonadiCore as a PUBLIC dependency
+
+According to [1] for PRIVATE dependencies the usage requirements are not
+propagated to consumer.
+
+[1] https://cmake.org/cmake/help/v3.0/manual/cmake-buildsystem.7.html#transitive-usage-requirements
+---
+ src/CMakeLists.txt | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git src/CMakeLists.txt src/CMakeLists.txt
+index c52963931..5f94f93d8 100644
+--- src/CMakeLists.txt
++++ src/CMakeLists.txt
+@@ -400,12 +400,13 @@ endif()
+ 
+ generate_export_header(kmailprivate BASE_NAME kmail)
+ target_link_libraries(kmailprivate
++    PUBLIC
++    KF5::AkonadiCore
+     PRIVATE
+     KF5::TextWidgets
+     KF5::I18n
+     KF5::Gravatar
+     KF5::Mime
+-    KF5::AkonadiCore
+     KF5::AkonadiMime
+     KF5::MessageCore
+     KF5::MessageList
+-- 
+2.35.1
+
