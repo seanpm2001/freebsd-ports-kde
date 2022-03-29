@@ -2732,7 +2732,6 @@
     SUBDIR += p5-Log-Agent
     SUBDIR += p5-Log-Agent-Logger
     SUBDIR += p5-Log-Any
-    SUBDIR += p5-Log-Any-Adapter-Callback
     SUBDIR += p5-Log-Any-Adapter-Dispatch
     SUBDIR += p5-Log-Any-Adapter-Log4perl
     SUBDIR += p5-Log-Any-App
@@ -4147,6 +4146,7 @@
     SUBDIR += py-aiorpcX
     SUBDIR += py-aiorpcX-legacy
     SUBDIR += py-aiortc
+    SUBDIR += py-aiosignal
     SUBDIR += py-amalgamate
     SUBDIR += py-aniso8601
     SUBDIR += py-aniso86016
@@ -4179,7 +4179,6 @@
     SUBDIR += py-astunparse
     SUBDIR += py-async_generator
     SUBDIR += py-async_timeout
-    SUBDIR += py-asyncio
     SUBDIR += py-asynctest
     SUBDIR += py-atomiclong
     SUBDIR += py-atomicwrites
@@ -4452,7 +4451,6 @@
     SUBDIR += py-debugpy
     SUBDIR += py-debugtools
     SUBDIR += py-decorator
-    SUBDIR += py-decorator4
     SUBDIR += py-decoratortools
     SUBDIR += py-deepdiff
     SUBDIR += py-deepmerge
@@ -4492,6 +4490,7 @@
     SUBDIR += py-enum-compat
     SUBDIR += py-envisage
     SUBDIR += py-envs
+    SUBDIR += py-epc
     SUBDIR += py-epdb
     SUBDIR += py-epsilon
     SUBDIR += py-evdev
@@ -4829,6 +4828,7 @@
     SUBDIR += py-nose-timer
     SUBDIR += py-nose2
     SUBDIR += py-nosexcover
+    SUBDIR += py-notebook-shim
     SUBDIR += py-notify2
     SUBDIR += py-num2words
     SUBDIR += py-numba
@@ -5105,6 +5105,7 @@
     SUBDIR += py-pytest-rerunfailures
     SUBDIR += py-pytest-runner
     SUBDIR += py-pytest-shutil
+    SUBDIR += py-pytest-subtests
     SUBDIR += py-pytest-sugar
     SUBDIR += py-pytest-timeout
     SUBDIR += py-pytest-tornado
@@ -5856,6 +5857,7 @@
     SUBDIR += rubygem-aws-sdk-kafka
     SUBDIR += rubygem-aws-sdk-kafkaconnect
     SUBDIR += rubygem-aws-sdk-kendra
+    SUBDIR += rubygem-aws-sdk-keyspaces
     SUBDIR += rubygem-aws-sdk-kinesis
     SUBDIR += rubygem-aws-sdk-kinesisanalytics
     SUBDIR += rubygem-aws-sdk-kinesisanalyticsv2
@@ -6303,6 +6305,7 @@
     SUBDIR += rubygem-equatable
     SUBDIR += rubygem-erb
     SUBDIR += rubygem-errand
+    SUBDIR += rubygem-error_highlight
     SUBDIR += rubygem-et-orbi
     SUBDIR += rubygem-etc
     SUBDIR += rubygem-event_emitter
@@ -6528,6 +6531,7 @@
     SUBDIR += rubygem-manpages
     SUBDIR += rubygem-map
     SUBDIR += rubygem-marcel
+    SUBDIR += rubygem-memo_wise
     SUBDIR += rubygem-memoist
     SUBDIR += rubygem-memoizable
     SUBDIR += rubygem-memoize
@@ -6662,6 +6666,7 @@
     SUBDIR += rubygem-puppet-resource_api
     SUBDIR += rubygem-pygments.rb
     SUBDIR += rubygem-que
+    SUBDIR += rubygem-que-scheduler
     SUBDIR += rubygem-r18n-core
     SUBDIR += rubygem-r18n-desktop
     SUBDIR += rubygem-r18n-rails
@@ -6787,7 +6792,11 @@
     SUBDIR += rubygem-semi_semantic
     SUBDIR += rubygem-semver2
     SUBDIR += rubygem-semverse
+    SUBDIR += rubygem-sentry-rails
     SUBDIR += rubygem-sentry-raven
+    SUBDIR += rubygem-sentry-ruby
+    SUBDIR += rubygem-sentry-ruby-core
+    SUBDIR += rubygem-sentry-sidekiq
     SUBDIR += rubygem-sequel
     SUBDIR += rubygem-set
     SUBDIR += rubygem-settingslogic
@@ -6947,6 +6956,7 @@
     SUBDIR += rubygem-validate_url
     SUBDIR += rubygem-validates_timeliness
     SUBDIR += rubygem-versionomy
+    SUBDIR += rubygem-view_component-rails61
     SUBDIR += rubygem-virtus
     SUBDIR += rubygem-warbler
     SUBDIR += rubygem-warden

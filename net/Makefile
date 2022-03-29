@@ -368,6 +368,7 @@
     SUBDIR += libgravatar
     SUBDIR += libgrss
     SUBDIR += libgweather
+    SUBDIR += libgweather4
     SUBDIR += libilbc
     SUBDIR += libiscsi
     SUBDIR += libkgapi
@@ -1564,6 +1565,7 @@
     SUBDIR += wireguard-go
     SUBDIR += wireguard-kmod
     SUBDIR += wireguard-tools
+    SUBDIR += wireproxy
     SUBDIR += wireshark
     SUBDIR += wireshark-lite
     SUBDIR += wlan2eth
