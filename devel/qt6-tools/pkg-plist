@@ -328,7 +328,7 @@ bin/qtplugininfo6
 %%QT_BINDIR%%/designer
 %%QT_BINDIR%%/lconvert
 %%QT_BINDIR%%/linguist
-%%QT_BINDIR%%/l%%CMAKE_BUILD_TYPE%%
+%%QT_BINDIR%%/lrelease
 %%QT_BINDIR%%/lupdate
 %%QT_BINDIR%%/pixeltool
 %%QT_BINDIR%%/qdbus

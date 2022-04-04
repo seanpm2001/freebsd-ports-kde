@@ -359,6 +359,7 @@ bin/qmlpreview6
 %%QT_INCDIR%%/QtQmlCompiler/%%FULLVER%%/QtQmlCompiler/private/qqmljsmetatypes_p.h
 %%QT_INCDIR%%/QtQmlCompiler/%%FULLVER%%/QtQmlCompiler/private/qqmljsresourcefilemapper_p.h
 %%QT_INCDIR%%/QtQmlCompiler/%%FULLVER%%/QtQmlCompiler/private/qqmljsscope_p.h
+%%QT_INCDIR%%/QtQmlCompiler/%%FULLVER%%/QtQmlCompiler/private/qqmljsscopesbyid_p.h
 %%QT_INCDIR%%/QtQmlCompiler/%%FULLVER%%/QtQmlCompiler/private/qqmljsstreamwriter_p.h
 %%QT_INCDIR%%/QtQmlCompiler/%%FULLVER%%/QtQmlCompiler/private/qqmljstypedescriptionreader_p.h
 %%QT_INCDIR%%/QtQmlCompiler/%%FULLVER%%/QtQmlCompiler/private/qqmljstypereader_p.h
