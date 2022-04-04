@@ -322,42 +322,6 @@
 %%QT_CMAKEDIR%%/Qt6Gui/Qt6QWaylandXCompositeGlxPlatformIntegrationPluginConfigVersionImpl.cmake
 %%QT_CMAKEDIR%%/Qt6Gui/Qt6QWaylandXCompositeGlxPlatformIntegrationPluginTargets-%%CMAKE_BUILD_TYPE%%.cmake
 %%QT_CMAKEDIR%%/Qt6Gui/Qt6QWaylandXCompositeGlxPlatformIntegrationPluginTargets.cmake
-%%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins/Qt6WaylandCompositorIviapplicationAdditionalTargetInfo.cmake
-%%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins/Qt6WaylandCompositorIviapplicationConfig.cmake
-%%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins/Qt6WaylandCompositorIviapplicationConfigVersion.cmake
-%%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins/Qt6WaylandCompositorIviapplicationConfigVersionImpl.cmake
-%%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins/Qt6WaylandCompositorIviapplicationTargets-%%CMAKE_BUILD_TYPE%%.cmake
-%%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins/Qt6WaylandCompositorIviapplicationTargets.cmake
-%%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins/Qt6WaylandCompositorWLShellAdditionalTargetInfo.cmake
-%%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins/Qt6WaylandCompositorWLShellConfig.cmake
-%%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins/Qt6WaylandCompositorWLShellConfigVersion.cmake
-%%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins/Qt6WaylandCompositorWLShellConfigVersionImpl.cmake
-%%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins/Qt6WaylandCompositorWLShellTargets-%%CMAKE_BUILD_TYPE%%.cmake
-%%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins/Qt6WaylandCompositorWLShellTargets.cmake
-%%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins/Qt6WaylandCompositorXdgShellAdditionalTargetInfo.cmake
-%%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins/Qt6WaylandCompositorXdgShellConfig.cmake
-%%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins/Qt6WaylandCompositorXdgShellConfigVersion.cmake
-%%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins/Qt6WaylandCompositorXdgShellConfigVersionImpl.cmake
-%%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins/Qt6WaylandCompositorXdgShellTargets-%%CMAKE_BUILD_TYPE%%.cmake
-%%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins/Qt6WaylandCompositorXdgShellTargets.cmake
-%%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins/Qt6WaylandTextureSharingAdditionalTargetInfo.cmake
-%%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins/Qt6WaylandTextureSharingConfig.cmake
-%%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins/Qt6WaylandTextureSharingConfigVersion.cmake
-%%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins/Qt6WaylandTextureSharingConfigVersionImpl.cmake
-%%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins/Qt6WaylandTextureSharingExtensionAdditionalTargetInfo.cmake
-%%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins/Qt6WaylandTextureSharingExtensionConfig.cmake
-%%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins/Qt6WaylandTextureSharingExtensionConfigVersion.cmake
-%%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins/Qt6WaylandTextureSharingExtensionConfigVersionImpl.cmake
-%%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins/Qt6WaylandTextureSharingExtensionTargets-%%CMAKE_BUILD_TYPE%%.cmake
-%%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins/Qt6WaylandTextureSharingExtensionTargets.cmake
-%%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins/Qt6WaylandTextureSharingTargets-%%CMAKE_BUILD_TYPE%%.cmake
-%%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins/Qt6WaylandTextureSharingTargets.cmake
-%%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins/Qt6qwaylandcompositorpluginAdditionalTargetInfo.cmake
-%%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins/Qt6qwaylandcompositorpluginConfig.cmake
-%%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins/Qt6qwaylandcompositorpluginConfigVersion.cmake
-%%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins/Qt6qwaylandcompositorpluginConfigVersionImpl.cmake
-%%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins/Qt6qwaylandcompositorpluginTargets-%%CMAKE_BUILD_TYPE%%.cmake
-%%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins/Qt6qwaylandcompositorpluginTargets.cmake
 %%QT_CMAKEDIR%%/Qt6WaylandClient/Qt6QWaylandBradientDecorationPluginAdditionalTargetInfo.cmake
 %%QT_CMAKEDIR%%/Qt6WaylandClient/Qt6QWaylandBradientDecorationPluginConfig.cmake
 %%QT_CMAKEDIR%%/Qt6WaylandClient/Qt6QWaylandBradientDecorationPluginConfigVersion.cmake
@@ -542,24 +506,6 @@
 %%QT_PLUGINDIR%%/wayland-shell-integration/libivi-shell.so
 %%QT_PLUGINDIR%%/wayland-shell-integration/libwl-shell-plugin.so
 %%QT_PLUGINDIR%%/wayland-shell-integration/libxdg-shell.so
-%%QT_QMLDIR%%/QtWayland/Client/TextureSharing/libwaylandtexturesharingplugin.so
-%%QT_QMLDIR%%/QtWayland/Client/TextureSharing/qmldir
-%%QT_QMLDIR%%/QtWayland/Compositor/IviApplication/libwaylandcompositoriviapplicationplugin.so
-%%QT_QMLDIR%%/QtWayland/Compositor/IviApplication/plugins.qmltypes
-%%QT_QMLDIR%%/QtWayland/Compositor/IviApplication/qmldir
-%%QT_QMLDIR%%/QtWayland/Compositor/TextureSharingExtension/libwaylandtexturesharingextensionplugin.so
-%%QT_QMLDIR%%/QtWayland/Compositor/TextureSharingExtension/qmldir
-%%QT_QMLDIR%%/QtWayland/Compositor/WaylandCompositor.qmltypes
-%%QT_QMLDIR%%/QtWayland/Compositor/WlShell/libwaylandcompositorwlshellplugin.so
-%%QT_QMLDIR%%/QtWayland/Compositor/WlShell/plugins.qmltypes
-%%QT_QMLDIR%%/QtWayland/Compositor/WlShell/qmldir
-%%QT_QMLDIR%%/QtWayland/Compositor/XdgShell/libwaylandcompositorxdgshellplugin.so
-%%QT_QMLDIR%%/QtWayland/Compositor/XdgShell/plugins.qmltypes
-%%QT_QMLDIR%%/QtWayland/Compositor/XdgShell/qmldir
-%%QT_QMLDIR%%/QtWayland/Compositor/libqwaylandcompositorplugin.so
-%%QT_QMLDIR%%/QtWayland/Compositor/qmldir
-%%QT_QMLDIR%%/QtWayland/Compositor/qmlfiles/WaylandCursorItem.qml
-%%QT_QMLDIR%%/QtWayland/Compositor/qmlfiles/WaylandOutputWindow.qml
 %%QT_LIBEXECDIR%%/qtwaylandscanner
 %%QT_DATADIR%%/modules/WaylandClient.json
 %%QT_DATADIR%%/modules/WaylandCompositor.json
@@ -568,7 +514,6 @@
 %%QT_DATADIR%%/modules/WlShellIntegrationPrivate.json
 @dir %%QT_LIBDIR%%/cmake/Qt6BuildInternals/StandaloneTests
 @dir %%QT_LIBDIR%%/cmake/Qt6Gui
-@dir %%QT_LIBDIR%%/cmake/Qt6Qml/QmlPlugins
 @dir %%QT_LIBDIR%%/cmake/Qt6WaylandClient
 @dir %%QT_LIBDIR%%/cmake/Qt6WaylandCompositor
 @dir %%QT_LIBDIR%%/cmake/Qt6WaylandEglClientHwIntegrationPrivate

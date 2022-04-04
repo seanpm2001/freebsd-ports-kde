@@ -4,7 +4,6 @@ bin/linguist6
 bin/pixeltool6
 bin/qdbus6
 bin/qdbusviewer6
-bin/qdistancefieldgenerator6
 bin/qdoc6
 bin/qtdiag6
 bin/qtplugininfo6
@@ -262,12 +261,6 @@ bin/qtplugininfo6
 %%QT_CMAKEDIR%%/Qt6Designer/Qt6DesignerTargets-%%CMAKE_BUILD_TYPE%%.cmake
 %%QT_CMAKEDIR%%/Qt6Designer/Qt6DesignerTargets.cmake
 %%QT_CMAKEDIR%%/Qt6Designer/Qt6DesignerVersionlessTargets.cmake
-%%QT_CMAKEDIR%%/Qt6Designer/Qt6QQuickWidgetPluginAdditionalTargetInfo.cmake
-%%QT_CMAKEDIR%%/Qt6Designer/Qt6QQuickWidgetPluginConfig.cmake
-%%QT_CMAKEDIR%%/Qt6Designer/Qt6QQuickWidgetPluginConfigVersion.cmake
-%%QT_CMAKEDIR%%/Qt6Designer/Qt6QQuickWidgetPluginConfigVersionImpl.cmake
-%%QT_CMAKEDIR%%/Qt6Designer/Qt6QQuickWidgetPluginTargets-%%CMAKE_BUILD_TYPE%%.cmake
-%%QT_CMAKEDIR%%/Qt6Designer/Qt6QQuickWidgetPluginTargets.cmake
 %%QT_CMAKEDIR%%/Qt6DesignerComponentsPrivate/Qt6DesignerComponentsPrivateAdditionalTargetInfo.cmake
 %%QT_CMAKEDIR%%/Qt6DesignerComponentsPrivate/Qt6DesignerComponentsPrivateConfig.cmake
 %%QT_CMAKEDIR%%/Qt6DesignerComponentsPrivate/Qt6DesignerComponentsPrivateConfigVersion.cmake
@@ -335,12 +328,11 @@ bin/qtplugininfo6
 %%QT_BINDIR%%/designer
 %%QT_BINDIR%%/lconvert
 %%QT_BINDIR%%/linguist
-%%QT_BINDIR%%/lrelease
+%%QT_BINDIR%%/l%%CMAKE_BUILD_TYPE%%
 %%QT_BINDIR%%/lupdate
 %%QT_BINDIR%%/pixeltool
 %%QT_BINDIR%%/qdbus
 %%QT_BINDIR%%/qdbusviewer
-%%QT_BINDIR%%/qdistancefieldgenerator
 %%QT_BINDIR%%/qdoc
 %%QT_BINDIR%%/qhelpgenerator
 %%QT_BINDIR%%/qtdiag
@@ -377,9 +369,8 @@ bin/qtplugininfo6
 %%QT_MKSPECDIR%%/modules/qt_lib_uiplugin.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_uitools.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_uitools_private.pri
-%%QT_PLUGINDIR%%/designer/libqquickwidget.so
 %%QT_LIBEXECDIR%%/lprodump
-%%QT_LIBEXECDIR%%/lrelease-pro
+%%QT_LIBEXECDIR%%/l%%CMAKE_BUILD_TYPE%%-pro
 %%QT_LIBEXECDIR%%/lupdate-pro
 %%QT_LIBEXECDIR%%/qtattributionsscanner
 %%QT_DATADIR%%/modules/Designer.json

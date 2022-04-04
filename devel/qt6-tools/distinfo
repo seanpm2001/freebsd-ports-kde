@@ -1,3 +1,3 @@
-TIMESTAMP = 1638607006
-SHA256 (KDE/Qt/6.2.2/qttools-everywhere-src-6.2.2.tar.xz) = c0542ecb4a0aec21246a1cb5cd9f8f51b368929ce2065a455b13c3b47a94ecd1
-SIZE (KDE/Qt/6.2.2/qttools-everywhere-src-6.2.2.tar.xz) = 8622800
+TIMESTAMP = 1648809845
+SHA256 (qttools-everywhere-src-6.2.2.tar.xz) = c0542ecb4a0aec21246a1cb5cd9f8f51b368929ce2065a455b13c3b47a94ecd1
+SIZE (qttools-everywhere-src-6.2.2.tar.xz) = 8622800
