@@ -1,7 +1,7 @@
 # Created by: Koop Mast <kwm@FreeBSD.org>
 
 PORTNAME=	evolution-ews
-DISTVERSION=	3.42.4
+DISTVERSION=	3.44.0
 PORTREVISION=	1
 CATEGORIES=	mail gnome
 MASTER_SITES=	GNOME
@@ -28,7 +28,7 @@ RUN_DEPENDS=	evolution>=3.0.0:mail/evolution
 
 PORTSCOUT=	limitw:1,even
 
-USES=		bdb:5 compiler:c11 cmake gettext gnome localbase pathfix \
+USES=		compiler:c11 cmake gettext gnome localbase pathfix \
 		pkgconfig sqlite tar:xz
 USE_GNOME=	cairo gdkpixbuf2 evolutiondataserver3 intltool
 
