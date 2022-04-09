@@ -1663,6 +1663,7 @@
     SUBDIR += ocaml-uutf
     SUBDIR += ocaml-xstr
     SUBDIR += ocaml-xstrp4
+    SUBDIR += oci-cli
     SUBDIR += ocl-icd
     SUBDIR += oclgrind
     SUBDIR += ode
@@ -4821,6 +4822,7 @@
     SUBDIR += py-notify2
     SUBDIR += py-num2words
     SUBDIR += py-numba
+    SUBDIR += py-objgraph
     SUBDIR += py-oci
     SUBDIR += py-odfpy
     SUBDIR += py-offtrac
@@ -5051,6 +5053,7 @@
     SUBDIR += py-pyrsistent
     SUBDIR += py-pysdl2
     SUBDIR += py-pyshp
+    SUBDIR += py-pysimdjson
     SUBDIR += py-pysparklines
     SUBDIR += py-pystorm
     SUBDIR += py-pyte
@@ -5107,7 +5110,9 @@
     SUBDIR += py-pytest-xprocess
     SUBDIR += py-pytest4
     SUBDIR += py-pytest4-asyncio
+    SUBDIR += py-pytest4-cache
     SUBDIR += py-pytest4-cov
+    SUBDIR += py-pytest4-flakes
     SUBDIR += py-python-Levenshtein
     SUBDIR += py-python-application
     SUBDIR += py-python-bugzilla
@@ -5522,6 +5527,7 @@
     SUBDIR += qbs
     SUBDIR += qca
     SUBDIR += qconf
+    SUBDIR += qcoro
     SUBDIR += qgit
     SUBDIR += qjson
     SUBDIR += qmake
