@@ -1,3 +1,3 @@
-TIMESTAMP = 1647622442
-SHA256 (KDE/release-service/22.03.80/ktp-common-internals-22.03.80.tar.xz) = 52581cdf2842387b3cd0151385f86a9e36d847e535d1688b2624ef6244c3c009
-SIZE (KDE/release-service/22.03.80/ktp-common-internals-22.03.80.tar.xz) = 451032
+TIMESTAMP = 1649486716
+SHA256 (KDE/release-service/22.03.90/ktp-common-internals-22.03.90.tar.xz) = d6daaef4434448c994f8a17a407921d19a5b2981a2288fb847193e3d1985cd1b
+SIZE (KDE/release-service/22.03.90/ktp-common-internals-22.03.90.tar.xz) = 451220
