@@ -1,3 +1,3 @@
-TIMESTAMP = 1649486813
-SHA256 (KDE/release-service/22.03.90/kpublictransport-22.03.90.tar.xz) = a5783dca474e9a5cf24645d23bcaa7e5c438bb48e000d5b8ed8c420c5bc9c75f
-SIZE (KDE/release-service/22.03.90/kpublictransport-22.03.90.tar.xz) = 484784
+TIMESTAMP = 1650101911
+SHA256 (KDE/release-service/22.04.0/kpublictransport-22.04.0.tar.xz) = 2cd710e123067e738ec00723e42e6e50d8392eda3bc9771b5f9c88fcd9f987d9
+SIZE (KDE/release-service/22.04.0/kpublictransport-22.04.0.tar.xz) = 484884

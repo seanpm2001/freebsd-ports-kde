@@ -1,3 +1,3 @@
-TIMESTAMP = 1649486748
-SHA256 (KDE/release-service/22.03.90/kget-22.03.90.tar.xz) = 22f29b274e24eaca760a1b50a5ba362266249a4a12dba3ddde1f8764bcea1cab
-SIZE (KDE/release-service/22.03.90/kget-22.03.90.tar.xz) = 5432588
+TIMESTAMP = 1650101863
+SHA256 (KDE/release-service/22.04.0/kget-22.04.0.tar.xz) = adc18801658abe983aa8759f6a1899e69b64a8c4d1a761b0cf101523161e4707
+SIZE (KDE/release-service/22.04.0/kget-22.04.0.tar.xz) = 5432724

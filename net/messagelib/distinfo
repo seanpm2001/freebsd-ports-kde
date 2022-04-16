@@ -1,3 +1,3 @@
-TIMESTAMP = 1649486761
-SHA256 (KDE/release-service/22.03.90/messagelib-22.03.90.tar.xz) = 52d7ac0b0749f2bb1e3e726bbb123eff1f3126278f4686565e981a30806f5ebe
-SIZE (KDE/release-service/22.03.90/messagelib-22.03.90.tar.xz) = 10881440
+TIMESTAMP = 1650101873
+SHA256 (KDE/release-service/22.04.0/messagelib-22.04.0.tar.xz) = 6bcee7def27caab7b44e8100392655ab882f05e20ba454de06712365c4c6c95b
+SIZE (KDE/release-service/22.04.0/messagelib-22.04.0.tar.xz) = 10844100
