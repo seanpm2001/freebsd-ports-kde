@@ -17542,3 +17542,5 @@ print/py-pdf|print/py-pypdf|2022-08-27|Rename to match upstream naming
 shells/ksh93-devel|shells/ksh-devel|2022-08-28|Development has resumed under a new GH account
 devel/boehm-gc-redirect||2022-08-29|No consumer in ports tree
 devel/libthreader|devel/libthreadar|2022-08-29|Fix directory name
+net/gstreamer1-plugins-libmms|2022-08-26|Microsoft deprecated MMS in 2003
+x11/plasma5-kwayland-server|x11-wm/plasma5-kwin|2022-08-31|Reintegrated into kwin
