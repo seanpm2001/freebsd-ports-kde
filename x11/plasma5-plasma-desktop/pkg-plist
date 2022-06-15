@@ -16,9 +16,11 @@ lib/libexec/kauth/kcmdatetimehelper
 %%QT_PLUGINDIR%%/kf5/kded/keyboard.so
 %%QT_PLUGINDIR%%/kf5/krunner/krunner_kwin.so
 %%QT_PLUGINDIR%%/kf5/krunner/krunner_plasma-desktop.so
+%%QT_PLUGINDIR%%/plasma/applets/org.kde.plasma.marginsseparator.so
 %%QT_PLUGINDIR%%/plasma/dataengine/plasma_engine_touchpad.so
 %%QT_PLUGINDIR%%/plasma/kcminit/kcm_mouse_init.so
 %%QT_PLUGINDIR%%/plasma/kcminit/kcm_touchpad_init.so
+%%QT_PLUGINDIR%%/plasma/kcms/desktop/kcm_krunnersettings.so
 %%QT_PLUGINDIR%%/plasma/kcms/systemsettings/kcm_access.so
 %%QT_PLUGINDIR%%/plasma/kcms/systemsettings/kcm_baloofile.so
 %%QT_PLUGINDIR%%/plasma/kcms/systemsettings/kcm_componentchooser.so
@@ -59,7 +61,6 @@ lib/libexec/kauth/kcmdatetimehelper
 %%QT_QMLDIR%%/org/kde/private/desktopcontainment/desktop/qmldir
 %%QT_QMLDIR%%/org/kde/private/desktopcontainment/folder/libfolderplugin.so
 %%QT_QMLDIR%%/org/kde/private/desktopcontainment/folder/qmldir
-share/applications/kcm_touchpad.desktop
 share/applications/kcm_access.desktop
 share/applications/kcm_activities.desktop
 share/applications/kcm_baloofile.desktop
@@ -70,6 +71,7 @@ share/applications/kcm_device_automounter.desktop
 share/applications/kcm_kded.desktop
 share/applications/kcm_keyboard.desktop
 share/applications/kcm_keys.desktop
+share/applications/kcm_krunnersettings.desktop
 share/applications/kcm_launchfeedback.desktop
 share/applications/kcm_mouse.desktop
 share/applications/kcm_plasmasearch.desktop
@@ -77,6 +79,7 @@ share/applications/kcm_qtquicksettings.desktop
 share/applications/kcm_smserver.desktop
 share/applications/kcm_solid_actions.desktop
 share/applications/kcm_splashscreen.desktop
+share/applications/kcm_touchpad.desktop
 share/applications/kcm_tablet.desktop
 share/applications/kcm_workspace.desktop
 share/applications/kcmspellchecking.desktop
@@ -87,10 +90,12 @@ share/config.kcfg/kcmaccessibilitybell.kcfg
 share/config.kcfg/kcmaccessibilitykeyboard.kcfg
 share/config.kcfg/kcmaccessibilitymouse.kcfg
 share/config.kcfg/kcmaccessibilityscreenreader.kcfg
+share/config.kcfg/krunnersettingsbase.kcfg
 share/config.kcfg/landingpage_kdeglobalssettings.kcfg
 share/config.kcfg/launchfeedbacksettingsbase.kcfg
 share/config.kcfg/splashscreensettings.kcfg
 share/config.kcfg/workspaceoptions_kdeglobalssettings.kcfg
+share/config.kcfg/workspaceoptions_kwinsettings.kcfg
 share/config.kcfg/workspaceoptions_plasmasettings.kcfg
 share/dbus-1/interfaces/org.kde.touchpad.xml
 share/dbus-1/system-services/org.kde.kcontrol.kcmclock.service
@@ -554,6 +559,8 @@ share/doc/HTML/ru/kcontrol/joystick/joystick-calibration.png
 share/doc/HTML/ru/kcontrol/joystick/joystick-main.png
 share/doc/HTML/ru/kcontrol/kcmaccess/index.cache.bz2
 share/doc/HTML/ru/kcontrol/kcmaccess/index.docbook
+share/doc/HTML/ru/kcontrol/kcmactivities/index.cache.bz2
+share/doc/HTML/ru/kcontrol/kcmactivities/index.docbook
 share/doc/HTML/ru/kcontrol/kcmlaunchfeedback/index.cache.bz2
 share/doc/HTML/ru/kcontrol/kcmlaunchfeedback/index.docbook
 share/doc/HTML/ru/kcontrol/kcmsmserver/index.cache.bz2
@@ -582,6 +589,8 @@ share/doc/HTML/ru/kcontrol/splashscreen/get-new-theme.png
 share/doc/HTML/ru/kcontrol/splashscreen/index.cache.bz2
 share/doc/HTML/ru/kcontrol/splashscreen/index.docbook
 share/doc/HTML/ru/kcontrol/splashscreen/splash-main.png
+share/doc/HTML/ru/kfontview/index.cache.bz2
+share/doc/HTML/ru/kfontview/index.docbook
 share/doc/HTML/ru/knetattach/index.cache.bz2
 share/doc/HTML/ru/knetattach/index.docbook
 share/doc/HTML/ru/plasma-desktop/index.cache.bz2
@@ -758,6 +767,7 @@ share/kpackage/kcms/kcm_componentchooser/contents/ui/ComponentComboBox.qml
 share/kpackage/kcms/kcm_componentchooser/contents/ui/main.qml
 share/kpackage/kcms/kcm_keys/contents/ui/ShortcutActionDelegate.qml
 share/kpackage/kcms/kcm_keys/contents/ui/main.qml
+share/kpackage/kcms/kcm_krunnersettings/contents/ui/main.qml
 share/kpackage/kcms/kcm_landingpage/contents/ui/FeedbackControls.qml
 share/kpackage/kcms/kcm_landingpage/contents/ui/MostUsedIcon.qml
 share/kpackage/kcms/kcm_landingpage/contents/ui/Thumbnail.qml
@@ -2662,6 +2672,7 @@ share/locale/pt/LC_MESSAGES/kcm_search.mo
 share/locale/pt/LC_MESSAGES/kcm_smserver.mo
 share/locale/pt/LC_MESSAGES/kcm_solid_actions.mo
 share/locale/pt/LC_MESSAGES/kcm_splashscreen.mo
+share/locale/pt/LC_MESSAGES/kcm_tablet.mo
 share/locale/pt/LC_MESSAGES/kcm_touchpad.mo
 share/locale/pt/LC_MESSAGES/kcm_workspace.mo
 share/locale/pt/LC_MESSAGES/kcmkclock.mo
@@ -3169,6 +3180,7 @@ share/locale/ta/LC_MESSAGES/kcm_search.mo
 share/locale/ta/LC_MESSAGES/kcm_smserver.mo
 share/locale/ta/LC_MESSAGES/kcm_solid_actions.mo
 share/locale/ta/LC_MESSAGES/kcm_splashscreen.mo
+share/locale/ta/LC_MESSAGES/kcm_tablet.mo
 share/locale/ta/LC_MESSAGES/kcm_touchpad.mo
 share/locale/ta/LC_MESSAGES/kcm_workspace.mo
 share/locale/ta/LC_MESSAGES/kcmkclock.mo
@@ -3190,6 +3202,7 @@ share/locale/ta/LC_MESSAGES/plasma_applet_org.kde.plasma.showdesktop.mo
 share/locale/ta/LC_MESSAGES/plasma_applet_org.kde.plasma.taskmanager.mo
 share/locale/ta/LC_MESSAGES/plasma_applet_org.kde.plasma.trash.mo
 share/locale/ta/LC_MESSAGES/plasma_applet_org.kde.plasma.windowlist.mo
+share/locale/ta/LC_MESSAGES/plasma_runner_kwin.mo
 share/locale/ta/LC_MESSAGES/plasma_shell_org.kde.plasma.desktop.mo
 share/locale/ta/LC_MESSAGES/plasma_toolbox_org.kde.desktoptoolbox.mo
 share/locale/ta/LC_MESSAGES/plasma_toolbox_org.kde.paneltoolbox.mo
@@ -3278,6 +3291,7 @@ share/locale/tr/LC_MESSAGES/kcm_search.mo
 share/locale/tr/LC_MESSAGES/kcm_smserver.mo
 share/locale/tr/LC_MESSAGES/kcm_solid_actions.mo
 share/locale/tr/LC_MESSAGES/kcm_splashscreen.mo
+share/locale/tr/LC_MESSAGES/kcm_tablet.mo
 share/locale/tr/LC_MESSAGES/kcm_touchpad.mo
 share/locale/tr/LC_MESSAGES/kcm_workspace.mo
 share/locale/tr/LC_MESSAGES/kcmkclock.mo
@@ -3687,6 +3701,11 @@ share/plasma/plasmoids/org.kde.plasma.kimpanel/metadata.json
 share/plasma/plasmoids/org.kde.plasma.marginsseparator/contents/config/main.xml
 share/plasma/plasmoids/org.kde.plasma.marginsseparator/contents/ui/main.qml
 share/plasma/plasmoids/org.kde.plasma.marginsseparator/metadata.json
+share/plasma/plasmoids/org.kde.plasma.marginsseparator/package/contents/config/main.xml
+share/plasma/plasmoids/org.kde.plasma.marginsseparator/package/contents/ui/main.qml
+share/plasma/plasmoids/org.kde.plasma.marginsseparator/package/metadata.json
+share/plasma/plasmoids/org.kde.plasma.marginsseparator/plugin/marginSeparator.cpp
+share/plasma/plasmoids/org.kde.plasma.marginsseparator/plugin/marginSeparator.h
 share/plasma/plasmoids/org.kde.plasma.minimizeall/contents/config/main.xml
 share/plasma/plasmoids/org.kde.plasma.minimizeall/contents/ui/main.qml
 share/plasma/plasmoids/org.kde.plasma.minimizeall/metadata.json
@@ -3714,6 +3733,7 @@ share/plasma/plasmoids/org.kde.plasma.taskmanager/contents/ui/GroupDialog.qml
 share/plasma/plasmoids/org.kde.plasma.taskmanager/contents/ui/GroupExpanderOverlay.qml
 share/plasma/plasmoids/org.kde.plasma.taskmanager/contents/ui/MouseHandler.qml
 share/plasma/plasmoids/org.kde.plasma.taskmanager/contents/ui/PipeWireThumbnail.qml
+share/plasma/plasmoids/org.kde.plasma.taskmanager/contents/ui/PlayerController.qml
 share/plasma/plasmoids/org.kde.plasma.taskmanager/contents/ui/PulseAudio.qml
 share/plasma/plasmoids/org.kde.plasma.taskmanager/contents/ui/ScrollableTextWrapper.qml
 share/plasma/plasmoids/org.kde.plasma.taskmanager/contents/ui/Task.qml
@@ -3729,6 +3749,7 @@ share/plasma/plasmoids/org.kde.plasma.taskmanager/contents/ui/main.qml
 share/plasma/plasmoids/org.kde.plasma.taskmanager/metadata.json
 share/plasma/plasmoids/org.kde.plasma.trash/contents/ui/main.qml
 share/plasma/plasmoids/org.kde.plasma.trash/metadata.json
+share/plasma/plasmoids/org.kde.plasma.windowlist/contents/ui/MenuButton.qml
 share/plasma/plasmoids/org.kde.plasma.windowlist/contents/ui/main.qml
 share/plasma/plasmoids/org.kde.plasma.windowlist/metadata.json
 share/plasma/plasmoids/touchpad/contents/ui/touchpad.qml
@@ -3757,10 +3778,12 @@ share/plasma/shells/org.kde.plasma.desktop/contents/configuration/ConfigurationS
 share/plasma/shells/org.kde.plasma.desktop/contents/configuration/ContainmentConfiguration.qml
 share/plasma/shells/org.kde.plasma.desktop/contents/configuration/MouseEventInputButton.qml
 share/plasma/shells/org.kde.plasma.desktop/contents/configuration/PanelConfiguration.qml
+share/plasma/shells/org.kde.plasma.desktop/contents/configuration/ShellContainmentConfiguration.qml
 share/plasma/shells/org.kde.plasma.desktop/contents/configuration/panelconfiguration/MoreSettingsMenu.qml
 share/plasma/shells/org.kde.plasma.desktop/contents/configuration/panelconfiguration/Ruler.qml
 share/plasma/shells/org.kde.plasma.desktop/contents/configuration/panelconfiguration/SliderHandle.qml
 share/plasma/shells/org.kde.plasma.desktop/contents/configuration/panelconfiguration/ToolBar.qml
+share/plasma/shells/org.kde.plasma.desktop/contents/configuration/shellcontainmentconfiguration/Delegate.qml
 share/plasma/shells/org.kde.plasma.desktop/contents/defaults
 share/plasma/shells/org.kde.plasma.desktop/contents/explorer/AppletAlternatives.qml
 share/plasma/shells/org.kde.plasma.desktop/contents/explorer/AppletDelegate.qml
@@ -3773,7 +3796,6 @@ share/plasma/shells/org.kde.plasma.desktop/contents/updates/klipper_clear_config
 share/plasma/shells/org.kde.plasma.desktop/contents/updates/maintain_existing_desktop_icon_sizes.js
 share/plasma/shells/org.kde.plasma.desktop/contents/updates/move_desktop_layout_config.js
 share/plasma/shells/org.kde.plasma.desktop/contents/updates/no_middle_click_paste_on_panels.js
-share/plasma/shells/org.kde.plasma.desktop/contents/updates/obsolete_kickoffrc.js
 share/plasma/shells/org.kde.plasma.desktop/contents/updates/systemloadviewer_systemmonitor.js
 share/plasma/shells/org.kde.plasma.desktop/contents/updates/unlock_widgets.js
 share/plasma/shells/org.kde.plasma.desktop/contents/views/Desktop.qml

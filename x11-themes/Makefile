@@ -137,6 +137,7 @@
     SUBDIR += plasma5-breeze-gtk
     SUBDIR += plasma5-kde-gtk-config
     SUBDIR += plasma5-oxygen
+    SUBDIR += plasma5-oxygen-sounds
     SUBDIR += plasma5-plasma-workspace-wallpapers
     SUBDIR += plata-theme
     SUBDIR += pop-gtk-themes

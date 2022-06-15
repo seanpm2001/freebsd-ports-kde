@@ -75,7 +75,7 @@ _KDE_RELNAME=		KDE${_KDE_VERSION}
 
 # === VERSIONS OF THE DIFFERENT COMPONENTS =====================================
 # Current KDE desktop.
-KDE_PLASMA_VERSION?=		5.24.5
+KDE_PLASMA_VERSION?=		5.25.0
 KDE_PLASMA_BRANCH?=		stable
 
 # Current KDE frameworks.
@@ -239,7 +239,7 @@ _USE_FRAMEWORKS_TIER2=	auth completion crash doctools \
 _USE_FRAMEWORKS_TIER3=	activities activities-stats baloo5 bookmarks configwidgets \
 			designerplugin emoticons globalaccel guiaddons \
 			iconthemes init kcmutils kdav kdeclarative \
-			kded kdesu kdewebkit kio kwayland-server newstuff notifyconfig parts \
+			kded kdesu kdewebkit kio newstuff notifyconfig parts \
 			people plasma-framework purpose runner service texteditor \
 			textwidgets wallet xmlgui xmlrpcclient
 
@@ -438,9 +438,6 @@ kde-kquickcharts_PATH=		${QT_QMLDIR}/org/kde/quickcharts/libQuickCharts.so
 
 kde-kross_PORT=			lang/kf5-kross
 kde-kross_LIB=			libKF5KrossCore.so
-
-kde-kwayland-server_PORT=	x11/plasma5-kwayland-server
-kde-kwayland-server_LIB=	libKWaylandServer.so
 
 kde-layer-shell-qt_PORT=	x11/plasma5-layer-shell-qt
 kde-layer-shell-qt_LIB=		libLayerShellQtInterface.so

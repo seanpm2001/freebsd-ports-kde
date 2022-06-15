@@ -1,3 +1,5 @@
-TIMESTAMP = 1651588848
-SHA256 (KDE/plasma/5.24.5/kdeplasma-addons-5.24.5.tar.xz) = 3db52bc3c594d92deea3cfcb3112b4fa6ce328b7481acaa79187dab274e5e80e
-SIZE (KDE/plasma/5.24.5/kdeplasma-addons-5.24.5.tar.xz) = 635292
+TIMESTAMP = 1655270713
+SHA256 (KDE/plasma/5.25.0/kdeplasma-addons-5.25.0.tar.xz) = d91a61a9994311491bf661c9387001acbcf947e996eb7a6c1cb99d5dd2ebb744
+SIZE (KDE/plasma/5.25.0/kdeplasma-addons-5.25.0.tar.xz) = 654532
+SHA256 (KDE/plasma/5.25.0/9a202b1e7315f7298abdf44ea8eea87e39b87ea2.diff) = 305eff77a6c680ea93dae6c40041685421b89c137e3a4ee35363f9f7ea7983e5
+SIZE (KDE/plasma/5.25.0/9a202b1e7315f7298abdf44ea8eea87e39b87ea2.diff) = 307
