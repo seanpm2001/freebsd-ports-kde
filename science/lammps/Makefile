@@ -26,7 +26,7 @@ USE_LDCONFIG=	yes
 USE_PYTHON=	cython
 
 USE_GITHUB=	yes
-GH_TAGNAME=	patch_24Mar2022
+GH_TAGNAME=	patch_2Jun2022
 
 SHEBANG_GLOB=	*.sh *.bash
 SHEBANG_FILES=	lib/kokkos/bin/nvcc_wrapper
@@ -34,7 +34,7 @@ SHEBANG_FILES=	lib/kokkos/bin/nvcc_wrapper
 CMAKE_ON=	BUILD_SHARED_LIBS
 CMAKE_SOURCE_PATH=	${WRKSRC}/cmake
 CMAKE_ARGS=	-DBLA_VENDOR:STRING="OpenBLAS" ${CMAKE_ARGS_${CHOSEN_COMPILER_TYPE}} \
-		-DFREEBSD_PYTHON_VER=${PYTHON_VER}
+		-DPython_EXECUTABLE=${PYTHON_CMD}
 CMAKE_ARGS_gcc=	-DBUILD_OMP:BOOL=false
 
 # enable packages (for a complete list see STANDARD_PACKAGES in cmake/CMakeLists.txt)
@@ -82,7 +82,7 @@ GZIP_CMAKE_BOOL=	WITH_GZIP
 H5MD_DESC=		USER-H5MD package based on libhdf5
 H5MD_CMAKE_BOOL=	PKG_USER-H5MD
 H5MD_LIB_DEPENDS=	libhdf5.so:science/hdf5 \
-			libsz.so:science/szip
+			libsz.so:science/libaec
 
 KIM_DESC=		KIM package based on the OpenKim library/repository
 KIM_USES=		pkgconfig

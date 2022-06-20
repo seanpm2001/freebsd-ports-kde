@@ -38,6 +38,9 @@
     SUBDIR += awstats
     SUBDIR += axis2
     SUBDIR += bacula-web
+    SUBDIR += baculum-api
+    SUBDIR += baculum-common
+    SUBDIR += baculum-web
     SUBDIR += baikal
     SUBDIR += bareos-webui
     SUBDIR += bareos18-webui
@@ -109,6 +112,7 @@
     SUBDIR += dokuwiki
     SUBDIR += dolibarr
     SUBDIR += dolibarr13
+    SUBDIR += dolibarr14
     SUBDIR += domoticz
     SUBDIR += dooble
     SUBDIR += drupal7
@@ -271,6 +275,7 @@
     SUBDIR += jitsi-meet
     SUBDIR += jmeter
     SUBDIR += joomla3
+    SUBDIR += joomla4
     SUBDIR += jwt-cli
     SUBDIR += kanboard
     SUBDIR += kannel
@@ -281,6 +286,7 @@
     SUBDIR += kf5-khtml
     SUBDIR += kf5-kjs
     SUBDIR += kf5-kjsembed
+    SUBDIR += kineto
     SUBDIR += kiwix-tools
     SUBDIR += kohana
     SUBDIR += kristall
@@ -338,6 +344,7 @@
     SUBDIR += mediawiki135
     SUBDIR += mediawiki136
     SUBDIR += mediawiki137
+    SUBDIR += mediawiki138
     SUBDIR += mergelog
     SUBDIR += mhonarc
     SUBDIR += micro_httpd
@@ -394,6 +401,7 @@
     SUBDIR += mod_php74
     SUBDIR += mod_php80
     SUBDIR += mod_php81
+    SUBDIR += mod_php82
     SUBDIR += mod_proctitle
     SUBDIR += mod_qos
     SUBDIR += mod_realdoc
@@ -418,6 +426,7 @@
     SUBDIR += moodle310
     SUBDIR += moodle311
     SUBDIR += moodle39
+    SUBDIR += moodle40
     SUBDIR += morty
     SUBDIR += mozplugger
     SUBDIR += multisort
@@ -463,7 +472,7 @@
     SUBDIR += npm
     SUBDIR += npm-node14
     SUBDIR += npm-node16
-    SUBDIR += npm-node17
+    SUBDIR += npm-node18
     SUBDIR += nspluginwrapper
     SUBDIR += oauth2-proxy
     SUBDIR += obhttpd
@@ -756,6 +765,7 @@
     SUBDIR += p5-Dancer2
     SUBDIR += p5-Dancer2-Plugin-Ajax
     SUBDIR += p5-Dancer2-Plugin-Deferred
+    SUBDIR += p5-Dancer2-Plugin-FormValidator
     SUBDIR += p5-Dancer2-Plugin-Interchange6
     SUBDIR += p5-Dancer2-Plugin-Path-Class
     SUBDIR += p5-Data-TreeDumper-Renderer-DHTML
@@ -801,6 +811,7 @@
     SUBDIR += p5-HTML-Element-Library
     SUBDIR += p5-HTML-Element-Replacer
     SUBDIR += p5-HTML-Encoding
+    SUBDIR += p5-HTML-Escape
     SUBDIR += p5-HTML-ExtractContent
     SUBDIR += p5-HTML-ExtractMain
     SUBDIR += p5-HTML-Field
@@ -1186,6 +1197,7 @@
     SUBDIR += p5-URI-Escape-JavaScript
     SUBDIR += p5-URI-Escape-XS
     SUBDIR += p5-URI-Fetch
+    SUBDIR += p5-URI-Normalize
     SUBDIR += p5-URI-ParseSearchString
     SUBDIR += p5-URI-Sequin
     SUBDIR += p5-URI-Title
@@ -1381,6 +1393,9 @@
     SUBDIR += php81-opcache
     SUBDIR += php81-session
     SUBDIR += php81-tidy
+    SUBDIR += php82-opcache
+    SUBDIR += php82-session
+    SUBDIR += php82-tidy
     SUBDIR += phpbb
     SUBDIR += phpbb3
     SUBDIR += phpgroupware
@@ -1423,12 +1438,14 @@
     SUBDIR += py-azure-storage
     SUBDIR += py-beaker
     SUBDIR += py-beautifulsoup
+    SUBDIR += py-beautifulsoup449
     SUBDIR += py-betamax
     SUBDIR += py-biscuits
     SUBDIR += py-bjoern
     SUBDIR += py-bleach
     SUBDIR += py-bokeh
     SUBDIR += py-boto3
+    SUBDIR += py-botocore-stubs
     SUBDIR += py-bottle
     SUBDIR += py-bottle-cork
     SUBDIR += py-branca
@@ -1452,7 +1469,6 @@
     SUBDIR += py-dj32-django-filter
     SUBDIR += py-dj32-django-graphiql-debug-toolbar
     SUBDIR += py-dj32-django-js-asset
-    SUBDIR += py-dj32-django-modelcluster
     SUBDIR += py-dj32-django-mptt
     SUBDIR += py-dj32-django-prometheus
     SUBDIR += py-dj32-django-redis
@@ -1462,6 +1478,20 @@
     SUBDIR += py-dj32-django-treebeard
     SUBDIR += py-dj32-djangorestframework
     SUBDIR += py-dj32-drf-yasg
+    SUBDIR += py-dj40-django-auth-ldap
+    SUBDIR += py-dj40-django-cors-headers
+    SUBDIR += py-dj40-django-debug-toolbar
+    SUBDIR += py-dj40-django-filter
+    SUBDIR += py-dj40-django-graphiql-debug-toolbar
+    SUBDIR += py-dj40-django-js-asset
+    SUBDIR += py-dj40-django-mptt
+    SUBDIR += py-dj40-django-prometheus
+    SUBDIR += py-dj40-django-redis
+    SUBDIR += py-dj40-django-tables2
+    SUBDIR += py-dj40-django-taggit
+    SUBDIR += py-dj40-django-timezone-field
+    SUBDIR += py-dj40-djangorestframework
+    SUBDIR += py-dj40-drf-yasg
     SUBDIR += py-django
     SUBDIR += py-django-admin-rangefilter
     SUBDIR += py-django-advanced-filters
@@ -1474,6 +1504,7 @@
     SUBDIR += py-django-babel
     SUBDIR += py-django-bakery
     SUBDIR += py-django-bitfield
+    SUBDIR += py-django-bleach
     SUBDIR += py-django-bootstrap-form
     SUBDIR += py-django-bootstrap-pagination
     SUBDIR += py-django-bootstrap3
@@ -1531,6 +1562,7 @@
     SUBDIR += py-django-object-actions
     SUBDIR += py-django-otp
     SUBDIR += py-django-otp-yubikey
+    SUBDIR += py-django-permissionedforms
     SUBDIR += py-django-pglocks
     SUBDIR += py-django-photologue
     SUBDIR += py-django-picklefield
@@ -1668,6 +1700,7 @@
     SUBDIR += py-httpretty
     SUBDIR += py-httptools
     SUBDIR += py-httpx
+    SUBDIR += py-httpx-gssapi
     SUBDIR += py-httpx-oauth
     SUBDIR += py-httpx-socks
     SUBDIR += py-httpx013
@@ -1729,6 +1762,7 @@
     SUBDIR += py-requests
     SUBDIR += py-requests-aws4auth
     SUBDIR += py-requests-cache
+    SUBDIR += py-requests-cache93
     SUBDIR += py-requests-file
     SUBDIR += py-requests-futures
     SUBDIR += py-requests-mock
@@ -1893,14 +1927,22 @@
     SUBDIR += rubygem-faraday
     SUBDIR += rubygem-faraday-em_http
     SUBDIR += rubygem-faraday-em_synchrony
+    SUBDIR += rubygem-faraday-http-cache
     SUBDIR += rubygem-faraday-httpclient
+    SUBDIR += rubygem-faraday-httpclient1
     SUBDIR += rubygem-faraday-multipart
     SUBDIR += rubygem-faraday-net_http
+    SUBDIR += rubygem-faraday-net_http1
     SUBDIR += rubygem-faraday-net_http_persistent
+    SUBDIR += rubygem-faraday-net_http_persistent1
     SUBDIR += rubygem-faraday-patron
+    SUBDIR += rubygem-faraday-patron1
     SUBDIR += rubygem-faraday-rack
+    SUBDIR += rubygem-faraday-rack1
     SUBDIR += rubygem-faraday-retry
+    SUBDIR += rubygem-faraday-retry1
     SUBDIR += rubygem-faraday0
+    SUBDIR += rubygem-faraday1
     SUBDIR += rubygem-faraday14
     SUBDIR += rubygem-faraday_middleware
     SUBDIR += rubygem-faraday_middleware0
@@ -2054,7 +2096,6 @@
     SUBDIR += rubygem-rack-protection
     SUBDIR += rubygem-rack-protection1
     SUBDIR += rubygem-rack-proxy
-    SUBDIR += rubygem-rack-proxy06
     SUBDIR += rubygem-rack-ssl
     SUBDIR += rubygem-rack-test
     SUBDIR += rubygem-rack-timeout
@@ -2180,7 +2221,6 @@
     SUBDIR += sfeed
     SUBDIR += sfnt2woff
     SUBDIR += shellinabox
-    SUBDIR += shttpd
     SUBDIR += silicon
     SUBDIR += simple-web-server
     SUBDIR += sitecopy
@@ -2190,6 +2230,7 @@
     SUBDIR += smarty3
     SUBDIR += smb_auth
     SUBDIR += snarf
+    SUBDIR += so
     SUBDIR += sogo
     SUBDIR += sogo-activesync
     SUBDIR += sogo2
@@ -2212,6 +2253,7 @@
     SUBDIR += suphp
     SUBDIR += surf
     SUBDIR += swiggle
+    SUBDIR += tcexam
     SUBDIR += tclhttpd
     SUBDIR += tclwebtest
     SUBDIR += tdiary
@@ -2247,6 +2289,7 @@
     SUBDIR += transproxy
     SUBDIR += tt-rss
     SUBDIR += ttf2eot
+    SUBDIR += tuifeed
     SUBDIR += tusc
     SUBDIR += tusd
     SUBDIR += twiki
@@ -2302,8 +2345,10 @@
     SUBDIR += varnish-ip2proxy
     SUBDIR += varnish-libvmod-digest
     SUBDIR += varnish-libvmod-dynamic
+    SUBDIR += varnish-libvmod-geoip2
     SUBDIR += varnish-libvmod-maxminddb
     SUBDIR += varnish-libvmod-querystring
+    SUBDIR += varnish-libvmod-redis
     SUBDIR += varnish-modules
     SUBDIR += varnish-nagios
     SUBDIR += varnish4
@@ -2367,7 +2412,7 @@
     SUBDIR += yarn
     SUBDIR += yarn-node14
     SUBDIR += yarn-node16
-    SUBDIR += yarn-node17
+    SUBDIR += yarn-node18
     SUBDIR += yarr
     SUBDIR += yaws
     SUBDIR += you-get

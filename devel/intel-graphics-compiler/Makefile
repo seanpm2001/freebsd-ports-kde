@@ -1,6 +1,6 @@
 PORTNAME=	intel-graphics-compiler
 DISTVERSIONPREFIX=	igc-
-DISTVERSION=	1.0.10778
+DISTVERSION=	1.0.11378
 CATEGORIES=	devel
 PKGNAMESUFFIX=	-${FLAVOR}
 
@@ -13,12 +13,12 @@ LICENSE_FILE=	${WRKSRC}/LICENSE.md
 ONLY_FOR_ARCHS=	aarch64 amd64 i386
 ONLY_FOR_ARCHS_REASON=	only Intel GPUs on x86 are supported
 
-BUILD_DEPENDS=	vc-intrinsics-${FLAVOR}>=s20210730:devel/vc-intrinsics@${FLAVOR}
+BUILD_DEPENDS=	vc-intrinsics-${FLAVOR}>=0.4.0:devel/vc-intrinsics@${FLAVOR}
 LIB_DEPENDS=	libLLVM-${FLAVOR:S/llvm//}.so:devel/${FLAVOR} \
 		libopencl-clang.so.${FLAVOR:S/llvm//}:devel/opencl-clang@${FLAVOR} \
 		libLLVMSPIRVLib.so.${FLAVOR:S/llvm//}:devel/spirv-llvm-translator@${FLAVOR}
 
-FLAVORS=	${12 11:L:S/^/llvm/}
+FLAVORS=	${13 12 11:L:S/^/llvm/}
 
 CONFLICTS_INSTALL=	${PORTNAME}-llvm*
 

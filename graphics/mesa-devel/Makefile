@@ -1,12 +1,15 @@
 PORTNAME=	mesa
-DISTVERSION=	22.0-branchpoint-2059
-DISTVERSIONSUFFIX=	-ge8a63cf61ec
+DISTVERSION=	22.1-branchpoint-3251
+DISTVERSIONSUFFIX=	-g9ca0c0b4b40
 CATEGORIES=	graphics
 PKGNAMESUFFIX=	-devel
 
 PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
 PATCHFILES+=	700efacda59c.patch:-p1
 PATCHFILES+=	50433886a3e3.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/6881
+PATCHFILES+=	4356e7185193.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/16987
+PATCHFILES+=	b2a22acce617.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/16987
+PATCHFILES+=	19eb2c30bff0.patch:-p1 # https://gitlab.freedesktop.org/mesa/mesa/-/merge_requests/16987
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	Bleeding edge Mesa drivers (OpenGL, Vulkan)
@@ -71,12 +74,14 @@ ${j}_VARS+=		${i}_DRIVERS+=${j:S/anv/intel/:S/radv/amd/}
 GALLIUM_DESC=		Unified OpenGL drivers
 crocus_DESC=		Broadwater, Eaglelake, Ironlake, Sandybridge, Ivybridge, Haswell
 iris_DESC=		Broadwell and newer
+panfrost_DESC=		Midgard, Bifrost
 r600_DESC=		R600, R700, Evergreen, Northern Islands (implies LLVM)
 radeonsi_DESC=		Southern Islands and newer (implies LLVM)
 
 VULKAN_DESC=		Vulkan drivers
 anv_DESC=		Haswell and newer
 radv_DESC=		Southern Islands and newer (implies LLVM)
+radv_BUILD_DEPENDS=	glslangValidator:graphics/glslang
 
 COINST_DESC=		Allow co-installation with another Mesa port
 COINST_MESON_ON=	-Degl-lib-suffix=${PKGNAMESUFFIX}
@@ -111,7 +116,7 @@ VDPAU_IMPLIES=		X11
 VKLAYERS_DESC=		Vulkan layers: ${VKLAYERS_MESON_ON:C/.*=//} (implies ${VKLAYERS_IMPLIES})
 VKLAYERS_BUILD_DEPENDS=	glslangValidator:graphics/glslang
 VKLAYERS_MESON_ON=	-Dvulkan-layers=device-select,overlay
-VKLAYERS_IMPLIES=	${"${PORT_OPTIONS:Mradv}":?radv:anv} # any from OPTIONS_GROUP_VULKAN
+VKLAYERS_IMPLIES=	${"${PORT_OPTIONS:Manv}":?anv:radv} # any from OPTIONS_GROUP_VULKAN
 
 WAYLAND_BUILD_DEPENDS=	wayland-protocols>0:graphics/wayland-protocols
 WAYLAND_LIB_DEPENDS=	libwayland-server.so:graphics/wayland

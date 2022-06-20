@@ -1,5 +1,5 @@
 PORTNAME=	dynare
-DISTVERSION=	5.0
+DISTVERSION=	5.1
 PORTREVISION=	1
 CATEGORIES=	science # economics
 MASTER_SITES=	https://www.dynare.org/release/source/
@@ -10,11 +10,13 @@ COMMENT=	Software platform for handling a wide class of economic models
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
+BROKEN_aarch64=	cannot open module file 'ieee_arithmetic.mod' for reading at (1): No such file or directory
+
 BUILD_DEPENDS=	${LOCALBASE}/include/boost/tokenizer.hpp:devel/boost-libs
 LIB_DEPENDS=	libhdf5.so:science/hdf5 \
 		libmatio.so:math/matio \
 		libopenblas.so:math/openblas \
-		libsz.so:science/szip
+		libsz.so:science/libaec
 RUN_DEPENDS=	epstool:graphics/epstool \
 		gnuplot:math/gnuplot \
 		pstoedit:graphics/pstoedit \
@@ -28,6 +30,8 @@ USE_GCC=	yes # clang-11 fails: error: reference to local binding 'ii1' declared 
 GNU_CONFIGURE=	yes
 CONFIGURE_ARGS=	--disable-matlab \
 		--disable-doc
+
+FCFLAGS+=	-fPIC # required because configure tests with -shared
 
 SUB_FILES=	pkg-message
 

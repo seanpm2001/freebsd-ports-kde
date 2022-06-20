@@ -128,6 +128,7 @@
     SUBDIR += midpoint
     SUBDIR += mk-livestatus
     SUBDIR += monitoring-plugins
+    SUBDIR += mqtt2prometheus
     SUBDIR += mrtg
     SUBDIR += mrtg-ping-probe
     SUBDIR += mtrace
@@ -280,6 +281,7 @@
     SUBDIR += php74-snmp
     SUBDIR += php80-snmp
     SUBDIR += php81-snmp
+    SUBDIR += php82-snmp
     SUBDIR += phpfpm_exporter
     SUBDIR += phpipam
     SUBDIR += phpweathermap
