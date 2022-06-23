@@ -2,6 +2,9 @@ PORTNAME=	kdeplasma-addons
 DISTVERSION=	${KDE_PLASMA_VERSION}
 CATEGORIES=	x11-toolkits kde kde-plasma
 
+PATCH_SITES=	https://invent.kde.org/plasma/kdeplasma-addons/-/commit/
+PATCHFILES=	9a202b1e7315f7298abdf44ea8eea87e39b87ea2.diff:-p1
+
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Plasma5 addons to improve the Plasma experience
 
