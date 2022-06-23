@@ -2,6 +2,9 @@ PORTNAME=	kinfocenter
 DISTVERSION=	${KDE_PLASMA_VERSION}
 CATEGORIES=	sysutils kde kde-plasma
 
+PATCH_SITES=	https://invent.kde.org/plasma/kinfocenter/-/commit/
+PATCHFILES=	5bcfdeb59868080425bfe4402c52e7470734eb25.diff:-p1
+
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Plasma5 utility providing system information
 

@@ -23,8 +23,10 @@ LIB_DEPENDS=	libXcursor.so:x11/libXcursor \
 		libxcb-keysyms.so:x11/xcb-util-keysyms \
 		libxkbcommon.so:x11/libxkbcommon
 BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:devel/evdev-proto \
-		xwayland-devel>0:x11-servers/xwayland-devel
-RUN_DEPENDS=	xwayland-devel>0:x11-servers/xwayland-devel
+		xwayland-devel>0:x11-servers/xwayland-devel \
+		wayland-protocols>=1.25:graphics/wayland-protocols
+RUN_DEPENDS=	xwayland-devel>0:x11-servers/xwayland-devel\
+		wayland-protocols>=1.25:graphics/wayland-protocols
 
 CONFLICTS_INSTALL=	kwinft # bin/kwin_wayland
 
@@ -35,7 +37,7 @@ USE_GNOME=	glib20
 USE_KDE=	activities attica auth breeze codecs completion config \
 		configwidgets coreaddons crash decoration globalaccel i18n \
 		iconthemes idletime init jobwidgets kcmutils kdeclarative kio \
-		kscreenlocker kwayland-integration kwayland-server newstuff \
+		kscreenlocker kwayland-integration newstuff \
 		notifications package plasma-framework \
 		plasma-wayland-protocols runner service sonnet textwidgets \
 		wayland widgetsaddons windowsystem xmlgui \
@@ -48,5 +50,7 @@ USE_QT=		concurrent core dbus declarative gui multimedia network script \
 USE_XORG=	ice sm x11 xcb xext xi
 SHEBANG_FILES=	kconf_update/*.py \
 		kconf_update/*.pl
+
+BINARY_ALIAS=	python3=${PYTHON_CMD}
 
 .include <bsd.port.mk>
