@@ -1,6 +1,5 @@
 PORTNAME=	emby-server
-DISTVERSION=	4.6.7.0
-PORTREVISION=	2
+DISTVERSION=	4.7.4.0
 CATEGORIES=	multimedia
 MASTER_SITES=	https://github.com/MediaBrowser/Emby.Releases/releases/download/${PORTVERSION}/ \
 		https://mediabrowser.github.io/embytools/
@@ -24,9 +23,11 @@ LICENSE_PERMS=	dist-mirror no-dist-sell pkg-mirror no-pkg-sell auto-accept
 
 ONLY_FOR_ARCHS=	amd64
 
-BUILD_DEPENDS=	nasm:devel/nasm
+BUILD_DEPENDS=	nasm:devel/nasm \
+		${LOCALBASE}/include/CL/opencl.h:devel/opencl
 LIB_DEPENDS=	libaribb24.so:multimedia/aribb24 \
 		libass.so:multimedia/libass \
+		libchromaprint.so:audio/chromaprint \
 		libdav1d.so:multimedia/dav1d \
 		libdrm.so:graphics/libdrm \
 		libfontconfig.so:x11-fonts/fontconfig \
@@ -34,10 +35,12 @@ LIB_DEPENDS=	libaribb24.so:multimedia/aribb24 \
 		libfribidi.so:converters/fribidi \
 		libgnutls.so:security/gnutls \
 		libmfx.so:multimedia/intel-media-sdk \
+		libOpenCL.so:devel/ocl-icd \
 		libogg.so:audio/libogg \
 		libopus.so:audio/opus \
 		libpng.so:graphics/png \
 		libraw.so:graphics/libraw \
+		libtesseract.so:graphics/tesseract \
 		libtheora.so:multimedia/libtheora \
 		libva.so:multimedia/libva \
 		libvorbis.so:audio/libvorbis \
@@ -64,6 +67,7 @@ CONFIGURE_ARGS=	--cc="${CC}" \
 		--disable-v4l2-m2m \
 		--disable-vdpau \
 		--disable-xlib \
+		--enable-chromaprint \
 		--enable-fontconfig \
 		--enable-gnutls \
 		--enable-gpl \
@@ -76,6 +80,7 @@ CONFIGURE_ARGS=	--cc="${CC}" \
 		--enable-libfribidi \
 		--enable-libmfx \
 		--enable-libopus \
+		--enable-libtesseract \
 		--enable-libtheora \
 		--enable-libvorbis \
 		--enable-libvpx \
@@ -83,6 +88,7 @@ CONFIGURE_ARGS=	--cc="${CC}" \
 		--enable-libx264 \
 		--enable-libx265 \
 		--enable-libzvbi \
+		--enable-opencl \
 		--enable-optimizations \
 		--enable-static \
 		--enable-vaapi \
@@ -115,7 +121,7 @@ X11_USES=		xorg magick:6
 X11_USES_OFF=		magick:6,nox11
 X11_USE=		xorg=x11
 
-FFVERSION=	2021_02_27
+FFVERSION=	2022_05_07
 
 do-install:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/lib/emby-server/system

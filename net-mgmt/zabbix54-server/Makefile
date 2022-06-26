@@ -1,5 +1,5 @@
 PORTNAME=	zabbix54
-DISTVERSION=	5.4.11
+DISTVERSION=	5.4.12
 CATEGORIES=	net-mgmt
 MASTER_SITES=	https://cdn.zabbix.com/zabbix/sources/stable/${DISTVERSION:R}/
 PKGNAMESUFFIX?=	-server
@@ -16,6 +16,9 @@ LIB_DEPENDS=	libpcre.so:devel/pcre
 CONFLICTS_INSTALL=	zabbix[0-46-9][0-9]${PKGNAMESUFFIX} \
 		zabbix5[0-35-9]${PKGNAMESUFFIX} \
 		zabbix[0-9]${PKGNAMESUFFIX}
+
+DEPRECATED=     Unsupported by upstream
+EXPIRATION_DATE=2022-06-29
 
 ZABBIX_BUILD=	${PKGNAMESUFFIX:S/^-//:S/-$//}
 

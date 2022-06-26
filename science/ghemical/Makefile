@@ -2,7 +2,7 @@
 
 PORTNAME=	ghemical
 PORTVERSION=	3.0.0
-PORTREVISION=	22
+PORTREVISION=	23
 CATEGORIES=	science
 MASTER_SITES=	http://bioinformatics.org/ghemical/download/%SUBDIR%/
 MASTER_SITE_SUBDIR=	release20111012 current
@@ -21,7 +21,7 @@ LIB_DEPENDS=	libblas.so:math/blas \
 		libint.so:science/libint \
 		liblapack.so:math/lapack \
 		liboglappth.so:science/liboglappth \
-		libmopac7.so:biology/mopac \
+		libmopac7.so:science/mopac \
 		libmpqc.so:science/mpqc
 RUN_DEPENDS=	xdg-open:devel/xdg-utils
 

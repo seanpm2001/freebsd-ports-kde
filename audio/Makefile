@@ -11,6 +11,7 @@
     SUBDIR += abgate-lv2
     SUBDIR += abx
     SUBDIR += adplay
+    SUBDIR += aeolus
     SUBDIR += afsp
     SUBDIR += aften
     SUBDIR += alac
@@ -115,6 +116,8 @@
     SUBDIR += deadbeef-waveform-seekbar-plugin
     SUBDIR += dekagen
     SUBDIR += denemo
+    SUBDIR += dexed
+    SUBDIR += dgedit
     SUBDIR += din
     SUBDIR += discid
     SUBDIR += dmidiplayer
@@ -363,6 +366,7 @@
     SUBDIR += libbpm
     SUBDIR += libbs2b
     SUBDIR += libcanberra
+    SUBDIR += libcanberra-gtk2
     SUBDIR += libcanberra-gtk3
     SUBDIR += libcdaudio
     SUBDIR += libcddb
@@ -418,6 +422,7 @@
     SUBDIR += libsndfile
     SUBDIR += libsonic
     SUBDIR += libsoxr
+    SUBDIR += libspecbleach
     SUBDIR += libtremor
     SUBDIR += libumidi
     SUBDIR += libvorbis

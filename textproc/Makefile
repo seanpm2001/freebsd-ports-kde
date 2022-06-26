@@ -11,6 +11,7 @@
     SUBDIR += R-cran-commonmark
     SUBDIR += R-cran-formatR
     SUBDIR += R-cran-highr
+    SUBDIR += R-cran-htmlTable
     SUBDIR += R-cran-htmltools
     SUBDIR += R-cran-hunspell
     SUBDIR += R-cran-markdown
@@ -51,7 +52,9 @@
     SUBDIR += apache-commons-digester
     SUBDIR += apache-poi
     SUBDIR += apache-solr
+    SUBDIR += apache-xmlbeans
     SUBDIR += apertium
+    SUBDIR += apertium-eng
     SUBDIR += artha
     SUBDIR += asciidoc
     SUBDIR += asm-xml
@@ -87,6 +90,7 @@
     SUBDIR += castxml
     SUBDIR += catdoc
     SUBDIR += cdif
+    SUBDIR += cg3
     SUBDIR += cgrep
     SUBDIR += chkascii
     SUBDIR += chpp
@@ -105,6 +109,7 @@
     SUBDIR += confget
     SUBDIR += consul-template
     SUBDIR += cpp-peglib
+    SUBDIR += cpptoml
     SUBDIR += crex
     SUBDIR += crunch
     SUBDIR += cs-aspell
@@ -318,6 +323,7 @@
     SUBDIR += jade
     SUBDIR += jalingo
     SUBDIR += jarnal
+    SUBDIR += jarowinkler-cpp
     SUBDIR += java2html
     SUBDIR += jaxup
     SUBDIR += jdictionary
@@ -449,6 +455,7 @@
     SUBDIR += md4c
     SUBDIR += mdbook
     SUBDIR += mdbook-linkcheck
+    SUBDIR += mdbook-mermaid
     SUBDIR += mdocml
     SUBDIR += meilisearch
     SUBDIR += meld
@@ -1170,6 +1177,7 @@
     SUBDIR += p5-libxml
     SUBDIR += p5-pod2pdf
     SUBDIR += p5-podlators
+    SUBDIR += p5-utf8-all
     SUBDIR += p5-xmltv
     SUBDIR += pa-aspell
     SUBDIR += pageedit
@@ -1240,6 +1248,15 @@
     SUBDIR += php81-xmlreader
     SUBDIR += php81-xmlwriter
     SUBDIR += php81-xsl
+    SUBDIR += php82-ctype
+    SUBDIR += php82-dom
+    SUBDIR += php82-enchant
+    SUBDIR += php82-pspell
+    SUBDIR += php82-simplexml
+    SUBDIR += php82-xml
+    SUBDIR += php82-xmlreader
+    SUBDIR += php82-xmlwriter
+    SUBDIR += php82-xsl
     SUBDIR += pict
     SUBDIR += po4a
     SUBDIR += pod2mdoc
@@ -1331,6 +1348,7 @@
     SUBDIR += py-iso-639
     SUBDIR += py-iso3166
     SUBDIR += py-j2cli
+    SUBDIR += py-jarowinkler
     SUBDIR += py-jc
     SUBDIR += py-jinja2-cli
     SUBDIR += py-jq
@@ -1359,8 +1377,10 @@
     SUBDIR += py-mathics-pygments
     SUBDIR += py-mdit-py-plugins
     SUBDIR += py-mdurl
+    SUBDIR += py-mike
     SUBDIR += py-misaka
     SUBDIR += py-mistune
+    SUBDIR += py-mistune0
     SUBDIR += py-mkdocs
     SUBDIR += py-mkdocs-autorefs
     SUBDIR += py-mkdocs-material
@@ -1454,6 +1474,8 @@
     SUBDIR += py-restructuredtext-lint
     SUBDIR += py-reverend
     SUBDIR += py-rich
+    SUBDIR += py-rich-cli
+    SUBDIR += py-rich-rst
     SUBDIR += py-rnc2rng
     SUBDIR += py-rss2gen
     SUBDIR += py-rst2ansi
@@ -1469,8 +1491,10 @@
     SUBDIR += py-sphinx-autoapi
     SUBDIR += py-sphinx-autobuild
     SUBDIR += py-sphinx-autodoc-typehints
+    SUBDIR += py-sphinx-basic-ng
     SUBDIR += py-sphinx-book-theme
     SUBDIR += py-sphinx-copybutton
+    SUBDIR += py-sphinx-design
     SUBDIR += py-sphinx-inline-tabs
     SUBDIR += py-sphinx-intl
     SUBDIR += py-sphinx-issues
@@ -1504,12 +1528,14 @@
     SUBDIR += py-sphinxext-opengraph
     SUBDIR += py-spylls
     SUBDIR += py-stemming
+    SUBDIR += py-tableschema-to-template
     SUBDIR += py-tabletext
     SUBDIR += py-tablib
     SUBDIR += py-terminaltables
     SUBDIR += py-textdistance
     SUBDIR += py-textfsm
     SUBDIR += py-texttable
+    SUBDIR += py-textual
     SUBDIR += py-three-merge
     SUBDIR += py-tinycss
     SUBDIR += py-tinycss2
@@ -1564,8 +1590,8 @@
     SUBDIR += re_graph
     SUBDIR += redet
     SUBDIR += redisearch
-    SUBDIR += redisearch16
     SUBDIR += redisearch20
+    SUBDIR += redisearch22
     SUBDIR += redland
     SUBDIR += redland-bindings
     SUBDIR += refdb
@@ -1609,6 +1635,7 @@
     SUBDIR += rubygem-asciidoctor-kroki
     SUBDIR += rubygem-asciidoctor-pdf
     SUBDIR += rubygem-asciidoctor-plantuml
+    SUBDIR += rubygem-asciidoctor-plantuml00
     SUBDIR += rubygem-autoprefixer-rails
     SUBDIR += rubygem-autoprefixer-rails-node16
     SUBDIR += rubygem-autoprefixer-rails1025
@@ -1630,12 +1657,11 @@
     SUBDIR += rubygem-css_parser
     SUBDIR += rubygem-cssmin
     SUBDIR += rubygem-cucumber-gherkin
+    SUBDIR += rubygem-cucumber-gherkin23
     SUBDIR += rubygem-cucumber-html-formatter
-    SUBDIR += rubygem-cucumber-html-formatter17
     SUBDIR += rubygem-diff-lcs
     SUBDIR += rubygem-diff_match_patch
     SUBDIR += rubygem-diffy
-    SUBDIR += rubygem-diffy330
     SUBDIR += rubygem-docdiff
     SUBDIR += rubygem-elasticsearch
     SUBDIR += rubygem-elasticsearch-api
@@ -1644,6 +1670,7 @@
     SUBDIR += rubygem-elasticsearch-dsl
     SUBDIR += rubygem-elasticsearch-model
     SUBDIR += rubygem-elasticsearch-model6
+    SUBDIR += rubygem-elasticsearch-model713
     SUBDIR += rubygem-elasticsearch-persistence
     SUBDIR += rubygem-elasticsearch-rails
     SUBDIR += rubygem-elasticsearch-rails6
@@ -1697,6 +1724,7 @@
     SUBDIR += rubygem-kramdown
     SUBDIR += rubygem-kramdown-parser-gfm
     SUBDIR += rubygem-kramdown1
+    SUBDIR += rubygem-kramdown23
     SUBDIR += rubygem-kwalify
     SUBDIR += rubygem-libxml-ruby
     SUBDIR += rubygem-linguistics
@@ -2013,8 +2041,10 @@
     SUBDIR += yi-hunspell
     SUBDIR += yodl
     SUBDIR += yq
+    SUBDIR += zed
     SUBDIR += zenxml
     SUBDIR += zorba
+    SUBDIR += zq
     SUBDIR += zu-aspell
     SUBDIR += zu-hunspell
     SUBDIR += zxing-cpp
