@@ -96,6 +96,7 @@ lib/libkwinxrenderutils.so.%%KDE_PLASMA_VERSION%%
 %%QT_QMLDIR%%/org/kde/kwin/decorations/plastik/libplastikplugin.so
 %%QT_QMLDIR%%/org/kde/kwin/decorations/plastik/qmldir
 %%QT_QMLDIR%%/org/kde/kwin/private/effects/WindowHeap.qml
+%%QT_QMLDIR%%/org/kde/kwin/private/effects/WindowHeapDelegate.qml
 %%QT_QMLDIR%%/org/kde/kwin/private/effects/libeffectsplugin.so
 %%QT_QMLDIR%%/org/kde/kwin/private/effects/qmldir
 %%QT_QMLDIR%%/org/kde/kwin/private/kdecoration/libkdecorationprivatedeclarative.so
