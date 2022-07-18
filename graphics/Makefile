@@ -417,6 +417,7 @@
     SUBDIR += kqtquickcharts
     SUBDIR += kquickimageeditor
     SUBDIR += krita
+    SUBDIR += ksanecore
     SUBDIR += kseexpr
     SUBDIR += ksnip
     SUBDIR += kxstitch
