@@ -1,8 +1,6 @@
-# Created by: Palle Girgensohn <girgen@FreeBSD.org>
-
 PORTNAME=	fluent-bit
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.9.5
+DISTVERSION=	1.9.6
 CATEGORIES=	sysutils
 
 MAINTAINER=	girgen@FreeBSD.org
@@ -22,7 +20,7 @@ OPTIONS_DEFINE=		SSL PGSQL
 OPTIONS_DEFAULT=	SSL
 
 LIB_DEPENDS=		libyaml.so:textproc/libyaml
-LDFLAGS=		-lexecinfo
+LDFLAGS+=		-lexecinfo -L${LOCALBASE}/lib
 CMAKE_ARGS=		-DFLB_DEBUG=Off -DFLB_TRACE=Off
 CFLAGS+=		-I${LOCALBASE}/include
 

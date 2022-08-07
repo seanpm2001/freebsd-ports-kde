@@ -29,6 +29,7 @@ include/wlr/render/wlr_texture.h
 include/wlr/types/wlr_buffer.h
 include/wlr/types/wlr_compositor.h
 include/wlr/types/wlr_cursor.h
+include/wlr/types/wlr_damage_ring.h
 include/wlr/types/wlr_data_control_v1.h
 include/wlr/types/wlr_data_device.h
 include/wlr/types/wlr_drm.h
@@ -66,6 +67,7 @@ include/wlr/types/wlr_screencopy_v1.h
 include/wlr/types/wlr_seat.h
 include/wlr/types/wlr_server_decoration.h
 include/wlr/types/wlr_session_lock_v1.h
+include/wlr/types/wlr_single_pixel_buffer_v1.h
 include/wlr/types/wlr_subcompositor.h
 include/wlr/types/wlr_surface.h
 include/wlr/types/wlr_switch.h

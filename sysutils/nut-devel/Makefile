@@ -1,5 +1,3 @@
-# Created by: Boris Popov <bp@FreeBSD.org>
-
 PORTNAME=	nut
 PORTVERSION=	${NUT_COMMIT_DATE}
 CATEGORIES=	sysutils
@@ -19,12 +17,12 @@ CONFLICTS=	nut-[0-9]*
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	networkupstools
-GH_TAGNAME=	3744cb047
-NUT_COMMIT_DATE=	2022.05.24
+GH_TAGNAME=	4e3d0ecce
+NUT_COMMIT_DATE=	2022.08.01
 
 MAKE_JOBS_UNSAFE=	yes
 GNU_CONFIGURE=	yes
-USES=		autoreconf:build compiler:c11 gmake libtool pkgconfig python:build
+USES=		autoreconf:build compiler:c11 gmake libtool pkgconfig python
 USE_LDCONFIG=	yes
 
 NUT_USER?=	uucp
@@ -37,8 +35,8 @@ CGIDIR_REL?=	${CGIDIR:S,^${PREFIX}/,,}
 PLIST_SUB+=	CGIDIR="${CGIDIR_REL}"
 PLIST_SUB+=	CGIETCDIR="etc/nut/"
 
-OPTIONS_DEFAULT=SERIAL USB SNMP NEON SSL_OFF MANPAGES
-OPTIONS_DEFINE=	SERIAL USB SNMP NEON PDU CGI BASH AVAHI IPMIPSU FREEIPMI DOCS MANPAGES
+OPTIONS_DEFAULT=	SERIAL USB SNMP NEON PDU MODBUS CGI BASH AVAHI FREEIPMI DOCS MANPAGES OPENSSL
+OPTIONS_DEFINE=	SERIAL USB SNMP NEON PDU MODBUS CGI BASH AVAHI IPMIPSU FREEIPMI DOCS MANPAGES
 OPTIONS_SINGLE=	SSL
 OPTIONS_SINGLE_SSL=	SSL_OFF OPENSSL NSS
 OPTIONS_SUB=	yes
@@ -47,6 +45,7 @@ SERIAL_DESC=	SERIAL support
 USB_DESC=	USB support
 NEON_DESC=	NEON XML/HTTP support
 PDU_DESC=	Powerman PDU support
+MODBUS_DESC=	Modbus support
 CGI_DESC=	Web CGI interface
 FREEIPMI_DESC=	freeipmi support
 IPMIPSU_DESC=	Use nut-ipmipsu support (experimental)
@@ -72,6 +71,9 @@ CONFIGURE_ARGS=	--sysconfdir=${PREFIX}/etc/nut \
 		--with-pkgconfig-dir=${PREFIX}/libdata/pkgconfig \
 		--with-user=${NUT_USER} \
 		--with-group=${NUT_GROUP} \
+		--with-python=${PYTHON_CMD} \
+		--without-python2 \
+		--with-python3=${PYTHON_CMD} \
 		--with-dev
 
 CFLAGS+=	-I${LOCALBASE}/include -L${LOCALBASE}/lib
@@ -104,6 +106,9 @@ NEON_CONFIGURE_WITH=	neon
 
 PDU_LIB_DEPENDS=	libpowerman.so:sysutils/powerman
 PDU_CONFIGURE_WITH=	powerman
+
+MODBUS_LIB_DEPENDS=	libmodbus.so:comms/libmodbus
+MODBUS_CONFIGURE_WITH=	modbus
 
 BASH_BUILD_DEPENDS=	${LOCALBASE}/share/bash-completion/bash_completion.sh:shells/bash-completion
 BASH_RUN_DEPENDS=	${LOCALBASE}/share/bash-completion/bash_completion.sh:shells/bash-completion

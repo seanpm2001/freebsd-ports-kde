@@ -56,8 +56,8 @@ GCC_DEFAULT?=		11
 GL_DEFAULT?=		mesa-libs
 # Possible values: 7, 8, 9, agpl
 GHOSTSCRIPT_DEFAULT?=	agpl
-# Possible values: 1.17, 1.18, 1.19-devel
-GO_DEFAULT?=		1.18
+# Possible values: 1.18, 1.19, 1.20-devel
+GO_DEFAULT?=		1.19
 # Possible values: 6, 6-nox11, 7, 7-nox11
 IMAGEMAGICK_DEFAULT?=	7
 # Possible values: 7, 8, 11, 17, 18
@@ -88,7 +88,7 @@ LLVM_DEFAULT?=		90
 LUA_DEFAULT?=		5.2
 # Possible values: 5.10, 5.20, 6.8
 MONO_DEFAULT=		5.10
-# Possible values: 5.5, 5.6, 5.7, 8.0, 10.3m, 10.4m, 10.5m, 5.5p, 5.6p, 5.7p, 5.6w, 5.7w
+# Possible values: 5.6, 5.7, 8.0, 10.3m, 10.4m, 10.5m, 5.7p, 5.7w
 MYSQL_DEFAULT?=		5.7
 # Possible values: ninja, samurai
 NINJA_DEFAULT?=		ninja

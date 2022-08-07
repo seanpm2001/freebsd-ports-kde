@@ -1,8 +1,6 @@
-# Created by: Sascha Holzleiter <sascha@root-login.org>
-
 PORTNAME=	gopass
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.14.3
+DISTVERSION=	1.14.4
 PORTREVISION=	1
 CATEGORIES=	security
 
@@ -10,7 +8,6 @@ MAINTAINER=	eduardo@FreeBSD.org
 COMMENT=	Rewrite of the pass password manager in Go
 
 LICENSE=	MIT
-LICENSE_FILE=	${WRKSRC}/LICENSE
 
 ONLY_FOR_ARCHS=	amd64
 ONLY_FOR_ARCHS_REASON=	upstream only supports amd64

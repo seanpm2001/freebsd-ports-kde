@@ -1,5 +1,6 @@
 PORTNAME=	dftbplus
 DISTVERSION=	22.1
+PORTREVISION=	1
 CATEGORIES=	science
 
 MAINTAINER=	yuri@FreeBSD.org
@@ -7,9 +8,12 @@ COMMENT=	DFTB+: Package for performing fast atomistic simulations
 
 LICENSE=	GPLv3 # main code is under LGPL3+, the bundled dftd3-lib is under GPLv1+, this makes the result GPLv3 (based on https://www.gnu.org/licenses/gpl-faq.html#AllCompatibility)
 
-.for arch in aarch64 powerpc powerpc64 powerpc64le
-BROKEN_${arch}=	Lack of IEEE754 support in gcc causes "Cannot find an intrinsic module named 'ieee_arithmetic'", see bug\#255890
-.endfor
+BROKEN_aarch64=	Lack of IEEE754 support in gcc causes "Cannot find an intrinsic module named 'ieee_arithmetic'", see bug\#255890
+BROKEN_FreeBSD_12_powerpc=	Lack of IEEE754 support in gcc causes "Cannot find an intrinsic module named 'ieee_arithmetic'", see bug\#255890
+BROKEN_FreeBSD_12_powerpc64=	Lack of IEEE754 support in gcc causes "Cannot find an intrinsic module named 'ieee_arithmetic'", see bug\#255890
+BROKEN_FreeBSD_13_powerpc=	Lack of IEEE754 support in gcc causes "Cannot find an intrinsic module named 'ieee_arithmetic'", see bug\#255890
+BROKEN_FreeBSD_13_powerpc64=	Lack of IEEE754 support in gcc causes "Cannot find an intrinsic module named 'ieee_arithmetic'", see bug\#255890
+BROKEN_FreeBSD_13_powerpc64le=	Lack of IEEE754 support in gcc causes "Cannot find an intrinsic module named 'ieee_arithmetic'", see bug\#255890
 
 LIB_DEPENDS=	libblas.so:math/blas \
 		liblapack.so:math/lapack \

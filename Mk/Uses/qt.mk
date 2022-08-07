@@ -22,7 +22,7 @@ _QT_MK_INCLUDED=	qt.mk
 
 # Qt versions currently supported by the framework.
 _QT_SUPPORTED?=		5 6
-QT5_VERSION?=		5.15.2
+QT5_VERSION?=		5.15.5
 QT6_VERSION?=		6.2.4
 
 # We accept the Qt version to be passed by either or all of the three mk files.
@@ -165,7 +165,7 @@ qt-assistant_PATH=	${LOCALBASE}/${QT_BINDIR_REL}/assistant
 
 # Always build with *this* version's buildtools
 qt-buildtools_PORT=	devel/${_QT_RELNAME}-buildtools
-qt-buildtools_PATH=	${_QT_RELNAME}-buildtools>=${_QT_VERSION}
+qt-buildtools_PATH=	${_QT_RELNAME}-buildtools>=${_QT_VERSION:R}
 
 qt-base_PORT=		devel/${_QT_RELNAME}-base
 qt-base_LIB=		libQt${_QT_LIBVER}Core.so
@@ -277,7 +277,7 @@ qt-qev_PATH=		${LOCALBASE}/${QT_BINDIR_REL}/qev
 
 # Always build with *this* version's qmake
 qt-qmake_PORT=		devel/${_QT_RELNAME}-qmake
-qt-qmake_PATH=		${_QT_RELNAME}-qmake>=${_QT_VERSION}
+qt-qmake_PATH=		${_QT_RELNAME}-qmake>=${_QT_VERSION:R}
 
 qt-quick3d_PORT=	x11-toolkits/${_QT_RELNAME}-quick3d
 qt-quick3d_LIB=		libQt${_QT_LIBVER}Quick3D.so
