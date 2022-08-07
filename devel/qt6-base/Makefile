@@ -10,52 +10,53 @@ BUILD_DEPENDS=	xml:textproc/xmlstarlet \
 		${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers \
 		${LOCALBASE}/include/linux/input.h:devel/evdev-proto
 LIB_DEPENDS=	\
+		libatk-1.0.so:accessibility/atk \
 		libatk-bridge-2.0.so:accessibility/at-spi2-atk \
 		libatspi.so:accessibility/at-spi2-core \
-		libatk-1.0.so:accessibility/atk \
-		libzstd.so:archivers/zstd \
-		libfribidi.so:converters/fribidi \
+		libavahi-client.so:net/avahi-app \
+		libbrotlidec.so:archivers/brotli \
+		libcups.so:print/cups \
 		libdbus-1.so:devel/dbus \
 		libdouble-conversion.so:devel/double-conversion \
-		libintl.so:devel/gettext-runtime \
-		libicui18n.so:devel/icu \
-		libepoll-shim.so:devel/libepoll-shim \
-		libevdev.so:devel/libevdev \
-		libffi.so:devel/libffi \
-		libgudev-1.0.so:devel/libgudev \
-		libmtdev.so:devel/libmtdev \
-		libudev.so:devel/libudev-devd \
-		libunistring.so:devel/libunistring \
-		libpcre.so:devel/pcre \
-		libpcre2-16.so:devel/pcre2 \
-		libidn2.so:dns/libidn2 \
-		libgraphite2.so:graphics/graphite2 \
-		libjpeg.so:graphics/jpeg-turbo \
 		libdrm.so:graphics/libdrm \
+		libepoll-shim.so:devel/libepoll-shim \
 		libepoxy.so:graphics/libepoxy \
-		libpng16.so:graphics/png \
-		libvulkan.so:graphics/vulkan-loader \
-		libwayland-client.so:graphics/wayland \
-		libgmp.so:math/gmp \
-		libavahi-client.so:net/avahi-app \
-		libcups.so:print/cups \
+		libevdev.so:devel/libevdev \
+		libexpat.so:textproc/expat2 \
+		libffi.so:devel/libffi \
+		libfontconfig.so:x11-fonts/fontconfig \
 		libfreetype.so:print/freetype2 \
-		libharfbuzz.so:print/harfbuzz \
+		libfribidi.so:converters/fribidi \
+		libgmp.so:math/gmp \
 		libgnutls.so:security/gnutls \
-		libtasn1.so:security/libtasn1 \
+		libgraphite2.so:graphics/graphite2 \
+		libgudev-1.0.so:devel/libgudev \
+		libharfbuzz.so:print/harfbuzz \
+		libicui18n.so:devel/icu \
+		libidn2.so:dns/libidn2 \
+		libinput.so:x11/libinput \
+		libintl.so:devel/gettext-runtime \
+		libjpeg.so:graphics/jpeg-turbo \
+		libmtdev.so:devel/libmtdev \
 		libnettle.so:security/nettle \
 		libp11-kit.so:security/p11-kit \
-		libexpat.so:textproc/expat2 \
-		libfontconfig.so:x11-fonts/fontconfig \
-		libinput.so:x11/libinput \
+		libpcre.so:devel/pcre \
+		libpcre2-16.so:devel/pcre2 \
+		libpng16.so:graphics/png \
+		libtasn1.so:security/libtasn1 \
+		libudev.so:devel/libudev-devd \
+		libunistring.so:devel/libunistring \
+		libvulkan.so:graphics/vulkan-loader \
 		libwacom.so:x11/libwacom \
-		libxkbcommon.so:x11/libxkbcommon \
-		libxcb-util.so:x11/xcb-util \
+		libwayland-client.so:graphics/wayland \
 		libxcb-cursor.so:x11/xcb-util-cursor \
+		libxcb-ewmh.so:x11/xcb-util-wm \
 		libxcb-image.so:x11/xcb-util-image \
 		libxcb-keysyms.so:x11/xcb-util-keysyms \
 		libxcb-render-util.so:x11/xcb-util-renderutil \
-		libxcb-ewmh.so:x11/xcb-util-wm
+		libxcb-util.so:x11/xcb-util \
+		libxkbcommon.so:x11/libxkbcommon \
+		libzstd.so:archivers/zstd
 
 USES=		cmake compiler:c++17-lang gl gnome jpeg perl5 pkgconfig python \
 		qt-dist:6 shebangfix xorg
@@ -71,7 +72,8 @@ CMAKE_OFF=	QT_FEATURE_eglfs \
 SHEBANG_FILES=	${WRKSRC}/mkspecs/features/uikit/device_destinations.sh \
 		${WRKSRC}/mkspecs/features/uikit/devices.py \
 		${WRKSRC}/mkspecs/features/data/mac/objc_namespace.sh \
-		${WRKSRC}/util/android/android_emulator_launcher.sh
+		${WRKSRC}/util/android/android_emulator_launcher.sh \
+		${WRKSRC}/util/testrunner/qt-testrunner.py
 USE_LDCONFIG=	${PREFIX}/${QT_LIBDIR_REL}
 
 # zstd from base fails to compress files during the build (error 11: unsupported argument)
