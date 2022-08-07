@@ -1,8 +1,8 @@
---- cmake/QtRpathHelpers.cmake.orig	2020-12-08 16:01:17 UTC
+--- cmake/QtRpathHelpers.cmake.orig	2022-05-25 08:58:52 UTC
 +++ cmake/QtRpathHelpers.cmake
-@@ -22,6 +22,8 @@ function(qt_compute_relative_rpath_base rpath install_
+@@ -29,6 +29,8 @@ function(qt_compute_relative_rpath_base rpath install_
          set(rpath_rel_base "@loader_path")
-     elseif(LINUX)
+     elseif(LINUX OR SOLARIS OR FREEBSD)
          set(rpath_rel_base "$ORIGIN")
 +    elseif(CMAKE_SYSTEM_NAME MATCHES "FreeBSD")
 +        set(rpath_rel_base "$ORIGIN")
