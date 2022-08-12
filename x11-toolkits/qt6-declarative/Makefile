@@ -20,13 +20,15 @@ LIB_DEPENDS=	libdouble-conversion.so:devel/double-conversion \
 		libxkbcommon.so:x11/libxkbcommon \
 		libzstd.so:archivers/zstd
 
-USES=		cmake compiler:c++17-lang gettext-runtime gl gnome python:3.5+ xorg \
+USES=		cmake compiler:c++17-lang gettext-runtime gl gnome pkgconfig python:3.5+ xorg \
 		qt-dist:6
 USE_GL=		gl
 USE_GNOME=	glib20
 USE_QT=		base shadertools
 USE_XORG=	x11 xau xcb xdmcp
 USE_LDCONFIG=	${PREFIX}/${QT_LIBDIR_REL}
+
+BINARY_ALIAS=	qsb=${QT_BINDIR}/qsb
 
 post-patch:
 	${REINPLACE_CMD} -e "s#python3#${PYTHON_CMD}#g" ${WRKSRC}/cmake/QtDeclarativeSetup.cmake
