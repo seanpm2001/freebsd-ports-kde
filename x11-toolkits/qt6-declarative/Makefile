@@ -28,8 +28,6 @@ USE_QT=		base shadertools
 USE_XORG=	x11 xau xcb xdmcp
 USE_LDCONFIG=	${PREFIX}/${QT_LIBDIR_REL}
 
-BINARY_ALIAS=	qsb=${QT_BINDIR}/qsb
-
 post-patch:
 	${REINPLACE_CMD} -e "s#python3#${PYTHON_CMD}#g" ${WRKSRC}/cmake/QtDeclarativeSetup.cmake
 

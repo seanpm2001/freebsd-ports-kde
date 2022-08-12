@@ -1,19 +1,10 @@
-@dir %%QT_LIBDIR%%/cmake/Qt6BuildInternals/StandaloneTests
-@dir %%QT_LIBDIR%%/cmake/Qt6Designer
-@dir %%QT_LIBDIR%%/cmake/Qt6DesignerComponentsPrivate
-@dir %%QT_LIBDIR%%/cmake/Qt6Help
-@dir %%QT_LIBDIR%%/cmake/Qt6Linguist
-@dir %%QT_LIBDIR%%/cmake/Qt6LinguistTools
-@dir %%QT_LIBDIR%%/cmake/Qt6Tools
-@dir %%QT_LIBDIR%%/cmake/Qt6ToolsTools
-@dir %%QT_LIBDIR%%/cmake/Qt6UiPlugin
-@dir %%QT_LIBDIR%%/cmake/Qt6UiTools
 bin/assistant6
 bin/designer6
 bin/linguist6
 bin/pixeltool6
 bin/qdbus6
 bin/qdbusviewer6
+bin/qdistancefieldgenerator6
 bin/qdoc6
 bin/qtdiag6
 bin/qtplugininfo6
@@ -271,6 +262,12 @@ lib/cmake/Qt6Designer/Qt6DesignerDependencies.cmake
 lib/cmake/Qt6Designer/Qt6DesignerTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/Qt6Designer/Qt6DesignerTargets.cmake
 lib/cmake/Qt6Designer/Qt6DesignerVersionlessTargets.cmake
+lib/cmake/Qt6Designer/Qt6QQuickWidgetPluginAdditionalTargetInfo.cmake
+lib/cmake/Qt6Designer/Qt6QQuickWidgetPluginConfig.cmake
+lib/cmake/Qt6Designer/Qt6QQuickWidgetPluginConfigVersion.cmake
+lib/cmake/Qt6Designer/Qt6QQuickWidgetPluginConfigVersionImpl.cmake
+lib/cmake/Qt6Designer/Qt6QQuickWidgetPluginTargets-%%CMAKE_BUILD_TYPE%%.cmake
+lib/cmake/Qt6Designer/Qt6QQuickWidgetPluginTargets.cmake
 lib/cmake/Qt6DesignerComponentsPrivate/Qt6DesignerComponentsPrivateAdditionalTargetInfo.cmake
 lib/cmake/Qt6DesignerComponentsPrivate/Qt6DesignerComponentsPrivateConfig.cmake
 lib/cmake/Qt6DesignerComponentsPrivate/Qt6DesignerComponentsPrivateConfigVersion.cmake
@@ -363,6 +360,7 @@ lib/metatypes/qt6uitools_%%CMAKE_BUILD_TYPE%%_metatypes.json
 %%QT_BINDIR%%/pixeltool
 %%QT_BINDIR%%/qdbus
 %%QT_BINDIR%%/qdbusviewer
+%%QT_BINDIR%%/qdistancefieldgenerator
 %%QT_BINDIR%%/qdoc
 %%QT_BINDIR%%/qtdiag
 %%QT_BINDIR%%/qtdiag6
@@ -378,6 +376,7 @@ lib/metatypes/qt6uitools_%%CMAKE_BUILD_TYPE%%_metatypes.json
 %%QT_MKSPECDIR%%/modules/qt_lib_uiplugin.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_uitools.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_uitools_private.pri
+%%QT_PLUGINDIR%%/designer/libqquickwidget.so
 libdata/pkgconfig/Qt6Designer.pc
 libdata/pkgconfig/Qt6Help.pc
 libdata/pkgconfig/Qt6Linguist.pc
