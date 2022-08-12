@@ -28,10 +28,8 @@ _QT5_DISTS=		3d activeqt androidextras base charts connectivity datavis3d \
 			serialport speech svg tools translations virtualkeyboard wayland \
 			webchannel webengine webglplugin websockets webview winextras \
 			x11extras xmlpatterns
-_QT6_DISTS=		3d 5compat base declarative doc imageformats quick3d quickcontrols2 quicktimeline networkauth shadertools svg tools translations webengine wayland
-
-_QT6_DIST_base_TAGNAME=	39d99c7
-_QT6_DIST_declarative_TAGNAME=	0efc634
+_QT6_DISTS=		3d 5compat base declarative doc imageformats quick3d quickcontrols2 \
+			quicktimeline networkauth shadertools svg tools translations webengine wayland
 
 _QT_DISTS=		${_QT${_QT_VER}_DISTS}
 
