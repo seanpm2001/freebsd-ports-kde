@@ -1,14 +1,3 @@
-%%QT_CMAKEDIR%%/Qt6/FindWrapIconv.cmake
-%%QT_CMAKEDIR%%/Qt6BuildInternals/StandaloneTests/Qt5CompatTestsConfig.cmake
-%%QT_CMAKEDIR%%/Qt6Core5Compat/Qt6Core5CompatAdditionalTargetInfo.cmake
-%%QT_CMAKEDIR%%/Qt6Core5Compat/Qt6Core5CompatConfig.cmake
-%%QT_CMAKEDIR%%/Qt6Core5Compat/Qt6Core5CompatConfigVersion.cmake
-%%QT_CMAKEDIR%%/Qt6Core5Compat/Qt6Core5CompatConfigVersionImpl.cmake
-%%QT_CMAKEDIR%%/Qt6Core5Compat/Qt6Core5CompatDependencies.cmake
-%%QT_CMAKEDIR%%/Qt6Core5Compat/Qt6Core5CompatTargets-%%CMAKE_BUILD_TYPE%%.cmake
-%%QT_CMAKEDIR%%/Qt6Core5Compat/Qt6Core5CompatTargets.cmake
-%%QT_CMAKEDIR%%/Qt6Core5Compat/Qt6Core5CompatVersionlessTargets.cmake
-%%QT_DATADIR%%/modules/Core5Compat.json
 %%QT_INCDIR%%/QtCore5Compat/%%FULLVER%%/QtCore5Compat/private/cp949codetbl_p.h
 %%QT_INCDIR%%/QtCore5Compat/%%FULLVER%%/QtCore5Compat/private/qbig5codec_p.h
 %%QT_INCDIR%%/QtCore5Compat/%%FULLVER%%/QtCore5Compat/private/qbinaryjson_p.h
@@ -70,12 +59,25 @@
 %%QT_INCDIR%%/QtCore5Compat/qtcore5compatversion.h
 %%QT_INCDIR%%/QtCore5Compat/qtextcodec.h
 %%QT_INCDIR%%/QtCore5Compat/qxml.h
+%%QT_CMAKEDIR%%/Qt6/FindWrapIconv.cmake
+%%QT_CMAKEDIR%%/Qt6BuildInternals/StandaloneTests/Qt5CompatTestsConfig.cmake
+%%QT_CMAKEDIR%%/Qt6Core5Compat/Qt6Core5CompatAdditionalTargetInfo.cmake
+%%QT_CMAKEDIR%%/Qt6Core5Compat/Qt6Core5CompatConfig.cmake
+%%QT_CMAKEDIR%%/Qt6Core5Compat/Qt6Core5CompatConfigVersion.cmake
+%%QT_CMAKEDIR%%/Qt6Core5Compat/Qt6Core5CompatConfigVersionImpl.cmake
+%%QT_CMAKEDIR%%/Qt6Core5Compat/Qt6Core5CompatDependencies.cmake
+%%QT_CMAKEDIR%%/Qt6Core5Compat/Qt6Core5CompatTargets-%%CMAKE_BUILD_TYPE%%.cmake
+%%QT_CMAKEDIR%%/Qt6Core5Compat/Qt6Core5CompatTargets.cmake
+%%QT_CMAKEDIR%%/Qt6Core5Compat/Qt6Core5CompatVersionlessTargets.cmake
 %%QT_LIBDIR%%/libQt6Core5Compat.prl
 %%QT_LIBDIR%%/libQt6Core5Compat.so
-%%QT_LIBDIR%%/libQt6Core5Compat.so.%%FULLVER%%
 %%QT_LIBDIR%%/libQt6Core5Compat.so.6
+%%QT_LIBDIR%%/libQt6Core5Compat.so.%%FULLVER%%
 %%QT_LIBDIR%%/metatypes/qt6core5compat_%%CMAKE_BUILD_TYPE%%_metatypes.json
 %%QT_MKSPECDIR%%/modules/qt_lib_core5compat.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_core5compat_private.pri
+libdata/pkgconfig/Qt6Core5Compat.pc
+%%QT_DATADIR%%/modules/Core5Compat.json
 @dir %%QT_LIBDIR%%/cmake/Qt6BuildInternals/StandaloneTests
 @dir %%QT_LIBDIR%%/cmake/Qt6Core5Compat
+@dir %%QT_LIBDIR%%/pkgconfig

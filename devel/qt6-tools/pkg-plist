@@ -334,7 +334,6 @@ bin/qtplugininfo6
 %%QT_BINDIR%%/qdbus
 %%QT_BINDIR%%/qdbusviewer
 %%QT_BINDIR%%/qdoc
-%%QT_BINDIR%%/qhelpgenerator
 %%QT_BINDIR%%/qtdiag
 %%QT_BINDIR%%/qtdiag6
 %%QT_BINDIR%%/qtplugininfo
@@ -369,9 +368,15 @@ bin/qtplugininfo6
 %%QT_MKSPECDIR%%/modules/qt_lib_uiplugin.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_uitools.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_uitools_private.pri
-%%QT_LIBEXECDIR%%/lprodump
+libdata/pkgconfig/Qt6Designer.pc
+libdata/pkgconfig/Qt6Help.pc
+libdata/pkgconfig/Qt6Linguist.pc
+libdata/pkgconfig/Qt6UiPlugin.pc
+libdata/pkgconfig/Qt6UiTools.pc
 %%QT_LIBEXECDIR%%/l%%CMAKE_BUILD_TYPE%%-pro
+%%QT_LIBEXECDIR%%/lprodump
 %%QT_LIBEXECDIR%%/lupdate-pro
+%%QT_LIBEXECDIR%%/qhelpgenerator
 %%QT_LIBEXECDIR%%/qtattributionsscanner
 %%QT_DATADIR%%/modules/Designer.json
 %%QT_DATADIR%%/modules/DesignerComponentsPrivate.json
@@ -403,3 +408,4 @@ bin/qtplugininfo6
 @dir %%QT_LIBDIR%%/cmake/Qt6ToolsTools
 @dir %%QT_LIBDIR%%/cmake/Qt6UiPlugin
 @dir %%QT_LIBDIR%%/cmake/Qt6UiTools
+@dir %%QT_LIBDIR%%/pkgconfig

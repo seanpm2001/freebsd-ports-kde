@@ -74,17 +74,17 @@ LICENSE?=		LGPL21
 DESCR?=			${PORTSDIR}/devel/${_QT_RELNAME}/pkg-descr
 .  endif
 
-. if ${_QT_VER:M5}
+.  if ${_QT_VER:M5}
 # Stage support.
 DESTDIRNAME=		INSTALL_ROOT
-.else
+.  else
 DESTDIRNAME=		DESTDIR
-.endif
+.  endif
 
 # Qt's tarballs are xz compressed.
-.    if empty(USES:Mtar)
+.  if empty(USES:Mtar)
 EXTRACT_SUFX?=		.tar.xz
-.    endif
+.  endif
 
 .  if ${_QT_VER:M6}
 DISTNAME=		${_QT_DIST:S,^,qt,:S,$,-everywhere-src-${DISTVERSION},}
@@ -194,7 +194,7 @@ CMAKE_ARGS+=		-DINSTALL_ARCHDATADIR=${PREFIX}/${QT_ARCHDIR_REL} \
 			-DINSTALL_SYSCONFDIR=${PREFIX}/${QT_ETCDIR_REL} \
 			-DINSTALL_TESTSDIR=${PREFIX}/${QT_TESTDIR_REL} \
 			-DINSTALL_TRANSLATIONSDIR=${PREFIX}/${QT_L10NDIR_REL} \
-			-DCMAKE_MODULE_PATH="${LOCALBASE};${PREFIX}/${QT_LIBDIR_REL}" \
+			-DCMAKE_MODULE_PATH="${LOCALBASE};${PREFIX}/${QT_LIBDIR_REL};${PREFIX}/${QT_LIBDIR_REL}/cmake" \
 			-DQT_QMAKE_TARGET_MKSPEC:String=freebsd-clang \
 			-DCMAKE_PREFIX_PATH=${PREFIX}/${QT_LIBDIR_REL}/cmake \
 			-DCMAKE_MODULE_PATH=${PREFIX}/${QT_LIBDIR_REL}/cmake
@@ -267,11 +267,11 @@ _EXTRA_PATCHES_QT5+=	${PORTSDIR}/devel/${_QT_RELNAME}/files/extra-patch-mkspecs_
 			${PORTSDIR}/devel/${_QT_RELNAME}/files/extra-patch-mkspecs_common_gcc-base.conf \
 			${PORTSDIR}/devel/${_QT_RELNAME}/files/extrapatch-mkspecs_freebsd-g++_qmake.conf
 .    endif
-.  if ${_QT_VER:M5}
+.    if ${_QT_VER:M5}
 EXTRA_PATCHES?=		${PORTSDIR}/devel/${_QT_RELNAME}/files/extrapatch-configure \
 			${PORTSDIR}/devel/${_QT_RELNAME}/files/extrapatch-sync.profiles \
 			${_EXTRA_PATCHES_QT5}
-.  endif # ${_QT_VER:M5}
+.    endif # ${_QT_VER:M5}
 .  endif #  ${_QT_DIST} == "base"
 
 # Override settings installed in qconfig.h and *.pri files. The flags will be
