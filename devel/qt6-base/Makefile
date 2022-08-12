@@ -67,8 +67,7 @@ USE_XORG=	ice pixman sm x11 xau xcb xcomposite xcursor xdamage xdmcp \
 CMAKE_ON=	QT_AVOID_CMAKE_ARCHIVING_API \
 		QT_FIND_ALL_PACKAGES_ALWAYS
 CMAKE_OFF=	QT_FEATURE_eglfs \
-		QT_FEATURE_gssapi \
-		QT_FEATURE_animation
+		QT_FEATURE_gssapi
 SHEBANG_FILES=	${WRKSRC}/mkspecs/features/uikit/device_destinations.sh \
 		${WRKSRC}/mkspecs/features/uikit/devices.py \
 		${WRKSRC}/mkspecs/features/data/mac/objc_namespace.sh \
