@@ -387,6 +387,7 @@
     SUBDIR += py-gluoncv
     SUBDIR += py-gluonnlp
     SUBDIR += py-halo
+    SUBDIR += py-histoprint
     SUBDIR += py-huepy
     SUBDIR += py-kartograph
     SUBDIR += py-log_symbols
@@ -411,6 +412,7 @@
     SUBDIR += py-pyprind
     SUBDIR += py-python-geohash
     SUBDIR += py-python-utils
+    SUBDIR += py-qiskit-machine-learning
     SUBDIR += py-scikit-fusion
     SUBDIR += py-serverfiles
     SUBDIR += py-soapy_power
