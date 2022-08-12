@@ -388,61 +388,6 @@ lib/cmake/Qt6Quick3DUtils/Qt6Quick3DUtilsDependencies.cmake
 lib/cmake/Qt6Quick3DUtils/Qt6Quick3DUtilsTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/Qt6Quick3DUtils/Qt6Quick3DUtilsTargets.cmake
 lib/cmake/Qt6Quick3DUtils/Qt6Quick3DUtilsVersionlessTargets.cmake
-lib/libQt6Quick3D.prl
-lib/libQt6Quick3D.so
-lib/libQt6Quick3D.so.6
-lib/libQt6Quick3D.so.%%FULLVER%%
-lib/libQt6Quick3DAssetImport.prl
-lib/libQt6Quick3DAssetImport.so
-lib/libQt6Quick3DAssetImport.so.6
-lib/libQt6Quick3DAssetImport.so.%%FULLVER%%
-lib/libQt6Quick3DAssetUtils.prl
-lib/libQt6Quick3DAssetUtils.so
-lib/libQt6Quick3DAssetUtils.so.6
-lib/libQt6Quick3DAssetUtils.so.%%FULLVER%%
-lib/libQt6Quick3DEffects.prl
-lib/libQt6Quick3DEffects.so
-lib/libQt6Quick3DEffects.so.6
-lib/libQt6Quick3DEffects.so.%%FULLVER%%
-lib/libQt6Quick3DGlslParser.prl
-lib/libQt6Quick3DGlslParser.so
-lib/libQt6Quick3DGlslParser.so.6
-lib/libQt6Quick3DGlslParser.so.%%FULLVER%%
-lib/libQt6Quick3DHelpers.prl
-lib/libQt6Quick3DHelpers.so
-lib/libQt6Quick3DHelpers.so.6
-lib/libQt6Quick3DHelpers.so.%%FULLVER%%
-lib/libQt6Quick3DIblBaker.prl
-lib/libQt6Quick3DIblBaker.so
-lib/libQt6Quick3DIblBaker.so.6
-lib/libQt6Quick3DIblBaker.so.%%FULLVER%%
-lib/libQt6Quick3DParticleEffects.prl
-lib/libQt6Quick3DParticleEffects.so
-lib/libQt6Quick3DParticleEffects.so.6
-lib/libQt6Quick3DParticleEffects.so.%%FULLVER%%
-lib/libQt6Quick3DParticles.prl
-lib/libQt6Quick3DParticles.so
-lib/libQt6Quick3DParticles.so.6
-lib/libQt6Quick3DParticles.so.%%FULLVER%%
-lib/libQt6Quick3DRuntimeRender.prl
-lib/libQt6Quick3DRuntimeRender.so
-lib/libQt6Quick3DRuntimeRender.so.6
-lib/libQt6Quick3DRuntimeRender.so.%%FULLVER%%
-lib/libQt6Quick3DUtils.prl
-lib/libQt6Quick3DUtils.so
-lib/libQt6Quick3DUtils.so.6
-lib/libQt6Quick3DUtils.so.%%FULLVER%%
-lib/metatypes/qt6quick3d_%%CMAKE_BUILD_TYPE%%_metatypes.json
-lib/metatypes/qt6quick3dassetimport_%%CMAKE_BUILD_TYPE%%_metatypes.json
-lib/metatypes/qt6quick3dassetutils_%%CMAKE_BUILD_TYPE%%_metatypes.json
-lib/metatypes/qt6quick3deffects_%%CMAKE_BUILD_TYPE%%_metatypes.json
-lib/metatypes/qt6quick3dglslparserprivate_%%CMAKE_BUILD_TYPE%%_metatypes.json
-lib/metatypes/qt6quick3dhelpers_%%CMAKE_BUILD_TYPE%%_metatypes.json
-lib/metatypes/qt6quick3diblbaker_%%CMAKE_BUILD_TYPE%%_metatypes.json
-lib/metatypes/qt6quick3dparticleeffects_%%CMAKE_BUILD_TYPE%%_metatypes.json
-lib/metatypes/qt6quick3dparticles_%%CMAKE_BUILD_TYPE%%_metatypes.json
-lib/metatypes/qt6quick3druntimerender_%%CMAKE_BUILD_TYPE%%_metatypes.json
-lib/metatypes/qt6quick3dutils_%%CMAKE_BUILD_TYPE%%_metatypes.json
 %%QT_BINDIR%%/balsam
 %%QT_BINDIR%%/balsamui
 %%QT_BINDIR%%/instancer
@@ -450,6 +395,61 @@ lib/metatypes/qt6quick3dutils_%%CMAKE_BUILD_TYPE%%_metatypes.json
 %%QT_BINDIR%%/meshdebug
 %%QT_BINDIR%%/shadergen
 %%QT_BINDIR%%/shapegen
+%%QT_LIBDIR%%/libQt6Quick3D.prl
+%%QT_LIBDIR%%/libQt6Quick3D.so
+%%QT_LIBDIR%%/libQt6Quick3D.so.6
+%%QT_LIBDIR%%/libQt6Quick3D.so.%%FULLVER%%
+%%QT_LIBDIR%%/libQt6Quick3DAssetImport.prl
+%%QT_LIBDIR%%/libQt6Quick3DAssetImport.so
+%%QT_LIBDIR%%/libQt6Quick3DAssetImport.so.6
+%%QT_LIBDIR%%/libQt6Quick3DAssetImport.so.%%FULLVER%%
+%%QT_LIBDIR%%/libQt6Quick3DAssetUtils.prl
+%%QT_LIBDIR%%/libQt6Quick3DAssetUtils.so
+%%QT_LIBDIR%%/libQt6Quick3DAssetUtils.so.6
+%%QT_LIBDIR%%/libQt6Quick3DAssetUtils.so.%%FULLVER%%
+%%QT_LIBDIR%%/libQt6Quick3DEffects.prl
+%%QT_LIBDIR%%/libQt6Quick3DEffects.so
+%%QT_LIBDIR%%/libQt6Quick3DEffects.so.6
+%%QT_LIBDIR%%/libQt6Quick3DEffects.so.%%FULLVER%%
+%%QT_LIBDIR%%/libQt6Quick3DGlslParser.prl
+%%QT_LIBDIR%%/libQt6Quick3DGlslParser.so
+%%QT_LIBDIR%%/libQt6Quick3DGlslParser.so.6
+%%QT_LIBDIR%%/libQt6Quick3DGlslParser.so.%%FULLVER%%
+%%QT_LIBDIR%%/libQt6Quick3DHelpers.prl
+%%QT_LIBDIR%%/libQt6Quick3DHelpers.so
+%%QT_LIBDIR%%/libQt6Quick3DHelpers.so.6
+%%QT_LIBDIR%%/libQt6Quick3DHelpers.so.%%FULLVER%%
+%%QT_LIBDIR%%/libQt6Quick3DIblBaker.prl
+%%QT_LIBDIR%%/libQt6Quick3DIblBaker.so
+%%QT_LIBDIR%%/libQt6Quick3DIblBaker.so.6
+%%QT_LIBDIR%%/libQt6Quick3DIblBaker.so.%%FULLVER%%
+%%QT_LIBDIR%%/libQt6Quick3DParticleEffects.prl
+%%QT_LIBDIR%%/libQt6Quick3DParticleEffects.so
+%%QT_LIBDIR%%/libQt6Quick3DParticleEffects.so.6
+%%QT_LIBDIR%%/libQt6Quick3DParticleEffects.so.%%FULLVER%%
+%%QT_LIBDIR%%/libQt6Quick3DParticles.prl
+%%QT_LIBDIR%%/libQt6Quick3DParticles.so
+%%QT_LIBDIR%%/libQt6Quick3DParticles.so.6
+%%QT_LIBDIR%%/libQt6Quick3DParticles.so.%%FULLVER%%
+%%QT_LIBDIR%%/libQt6Quick3DRuntimeRender.prl
+%%QT_LIBDIR%%/libQt6Quick3DRuntimeRender.so
+%%QT_LIBDIR%%/libQt6Quick3DRuntimeRender.so.6
+%%QT_LIBDIR%%/libQt6Quick3DRuntimeRender.so.%%FULLVER%%
+%%QT_LIBDIR%%/libQt6Quick3DUtils.prl
+%%QT_LIBDIR%%/libQt6Quick3DUtils.so
+%%QT_LIBDIR%%/libQt6Quick3DUtils.so.6
+%%QT_LIBDIR%%/libQt6Quick3DUtils.so.%%FULLVER%%
+%%QT_LIBDIR%%/metatypes/qt6quick3d_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt6quick3dassetimport_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt6quick3dassetutils_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt6quick3deffects_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt6quick3dglslparserprivate_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt6quick3dhelpers_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt6quick3diblbaker_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt6quick3dparticleeffects_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt6quick3dparticles_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt6quick3druntimerender_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt6quick3dutils_%%CMAKE_BUILD_TYPE%%_metatypes.json
 %%QT_MKSPECDIR%%/modules/qt_lib_quick3d.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_quick3d_private.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_quick3dassetimport.pri
@@ -900,3 +900,18 @@ libdata/pkgconfig/Qt6Quick3DUtils.pc
 %%QT_DATADIR%%/modules/Quick3DParticles.json
 %%QT_DATADIR%%/modules/Quick3DRuntimeRender.json
 %%QT_DATADIR%%/modules/Quick3DUtils.json
+@dir %%QT_CMAKEDIR%%/Qt6BuildInternals/StandaloneTests
+@dir %%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins
+@dir %%QT_CMAKEDIR%%/Qt6Quick3D
+@dir %%QT_CMAKEDIR%%/Qt6Quick3DAssetImport
+@dir %%QT_CMAKEDIR%%/Qt6Quick3DAssetUtils
+@dir %%QT_CMAKEDIR%%/Qt6Quick3DEffects
+@dir %%QT_CMAKEDIR%%/Qt6Quick3DGlslParserPrivate
+@dir %%QT_CMAKEDIR%%/Qt6Quick3DHelpers
+@dir %%QT_CMAKEDIR%%/Qt6Quick3DIblBaker
+@dir %%QT_CMAKEDIR%%/Qt6Quick3DParticleEffects
+@dir %%QT_CMAKEDIR%%/Qt6Quick3DParticles
+@dir %%QT_CMAKEDIR%%/Qt6Quick3DRuntimeRender
+@dir %%QT_CMAKEDIR%%/Qt6Quick3DTools
+@dir %%QT_CMAKEDIR%%/Qt6Quick3DUtils
+@dir %%QT_LIBDIR%%/pkgconfig

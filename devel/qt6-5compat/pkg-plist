@@ -69,12 +69,15 @@ lib/cmake/Qt6Core5Compat/Qt6Core5CompatDependencies.cmake
 lib/cmake/Qt6Core5Compat/Qt6Core5CompatTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/Qt6Core5Compat/Qt6Core5CompatTargets.cmake
 lib/cmake/Qt6Core5Compat/Qt6Core5CompatVersionlessTargets.cmake
-lib/libQt6Core5Compat.prl
-lib/libQt6Core5Compat.so
-lib/libQt6Core5Compat.so.6
-lib/libQt6Core5Compat.so.%%FULLVER%%
-lib/metatypes/qt6core5compat_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/libQt6Core5Compat.prl
+%%QT_LIBDIR%%/libQt6Core5Compat.so
+%%QT_LIBDIR%%/libQt6Core5Compat.so.6
+%%QT_LIBDIR%%/libQt6Core5Compat.so.%%FULLVER%%
+%%QT_LIBDIR%%/metatypes/qt6core5compat_%%CMAKE_BUILD_TYPE%%_metatypes.json
 %%QT_MKSPECDIR%%/modules/qt_lib_core5compat.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_core5compat_private.pri
 libdata/pkgconfig/Qt6Core5Compat.pc
 %%QT_DATADIR%%/modules/Core5Compat.json
+@dir %%QT_CMAKEDIR%%/Qt6BuildInternals/StandaloneTests
+@dir %%QT_CMAKEDIR%%/Qt6Core5Compat
+@dir %%QT_LIBDIR%%/pkgconfig

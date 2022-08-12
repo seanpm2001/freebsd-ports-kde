@@ -518,31 +518,31 @@ lib/cmake/Qt6WlShellIntegrationPrivate/Qt6WlShellIntegrationPrivateDependencies.
 lib/cmake/Qt6WlShellIntegrationPrivate/Qt6WlShellIntegrationPrivateTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/Qt6WlShellIntegrationPrivate/Qt6WlShellIntegrationPrivateTargets.cmake
 lib/cmake/Qt6WlShellIntegrationPrivate/Qt6WlShellIntegrationPrivateVersionlessTargets.cmake
-lib/libQt6WaylandClient.prl
-lib/libQt6WaylandClient.so
-lib/libQt6WaylandClient.so.6
-lib/libQt6WaylandClient.so.%%FULLVER%%
-lib/libQt6WaylandCompositor.prl
-lib/libQt6WaylandCompositor.so
-lib/libQt6WaylandCompositor.so.6
-lib/libQt6WaylandCompositor.so.%%FULLVER%%
-lib/libQt6WaylandEglClientHwIntegration.prl
-lib/libQt6WaylandEglClientHwIntegration.so
-lib/libQt6WaylandEglClientHwIntegration.so.6
-lib/libQt6WaylandEglClientHwIntegration.so.%%FULLVER%%
-lib/libQt6WaylandEglCompositorHwIntegration.prl
-lib/libQt6WaylandEglCompositorHwIntegration.so
-lib/libQt6WaylandEglCompositorHwIntegration.so.6
-lib/libQt6WaylandEglCompositorHwIntegration.so.%%FULLVER%%
-lib/libQt6WlShellIntegration.prl
-lib/libQt6WlShellIntegration.so
-lib/libQt6WlShellIntegration.so.6
-lib/libQt6WlShellIntegration.so.%%FULLVER%%
-lib/metatypes/qt6waylandclient_%%CMAKE_BUILD_TYPE%%_metatypes.json
-lib/metatypes/qt6waylandcompositor_%%CMAKE_BUILD_TYPE%%_metatypes.json
-lib/metatypes/qt6waylandeglclienthwintegrationprivate_%%CMAKE_BUILD_TYPE%%_metatypes.json
-lib/metatypes/qt6waylandeglcompositorhwintegrationprivate_%%CMAKE_BUILD_TYPE%%_metatypes.json
-lib/metatypes/qt6wlshellintegrationprivate_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/libQt6WaylandClient.prl
+%%QT_LIBDIR%%/libQt6WaylandClient.so
+%%QT_LIBDIR%%/libQt6WaylandClient.so.6
+%%QT_LIBDIR%%/libQt6WaylandClient.so.%%FULLVER%%
+%%QT_LIBDIR%%/libQt6WaylandCompositor.prl
+%%QT_LIBDIR%%/libQt6WaylandCompositor.so
+%%QT_LIBDIR%%/libQt6WaylandCompositor.so.6
+%%QT_LIBDIR%%/libQt6WaylandCompositor.so.%%FULLVER%%
+%%QT_LIBDIR%%/libQt6WaylandEglClientHwIntegration.prl
+%%QT_LIBDIR%%/libQt6WaylandEglClientHwIntegration.so
+%%QT_LIBDIR%%/libQt6WaylandEglClientHwIntegration.so.6
+%%QT_LIBDIR%%/libQt6WaylandEglClientHwIntegration.so.%%FULLVER%%
+%%QT_LIBDIR%%/libQt6WaylandEglCompositorHwIntegration.prl
+%%QT_LIBDIR%%/libQt6WaylandEglCompositorHwIntegration.so
+%%QT_LIBDIR%%/libQt6WaylandEglCompositorHwIntegration.so.6
+%%QT_LIBDIR%%/libQt6WaylandEglCompositorHwIntegration.so.%%FULLVER%%
+%%QT_LIBDIR%%/libQt6WlShellIntegration.prl
+%%QT_LIBDIR%%/libQt6WlShellIntegration.so
+%%QT_LIBDIR%%/libQt6WlShellIntegration.so.6
+%%QT_LIBDIR%%/libQt6WlShellIntegration.so.%%FULLVER%%
+%%QT_LIBDIR%%/metatypes/qt6waylandclient_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt6waylandcompositor_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt6waylandeglclienthwintegrationprivate_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt6waylandeglcompositorhwintegrationprivate_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt6wlshellintegrationprivate_%%CMAKE_BUILD_TYPE%%_metatypes.json
 %%QT_MKSPECDIR%%/modules/qt_lib_wayland_egl_client_hw_integration_private.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_wayland_egl_compositor_hw_integration_private.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_waylandclient.pri
@@ -598,3 +598,14 @@ libdata/pkgconfig/Qt6WaylandCompositor.pc
 %%QT_DATADIR%%/modules/WaylandEglCompositorHwIntegrationPrivate.json
 %%QT_DATADIR%%/modules/WaylandGlobalPrivate.json
 %%QT_DATADIR%%/modules/WlShellIntegrationPrivate.json
+@dir %%QT_CMAKEDIR%%/Qt6BuildInternals/StandaloneTests
+@dir %%QT_CMAKEDIR%%/Qt6Gui
+@dir %%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins
+@dir %%QT_CMAKEDIR%%/Qt6WaylandClient
+@dir %%QT_CMAKEDIR%%/Qt6WaylandCompositor
+@dir %%QT_CMAKEDIR%%/Qt6WaylandEglClientHwIntegrationPrivate
+@dir %%QT_CMAKEDIR%%/Qt6WaylandEglCompositorHwIntegrationPrivate
+@dir %%QT_CMAKEDIR%%/Qt6WaylandGlobalPrivate
+@dir %%QT_CMAKEDIR%%/Qt6WaylandScannerTools
+@dir %%QT_CMAKEDIR%%/Qt6WlShellIntegrationPrivate
+@dir %%QT_LIBDIR%%/pkgconfig

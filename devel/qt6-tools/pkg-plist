@@ -331,26 +331,6 @@ lib/cmake/Qt6UiTools/Qt6UiToolsDependencies.cmake
 lib/cmake/Qt6UiTools/Qt6UiToolsTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/Qt6UiTools/Qt6UiToolsTargets.cmake
 lib/cmake/Qt6UiTools/Qt6UiToolsVersionlessTargets.cmake
-lib/libQt6Designer.prl
-lib/libQt6Designer.so
-lib/libQt6Designer.so.6
-lib/libQt6Designer.so.%%FULLVER%%
-lib/libQt6DesignerComponents.prl
-lib/libQt6DesignerComponents.so
-lib/libQt6DesignerComponents.so.6
-lib/libQt6DesignerComponents.so.%%FULLVER%%
-lib/libQt6Help.prl
-lib/libQt6Help.so
-lib/libQt6Help.so.6
-lib/libQt6Help.so.%%FULLVER%%
-lib/libQt6UiTools.prl
-lib/libQt6UiTools.so
-lib/libQt6UiTools.so.6
-lib/libQt6UiTools.so.%%FULLVER%%
-lib/metatypes/qt6designer_%%CMAKE_BUILD_TYPE%%_metatypes.json
-lib/metatypes/qt6designercomponentsprivate_%%CMAKE_BUILD_TYPE%%_metatypes.json
-lib/metatypes/qt6help_%%CMAKE_BUILD_TYPE%%_metatypes.json
-lib/metatypes/qt6uitools_%%CMAKE_BUILD_TYPE%%_metatypes.json
 %%QT_BINDIR%%/assistant
 %%QT_BINDIR%%/designer
 %%QT_BINDIR%%/lconvert
@@ -365,6 +345,26 @@ lib/metatypes/qt6uitools_%%CMAKE_BUILD_TYPE%%_metatypes.json
 %%QT_BINDIR%%/qtdiag
 %%QT_BINDIR%%/qtdiag6
 %%QT_BINDIR%%/qtplugininfo
+%%QT_LIBDIR%%/libQt6Designer.prl
+%%QT_LIBDIR%%/libQt6Designer.so
+%%QT_LIBDIR%%/libQt6Designer.so.6
+%%QT_LIBDIR%%/libQt6Designer.so.%%FULLVER%%
+%%QT_LIBDIR%%/libQt6DesignerComponents.prl
+%%QT_LIBDIR%%/libQt6DesignerComponents.so
+%%QT_LIBDIR%%/libQt6DesignerComponents.so.6
+%%QT_LIBDIR%%/libQt6DesignerComponents.so.%%FULLVER%%
+%%QT_LIBDIR%%/libQt6Help.prl
+%%QT_LIBDIR%%/libQt6Help.so
+%%QT_LIBDIR%%/libQt6Help.so.6
+%%QT_LIBDIR%%/libQt6Help.so.%%FULLVER%%
+%%QT_LIBDIR%%/libQt6UiTools.prl
+%%QT_LIBDIR%%/libQt6UiTools.so
+%%QT_LIBDIR%%/libQt6UiTools.so.6
+%%QT_LIBDIR%%/libQt6UiTools.so.%%FULLVER%%
+%%QT_LIBDIR%%/metatypes/qt6designer_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt6designercomponentsprivate_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt6help_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt6uitools_%%CMAKE_BUILD_TYPE%%_metatypes.json
 %%QT_MKSPECDIR%%/modules/qt_lib_designer.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_designer_private.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_designercomponents_private.pri
@@ -407,3 +407,14 @@ libdata/pkgconfig/Qt6UiTools.pc
 %%QT_DATADIR%%/phrasebooks/russian.qph
 %%QT_DATADIR%%/phrasebooks/spanish.qph
 %%QT_DATADIR%%/phrasebooks/swedish.qph
+@dir %%QT_CMAKEDIR%%/Qt6BuildInternals/StandaloneTests
+@dir %%QT_CMAKEDIR%%/Qt6Designer
+@dir %%QT_CMAKEDIR%%/Qt6DesignerComponentsPrivate
+@dir %%QT_CMAKEDIR%%/Qt6Help
+@dir %%QT_CMAKEDIR%%/Qt6Linguist
+@dir %%QT_CMAKEDIR%%/Qt6LinguistTools
+@dir %%QT_CMAKEDIR%%/Qt6Tools
+@dir %%QT_CMAKEDIR%%/Qt6ToolsTools
+@dir %%QT_CMAKEDIR%%/Qt6UiPlugin
+@dir %%QT_CMAKEDIR%%/Qt6UiTools
+@dir %%QT_LIBDIR%%/pkgconfig

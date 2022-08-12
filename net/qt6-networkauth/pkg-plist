@@ -35,12 +35,15 @@ lib/cmake/Qt6NetworkAuth/Qt6NetworkAuthDependencies.cmake
 lib/cmake/Qt6NetworkAuth/Qt6NetworkAuthTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/Qt6NetworkAuth/Qt6NetworkAuthTargets.cmake
 lib/cmake/Qt6NetworkAuth/Qt6NetworkAuthVersionlessTargets.cmake
-lib/libQt6NetworkAuth.prl
-lib/libQt6NetworkAuth.so
-lib/libQt6NetworkAuth.so.6
-lib/libQt6NetworkAuth.so.%%FULLVER%%
-lib/metatypes/qt6networkauth_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/libQt6NetworkAuth.prl
+%%QT_LIBDIR%%/libQt6NetworkAuth.so
+%%QT_LIBDIR%%/libQt6NetworkAuth.so.6
+%%QT_LIBDIR%%/libQt6NetworkAuth.so.%%FULLVER%%
+%%QT_LIBDIR%%/metatypes/qt6networkauth_%%CMAKE_BUILD_TYPE%%_metatypes.json
 %%QT_MKSPECDIR%%/modules/qt_lib_networkauth.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_networkauth_private.pri
 libdata/pkgconfig/Qt6NetworkAuth.pc
 %%QT_DATADIR%%/modules/NetworkAuth.json
+@dir %%QT_CMAKEDIR%%/Qt6BuildInternals/StandaloneTests
+@dir %%QT_CMAKEDIR%%/Qt6NetworkAuth
+@dir %%QT_LIBDIR%%/pkgconfig

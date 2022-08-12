@@ -1287,66 +1287,66 @@ lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3drenderpluginConfigVersion.cmake
 lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3drenderpluginConfigVersionImpl.cmake
 lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3drenderpluginTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/Qt6Qml/QmlPlugins/Qt6quick3drenderpluginTargets.cmake
-lib/libQt63DAnimation.prl
-lib/libQt63DAnimation.so
-lib/libQt63DAnimation.so.6
-lib/libQt63DAnimation.so.%%FULLVER%%
-lib/libQt63DCore.prl
-lib/libQt63DCore.so
-lib/libQt63DCore.so.6
-lib/libQt63DCore.so.%%FULLVER%%
-lib/libQt63DExtras.prl
-lib/libQt63DExtras.so
-lib/libQt63DExtras.so.6
-lib/libQt63DExtras.so.%%FULLVER%%
-lib/libQt63DInput.prl
-lib/libQt63DInput.so
-lib/libQt63DInput.so.6
-lib/libQt63DInput.so.%%FULLVER%%
-lib/libQt63DLogic.prl
-lib/libQt63DLogic.so
-lib/libQt63DLogic.so.6
-lib/libQt63DLogic.so.%%FULLVER%%
-lib/libQt63DQuick.prl
-lib/libQt63DQuick.so
-lib/libQt63DQuick.so.6
-lib/libQt63DQuick.so.%%FULLVER%%
-lib/libQt63DQuickAnimation.prl
-lib/libQt63DQuickAnimation.so
-lib/libQt63DQuickAnimation.so.6
-lib/libQt63DQuickAnimation.so.%%FULLVER%%
-lib/libQt63DQuickExtras.prl
-lib/libQt63DQuickExtras.so
-lib/libQt63DQuickExtras.so.6
-lib/libQt63DQuickExtras.so.%%FULLVER%%
-lib/libQt63DQuickInput.prl
-lib/libQt63DQuickInput.so
-lib/libQt63DQuickInput.so.6
-lib/libQt63DQuickInput.so.%%FULLVER%%
-lib/libQt63DQuickRender.prl
-lib/libQt63DQuickRender.so
-lib/libQt63DQuickRender.so.6
-lib/libQt63DQuickRender.so.%%FULLVER%%
-lib/libQt63DQuickScene2D.prl
-lib/libQt63DQuickScene2D.so
-lib/libQt63DQuickScene2D.so.6
-lib/libQt63DQuickScene2D.so.%%FULLVER%%
-lib/libQt63DRender.prl
-lib/libQt63DRender.so
-lib/libQt63DRender.so.6
-lib/libQt63DRender.so.%%FULLVER%%
-lib/metatypes/qt63danimation_%%CMAKE_BUILD_TYPE%%_metatypes.json
-lib/metatypes/qt63dcore_%%CMAKE_BUILD_TYPE%%_metatypes.json
-lib/metatypes/qt63dextras_%%CMAKE_BUILD_TYPE%%_metatypes.json
-lib/metatypes/qt63dinput_%%CMAKE_BUILD_TYPE%%_metatypes.json
-lib/metatypes/qt63dlogic_%%CMAKE_BUILD_TYPE%%_metatypes.json
-lib/metatypes/qt63dquick_%%CMAKE_BUILD_TYPE%%_metatypes.json
-lib/metatypes/qt63dquickanimation_%%CMAKE_BUILD_TYPE%%_metatypes.json
-lib/metatypes/qt63dquickextras_%%CMAKE_BUILD_TYPE%%_metatypes.json
-lib/metatypes/qt63dquickinput_%%CMAKE_BUILD_TYPE%%_metatypes.json
-lib/metatypes/qt63dquickrender_%%CMAKE_BUILD_TYPE%%_metatypes.json
-lib/metatypes/qt63dquickscene2d_%%CMAKE_BUILD_TYPE%%_metatypes.json
-lib/metatypes/qt63drender_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/libQt63DAnimation.prl
+%%QT_LIBDIR%%/libQt63DAnimation.so
+%%QT_LIBDIR%%/libQt63DAnimation.so.6
+%%QT_LIBDIR%%/libQt63DAnimation.so.%%FULLVER%%
+%%QT_LIBDIR%%/libQt63DCore.prl
+%%QT_LIBDIR%%/libQt63DCore.so
+%%QT_LIBDIR%%/libQt63DCore.so.6
+%%QT_LIBDIR%%/libQt63DCore.so.%%FULLVER%%
+%%QT_LIBDIR%%/libQt63DExtras.prl
+%%QT_LIBDIR%%/libQt63DExtras.so
+%%QT_LIBDIR%%/libQt63DExtras.so.6
+%%QT_LIBDIR%%/libQt63DExtras.so.%%FULLVER%%
+%%QT_LIBDIR%%/libQt63DInput.prl
+%%QT_LIBDIR%%/libQt63DInput.so
+%%QT_LIBDIR%%/libQt63DInput.so.6
+%%QT_LIBDIR%%/libQt63DInput.so.%%FULLVER%%
+%%QT_LIBDIR%%/libQt63DLogic.prl
+%%QT_LIBDIR%%/libQt63DLogic.so
+%%QT_LIBDIR%%/libQt63DLogic.so.6
+%%QT_LIBDIR%%/libQt63DLogic.so.%%FULLVER%%
+%%QT_LIBDIR%%/libQt63DQuick.prl
+%%QT_LIBDIR%%/libQt63DQuick.so
+%%QT_LIBDIR%%/libQt63DQuick.so.6
+%%QT_LIBDIR%%/libQt63DQuick.so.%%FULLVER%%
+%%QT_LIBDIR%%/libQt63DQuickAnimation.prl
+%%QT_LIBDIR%%/libQt63DQuickAnimation.so
+%%QT_LIBDIR%%/libQt63DQuickAnimation.so.6
+%%QT_LIBDIR%%/libQt63DQuickAnimation.so.%%FULLVER%%
+%%QT_LIBDIR%%/libQt63DQuickExtras.prl
+%%QT_LIBDIR%%/libQt63DQuickExtras.so
+%%QT_LIBDIR%%/libQt63DQuickExtras.so.6
+%%QT_LIBDIR%%/libQt63DQuickExtras.so.%%FULLVER%%
+%%QT_LIBDIR%%/libQt63DQuickInput.prl
+%%QT_LIBDIR%%/libQt63DQuickInput.so
+%%QT_LIBDIR%%/libQt63DQuickInput.so.6
+%%QT_LIBDIR%%/libQt63DQuickInput.so.%%FULLVER%%
+%%QT_LIBDIR%%/libQt63DQuickRender.prl
+%%QT_LIBDIR%%/libQt63DQuickRender.so
+%%QT_LIBDIR%%/libQt63DQuickRender.so.6
+%%QT_LIBDIR%%/libQt63DQuickRender.so.%%FULLVER%%
+%%QT_LIBDIR%%/libQt63DQuickScene2D.prl
+%%QT_LIBDIR%%/libQt63DQuickScene2D.so
+%%QT_LIBDIR%%/libQt63DQuickScene2D.so.6
+%%QT_LIBDIR%%/libQt63DQuickScene2D.so.%%FULLVER%%
+%%QT_LIBDIR%%/libQt63DRender.prl
+%%QT_LIBDIR%%/libQt63DRender.so
+%%QT_LIBDIR%%/libQt63DRender.so.6
+%%QT_LIBDIR%%/libQt63DRender.so.%%FULLVER%%
+%%QT_LIBDIR%%/metatypes/qt63danimation_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt63dcore_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt63dextras_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt63dinput_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt63dlogic_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt63dquick_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt63dquickanimation_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt63dquickextras_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt63dquickinput_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt63dquickrender_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt63dquickscene2d_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt63drender_%%CMAKE_BUILD_TYPE%%_metatypes.json
 %%QT_MKSPECDIR%%/modules/qt_lib_3danimation.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_3danimation_private.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_3dcore.pri
@@ -1427,3 +1427,18 @@ libdata/pkgconfig/Qt63DRender.pc
 %%QT_DATADIR%%/modules/3DQuickRender.json
 %%QT_DATADIR%%/modules/3DQuickScene2D.json
 %%QT_DATADIR%%/modules/3DRender.json
+@dir %%QT_CMAKEDIR%%/Qt63DAnimation
+@dir %%QT_CMAKEDIR%%/Qt63DCore
+@dir %%QT_CMAKEDIR%%/Qt63DExtras
+@dir %%QT_CMAKEDIR%%/Qt63DInput
+@dir %%QT_CMAKEDIR%%/Qt63DLogic
+@dir %%QT_CMAKEDIR%%/Qt63DQuick
+@dir %%QT_CMAKEDIR%%/Qt63DQuickAnimation
+@dir %%QT_CMAKEDIR%%/Qt63DQuickExtras
+@dir %%QT_CMAKEDIR%%/Qt63DQuickInput
+@dir %%QT_CMAKEDIR%%/Qt63DQuickRender
+@dir %%QT_CMAKEDIR%%/Qt63DQuickScene2D
+@dir %%QT_CMAKEDIR%%/Qt63DRender
+@dir %%QT_CMAKEDIR%%/Qt6BuildInternals/StandaloneTests
+@dir %%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins
+@dir %%QT_LIBDIR%%/pkgconfig

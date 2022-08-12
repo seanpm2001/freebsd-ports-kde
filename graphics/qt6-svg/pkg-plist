@@ -56,16 +56,16 @@ lib/cmake/Qt6SvgWidgets/Qt6SvgWidgetsDependencies.cmake
 lib/cmake/Qt6SvgWidgets/Qt6SvgWidgetsTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/Qt6SvgWidgets/Qt6SvgWidgetsTargets.cmake
 lib/cmake/Qt6SvgWidgets/Qt6SvgWidgetsVersionlessTargets.cmake
-lib/libQt6Svg.prl
-lib/libQt6Svg.so
-lib/libQt6Svg.so.6
-lib/libQt6Svg.so.%%FULLVER%%
-lib/libQt6SvgWidgets.prl
-lib/libQt6SvgWidgets.so
-lib/libQt6SvgWidgets.so.6
-lib/libQt6SvgWidgets.so.%%FULLVER%%
-lib/metatypes/qt6svg_%%CMAKE_BUILD_TYPE%%_metatypes.json
-lib/metatypes/qt6svgwidgets_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/libQt6Svg.prl
+%%QT_LIBDIR%%/libQt6Svg.so
+%%QT_LIBDIR%%/libQt6Svg.so.6
+%%QT_LIBDIR%%/libQt6Svg.so.%%FULLVER%%
+%%QT_LIBDIR%%/libQt6SvgWidgets.prl
+%%QT_LIBDIR%%/libQt6SvgWidgets.so
+%%QT_LIBDIR%%/libQt6SvgWidgets.so.6
+%%QT_LIBDIR%%/libQt6SvgWidgets.so.%%FULLVER%%
+%%QT_LIBDIR%%/metatypes/qt6svg_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/metatypes/qt6svgwidgets_%%CMAKE_BUILD_TYPE%%_metatypes.json
 %%QT_MKSPECDIR%%/modules/qt_lib_svg.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_svg_private.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_svgwidgets.pri
@@ -76,3 +76,8 @@ libdata/pkgconfig/Qt6Svg.pc
 libdata/pkgconfig/Qt6SvgWidgets.pc
 %%QT_DATADIR%%/modules/Svg.json
 %%QT_DATADIR%%/modules/SvgWidgets.json
+@dir %%QT_CMAKEDIR%%/Qt6BuildInternals/StandaloneTests
+@dir %%QT_CMAKEDIR%%/Qt6Gui
+@dir %%QT_CMAKEDIR%%/Qt6Svg
+@dir %%QT_CMAKEDIR%%/Qt6SvgWidgets
+@dir %%QT_LIBDIR%%/pkgconfig

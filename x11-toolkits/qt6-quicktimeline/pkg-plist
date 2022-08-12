@@ -25,11 +25,11 @@ lib/cmake/Qt6QuickTimeline/Qt6QuickTimelineDependencies.cmake
 lib/cmake/Qt6QuickTimeline/Qt6QuickTimelineTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/Qt6QuickTimeline/Qt6QuickTimelineTargets.cmake
 lib/cmake/Qt6QuickTimeline/Qt6QuickTimelineVersionlessTargets.cmake
-lib/libQt6QuickTimeline.prl
-lib/libQt6QuickTimeline.so
-lib/libQt6QuickTimeline.so.6
-lib/libQt6QuickTimeline.so.%%FULLVER%%
-lib/metatypes/qt6quicktimeline_%%CMAKE_BUILD_TYPE%%_metatypes.json
+%%QT_LIBDIR%%/libQt6QuickTimeline.prl
+%%QT_LIBDIR%%/libQt6QuickTimeline.so
+%%QT_LIBDIR%%/libQt6QuickTimeline.so.6
+%%QT_LIBDIR%%/libQt6QuickTimeline.so.%%FULLVER%%
+%%QT_LIBDIR%%/metatypes/qt6quicktimeline_%%CMAKE_BUILD_TYPE%%_metatypes.json
 %%QT_MKSPECDIR%%/modules/qt_lib_quicktimeline.pri
 %%QT_MKSPECDIR%%/modules/qt_lib_quicktimeline_private.pri
 %%QT_QMLDIR%%/QtQuick/Timeline/libqtquicktimelineplugin.so
@@ -37,3 +37,7 @@ lib/metatypes/qt6quicktimeline_%%CMAKE_BUILD_TYPE%%_metatypes.json
 %%QT_QMLDIR%%/QtQuick/Timeline/qmldir
 libdata/pkgconfig/Qt6QuickTimeline.pc
 %%QT_DATADIR%%/modules/QuickTimeline.json
+@dir %%QT_CMAKEDIR%%/Qt6BuildInternals/StandaloneTests
+@dir %%QT_CMAKEDIR%%/Qt6Qml/QmlPlugins
+@dir %%QT_CMAKEDIR%%/Qt6QuickTimeline
+@dir %%QT_LIBDIR%%/pkgconfig
