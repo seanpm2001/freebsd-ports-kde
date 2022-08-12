@@ -138,20 +138,21 @@ _USE_QT_ALL+=	sql-ibase
 .  endif
 
 _USE_QT5_ONLY=		3d buildtools charts concurrent connectivity \
-			core datavis3d diag examples gamepad \
-			graphicaleffects location networkauth paths phonon4 plugininfo printsupport \
+			core datavis3d diag examples gamepad graphicaleffects \
+			location networkauth paths phonon4 plugininfo printsupport \
 			qdbus qdoc qdoc-data qev quick3d quickcontrols quickcontrols2 \
-			quicktimeline remoteobjects scxml sensors serialbus serialport speech \
-			sql-tds uiplugin uitools virtualkeyboard wayland webchannel webglplugin \
-			webengine websockets websockets-qml webview widgets x11extras \
-			assistant dbus declarative designer doc gui help \
-			imageformats l10n linguist linguisttools multimedia \
-			network opengl pixeltool qdbusviewer qmake script \
-			scripttools sql sql-mysql sql-odbc sql-pgsql \
-			sql-sqlite2 sql-sqlite3 svg testlib webkit \
-			xml xmlpatterns
+			quicktimeline remoteobjects scxml sensors serialbus serialport \
+			speech sql-tds uiplugin uitools virtualkeyboard wayland \
+			webchannel webglplugin 	webengine websockets websockets-qml \
+			webview widgets x11extras assistant dbus declarative designer \
+			doc gui help imageformats l10n linguist linguisttools \
+			multimedia network opengl pixeltool qdbusviewer qmake script \
+			scripttools sql sql-mysql sql-odbc sql-pgsql sql-sqlite2 \
+			sql-sqlite3 svg testlib webkit xml xmlpatterns
 
-_USE_QT6_ONLY=		3d 5compat base declarative doc imageformats quick3d quickcontrols2 quicktimeline networkauth shadertools svg tools translations wayland
+_USE_QT6_ONLY=		3d 5compat base declarative doc imageformats quick3d \
+			quickcontrols2 quicktimeline networkauth shadertools \
+			svg tools translations wayland
 
 # Dependency tuples: _LIB should be preferred if possible.
 qt-3d_PORT=		graphics/${_QT_RELNAME}-3d
