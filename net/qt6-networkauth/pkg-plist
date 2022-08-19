@@ -46,4 +46,6 @@ libdata/pkgconfig/Qt6NetworkAuth.pc
 %%QT_DATADIR%%/modules/NetworkAuth.json
 @dir %%QT_CMAKEDIR%%/Qt6BuildInternals/StandaloneTests
 @dir %%QT_CMAKEDIR%%/Qt6NetworkAuth
+@dir %%QT_LIBDIR%%/cmake/Qt6BuildInternals/StandaloneTests
+@dir %%QT_LIBDIR%%/cmake/Qt6NetworkAuth
 @dir %%QT_LIBDIR%%/pkgconfig

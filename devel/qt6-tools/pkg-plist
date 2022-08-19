@@ -417,4 +417,14 @@ libdata/pkgconfig/Qt6UiTools.pc
 @dir %%QT_CMAKEDIR%%/Qt6ToolsTools
 @dir %%QT_CMAKEDIR%%/Qt6UiPlugin
 @dir %%QT_CMAKEDIR%%/Qt6UiTools
+@dir %%QT_LIBDIR%%/cmake/Qt6BuildInternals/StandaloneTests
+@dir %%QT_LIBDIR%%/cmake/Qt6Designer
+@dir %%QT_LIBDIR%%/cmake/Qt6DesignerComponentsPrivate
+@dir %%QT_LIBDIR%%/cmake/Qt6Help
+@dir %%QT_LIBDIR%%/cmake/Qt6Linguist
+@dir %%QT_LIBDIR%%/cmake/Qt6LinguistTools
+@dir %%QT_LIBDIR%%/cmake/Qt6Tools
+@dir %%QT_LIBDIR%%/cmake/Qt6ToolsTools
+@dir %%QT_LIBDIR%%/cmake/Qt6UiPlugin
+@dir %%QT_LIBDIR%%/cmake/Qt6UiTools
 @dir %%QT_LIBDIR%%/pkgconfig

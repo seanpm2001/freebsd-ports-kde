@@ -42,4 +42,7 @@ libdata/pkgconfig/Qt6ShaderTools.pc
 @dir %%QT_CMAKEDIR%%/Qt6BuildInternals/StandaloneTests
 @dir %%QT_CMAKEDIR%%/Qt6ShaderTools
 @dir %%QT_CMAKEDIR%%/Qt6ShaderToolsTools
+@dir %%QT_LIBDIR%%/cmake/Qt6BuildInternals/StandaloneTests
+@dir %%QT_LIBDIR%%/cmake/Qt6ShaderTools
+@dir %%QT_LIBDIR%%/cmake/Qt6ShaderToolsTools
 @dir %%QT_LIBDIR%%/pkgconfig

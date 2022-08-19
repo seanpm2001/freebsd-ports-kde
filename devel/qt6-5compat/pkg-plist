@@ -80,4 +80,6 @@ libdata/pkgconfig/Qt6Core5Compat.pc
 %%QT_DATADIR%%/modules/Core5Compat.json
 @dir %%QT_CMAKEDIR%%/Qt6BuildInternals/StandaloneTests
 @dir %%QT_CMAKEDIR%%/Qt6Core5Compat
+@dir %%QT_LIBDIR%%/cmake/Qt6BuildInternals/StandaloneTests
+@dir %%QT_LIBDIR%%/cmake/Qt6Core5Compat
 @dir %%QT_LIBDIR%%/pkgconfig

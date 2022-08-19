@@ -70,7 +70,7 @@ QT_L10NDIR_REL?=	${QT_DATADIR_REL}/translations
 QT_ETCDIR_REL?=		etc/xdg
 QT_EXAMPLEDIR_REL?=	share/examples/${_QT_RELNAME}
 QT_TESTDIR_REL?=	${QT_DATADIR_REL}/tests
-QT_CMAKEDIR_REL?=	${QT_ARCHDIR_REL}/cmake
+QT_CMAKEDIR_REL?=	lib/cmake
 
 # Not customizable.
 QT_MKSPECDIR_REL=	${QT_ARCHDIR_REL}/mkspecs
@@ -102,8 +102,8 @@ QMAKE_COMPILER=	$$(ccver="$$(${CXX} --version)"; case "$$ccver" in *clang*) echo
 	CMAKE
 QT_${dir}DIR=	${PREFIX}/${QT_${dir}DIR_REL}
 # Export all directories to the plist substituion for QT_DIST ports.
-# For the others, exclude QT_ETCDIR.
-.    if ${dir:NETC}
+# For the others, exclude QT_CMAKEDIR and QT_ETCDIR.
+.    if ${dir:NCMAKE} && ${dir:NETC}
 PLIST_SUB+=		QT_${dir}DIR="${QT_${dir}DIR_REL}"
 .    endif
 .  endfor

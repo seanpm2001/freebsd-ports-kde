@@ -57,41 +57,47 @@ IGNORE=			Unsupported qt-dist ${_QT_DIST} for qt:${_QT_VER}
 .  endif
 ################################################################################
 
-# Set standard bsd.port.mk variables -- for Qt5 just set up master sites and the shared distinfo file.
-# For Qt6 for the moment use github, as there are no proper snapshots releases provided by upstream.
-.  if ${_QT_VER:M6}
-MASTER_SITES=		${MASTER_SITE_QT}
-#DISTINFO_FILE?=		${PORTSDIR}/devel/${_QT_RELNAME}/distinfo
-.  else
-MASTER_SITES=		${MASTER_SITE_QT}
-DISTINFO_FILE?=		${PORTSDIR}/devel/${_QT_RELNAME}/distinfo
-.  endif
+# Set standard bsd.port.mk variables.
 LICENSE?=		LGPL21
 
 .  if !exists(${PKGDIR}/pkg-descr)
 DESCR?=			${PORTSDIR}/devel/${_QT_RELNAME}/pkg-descr
 .  endif
 
-.  if ${_QT_VER:M5}
+
 # Stage support.
-DESTDIRNAME=		INSTALL_ROOT
-.  else
-DESTDIRNAME=		DESTDIR
-.  endif
+_QT5_DESTDIRNAME=	INSTALL_ROOT
+_QT6_DESTDIRNAME=	DESTDIR
+DESTDIRNAME=		${_QT${_QT_VER}_DESTDIRNAME}
 
 # Qt's tarballs are xz compressed.
 .  if empty(USES:Mtar)
 EXTRACT_SUFX?=		.tar.xz
 .  endif
 
-.  if ${_QT_VER:M6}
-DISTNAME=		${_QT_DIST:S,^,qt,:S,$,-everywhere-src-${DISTVERSION},}
-MASTER_SITE_SUBDIR?=	official_releases/qt/${_QT_VERSION:R}/${_QT_VERSION}/submodules \
-			official_releases/additional_libraries/${_QT_VERSION:R}/${_QT_VERSION}/
-.  endif
+# Qt5 specific master sites
+_QT5_MASTER_SITES_kde=		LOCAL
+_QT5_MASTER_SITE_SUBDIR_kde=	tcberner/KDE/Qt/${_QT_VERSION}
+_QT5_MASTER_SITES=		${MASTER_SITE_QT}
+_QT5_MASTER_SITE_SUBDIR=	official_releases/qt/${_QT_VERSION:R}/${_QT_VERSION}/submodules/
+# Qt6 specific master sites
+_QT6_MASTER_SITES=		${MASTER_SITE_QT}
+_QT6_MASTER_SITE_SUBDIR=	official_releases/qt/${_QT_VERSION:R}/${_QT_VERSION}/submodules \
+				official_releases/additional_libraries/${_QT_VERSION:R}/${_QT_VERSION}/
+# Qt5 specific distnames
+_QT5_DISTNAME=			${_QT_DIST:S,^,qt,:S,$,-everywhere-src-${DISTVERSION},}
+_QT5_DISTNAME_kde=		${_QT_DIST:S,^,kde-qt,:S,$,-${DISTVERSION},}
+# Qt6 specific distnames
+_QT6_DISTNAME=			${_QT_DIST:S,^,qt,:S,$,-everywhere-src-${DISTVERSION},}
+
+# Effective master sites and disfile valus
+MASTER_SITES=			${_QT${_QT_VER}_MASTER_SITES${_KDE_${_QT_DIST}:D_kde}}
+MASTER_SITE_SUBDIR=		${_QT${_QT_VER}_MASTER_SITE_SUBDIR${_KDE_${_QT_DIST}:D_kde}}
+DISTNAME=			${_QT${_QT_VER}_DISTNAME${_KDE_${_QT_DIST}:D_kde}}
+DISTFILES=			${DISTNAME:S,$,${EXTRACT_SUFX},}
+DIST_SUBDIR=			KDE/Qt/${_QT_VERSION}
 
 .  if ${_QT_VER:M5}
-
 # KDE maintains a repository with a patched Qt5 distribution.
 _KDE_3d=		15
 _KDE_base=		165
@@ -129,38 +135,24 @@ _KDE_websockets=	3
 _KDE_webview=		0
 _KDE_x11extras=		0
 _KDE_xmlpatterns=	0
-
 .    if defined(_KDE_${_QT_DIST})
-# KDE patched Qt parts
 QT5_KDE_PATCH=		p${_KDE_${_QT_DIST}}
 _KDE_${_QT_DIST}_VERSION?=	${_QT_VERSION}
 _KDE_${_QT_DIST}_ORIGIN_TAG?=	v${_KDE_${_QT_DIST}_VERSION}-lts-lgpl
-MASTER_SITES=		LOCAL/tcberner/KDE/Qt/${_QT_VERSION}
-DISTNAME=		${_QT_DIST:S,^,kde-qt,:S,$,-${DISTVERSION},}
 COMMENT+=		(KDE patched)
 .    else
-# non KDE patched Qt parts
 QT5_KDE_PATCH=		#
-MASTER_SITES=		${MASTER_SITE_QT}
-MASTER_SITE_SUBDIR?=	official_releases/qt/${_QT_VERSION:R}/${_QT_VERSION}/submodules/
-DISTNAME=		${_QT_DIST:S,^,qt,:S,$,-everywhere-src-${DISTVERSION},}
 .    endif
+.  endif # ${_QT_VER:M5}
 
-DISTFILES=		${DISTNAME:S,$,${EXTRACT_SUFX},}
-DIST_SUBDIR=		KDE/Qt/${_QT_VERSION}
-
+# Environment setup for Qt5
+.  if ${_QT_VER:M5}
 # Qt (at least when used with qmake) has a tendency to overlink: some libraries
 # have dependencies on others in the mkspec configurations and the latter are
 # always passed to the linker even if they are not actually used. By passing
 # --as-needed to the linker by default when building the Qt ports we do not
 # have to declare a lot of unnecessary dependencies in USE_QT5.
 LDFLAGS+=		-Wl,--as-needed
-
-.    if ${.TARGETS:Mmakesum} || ${.TARGETS:Mfetch} && \
-	defined(DISABLE_SIZE) && defined(NO_CHECKSUM)
-# Ensure that the "makesum" target (with its inner "fetch" one) uses
-# devel/qt*/distinfo for every port.
-.    endif
 
 .    if ${_QT_DIST} == "base" && ${PORTNAME} != "qmake"
 # Qt configure requires pkg-config to detect dependencies.
@@ -175,6 +167,7 @@ EXTRACT_AFTER_ARGS?=	${DISTNAME:S,$,/examples,:S,^,--exclude ,} \
 			--no-same-owner --no-same-permissions
 .  endif # ! ${_QT_VER:M5}
 
+# Build setup for Qt6
 .  if ${_QT_VER:M6}
 CMAKE_ARGS+=		-DCMAKE_INSTALL_PREFIX=${PREFIX} \
 			-DINSTALL_BINDIR=${PREFIX}/${QT_BINDIR_REL} \
@@ -192,6 +185,7 @@ CMAKE_ARGS+=		-DCMAKE_INSTALL_PREFIX=${PREFIX} \
 			--log-level=TRACE
 .  endif
 
+# Build setup for Qt5
 .  if ${_QT_VER:M5}
 CONFIGURE_ENV+=		MAKE="${MAKE:T}"
 
