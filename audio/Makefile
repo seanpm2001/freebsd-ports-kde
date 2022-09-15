@@ -608,6 +608,7 @@
     SUBDIR += picard
     SUBDIR += picard-plugins
     SUBDIR += pithos
+    SUBDIR += plasma5-kpipewire
     SUBDIR += plasma5-plasma-pa
     SUBDIR += play
     SUBDIR += playgsf

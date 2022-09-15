@@ -1387,6 +1387,7 @@
     SUBDIR += phpvirtualbox
     SUBDIR += phpvirtualbox-legacy
     SUBDIR += piwigo
+    SUBDIR += plasma5-aura-browser
     SUBDIR += plasma5-plasma-browser-integration
     SUBDIR += pmwiki
     SUBDIR += pnews

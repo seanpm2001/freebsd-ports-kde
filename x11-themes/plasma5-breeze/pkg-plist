@@ -4,8 +4,8 @@ lib/cmake/Breeze/BreezeConfigVersion.cmake
 lib/kconf_update_bin/breezehighcontrasttobreezedark
 lib/kconf_update_bin/breezetobreezeclassic
 lib/kconf_update_bin/breezetobreezelight
-lib/libbreezecommon5.so.%%KDE_PLASMA_VERSION%%
 lib/libbreezecommon5.so.5
+lib/libbreezecommon5.so.%%KDE_PLASMA_VERSION%%
 %%QT_PLUGINDIR%%/kstyle_breeze_config.so
 %%QT_PLUGINDIR%%/org.kde.kdecoration2/breezedecoration.so
 %%QT_PLUGINDIR%%/styles/breeze.so
@@ -256,6 +256,8 @@ share/locale/ar/LC_MESSAGES/breeze_kwin_deco.mo
 share/locale/ar/LC_MESSAGES/breeze_style_config.mo
 share/locale/az/LC_MESSAGES/breeze_kwin_deco.mo
 share/locale/az/LC_MESSAGES/breeze_style_config.mo
+share/locale/bg/LC_MESSAGES/breeze_kwin_deco.mo
+share/locale/bg/LC_MESSAGES/breeze_style_config.mo
 share/locale/bs/LC_MESSAGES/breeze_kwin_deco.mo
 share/locale/bs/LC_MESSAGES/breeze_style_config.mo
 share/locale/ca/LC_MESSAGES/breeze_kwin_deco.mo
@@ -294,6 +296,7 @@ share/locale/ia/LC_MESSAGES/breeze_kwin_deco.mo
 share/locale/ia/LC_MESSAGES/breeze_style_config.mo
 share/locale/id/LC_MESSAGES/breeze_kwin_deco.mo
 share/locale/id/LC_MESSAGES/breeze_style_config.mo
+share/locale/is/LC_MESSAGES/breeze_style_config.mo
 share/locale/it/LC_MESSAGES/breeze_kwin_deco.mo
 share/locale/it/LC_MESSAGES/breeze_style_config.mo
 share/locale/ja/LC_MESSAGES/breeze_kwin_deco.mo
@@ -337,6 +340,8 @@ share/locale/sr@latin/LC_MESSAGES/breeze_kwin_deco.mo
 share/locale/sr@latin/LC_MESSAGES/breeze_style_config.mo
 share/locale/sv/LC_MESSAGES/breeze_kwin_deco.mo
 share/locale/sv/LC_MESSAGES/breeze_style_config.mo
+share/locale/ta/LC_MESSAGES/breeze_kwin_deco.mo
+share/locale/ta/LC_MESSAGES/breeze_style_config.mo
 share/locale/tg/LC_MESSAGES/breeze_kwin_deco.mo
 share/locale/tg/LC_MESSAGES/breeze_style_config.mo
 share/locale/tr/LC_MESSAGES/breeze_kwin_deco.mo
@@ -347,6 +352,9 @@ share/locale/zh_CN/LC_MESSAGES/breeze_kwin_deco.mo
 share/locale/zh_CN/LC_MESSAGES/breeze_style_config.mo
 share/locale/zh_TW/LC_MESSAGES/breeze_kwin_deco.mo
 share/locale/zh_TW/LC_MESSAGES/breeze_style_config.mo
+share/wallpapers/AnimatedWallpaperTest/contents/images/540x304.webp
+share/wallpapers/AnimatedWallpaperTest/contents/images_dark/540x304.webp
+share/wallpapers/AnimatedWallpaperTest/metadata.json
 share/wallpapers/Next/contents/images/1024x768.jpg
 share/wallpapers/Next/contents/images/1080x1920.jpg
 share/wallpapers/Next/contents/images/1280x1024.jpg

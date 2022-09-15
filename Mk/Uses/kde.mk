@@ -75,8 +75,8 @@ _KDE_RELNAME=		KDE${_KDE_VERSION}
 
 # === VERSIONS OF THE DIFFERENT COMPONENTS =====================================
 # Current KDE desktop.
-KDE_PLASMA_VERSION?=		5.24.6
-KDE_PLASMA_BRANCH?=		stable
+KDE_PLASMA_VERSION?=		5.25.90
+KDE_PLASMA_BRANCH?=		unstable
 
 # Current KDE frameworks.
 KDE_FRAMEWORKS_VERSION?=	5.98.0
@@ -633,7 +633,7 @@ kde-plasma-integration_PORT=	x11/plasma5-plasma-integration
 kde-plasma-integration_PATH=	${QT_PLUGINDIR}/platformthemes/KDEPlasmaPlatformTheme.so
 
 kde-plasma-pa_PORT=		audio/plasma5-plasma-pa
-kde-plasma-pa_PATH=		${QT_PLUGINDIR}/kcms/kcm_pulseaudio.so
+kde-plasma-pa_PATH=		${QT_PLUGINDIR}/plasma/kcms/systemsettings/kcm_pulseaudio.so
 
 kde-plasma-sdk_PORT=		devel/plasma5-plasma-sdk
 kde-plasma-sdk_PATH=		${KDE_PREFIX}/bin/plasmoidviewer

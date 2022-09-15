@@ -1,6 +1,10 @@
 PORTNAME=	kwayland
 DISTVERSION=	${KDE_FRAMEWORKS_VERSION}
+PORTREVISION=	1
 CATEGORIES=	x11 kde kde-frameworks
+
+PATCH_SITES=	https://invent.kde.org/frameworks/kwayland/-/commit/
+PATCHFILES=	cb13afd8530f651c7d0ce82e47eaa3e1939bd676.diff:-p1
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	KF5 Client and Server library wrapper for the Wayland libraries
