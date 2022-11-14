@@ -1,0 +1,24 @@
+USE_TMPFS=no
+Use additional swap space
+
+In final linking stage ulimit 4096 is tried to set, but it doesn't work for jails:
+ulimit: bad limit: Operation not permitted
+MAX_FILES=4096 in poudriere conf
+
+Linking with debug symbols causes high memory pressure
+
+ld: error: /usr/lib/crtn.o:(.debug_aranges+0x6): relocation R_X86_64_32 out of range: 4948421891 is not in [0, 4294967295]; consider recompiling with -fdebug-types-section to reduce size of debug sections
+
+"-fdebug-types-section" seems to fix it but takes a loooong time
+
+symbol_level=1
+
+
+https://bugreports.qt.io/browse/QTBUG-96897
+convert_dict.stamp is missing
+
+/usr/local/poudriere/data/.m/123Ramd64-qt6/ref/wrkdirs/usr/ports/www/qt6-webengine/work-normal/.build/src/core/Debug/amd64/convert_dict
+
+installs into QT_TOOLDIR, not in QT_BINDIR
+
+

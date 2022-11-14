@@ -1,0 +1,21 @@
+--- src/host/BUILD.toolchain.gn.in.orig	2022-09-26 10:05:50 UTC
++++ src/host/BUILD.toolchain.gn.in
+@@ -1,12 +1,18 @@ gcc_toolchain("@GN_TOOLCHAIN@") {
+ import("//build/config/sysroot.gni")
+ import("//build/toolchain/gcc_toolchain.gni")
+ gcc_toolchain("@GN_TOOLCHAIN@") {
++  # XXX Do we still require binutils?
++  #prefix = "/usr/local/bin"
+   cc = "@CMAKE_C_COMPILER@"
+   cxx = "@CMAKE_CXX_COMPILER@"
+   ld = "@CMAKE_CXX_COMPILER@"
+   ar = "@CMAKE_AR@"
++  #ar = "${prefix}/ar"
+   nm = "@CMAKE_NM@"
++  #nm = "${prefix}/nm"
+   extra_cppflags = ""
++  extra_cxxflags = "-O2 -pipe -fstack-protector-strong -isystem /usr/local/include -fno-strict-aliasing  -isystem /usr/local/include "
++  extra_ldflags = " -fstack-protector-strong -L/usr/local/lib "
+   toolchain_args = {
+     current_os = "@GN_OS@"
+     current_cpu = "@GN_CPU@"
