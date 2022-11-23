@@ -170,6 +170,7 @@
     SUBDIR += apc
     SUBDIR += apron
     SUBDIR += arb
+    SUBDIR += arborx
     SUBDIR += aribas
     SUBDIR += armadillo
     SUBDIR += arpack++
@@ -433,6 +434,7 @@
     SUBDIR += libbraiding
     SUBDIR += libccd
     SUBDIR += libdivide
+    SUBDIR += libfixmath
     SUBDIR += libflame
     SUBDIR += libhomfly
     SUBDIR += libmesh
@@ -579,6 +581,7 @@
     SUBDIR += octave-forge-mechanics
     SUBDIR += octave-forge-miscellaneous
     SUBDIR += octave-forge-missing-functions
+    SUBDIR += octave-forge-mpi
     SUBDIR += octave-forge-mqtt
     SUBDIR += octave-forge-msh
     SUBDIR += octave-forge-multicore
@@ -602,6 +605,8 @@
     SUBDIR += octave-forge-pde1dm
     SUBDIR += octave-forge-plot
     SUBDIR += octave-forge-ponchon-savarit
+    SUBDIR += octave-forge-psychrometrics
+    SUBDIR += octave-forge-pythonic
     SUBDIR += octave-forge-quaternion
     SUBDIR += octave-forge-queueing
     SUBDIR += octave-forge-secs1d
@@ -610,6 +615,7 @@
     SUBDIR += octave-forge-signal
     SUBDIR += octave-forge-simp
     SUBDIR += octave-forge-sockets
+    SUBDIR += octave-forge-sole
     SUBDIR += octave-forge-sparsersb
     SUBDIR += octave-forge-specfun
     SUBDIR += octave-forge-special-matrix
@@ -1151,6 +1157,7 @@
     SUBDIR += universal
     SUBDIR += unuran
     SUBDIR += vampire
+    SUBDIR += verdict
     SUBDIR += viennacl
     SUBDIR += vinci
     SUBDIR += visualpolylib

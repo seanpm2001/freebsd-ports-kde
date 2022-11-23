@@ -1,10 +1,9 @@
 PORTNAME=	matterircd
 DISTVERSIONPREFIX=	v
-DISTVERSION=	0.25.1
-PORTREVISION=	5
+DISTVERSION=	0.26.1
 CATEGORIES=	net-im irc
 
-MAINTAINER=	norrland@nullbyte.se
+MAINTAINER=	chalpin@cs.wisc.edu
 COMMENT=	IRC bridge for Mattermost and Slack
 WWW=		https://github.com/42wim/matterircd
 

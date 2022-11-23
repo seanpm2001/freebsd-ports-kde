@@ -68,6 +68,7 @@
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Imap/Responses/ACL.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Imap/SearchCriterias.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Imap/SequenceSet.php
+%%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Imap/Settings.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Imap/Traits/ResponseParser.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Imap/Traits/Status.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/LICENSE
@@ -92,7 +93,6 @@
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Mime/Enumerations/DkimStatus.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Mime/Enumerations/Header.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Mime/Enumerations/MessagePriority.php
-%%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Mime/Enumerations/MimeType.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Mime/Enumerations/Parameter.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Mime/Header.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Mime/HeaderCollection.php
@@ -114,18 +114,21 @@
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Net/Exceptions/SocketUnsuppoterdSecureConnectionException.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Net/Exceptions/SocketWriteException.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Net/NetClient.php
+%%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Net/SSLContext.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/RuntimeException.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Sieve/Exceptions/LoginBadCredentialsException.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Sieve/Exceptions/LoginBadMethodException.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Sieve/Exceptions/LoginException.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Sieve/Exceptions/NegativeResponseException.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Sieve/Exceptions/ResponseException.php
-%%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Sieve/ManageSieveClient.php
+%%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Sieve/Settings.php
+%%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Sieve/SieveClient.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Smtp/Exceptions/LoginBadCredentialsException.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Smtp/Exceptions/LoginBadMethodException.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Smtp/Exceptions/LoginException.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Smtp/Exceptions/NegativeResponseException.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Smtp/Exceptions/ResponseException.php
+%%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Smtp/Settings.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/MailSo/Smtp/SmtpClient.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/Predis/Client.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/Predis/ClientContextInterface.php
@@ -572,6 +575,9 @@
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/snappymail/crypt.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/snappymail/dav/client.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/snappymail/dns.php
+%%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/snappymail/file/magic.mime
+%%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/snappymail/file/magic.mime.php
+%%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/snappymail/file/mimetype.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/snappymail/http/csp.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/snappymail/http/exception.php
 %%WWWDIR%%/snappymail/v/%%VER%%/app/libraries/snappymail/http/request.php
@@ -854,6 +860,7 @@
 %%WWWDIR%%/snappymail/v/%%VER%%/static/favicon-light.png
 %%WWWDIR%%/snappymail/v/%%VER%%/static/favicon.ico
 %%WWWDIR%%/snappymail/v/%%VER%%/static/favicon.png
+%%WWWDIR%%/snappymail/v/%%VER%%/static/favicon.svg
 %%WWWDIR%%/snappymail/v/%%VER%%/static/js/admin.js
 %%WWWDIR%%/snappymail/v/%%VER%%/static/js/admin.js.br
 %%WWWDIR%%/snappymail/v/%%VER%%/static/js/admin.js.gz

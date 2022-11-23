@@ -1,6 +1,6 @@
 PORTNAME=	netbox
 DISTVERSIONPREFIX=	v
-DISTVERSION=	3.3.6
+DISTVERSION=	3.3.8
 CATEGORIES=	net-mgmt python
 
 MAINTAINER=	kai@FreeBSD.org
@@ -32,7 +32,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django40>=4.0.8<4.1:www/py-django40@${PY_FLA
 		${PYTHON_PKGNAMEPREFIX}dj40-django-prometheus>=2.2.0<2.3:www/py-dj40-django-prometheus@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}dj40-django-redis>=5.2.0<6:www/py-dj40-django-redis@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}dj40-django-rich>=1.4.0<2:www/py-dj40-django-rich@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}dj40-django-rq>=2.5.1<2.6:devel/py-dj40-django-rq@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}dj40-django-rq>=2.5.1<2.7:devel/py-dj40-django-rq@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}dj40-django-tables2>=2.4.1<2.5:www/py-dj40-django-tables2@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}dj40-django-taggit>=3.0.0<4:www/py-dj40-django-taggit@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}dj40-django-timezone-field>=5.0<6:www/py-dj40-django-timezone-field@${PY_FLAVOR} \
@@ -54,7 +54,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}django40>=4.0.8<4.1:www/py-django40@${PY_FLA
 		${PYTHON_PKGNAMEPREFIX}social-auth-core>=4.3.0<5:security/py-social-auth-core@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}svgwrite>=1.4.3<2:graphics/py-svgwrite@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}tablib>=3.2.1<4:textproc/py-tablib@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}tzdata>=2022.5:devel/py-tzdata@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}tzdata>=2022.6:devel/py-tzdata@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}yaml>=5.4.1<7:devel/py-yaml@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}gunicorn>=20.1.0<21:www/py-gunicorn@${PY_FLAVOR}
 

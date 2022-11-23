@@ -1,5 +1,5 @@
 PORTNAME=	ungoogled-chromium
-PORTVERSION=	107.0.5304.87
+PORTVERSION=	107.0.5304.110
 UGVERSION=	${DISTVERSION}-1
 CATEGORIES=	www wayland
 MASTER_SITES=	https://commondatastorage.googleapis.com/chromium-browser-official/ \
@@ -224,7 +224,7 @@ TEST_ALL_TARGET=	${TEST_TARGETS}
 .include <bsd.port.pre.mk>
 
 .if ${OSREL} == "12.3"
-BROKEN=		does not compile, libc++ too old
+IGNORE=		does not compile, libc++ too old
 .endif
 
 .if ${PORT_OPTIONS:MHEIMDAL_BASE} && !exists(/usr/lib/libkrb5.so)

@@ -47,6 +47,7 @@
     SUBDIR += airsaned
     SUBDIR += akira
     SUBDIR += alembic
+    SUBDIR += alizams
     SUBDIR += aloadimage
     SUBDIR += alpng
     SUBDIR += ampasACES-container
@@ -117,6 +118,7 @@
     SUBDIR += curator
     SUBDIR += curtail
     SUBDIR += cuttlefish
+    SUBDIR += cxxplot
     SUBDIR += darktable
     SUBDIR += dataplot
     SUBDIR += dbow2
@@ -131,6 +133,7 @@
     SUBDIR += dia
     SUBDIR += diff-pdf
     SUBDIR += diffpdf
+    SUBDIR += dify
     SUBDIR += digikam
     SUBDIR += dilay
     SUBDIR += diplib
@@ -153,6 +156,7 @@
     SUBDIR += edje_viewer
     SUBDIR += egl-wayland
     SUBDIR += eglexternalplatform
+    SUBDIR += elastix
     SUBDIR += electricsheep
     SUBDIR += elementary-photos
     SUBDIR += embree
@@ -291,6 +295,7 @@
     SUBDIR += goocanvasmm2
     SUBDIR += goom
     SUBDIR += gource
+    SUBDIR += goxel
     SUBDIR += gpaint
     SUBDIR += gphoto2
     SUBDIR += gpicview
@@ -583,6 +588,7 @@
     SUBDIR += nsxiv
     SUBDIR += nurbs++
     SUBDIR += nvidia-texture-tools
+    SUBDIR += ocaml-cairo
     SUBDIR += ocaml-images
     SUBDIR += ocaml-lablgl
     SUBDIR += ocrad
@@ -615,6 +621,7 @@
     SUBDIR += openorienteering-mapper
     SUBDIR += openrm
     SUBDIR += openshadinglanguage
+    SUBDIR += openslide
     SUBDIR += opensubdiv
     SUBDIR += openvkl
     SUBDIR += optar
@@ -625,6 +632,7 @@
     SUBDIR += ospray
     SUBDIR += ospray-studio
     SUBDIR += ossim
+    SUBDIR += oxipng
     SUBDIR += oyranos
     SUBDIR += p5-Acme-Steganography-Image-Png
     SUBDIR += p5-Algorithm-Line-Bresenham
@@ -885,6 +893,7 @@
     SUBDIR += py-opencolorio
     SUBDIR += py-openimageio
     SUBDIR += py-openshadinglanguage
+    SUBDIR += py-openslide-python
     SUBDIR += py-optimize-images
     SUBDIR += py-osmnet
     SUBDIR += py-pandana
@@ -906,6 +915,7 @@
     SUBDIR += py-pygeoapi
     SUBDIR += py-pygeos
     SUBDIR += py-pyglet
+    SUBDIR += py-pyglet1
     SUBDIR += py-pygraph
     SUBDIR += py-pygraphviz
     SUBDIR += py-pyinsane2
@@ -996,6 +1006,7 @@
     SUBDIR += ristretto
     SUBDIR += rlottie
     SUBDIR += ruby-gd
+    SUBDIR += rubygem-blurhash
     SUBDIR += rubygem-cairo
     SUBDIR += rubygem-captcha
     SUBDIR += rubygem-chunky_png
@@ -1070,6 +1081,7 @@
     SUBDIR += silgraphite
     SUBDIR += simage
     SUBDIR += simple-scan
+    SUBDIR += simpleitk
     SUBDIR += simpleviewer
     SUBDIR += skanlite
     SUBDIR += skanpage

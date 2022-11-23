@@ -1,6 +1,6 @@
 PORTNAME=	starship
 DISTVERSION=	1.11.0
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	shells
 MASTER_SITES=	CRATESIO
 DISTFILES=	${CARGO_DIST_SUBDIR}/${DISTNAME}${CARGO_CRATE_EXT}
@@ -11,6 +11,8 @@ WWW=		https://starship.rs/
 
 LICENSE=	ISCL
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+BROKEN_i386=	cargo crashes on shells/starship on i386, see https://bugs.freebsd.org/bugzilla/show_bug.cgi?id=267529
 
 LIB_DEPENDS=	libgit2.so:devel/libgit2 \
 		libssh2.so:security/libssh2

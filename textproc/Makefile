@@ -376,6 +376,7 @@
     SUBDIR += libexttextcat
     SUBDIR += libfo
     SUBDIR += libfolia
+    SUBDIR += libfyaml
     SUBDIR += libgepub
     SUBDIR += libixion
     SUBDIR += libkmfl
@@ -1309,6 +1310,7 @@
     SUBDIR += py-diff-match-patch
     SUBDIR += py-docrepr
     SUBDIR += py-docstring-parser
+    SUBDIR += py-docstring-to-markdown
     SUBDIR += py-docutils
     SUBDIR += py-docx2txt
     SUBDIR += py-dominate
@@ -1546,8 +1548,8 @@
     SUBDIR += py-tablib
     SUBDIR += py-terminaltables
     SUBDIR += py-textdistance
-    SUBDIR += py-textract
     SUBDIR += py-textfsm
+    SUBDIR += py-textract
     SUBDIR += py-texttable
     SUBDIR += py-textual
     SUBDIR += py-three-merge
@@ -1661,6 +1663,7 @@
     SUBDIR += rubygem-babel-transpiler
     SUBDIR += rubygem-babosa
     SUBDIR += rubygem-case_transform
+    SUBDIR += rubygem-case_transform61
     SUBDIR += rubygem-character_set
     SUBDIR += rubygem-charlock_holmes
     SUBDIR += rubygem-chewy
