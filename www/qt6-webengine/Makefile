@@ -12,6 +12,8 @@
 ### ---------------------------------------------------
 
 # TODO XXX
+# - If Qt6 gets updated, qt6-webengine assumes it has the new Qt6 version
+#   regardless of its distinfo which leads to pkg-plist issues at the end.
 # - Examine the issues with the spellchecker feature (see below for further
 #   details).
 # - Check for the 'XXX's in the Makefile, ${FILESDIR}/* and in Mk/*
@@ -146,7 +148,7 @@ MAKE_ENV+=	CC="${CC}" CXX="${CXX}"			\
 DESCR=		${PORTSDIR}/devel/qt6-base/pkg-descr
 
 DISTINFO_FILE=	${.CURDIR}/distinfo
-QT6_VERSION=	6.4.0
+QT6_VERSION=	6.4.1
 
 OPTIONS_DEFAULT=	ALSA
 OPTIONS_SINGLE=		AUDIO
