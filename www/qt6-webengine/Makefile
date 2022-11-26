@@ -94,7 +94,7 @@ USES=	bison cmake gl gnome gperf jpeg localbase:ldflags ninja:build \
 #USE_BINUTILS=	yes
 USE_GL=		gl
 USE_GNOME=	glib20 libxml2 libxslt
-USE_QT=		base declarative:run quick3d:build
+USE_QT=		base declarative:run quick3d:build webchannel:build
 QT_BINARIES=	yes
 USE_XORG=	x11 xcb xcomposite xcursor xdamage xext xfixes xi xkbfile \
 		xrandr xrender xscrnsaver xshmfence xtst
