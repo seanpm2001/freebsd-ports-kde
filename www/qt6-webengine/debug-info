@@ -1,24 +1,35 @@
-USE_TMPFS=no
-Use additional swap space
+If the debug build fails following workaround might be useful:
 
-In final linking stage ulimit 4096 is tried to set, but it doesn't work for jails:
-ulimit: bad limit: Operation not permitted
-MAX_FILES=4096 in poudriere conf
+- Disable tmpfs in poudriere via USE_TMPFS=no
 
-Linking with debug symbols causes high memory pressure
+- Use additional swap space
+
+- Linking with debug symbols causes high memory pressure:
 
 ld: error: /usr/lib/crtn.o:(.debug_aranges+0x6): relocation R_X86_64_32 out of range: 4948421891 is not in [0, 4294967295]; consider recompiling with -fdebug-types-section to reduce size of debug sections
 
-"-fdebug-types-section" seems to fix it but takes a loooong time
+  Setting CFLAGS+=-fdebug-types-section and CXXFLAGS+=-fdebug-types-section
+  might help here but linking still requires a very long time to complete.
 
-symbol_level=1
+- FreeBSD 12.1 has Clang 10 which seems too old to compile the debug build:
+In file included from ../../../../../qtwebengine-everywhere-src-6.4.0/src/3rdparty/chromium/v8/src/deoptimizer/translation-array.h:8: ../../../../../qtwebengine-everywhere-src-6.4.0/src/3rdparty/chromium/v8/src/codegen/register.h:29:48: error: member reference base type 'RegListBase' is not a structure or union
+   int num_different_regs = RegListBase{regs...}.Count();
+                              ~~~~~~~~~~~~~~~~~~~~^~~~~~
+                              ../../../../../qtwebengine-everywhere-src-6.4.0/src/3rdparty/chromium/v8/src/codegen/register.h:29:7: warning: uninitialized variable in a constexpr function is a C++20 extension [-Wc++20-extensions]
+                                int num_different_regs = RegListBase{regs...}.Count();
+                                      ^
+- In the final linking stage ulimit 4096 is tried to set, but it doesn't work for jails:
+
+ulimit: bad limit: Operation not permitted
+
+  Setting MAX_FILES=4096 in poudriere.conf should help.
+
+- Setting symbol_level=1 in cmake/Functions.cmake might also help.
 
 
-https://bugreports.qt.io/browse/QTBUG-96897
-convert_dict.stamp is missing
+There was also an issue with the missing "convert_dict.stamp" but this seems
+to resolved by a workaround in cmake/Functions.cmake:
 
-/usr/local/poudriere/data/.m/123Ramd64-qt6/ref/wrkdirs/usr/ports/www/qt6-webengine/work-normal/.build/src/core/Debug/amd64/convert_dict
-
-installs into QT_TOOLDIR, not in QT_BINDIR
-
-
+See also:
+- https://bugreports.qt.io/browse/QTBUG-96897
+- https://bugreports.qt.io/browse/QTBUG-98957
