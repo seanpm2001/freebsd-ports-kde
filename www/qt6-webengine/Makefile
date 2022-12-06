@@ -24,10 +24,7 @@
 # - Add remaining patches
 # - Webcam
 # - Remove USB, HID, Unittest Stuff
-# - Check ulimit settings (-n 4096 not allowed during build) (seems no longer
-#   be required and the shells/bash dependency can be dropped)
 # - Check BSD strip vs. bintools strip
-# - bintools seems not to be required anymore...really?
 
 # QtWebEngine itself is a very thin layer of Qt code on top of a large part of
 # Chromium (everything up to the content/ layer). As such, most of the work in
@@ -55,7 +52,6 @@ COMMENT=	Qt 6 library to render web content
 
 # XXX Is this still required?
 #BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:devel/evdev-proto
-#		bash:shells/bash \
 
 BUILD_DEPENDS=	${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat \
 		${PYTHON_PKGNAMEPREFIX}html5lib>0:www/py-html5lib@${PY_FLAVOR} \
@@ -87,11 +83,6 @@ LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
 
 USES=	bison cmake gl gnome gperf jpeg localbase:ldflags ninja:build \
 	nodejs:build,lts pkgconfig python:build qt-dist:6,webengine xorg
-# We need ar(1) from ports because the Chromium code uses the @file syntax.
-# We then need to ensure ld(1) from ports is used because of the archives ar(1)
-# generated.
-# XXX Building seems to work without binutils...
-#USE_BINUTILS=	yes
 USE_GL=		gl
 USE_GNOME=	glib20 libxml2 libxslt
 USE_QT=		base declarative:run positioning quick3d:build webchannel
@@ -114,28 +105,6 @@ MAKE_ENV+=	CC="${CC}" CXX="${CXX}"			\
 		CPLUS_INCLUDE_PATH=${LOCALBASE}/include	\
 		${CONFIGURE_ENV}
 
-# XXX Setting "CC" and "CXX" to "-B${LOCALBASE}/bin" doesn't work anymore due
-# some compiler checks via cmake.
-#CFLAGS+=		"-B${LOCALBASE}/bin"
-#CXXFLAGS+=		"-B${LOCALBASE}/bin"
-
-# XXX This is required at the moment to avoid error like this:
-# ld: error: /usr/lib/crtn.o:(.debug_aranges+0x6): relocation R_X86_64_32 out of range: 4948421891 is not in [0, 4294967295]; consider recompiling with -fdebug-types-section to reduce size of debug sections
-#CFLAGS+=	-fdebug-types-section
-#CXXFLAGS+=	-fdebug-types-section
-#
-# Also disable TMPFS in poudriere
-# But linking requires a loooong time to complete
-#
-# 12.1 has clang 10 which seems too old to compile the debug build:
-# In file included from ../../../../../qtwebengine-everywhere-src-6.4.0/src/3rdparty/chromium/v8/src/deoptimizer/translation-array.h:8:
-# ../../../../../qtwebengine-everywhere-src-6.4.0/src/3rdparty/chromium/v8/src/codegen/register.h:29:48: error: member reference base type 'RegListBase' is not a structure or union
-#   int num_different_regs = RegListBase{regs...}.Count();
-#                              ~~~~~~~~~~~~~~~~~~~~^~~~~~
-#                              ../../../../../qtwebengine-everywhere-src-6.4.0/src/3rdparty/chromium/v8/src/codegen/register.h:29:7: warning: uninitialized variable in a constexpr function is a C++20 extension [-Wc++20-extensions]
-#                                int num_different_regs = RegListBase{regs...}.Count();
-#                                      ^
-#
 #WITH_DEBUG=	yes
 
 # XXX Do we plan to use a own description for qt6-webengine?
