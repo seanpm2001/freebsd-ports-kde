@@ -100,12 +100,6 @@ USE_XORG=	x11 xcb xcomposite xcursor xdamage xext xfixes xi xkbfile \
 		xrandr xrender xscrnsaver xshmfence xtst
 
 CMAKE_ON=	QT_FEATURE_webengine_system_ffmpeg QT_FEATURE_webengine_proprietary_codecs
-# XXX If enabled (via autodetect), the "convert_dict.stamp" isn't created
-#     during build and lead to failures at the near end
-# 
-# If the "convert_dict.stamp" is created by hand during build, the build process succeeds then.
-#     /usr/local/poudriere/data/.m/123Ramd64-qt6/ref/wrkdirs/usr/ports/www/qt6-webengine/work-normal/.build/src/core/Debug/amd64/convert_dict
-CMAKE_OFF=	QT_FEATURE_webengine_spellchecker
 #MAKE_JOBS_UNSAFE=yes
 
 # The build system reads the environment variable $NINJA_PATH to decide whether

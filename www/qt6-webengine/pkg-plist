@@ -225,6 +225,14 @@ lib/cmake/Qt6WebEngineCore/Qt6WebEngineCoreMacros.cmake
 lib/cmake/Qt6WebEngineCore/Qt6WebEngineCoreTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/Qt6WebEngineCore/Qt6WebEngineCoreTargets.cmake
 lib/cmake/Qt6WebEngineCore/Qt6WebEngineCoreVersionlessTargets.cmake
+lib/cmake/Qt6WebEngineCoreTools/Qt6WebEngineCoreToolsAdditionalTargetInfo.cmake
+lib/cmake/Qt6WebEngineCoreTools/Qt6WebEngineCoreToolsConfig.cmake
+lib/cmake/Qt6WebEngineCoreTools/Qt6WebEngineCoreToolsConfigVersion.cmake
+lib/cmake/Qt6WebEngineCoreTools/Qt6WebEngineCoreToolsConfigVersionImpl.cmake
+lib/cmake/Qt6WebEngineCoreTools/Qt6WebEngineCoreToolsDependencies.cmake
+lib/cmake/Qt6WebEngineCoreTools/Qt6WebEngineCoreToolsTargets-%%CMAKE_BUILD_TYPE%%.cmake
+lib/cmake/Qt6WebEngineCoreTools/Qt6WebEngineCoreToolsTargets.cmake
+lib/cmake/Qt6WebEngineCoreTools/Qt6WebEngineCoreToolsVersionlessTargets.cmake
 lib/cmake/Qt6WebEngineQuick/Qt6WebEngineQuickAdditionalTargetInfo.cmake
 lib/cmake/Qt6WebEngineQuick/Qt6WebEngineQuickConfig.cmake
 lib/cmake/Qt6WebEngineQuick/Qt6WebEngineQuickConfigVersion.cmake
@@ -335,6 +343,7 @@ libdata/pkgconfig/Qt6WebEngineQuick.pc
 libdata/pkgconfig/Qt6WebEngineQuickDelegatesQml.pc
 libdata/pkgconfig/Qt6WebEngineWidgets.pc
 %%QT_TOOLDIR%%/QtWebEngineProcess
+%%QT_TOOLDIR%%/qwebengine_convert_dict
 %%QT_DATADIR%%/modules/Pdf.json
 %%QT_DATADIR%%/modules/PdfQuick.json
 %%QT_DATADIR%%/modules/PdfWidgets.json
