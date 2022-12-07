@@ -67,6 +67,7 @@ LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
 		libminizip.so:archivers/minizip \
 		libnspr4.so:devel/nspr \
 		libnss3.so:security/nss \
+		libopenh264.so:multimedia/openh264 \
 		libopus.so:audio/opus \
 		libpci.so:devel/libpci \
 		libpng.so:graphics/png \
@@ -170,9 +171,11 @@ pre-configure:
 # ./build/linux/unbundle/remove_bundled_libraries.py [list of preserved]
 	cd ${WRKSRC}/src/3rdparty/chromium && ${SETENV} ${CONFIGURE_ENV} ${PYTHON_CMD} \
 		./build/linux/unbundle/replace_gn_files.py --system-libraries \
-		fontconfig freetype harfbuzz-ng libdrm libevent libpng libxml libxslt opus || ${FALSE}
+		fontconfig freetype harfbuzz-ng libdrm libevent libpng libxml libxslt openh264 opus || ${FALSE}
 		# XXX Try to unbundle a few more libraries
 		# libwebp snappy
-		# flac icu? libvpx openh264 re2 zlib
+		# icu?
+		# Missing header: re2, libvpx, zlib
+		# NO-OP: flac
 
 .include <bsd.port.post.mk>
