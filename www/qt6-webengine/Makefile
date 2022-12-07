@@ -152,8 +152,7 @@ post-extract:
 
 post-patch:
 	# XXX Maybe there's still a better way to inject these args into the build process...
-	# The BUILD.toolchain.gn.in still needs to be reworked as it contains hardcoded values
-	#@${REINPLACE_CMD} -e 's|%%CXXFLAGS%%|${CXXFLAGS}|;s|%%LDFLAGS%%|${LDFLAGS}|' \
+	@${REINPLACE_CMD} -e 's|%%CPPFLAGS%%|${CPPFLAGS}|;s|%%CXXFLAGS%%|${CXXFLAGS}|;s|%%LDFLAGS%%|${LDFLAGS}|' \
 		${WRKSRC}/src/host/BUILD.toolchain.gn.in
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \
 		${WRKSRC}/src/3rdparty/chromium/third_party/pdfium/core/fxge/linux/fx_linux_impl.cpp \
