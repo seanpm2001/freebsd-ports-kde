@@ -64,7 +64,6 @@ LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
 		libfreetype.so:print/freetype2 \
 		libharfbuzz.so:print/harfbuzz \
 		liblcms2.so:graphics/lcms2 \
-		libminizip.so:archivers/minizip \
 		libnspr4.so:devel/nspr \
 		libnss3.so:security/nss \
 		libopenh264.so:multimedia/openh264 \
@@ -82,7 +81,7 @@ LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
 		libdouble-conversion.so:devel/double-conversion \
 		libjsoncpp.so:devel/jsoncpp \
 
-USES=	bison cmake gl gnome gperf jpeg localbase:ldflags ninja:build \
+USES=	bison cmake gl gnome gperf jpeg localbase:ldflags minizip ninja:build \
 	nodejs:build,lts pkgconfig python:build qt-dist:6,webengine xorg
 USE_GL=		gl
 USE_GNOME=	glib20 libxml2 libxslt
@@ -173,9 +172,7 @@ pre-configure:
 		./build/linux/unbundle/replace_gn_files.py --system-libraries \
 		fontconfig freetype harfbuzz-ng libdrm libevent libpng libxml libxslt openh264 opus || ${FALSE}
 		# XXX Try to unbundle a few more libraries
-		# libwebp snappy
-		# icu?
-		# Missing header: re2, libvpx, zlib
+		# Missing header: icu, libvpx, libwebp, re2, snappy, zlib
 		# NO-OP: flac
 
 .include <bsd.port.post.mk>
