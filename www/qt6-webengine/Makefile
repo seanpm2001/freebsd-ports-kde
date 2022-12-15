@@ -17,12 +17,8 @@
 # - Examine the issues with the spellchecker feature (see below for further
 #   details).
 # - Check for the 'XXX's in the Makefile, ${FILESDIR}/* and in Mk/*
-# - Do we still need binutils?
 # - Test build on aarch64 and other platforms
-# - Check webcam functionality
 # - runtime tests...oh my
-# - Add remaining patches
-# - Webcam
 # - Remove USB, HID, Unittest Stuff
 # - Check BSD strip vs. bintools strip
 
@@ -34,7 +30,6 @@
 # - We are using several stub files, especially in Chromium's base/ and net/
 #   layers. We should look at implementing the missing bits instead.
 # - We are currently not using any sandboxing mechanism.
-# - We need to see if more "use_system_<FOO>" flags can be passed.
 # - The process of porting QtWebEngine needs to be documented so we can move to
 #   newer releases more easily.
 #
@@ -49,9 +44,6 @@ PKGNAMEPREFIX=	qt6-
 
 MAINTAINER=	kde@FreeBSD.org
 COMMENT=	Qt 6 library to render web content
-
-# XXX Is this still required?
-#BUILD_DEPENDS=	${LOCALBASE}/include/linux/input.h:devel/evdev-proto
 
 BUILD_DEPENDS=	${LOCALBASE}/include/linux/videodev2.h:multimedia/v4l_compat \
 		${PYTHON_PKGNAMEPREFIX}html5lib>0:www/py-html5lib@${PY_FLAVOR} \
@@ -76,11 +68,6 @@ LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
 		libwebp.so:graphics/webp \
 		libxkbcommon.so:x11/libxkbcommon
 
-# XXX Are these libs still required?
-#LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
-		libdouble-conversion.so:devel/double-conversion \
-		libjsoncpp.so:devel/jsoncpp \
-
 USES=	bison cmake gl gnome gperf jpeg localbase:ldflags minizip ninja:build \
 	nodejs:build,lts pkgconfig python:build qt-dist:6,webengine xorg
 USE_GL=		gl
@@ -91,7 +78,6 @@ USE_XORG=	x11 xcb xcomposite xcursor xdamage xext xfixes xi xkbfile \
 		xrandr xrender xscrnsaver xshmfence xtst
 
 CMAKE_ON=	QT_FEATURE_webengine_system_ffmpeg QT_FEATURE_webengine_proprietary_codecs
-#MAKE_JOBS_UNSAFE=yes
 
 # The build system reads the environment variable $NINJA_PATH to decide whether
 # to boostrap ninja or not (and also to invoke it afterwards). CC and CXX are
@@ -104,8 +90,6 @@ MAKE_ENV+=	CC="${CC}" CXX="${CXX}"			\
 		C_INCLUDE_PATH=${LOCALBASE}/include	\
 		CPLUS_INCLUDE_PATH=${LOCALBASE}/include	\
 		${CONFIGURE_ENV}
-
-#WITH_DEBUG=	yes
 
 # XXX Do we plan to use a own description for qt6-webengine?
 DESCR=		${PORTSDIR}/devel/qt6-base/pkg-descr
@@ -161,10 +145,10 @@ post-patch:
 pre-configure:
 # Link in ${PYTHON_CMD} to ${CONFIGURE_WRKSRC}/bin -- the scripts hardcode 'python'
 # in too many places to reasonably patch. So just link in ${PYTHON_CMD} to work around
-# $LOCALBASE/bin/python being python3 if the default versions is set to 3.x.
+# $LOCALBASE/bin/python .
 	${MKDIR} ${CONFIGURE_WRKSRC}/bin && ${LN} -s ${PYTHON_CMD} ${CONFIGURE_WRKSRC}/bin/python
 
-# XXX We used to remove bundled libraries to be sure that chromium uses
+# We used to remove bundled libraries to be sure that chromium uses
 # system libraries and not shipped ones.
 # cd ${WRKSRC} && ${PYTHON_CMD} \
 # ./build/linux/unbundle/remove_bundled_libraries.py [list of preserved]
