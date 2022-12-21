@@ -91,9 +91,6 @@ MAKE_ENV+=	CC="${CC}" CXX="${CXX}"			\
 		CPLUS_INCLUDE_PATH=${LOCALBASE}/include	\
 		${CONFIGURE_ENV}
 
-# XXX Do we plan to use a own description for qt6-webengine?
-DESCR=		${PORTSDIR}/devel/qt6-base/pkg-descr
-
 DISTINFO_FILE=	${.CURDIR}/distinfo
 QT6_VERSION=	6.4.1
 
