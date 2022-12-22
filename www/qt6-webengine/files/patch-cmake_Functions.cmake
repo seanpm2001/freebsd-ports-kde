@@ -18,20 +18,8 @@
      else()
          message(DEBUG "Unrecognized OS")
      endif()
-@@ -804,6 +806,8 @@ macro(append_build_type_setup)
-         use_allocator="none"
-         use_custom_libcxx=false
-     )
-+    # XXX Check if this needs to be adjusted, e.g setting symbol_level=1
-+    #     if too much memory is required for a debug build.
-     if(${config} STREQUAL "Debug")
-         list(APPEND gnArgArg is_debug=true symbol_level=2)
-         if(WIN32)
-@@ -852,9 +856,10 @@ macro(append_build_type_setup)
-         endif()
-     endif()
+@@ -854,7 +856,7 @@ macro(append_build_type_setup)
  
-+    # XXX Check - Does it make sense to expose this?
      extend_gn_list(gnArgArg
          ARGS enable_precompiled_headers
 -        CONDITION BUILD_WITH_PCH AND NOT LINUX
@@ -39,27 +27,25 @@
      )
      extend_gn_list(gnArgArg
          ARGS dcheck_always_on
-@@ -902,7 +907,8 @@ macro(append_compiler_linker_sdk_setup)
+@@ -902,7 +904,7 @@ macro(append_compiler_linker_sdk_setup)
                  use_libcxx=true
              )
          endif()
 -        if(DEFINED QT_FEATURE_stdlib_libcpp AND LINUX)
-+	# XXX Check - Does it make sense to expose it?
 +	if(DEFINED QT_FEATURE_stdlib_libcpp AND (LINUX OR FREEBSD))
              extend_gn_list(gnArgArg ARGS use_libcxx
                  CONDITION QT_FEATURE_stdlib_libcpp
              )
-@@ -930,7 +936,8 @@ macro(append_compiler_linker_sdk_setup)
+@@ -930,7 +932,7 @@ macro(append_compiler_linker_sdk_setup)
          )
      endif()
      get_gn_arch(cpu ${TEST_architecture_arch})
 -    if(LINUX AND CMAKE_CROSSCOMPILING AND cpu STREQUAL "arm")
-+    # XXX Check - might be relevant for arm64, armv6, armv7 ...
 +    if((LINUX OR FREEBSD) AND CMAKE_CROSSCOMPILING AND cpu STREQUAL "arm")
  
          extend_gn_list_cflag(gnArgArg
              ARG arm_tune
-@@ -997,7 +1004,7 @@ macro(append_toolchain_setup)
+@@ -997,7 +999,7 @@ macro(append_toolchain_setup)
  endmacro()
  
  macro(append_toolchain_setup)
@@ -68,7 +54,7 @@
          list(APPEND gnArgArg
              custom_toolchain="${buildDir}/target_toolchain:target"
              host_toolchain="${buildDir}/host_toolchain:host"
-@@ -1024,7 +1031,7 @@ macro(append_pkg_config_setup)
+@@ -1024,7 +1026,7 @@ macro(append_pkg_config_setup)
  
  
  macro(append_pkg_config_setup)
@@ -77,7 +63,7 @@
          list(APPEND gnArgArg
              pkg_config="${PKG_CONFIG_EXECUTABLE}"
              host_pkg_config="${PKG_CONFIG_HOST_EXECUTABLE}"
-@@ -1100,6 +1107,20 @@ function(add_gn_build_aritfacts_to_target cmakeTarget 
+@@ -1100,6 +1102,20 @@ function(add_gn_build_aritfacts_to_target cmakeTarget 
              set_target_properties(${cmakeTarget} PROPERTIES
                  LINK_DEPENDS ${buildDir}/${config}/${arch}/${ninjaTarget}.stamp
              )
@@ -98,7 +84,7 @@
              if(QT_IS_MACOS_UNIVERSAL)
                  add_intermediate_archive(${target} ${buildDir}/${config}/${arch} ${completeStatic})
              elseif(IOS)
-@@ -1222,7 +1243,7 @@ function(check_for_ulimit)
+@@ -1222,7 +1238,7 @@ function(check_for_ulimit)
  
  function(check_for_ulimit)
      message("-- Checking 'ulimit -n'")
@@ -107,7 +93,7 @@
          OUTPUT_VARIABLE ulimitOutput
      )
      string(REGEX MATCHALL "[0-9]+" limit "${ulimitOutput}")
-@@ -1231,7 +1252,7 @@ function(check_for_ulimit)
+@@ -1231,7 +1247,7 @@ function(check_for_ulimit)
          if(NOT ${CMAKE_VERSION} VERSION_LESS "3.21.0")
              message(" -- Creating linker launcher")
              file(GENERATE OUTPUT ${PROJECT_BINARY_DIR}/linker_ulimit.sh

@@ -1,4 +1,4 @@
---- src/3rdparty/chromium/base/BUILD.gn.orig	2022-09-26 10:05:50 UTC
+--- src/3rdparty/chromium/base/BUILD.gn.orig	2022-11-08 21:18:48 UTC
 +++ src/3rdparty/chromium/base/BUILD.gn
 @@ -1000,7 +1000,7 @@ jumbo_component("base") {
        "timer/hi_res_timer_manager_posix.cc",
@@ -22,17 +22,15 @@
    }
  
    jumbo_excluded_sources = [
-@@ -1360,7 +1366,8 @@ jumbo_component("base") {
+@@ -1360,7 +1366,6 @@ jumbo_component("base") {
        "process/process_metrics_linux.cc",
        "threading/platform_thread_linux.cc",
      ]
 -    jumbo_excluded_sources += [ "process/memory_linux.cc" ]
-+    # XXX
-+    #jumbo_excluded_sources += [ "process/memory_linux.cc" ]
    }
  
    if (is_linux || is_chromeos || is_android || is_fuchsia) {
-@@ -1502,6 +1509,18 @@ jumbo_component("base") {
+@@ -1502,6 +1507,18 @@ jumbo_component("base") {
      libs += [ "atomic" ]
    }
  
@@ -51,7 +49,7 @@
    if (use_allocator_shim) {
      sources += [
        "allocator/allocator_shim.cc",
-@@ -1529,7 +1548,7 @@ jumbo_component("base") {
+@@ -1529,7 +1546,7 @@ jumbo_component("base") {
        ]
        configs += [ "//base/allocator:mac_no_default_new_delete_symbols" ]
      }
@@ -60,7 +58,7 @@
        sources += [
          "allocator/allocator_shim_override_cpp_symbols.h",
          "allocator/allocator_shim_override_glibc_weak_symbols.h",
-@@ -1585,7 +1604,7 @@ jumbo_component("base") {
+@@ -1585,7 +1602,7 @@ jumbo_component("base") {
  
    # Allow more direct string conversions on platforms with native utf8
    # strings
@@ -69,7 +67,7 @@
      defines += [ "SYSTEM_NATIVE_UTF8" ]
    }
  
-@@ -2163,6 +2182,42 @@ jumbo_component("base") {
+@@ -2163,6 +2180,42 @@ jumbo_component("base") {
      }
    }
  
@@ -112,7 +110,7 @@
    # iOS
    if (is_ios) {
      sources -= [
-@@ -3452,7 +3507,7 @@ test("base_unittests") {
+@@ -3452,7 +3505,7 @@ test("base_unittests") {
      }
    }
  
@@ -121,7 +119,7 @@
      sources += [
        "debug/proc_maps_linux_unittest.cc",
        "files/scoped_file_linux_unittest.cc",
-@@ -3500,7 +3555,7 @@ test("base_unittests") {
+@@ -3500,7 +3553,7 @@ test("base_unittests") {
        "posix/unix_domain_socket_unittest.cc",
        "task/thread_pool/task_tracker_posix_unittest.cc",
      ]
@@ -130,7 +128,7 @@
        sources += [
          "cpu_affinity_posix_unittest.cc",
          "profiler/stack_copier_signal_unittest.cc",
-@@ -3511,7 +3566,7 @@ test("base_unittests") {
+@@ -3511,7 +3564,7 @@ test("base_unittests") {
  
    # Allow more direct string conversions on platforms with native utf8
    # strings
@@ -139,7 +137,7 @@
      defines += [ "SYSTEM_NATIVE_UTF8" ]
    }
  
-@@ -3673,7 +3728,7 @@ test("base_unittests") {
+@@ -3673,7 +3726,7 @@ test("base_unittests") {
      }
    }
  

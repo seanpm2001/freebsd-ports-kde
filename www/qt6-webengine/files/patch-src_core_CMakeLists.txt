@@ -1,4 +1,4 @@
---- src/core/CMakeLists.txt.orig	2022-09-26 10:05:50 UTC
+--- src/core/CMakeLists.txt.orig	2022-11-08 21:18:48 UTC
 +++ src/core/CMakeLists.txt
 @@ -16,7 +16,7 @@ add_subdirectory(tools)
  #   TOOLCHAIN SETUP
@@ -9,7 +9,7 @@
      setup_toolchains()
  endif()
  
-@@ -366,12 +366,13 @@ foreach(arch ${archs})
+@@ -366,12 +366,12 @@ foreach(arch ${archs})
              CONDITION QT_FEATURE_webengine_embedded_build
          )
  
@@ -20,12 +20,11 @@
                  use_gio=false
                  use_gnome_keyring=false
 -                use_udev=true
-+		# XXX Hmm... true or false?
 +                use_udev=false
                  use_bundled_fontconfig=false
                  enable_session_service=false
                  is_cfi=false
-@@ -425,6 +426,10 @@ foreach(arch ${archs})
+@@ -425,6 +425,10 @@ foreach(arch ${archs})
              extend_gn_list(gnArgArg
                  ARGS use_pulseaudio
                  CONDITION QT_FEATURE_webengine_system_pulseaudio
