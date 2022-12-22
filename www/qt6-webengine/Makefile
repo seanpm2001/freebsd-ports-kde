@@ -11,16 +11,14 @@
 ### /!\ WARNING /!\ WARNING /!\ WARNING /!\ WARNING /!\
 ### ---------------------------------------------------
 
-# TODO XXX
+# TODO
 # - If Qt6 gets updated, qt6-webengine assumes it has the new Qt6 version
 #   regardless of its distinfo which leads to pkg-plist issues at the end.
 # - Examine the issues with the spellchecker feature (see below for further
 #   details).
-# - Check for the 'XXX's in the Makefile, ${FILESDIR}/* and in Mk/*
 # - Test build on aarch64 and other platforms
 # - runtime tests...oh my
 # - Remove USB, HID, Unittest Stuff
-# - Check BSD strip vs. bintools strip
 
 # QtWebEngine itself is a very thin layer of Qt code on top of a large part of
 # Chromium (everything up to the content/ layer). As such, most of the work in
@@ -132,7 +130,6 @@ post-extract:
 		${WRKSRC}/src/3rdparty/chromium/sandbox/policy/openbsd
 
 post-patch:
-	# XXX Maybe there's still a better way to inject these args into the build process...
 	@${REINPLACE_CMD} -e 's|%%CPPFLAGS%%|${CPPFLAGS}|;s|%%CXXFLAGS%%|${CXXFLAGS}|;s|%%LDFLAGS%%|${LDFLAGS}|' \
 		${WRKSRC}/src/host/BUILD.toolchain.gn.in
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \
@@ -145,15 +142,16 @@ pre-configure:
 # $LOCALBASE/bin/python .
 	${MKDIR} ${CONFIGURE_WRKSRC}/bin && ${LN} -s ${PYTHON_CMD} ${CONFIGURE_WRKSRC}/bin/python
 
-# We used to remove bundled libraries to be sure that chromium uses
+# We used to remove bundled libraries to be sure that webengine uses
 # system libraries and not shipped ones.
+#
+# Leads to missing header errors: icu, libvpx, libwebp, re2, snappy, zlib
+# No-Op: flac
+#
 # cd ${WRKSRC} && ${PYTHON_CMD} \
 # ./build/linux/unbundle/remove_bundled_libraries.py [list of preserved]
 	cd ${WRKSRC}/src/3rdparty/chromium && ${SETENV} ${CONFIGURE_ENV} ${PYTHON_CMD} \
 		./build/linux/unbundle/replace_gn_files.py --system-libraries \
 		fontconfig freetype harfbuzz-ng libdrm libevent libpng libxml libxslt openh264 opus || ${FALSE}
-		# XXX Try to unbundle a few more libraries
-		# Missing header: icu, libvpx, libwebp, re2, snappy, zlib
-		# NO-OP: flac
 
 .include <bsd.port.post.mk>
