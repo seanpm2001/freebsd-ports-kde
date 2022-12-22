@@ -1,25 +1,3 @@
-### ---------------------------------------------------
-### /!\ WARNING /!\ WARNING /!\ WARNING /!\ WARNING /!\
-### ---------------------------------------------------
-### The current state is at the moment:
-###
-###     >>> "It compiles...let's sell it!" [*] <<<
-###
-### [*] On 13.1-RELEASE amd64 for ALSA/PULSE/SNDIO and
-###     with/without DEBUG
-### ---------------------------------------------------
-### /!\ WARNING /!\ WARNING /!\ WARNING /!\ WARNING /!\
-### ---------------------------------------------------
-
-# TODO
-# - If Qt6 gets updated, qt6-webengine assumes it has the new Qt6 version
-#   regardless of its distinfo which leads to pkg-plist issues at the end.
-# - Examine the issues with the spellchecker feature (see below for further
-#   details).
-# - Test build on aarch64 and other platforms
-# - runtime tests...oh my
-# - Remove USB, HID, Unittest Stuff
-
 # QtWebEngine itself is a very thin layer of Qt code on top of a large part of
 # Chromium (everything up to the content/ layer). As such, most of the work in
 # this port revolves around taming Chromium and getting it to build on FreeBSD.
@@ -89,6 +67,14 @@ MAKE_ENV+=	CC="${CC}" CXX="${CXX}"			\
 		CPLUS_INCLUDE_PATH=${LOCALBASE}/include	\
 		${CONFIGURE_ENV}
 
+# Add extra-patch-no-mempcpy-nasm only when there's no mempcpy() in base.
+# Nested variable expansion avoids executing the test when not needed for
+# expanding EXTRA_PATCHES.
+# mempcpy was introduced in ee37f64cf875255338f917a9da76c643cf59786c
+EXTRA_PATCHES+=	${"${:!${GREP} mempcpy ${CROSS_SYSROOT}/usr/include/string.h \
+		|| ${TRUE}!}" == "":?${PATCHDIR}/extra-patch-no-mempcpy-nasm:}
+
+
 DISTINFO_FILE=	${.CURDIR}/distinfo
 QT6_VERSION=	6.4.1
 
@@ -110,19 +96,6 @@ PULSEAUDIO_CMAKE_OFF=	-DQT_FEATURE_webengine_system_pulseaudio:BOOL=OFF
 SNDIO_LIB_DEPENDS=	libsndio.so:audio/sndio
 SNDIO_CMAKE_ON=		-DQT_FEATURE_webengine_system_sndio:BOOL=ON
 SNDIO_CMAKE_OFF=	-DQT_FEATURE_webengine_system_sndio:BOOL=OFF
-
-.include <bsd.port.pre.mk>
-
-#.if defined(WITH_DEBUG)
-#USES+=	compiler:c++20-lang
-#.endif
-
-# Add extra-patch-no-mempcpy-nasm only when there's no mempcpy() in base.
-# Nested variable expansion avoids executing the test when not needed for
-# expanding EXTRA_PATCHES.
-# mempcpy was introduced in ee37f64cf875255338f917a9da76c643cf59786c
-EXTRA_PATCHES+=	${"${:!${GREP} mempcpy ${CROSS_SYSROOT}/usr/include/string.h \
-		|| ${TRUE}!}" == "":?${PATCHDIR}/extra-patch-no-mempcpy-nasm:}
 
 post-extract:
 	@${MKDIR} ${WRKSRC}/src/3rdparty/chromium/media/audio/sndio \
@@ -154,4 +127,4 @@ pre-configure:
 		./build/linux/unbundle/replace_gn_files.py --system-libraries \
 		fontconfig freetype harfbuzz-ng libdrm libevent libpng libxml libxslt openh264 opus || ${FALSE}
 
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
