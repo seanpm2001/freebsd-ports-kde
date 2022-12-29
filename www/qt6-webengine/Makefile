@@ -45,11 +45,10 @@ LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
 		libxkbcommon.so:x11/libxkbcommon
 
 USES=	bison cmake gl gnome gperf jpeg localbase:ldflags minizip ninja:build \
-	nodejs:build,lts pkgconfig python:build qt-dist:6,webengine xorg
+	nodejs:build,lts pkgconfig python:build,patch qt-dist:6,webengine xorg
 USE_GL=		gl
 USE_GNOME=	glib20 libxml2 libxslt
 USE_QT=		base declarative:run positioning quick3d:build webchannel
-QT_BINARIES=	yes
 USE_XORG=	x11 xcb xcomposite xcursor xdamage xext xfixes xi xkbfile \
 		xrandr xrender xscrnsaver xshmfence xtst
 
@@ -67,13 +66,14 @@ MAKE_ENV+=	CC="${CC}" CXX="${CXX}"			\
 		CPLUS_INCLUDE_PATH=${LOCALBASE}/include	\
 		${CONFIGURE_ENV}
 
+BINARY_ALIAS=	python=${PYTHON_CMD}
+
 # Add extra-patch-no-mempcpy-nasm only when there's no mempcpy() in base.
 # Nested variable expansion avoids executing the test when not needed for
 # expanding EXTRA_PATCHES.
 # mempcpy was introduced in ee37f64cf875255338f917a9da76c643cf59786c
 EXTRA_PATCHES+=	${"${:!${GREP} mempcpy ${CROSS_SYSROOT}/usr/include/string.h \
 		|| ${TRUE}!}" == "":?${PATCHDIR}/extra-patch-no-mempcpy-nasm:}
-
 
 DISTINFO_FILE=	${.CURDIR}/distinfo
 QT6_VERSION=	6.4.1
@@ -108,12 +108,6 @@ post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \
 		${WRKSRC}/src/3rdparty/chromium/third_party/pdfium/core/fxge/linux/fx_linux_impl.cpp \
 		${WRKSRC}/src/3rdparty/chromium/third_party/wayland/features.gni
-
-pre-configure:
-# Link in ${PYTHON_CMD} to ${CONFIGURE_WRKSRC}/bin -- the scripts hardcode 'python'
-# in too many places to reasonably patch. So just link in ${PYTHON_CMD} to work around
-# $LOCALBASE/bin/python .
-	${MKDIR} ${CONFIGURE_WRKSRC}/bin && ${LN} -s ${PYTHON_CMD} ${CONFIGURE_WRKSRC}/bin/python
 
 # We used to remove bundled libraries to be sure that webengine uses
 # system libraries and not shipped ones.
