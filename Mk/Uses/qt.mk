@@ -366,11 +366,7 @@ qt-webchannel_LIB=	libQt${_QT_LIBVER}WebChannel.so
 
 qt-webengine_PORT=	www/${_QT_RELNAME}-webengine
 
-.if ${_QT_VER} == 5
-qt-webengine_LIB=	libQt${_QT_LIBVER}WebEngine.so
-.else
 qt-webengine_LIB=	libQt${_QT_LIBVER}WebEngineCore.so
-.endif
 
 qt-webglplugin_PORT=     www/${_QT_RELNAME}-webglplugin
 qt-webglplugin_PATH=     ${LOCALBASE}/${QT_PLUGINDIR_REL}/platforms/libqwebgl.so
