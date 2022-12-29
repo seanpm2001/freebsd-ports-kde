@@ -103,6 +103,7 @@
     SUBDIR += create-cert
     SUBDIR += crlfuzz
     SUBDIR += crowdsec
+    SUBDIR += crowdsec-blocklist-mirror
     SUBDIR += crowdsec-firewall-bouncer
     SUBDIR += cryptlib
     SUBDIR += cryptopp
@@ -179,10 +180,12 @@
     SUBDIR += gnutls
     SUBDIR += go-cve-dictionary
     SUBDIR += gokart
+    SUBDIR += gokey
     SUBDIR += gonepass
     SUBDIR += gopass
     SUBDIR += gorilla
     SUBDIR += gost-engine
+    SUBDIR += gostsum
     SUBDIR += gpa
     SUBDIR += gpg-gui
     SUBDIR += gpg-tui
@@ -326,6 +329,7 @@
     SUBDIR += linux-c7-openssl-devel
     SUBDIR += linux-c7-p11-kit
     SUBDIR += linux-c7-trousers
+    SUBDIR += local-php-security-checker
     SUBDIR += logcheck
     SUBDIR += lua-bcrypt
     SUBDIR += luasec
@@ -390,6 +394,7 @@
     SUBDIR += openconnect-gui
     SUBDIR += opencryptoki
     SUBDIR += openct
+    SUBDIR += openfhe
     SUBDIR += openfortivpn
     SUBDIR += openiked
     SUBDIR += openiked-portable
@@ -419,6 +424,7 @@
     SUBDIR += ossec-hids-server
     SUBDIR += ossec-hids-server-config
     SUBDIR += osslsigncode
+    SUBDIR += osv-scanner
     SUBDIR += otpw
     SUBDIR += owasp-dependency-check
     SUBDIR += p11-kit
@@ -771,9 +777,6 @@
     SUBDIR += pgpdump
     SUBDIR += pgpgpg
     SUBDIR += pgpin
-    SUBDIR += php74-filter
-    SUBDIR += php74-openssl
-    SUBDIR += php74-sodium
     SUBDIR += php80-filter
     SUBDIR += php80-sodium
     SUBDIR += php81-filter
@@ -842,7 +845,6 @@
     SUBDIR += py-certbot
     SUBDIR += py-certbot-apache
     SUBDIR += py-certbot-dns-cloudflare
-    SUBDIR += py-certbot-dns-cloudxns
     SUBDIR += py-certbot-dns-cpanel
     SUBDIR += py-certbot-dns-digitalocean
     SUBDIR += py-certbot-dns-dnsimple
@@ -1103,6 +1105,7 @@
     SUBDIR += rubygem-omniauth-oauth2-generic
     SUBDIR += rubygem-omniauth-rails_csrf_protection
     SUBDIR += rubygem-omniauth-saml
+    SUBDIR += rubygem-omniauth-saml1
     SUBDIR += rubygem-omniauth-shibboleth
     SUBDIR += rubygem-omniauth1
     SUBDIR += rubygem-openssl

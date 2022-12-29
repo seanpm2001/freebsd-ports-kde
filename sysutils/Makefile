@@ -52,6 +52,7 @@
     SUBDIR += apcctrl
     SUBDIR += apcpwr
     SUBDIR += apcupsd
+    SUBDIR += apt-mirror-devel
     SUBDIR += aptly
     SUBDIR += arc_summary
     SUBDIR += arcconf
@@ -88,6 +89,7 @@
     SUBDIR += bacula11-docs
     SUBDIR += bacula11-server
     SUBDIR += bacula13-client
+    SUBDIR += bacula13-client-static
     SUBDIR += bacula13-docs
     SUBDIR += bacula13-server
     SUBDIR += bacula9-client
@@ -176,11 +178,9 @@
     SUBDIR += cfengine-devel
     SUBDIR += cfengine-masterfiles
     SUBDIR += cfengine-masterfiles-devel
-    SUBDIR += cfengine-masterfiles317
     SUBDIR += cfengine-masterfiles318
     SUBDIR += cfengine-masterfiles319
     SUBDIR += cfengine-masterfiles320
-    SUBDIR += cfengine317
     SUBDIR += cfengine318
     SUBDIR += cfengine319
     SUBDIR += cfengine320
@@ -463,7 +463,6 @@
     SUBDIR += g15daemon
     SUBDIR += gaffitter
     SUBDIR += ganglia-monitor-core
-    SUBDIR += ganglia-webfrontend
     SUBDIR += gapcmon
     SUBDIR += garcon
     SUBDIR += gather
@@ -544,6 +543,7 @@
     SUBDIR += hs-cputype
     SUBDIR += hstr
     SUBDIR += htop
+    SUBDIR += httm
     SUBDIR += httplog
     SUBDIR += hw-probe
     SUBDIR += hwstat
@@ -690,6 +690,7 @@
     SUBDIR += ltrace
     SUBDIR += lttng-tools
     SUBDIR += lttng-ust
+    SUBDIR += lua-puremagic
     SUBDIR += luckybackup
     SUBDIR += lxinput
     SUBDIR += lxqt-admin
@@ -829,6 +830,7 @@
     SUBDIR += ntpstat
     SUBDIR += nut
     SUBDIR += nut-devel
+    SUBDIR += nut_exporter
     SUBDIR += nvclock
     SUBDIR += nvimpager
     SUBDIR += nvme-cli
@@ -989,8 +991,6 @@
     SUBDIR += pfstat
     SUBDIR += pftables
     SUBDIR += pftop
-    SUBDIR += php74-fileinfo
-    SUBDIR += php74-posix
     SUBDIR += php80-fileinfo
     SUBDIR += php80-posix
     SUBDIR += php81-fileinfo
@@ -1146,6 +1146,7 @@
     SUBDIR += qt5-qtpaths
     SUBDIR += qt5-qtplugininfo
     SUBDIR += qtpass
+    SUBDIR += qtxdg-tools
     SUBDIR += quickjail
     SUBDIR += quicksynergy
     SUBDIR += racktables

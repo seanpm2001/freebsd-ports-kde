@@ -12,6 +12,7 @@
     SUBDIR += bee-host
     SUBDIR += biew
     SUBDIR += bitedit
+    SUBDIR += bless
     SUBDIR += boiling-egg
     SUBDIR += bpatch
     SUBDIR += bvi
@@ -238,6 +239,7 @@
     SUBDIR += py-vim-bridge
     SUBDIR += quilter
     SUBDIR += rehex
+    SUBDIR += retext
     SUBDIR += rubygem-neovim
     SUBDIR += scite
     SUBDIR += se

@@ -44,6 +44,7 @@
     SUBDIR += credis
     SUBDIR += cutelyst-asql
     SUBDIR += dalmp
+    SUBDIR += datasette
     SUBDIR += db
     SUBDIR += db18
     SUBDIR += db5
@@ -541,7 +542,6 @@
     SUBDIR += pear-Structures_DataGrid_DataSource_DB
     SUBDIR += pear-Structures_DataGrid_DataSource_PDO
     SUBDIR += pear-XML_Query2XML
-    SUBDIR += pecl-cassandra
     SUBDIR += pecl-couchbase
     SUBDIR += pecl-leveldb
     SUBDIR += pecl-memcache
@@ -597,18 +597,6 @@
     SUBDIR += pguri
     SUBDIR += php-tarantool
     SUBDIR += php-xapian
-    SUBDIR += php74-dba
-    SUBDIR += php74-mysqli
-    SUBDIR += php74-odbc
-    SUBDIR += php74-pdo
-    SUBDIR += php74-pdo_dblib
-    SUBDIR += php74-pdo_firebird
-    SUBDIR += php74-pdo_mysql
-    SUBDIR += php74-pdo_odbc
-    SUBDIR += php74-pdo_pgsql
-    SUBDIR += php74-pdo_sqlite
-    SUBDIR += php74-pgsql
-    SUBDIR += php74-sqlite3
     SUBDIR += php80-dba
     SUBDIR += php80-mysqli
     SUBDIR += php80-odbc
@@ -1005,8 +993,8 @@
     SUBDIR += rubygem-redis-namespace
     SUBDIR += rubygem-redis-namespace18
     SUBDIR += rubygem-redis4
-    SUBDIR += rubygem-sdbm
     SUBDIR += rubygem-scenic61
+    SUBDIR += rubygem-sdbm
     SUBDIR += rubygem-seed-fu
     SUBDIR += rubygem-sqlite3
     SUBDIR += rubygem-sqlite3-ruby

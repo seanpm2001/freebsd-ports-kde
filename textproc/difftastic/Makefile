@@ -1,5 +1,5 @@
 PORTNAME=	difftastic
-DISTVERSION=	0.38.0
+DISTVERSION=	0.39.0
 PORTREVISION=	1
 CATEGORIES=	textproc
 
@@ -108,6 +108,13 @@ CARGO_CRATES=	aho-corasick-0.7.18 \
 PORTDOCS=	*
 
 OPTIONS_DEFINE=	DOCS
+
+.include <bsd.port.options.mk>
+
+.if ${ARCH} == powerpc
+LIB_DEPENDS+=	libatomic.so:lang/gcc${GCC_DEFAULT}
+LDFLAGS+=	-L/usr/local/lib/gcc${GCC_DEFAULT} -latomic
+.endif
 
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/difft

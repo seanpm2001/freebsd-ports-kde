@@ -1,6 +1,7 @@
 PORTNAME=	gleam
 DISTVERSIONPREFIX=	v
 DISTVERSION=	0.25.0
+PORTREVISION=	1
 CATEGORIES=	lang
 
 MAINTAINER=	dch@FreeBSD.org
@@ -25,6 +26,8 @@ PLIST_FILES=	bin/gleam
 PORTDOCS=	README.md
 
 OPTIONS_DEFINE=	DOCS
+
+PORTSCOUT=	limit:[0-9.]+
 
 do-build:
 	(cd ${WRKSRC} && \

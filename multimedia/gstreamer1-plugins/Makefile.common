@@ -122,7 +122,6 @@ BAD_GST_ALL_PLUGINS+= \
 		ivtc \
 		jp2kdecimator \
 		jpegformat \
-		kate \
 		kms \
 		ladspa \
 		libde265 \
@@ -178,6 +177,7 @@ BAD_GST_ALL_PLUGINS+= \
 		soundtouch \
 		spandsp \
 		speed \
+		srt \
 		srtp \
 		subenc \
 		svthevcenc \

@@ -577,6 +577,7 @@
     SUBDIR += eiffelstudio
     SUBDIR += electron18
     SUBDIR += electron19
+    SUBDIR += electron21
     SUBDIR += elf
     SUBDIR += elf-dissector
     SUBDIR += elfcat
@@ -876,6 +877,7 @@
     SUBDIR += gpds
     SUBDIR += gperf
     SUBDIR += gpm
+    SUBDIR += gprbuild
     SUBDIR += gputils
     SUBDIR += gradle
     SUBDIR += gradle-completion
@@ -999,6 +1001,7 @@
     SUBDIR += jetbrains-clion
     SUBDIR += jetbrains-goland
     SUBDIR += jetbrains-phpstorm
+    SUBDIR += jetbrains-pty4j
     SUBDIR += jetbrains-webstorm
     SUBDIR += jgoodies-looks
     SUBDIR += jiic
@@ -1221,6 +1224,7 @@
     SUBDIR += libgnuregex
     SUBDIR += libgpc
     SUBDIR += libgpkg
+    SUBDIR += libgpr
     SUBDIR += libgrading
     SUBDIR += libgraphqlparser
     SUBDIR += libgsf
@@ -1273,6 +1277,7 @@
     SUBDIR += libnaji
     SUBDIR += libnest2d-ultimaker
     SUBDIR += libnfc
+    SUBDIR += libnjs
     SUBDIR += libnotify
     SUBDIR += libnsutils
     SUBDIR += liboil
@@ -3972,7 +3977,6 @@
     SUBDIR += pear-pdepend-staticReflection
     SUBDIR += pear-phing
     SUBDIR += pecl-APCu
-    SUBDIR += pecl-APCu_bc
     SUBDIR += pecl-ast
     SUBDIR += pecl-dio
     SUBDIR += pecl-ds
@@ -3981,14 +3985,10 @@
     SUBDIR += pecl-event
     SUBDIR += pecl-expect
     SUBDIR += pecl-grpc
-    SUBDIR += pecl-hrtime
     SUBDIR += pecl-inotify
-    SUBDIR += pecl-jsmin
     SUBDIR += pecl-json_post
-    SUBDIR += pecl-jsond
     SUBDIR += pecl-msgpack
     SUBDIR += pecl-mustache
-    SUBDIR += pecl-propro2
     SUBDIR += pecl-protobuf
     SUBDIR += pecl-psr
     SUBDIR += pecl-raphf2
@@ -4015,17 +4015,6 @@
     SUBDIR += php-ice37
     SUBDIR += php-libawl
     SUBDIR += php-maxminddb
-    SUBDIR += php74-ffi
-    SUBDIR += php74-gettext
-    SUBDIR += php74-intl
-    SUBDIR += php74-json
-    SUBDIR += php74-pcntl
-    SUBDIR += php74-readline
-    SUBDIR += php74-shmop
-    SUBDIR += php74-sysvmsg
-    SUBDIR += php74-sysvsem
-    SUBDIR += php74-sysvshm
-    SUBDIR += php74-tokenizer
     SUBDIR += php80-ffi
     SUBDIR += php80-gettext
     SUBDIR += php80-intl
@@ -4120,6 +4109,7 @@
     SUBDIR += py-Jinja2
     SUBDIR += py-Jinja2-doc
     SUBDIR += py-Js2Py
+    SUBDIR += py-PYB11Generator
     SUBDIR += py-PeachPy
     SUBDIR += py-Products.ExternalEditor
     SUBDIR += py-Products.PloneLanguageTool
@@ -4167,6 +4157,7 @@
     SUBDIR += py-arpeggio
     SUBDIR += py-arrow
     SUBDIR += py-asciimatics
+    SUBDIR += py-asgi-lifespan
     SUBDIR += py-asn1crypto
     SUBDIR += py-aspy.yaml
     SUBDIR += py-asteval
@@ -4290,6 +4281,7 @@
     SUBDIR += py-babelfish
     SUBDIR += py-babi_grammars
     SUBDIR += py-backcall
+    SUBDIR += py-backoff
     SUBDIR += py-backports
     SUBDIR += py-backports.cached-property
     SUBDIR += py-backports.csv
@@ -4298,6 +4290,7 @@
     SUBDIR += py-banal
     SUBDIR += py-bandit
     SUBDIR += py-bcdoc
+    SUBDIR += py-beartype
     SUBDIR += py-beautifultable
     SUBDIR += py-behave
     SUBDIR += py-beniget
@@ -4373,6 +4366,7 @@
     SUBDIR += py-click
     SUBDIR += py-click-completion
     SUBDIR += py-click-default-group
+    SUBDIR += py-click-default-group-wheel
     SUBDIR += py-click-log
     SUBDIR += py-click-plugins
     SUBDIR += py-click-threading
@@ -4592,6 +4586,7 @@
     SUBDIR += py-game_sdl2
     SUBDIR += py-gapic-generator
     SUBDIR += py-gast
+    SUBDIR += py-gelidum
     SUBDIR += py-genson
     SUBDIR += py-genty
     SUBDIR += py-geojson
@@ -4651,6 +4646,7 @@
     SUBDIR += py-homebase
     SUBDIR += py-http-prompt
     SUBDIR += py-humanize
+    SUBDIR += py-hupper
     SUBDIR += py-hvac
     SUBDIR += py-hypothesis
     SUBDIR += py-hypothesmith
@@ -4694,6 +4690,7 @@
     SUBDIR += py-itemloaders
     SUBDIR += py-iteration-utilities
     SUBDIR += py-itypes
+    SUBDIR += py-janus
     SUBDIR += py-jaraco
     SUBDIR += py-jaraco.classes
     SUBDIR += py-jaraco.context
@@ -4795,6 +4792,7 @@
     SUBDIR += py-logzero
     SUBDIR += py-louie
     SUBDIR += py-lru-dict
+    SUBDIR += py-lsprotocol
     SUBDIR += py-lunardate
     SUBDIR += py-lxml
     SUBDIR += py-lxml-stubs
@@ -5037,6 +5035,7 @@
     SUBDIR += py-prompt-toolkit
     SUBDIR += py-prompt-toolkit1
     SUBDIR += py-prompt-toolkit2
+    SUBDIR += py-property-cached
     SUBDIR += py-proselint
     SUBDIR += py-proto-plus
     SUBDIR += py-protobuf
@@ -5444,6 +5443,7 @@
     SUBDIR += py-trimesh
     SUBDIR += py-trove-classifiers
     SUBDIR += py-ttictoc
+    SUBDIR += py-ttkbootstrap
     SUBDIR += py-ttystatus
     SUBDIR += py-twiggy
     SUBDIR += py-twilio
@@ -5645,6 +5645,7 @@
     SUBDIR += pycos
     SUBDIR += pycount
     SUBDIR += pydbus-common
+    SUBDIR += pydeps
     SUBDIR += pydio-packr
     SUBDIR += pyenv
     SUBDIR += pygobject3-common
@@ -5717,6 +5718,7 @@
     SUBDIR += rapidfuzz-cpp
     SUBDIR += rapidjson
     SUBDIR += rapidyaml
+    SUBDIR += rationl
     SUBDIR += raylib
     SUBDIR += rbenv
     SUBDIR += rbtools
@@ -5883,6 +5885,7 @@
     SUBDIR += rubygem-aws-sdk-chimesdkmediapipelines
     SUBDIR += rubygem-aws-sdk-chimesdkmeetings
     SUBDIR += rubygem-aws-sdk-chimesdkmessaging
+    SUBDIR += rubygem-aws-sdk-chimesdkvoice
     SUBDIR += rubygem-aws-sdk-cloud9
     SUBDIR += rubygem-aws-sdk-cloudcontrolapi
     SUBDIR += rubygem-aws-sdk-clouddirectory
@@ -5925,6 +5928,7 @@
     SUBDIR += rubygem-aws-sdk-core
     SUBDIR += rubygem-aws-sdk-core2
     SUBDIR += rubygem-aws-sdk-core3131
+    SUBDIR += rubygem-aws-sdk-core3159
     SUBDIR += rubygem-aws-sdk-costandusagereportservice
     SUBDIR += rubygem-aws-sdk-costexplorer
     SUBDIR += rubygem-aws-sdk-customerprofiles
@@ -6001,6 +6005,7 @@
     SUBDIR += rubygem-aws-sdk-iotfleethub
     SUBDIR += rubygem-aws-sdk-iotfleetwise
     SUBDIR += rubygem-aws-sdk-iotjobsdataplane
+    SUBDIR += rubygem-aws-sdk-iotroborunner
     SUBDIR += rubygem-aws-sdk-iotsecuretunneling
     SUBDIR += rubygem-aws-sdk-iotsitewise
     SUBDIR += rubygem-aws-sdk-iotthingsgraph
@@ -6098,6 +6103,7 @@
     SUBDIR += rubygem-aws-sdk-redshiftserverless
     SUBDIR += rubygem-aws-sdk-rekognition
     SUBDIR += rubygem-aws-sdk-resiliencehub
+    SUBDIR += rubygem-aws-sdk-resourceexplorer2
     SUBDIR += rubygem-aws-sdk-resourcegroups
     SUBDIR += rubygem-aws-sdk-resourcegroupstaggingapi
     SUBDIR += rubygem-aws-sdk-resources
@@ -6111,6 +6117,7 @@
     SUBDIR += rubygem-aws-sdk-route53recoveryreadiness
     SUBDIR += rubygem-aws-sdk-route53resolver
     SUBDIR += rubygem-aws-sdk-s3
+    SUBDIR += rubygem-aws-sdk-s31114
     SUBDIR += rubygem-aws-sdk-s3control
     SUBDIR += rubygem-aws-sdk-s3outposts
     SUBDIR += rubygem-aws-sdk-sagemaker
@@ -6118,6 +6125,7 @@
     SUBDIR += rubygem-aws-sdk-sagemakerfeaturestoreruntime
     SUBDIR += rubygem-aws-sdk-sagemakerruntime
     SUBDIR += rubygem-aws-sdk-savingsplans
+    SUBDIR += rubygem-aws-sdk-scheduler
     SUBDIR += rubygem-aws-sdk-schemas
     SUBDIR += rubygem-aws-sdk-secretsmanager
     SUBDIR += rubygem-aws-sdk-securityhub
@@ -6138,6 +6146,7 @@
     SUBDIR += rubygem-aws-sdk-ssm
     SUBDIR += rubygem-aws-sdk-ssmcontacts
     SUBDIR += rubygem-aws-sdk-ssmincidents
+    SUBDIR += rubygem-aws-sdk-ssmsap
     SUBDIR += rubygem-aws-sdk-sso
     SUBDIR += rubygem-aws-sdk-ssoadmin
     SUBDIR += rubygem-aws-sdk-ssooidc
@@ -7195,6 +7204,7 @@
     SUBDIR += rubymine
     SUBDIR += rudeconfig
     SUBDIR += rudiments
+    SUBDIR += ruff
     SUBDIR += rust-analyzer
     SUBDIR += rust-bindgen
     SUBDIR += rust-cbindgen
@@ -7387,6 +7397,7 @@
     SUBDIR += treepy.el
     SUBDIR += trellis
     SUBDIR += trio
+    SUBDIR += trompeloeil
     SUBDIR += truc
     SUBDIR += tup
     SUBDIR += ua_parser-core

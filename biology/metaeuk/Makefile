@@ -1,5 +1,6 @@
 PORTNAME=	metaeuk
 DISTVERSION=	6
+PORTREVISION=	1
 DISTVERSIONSUFFIX=	-a5d39d9
 CATEGORIES=	biology
 
@@ -24,6 +25,16 @@ GH_TUPLE=	soedinglab:metaeuk-regression:6404519:metaeuk_regression/tests \
 SHEBANG_GLOB=	*.sh
 
 PLIST_FILES=	bin/metaeuk
+
+CMAKE_OFF=	NATIVE_ARCH
+
+.if !exists(/usr/include/omp.h)
+CMAKE_ARGS+=	-DREQUIRE_OPENMP:BOOL=OFF
+
+post-patch: # workaround for https://github.com/soedinglab/metaeuk/issues/55
+	@${REINPLACE_CMD} -e 's|set(REQUIRE_OPENMP 1 |set(REQUIRE_OPENMP 0 |' ${WRKSRC}/lib/mmseqs/src/CMakeLists.txt
+	
+.endif
 
 do-test:
 	@cd ${WRKSRC}/tests && ./run.sh ${STAGEDIR}${PREFIX}/bin/metaeuk

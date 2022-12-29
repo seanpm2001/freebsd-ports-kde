@@ -48,7 +48,6 @@
     SUBDIR += dosage
     SUBDIR += dstask
     SUBDIR += easystroke
-    SUBDIR += egroupware
     SUBDIR += elementary-calendar
     SUBDIR += fasd
     SUBDIR += fbreader
@@ -209,6 +208,7 @@
     SUBDIR += preferences
     SUBDIR += presage
     SUBDIR += projectlibre
+    SUBDIR += pueue
     SUBDIR += puush
     SUBDIR += py-autokey
     SUBDIR += py-bugwarrior

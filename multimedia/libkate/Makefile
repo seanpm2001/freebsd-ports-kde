@@ -5,12 +5,15 @@ CATEGORIES=	multimedia
 MASTER_SITES=	https://downloads.xiph.org/releases/kate/ \
 		https://ftp.osuosl.org/pub/xiph/releases/kate/
 
-MAINTAINER=	bar@FreeBSD.org
+MAINTAINER=	ports@FreeBSD.org
 COMMENT=	Codec for karaoke and text encapsulation for Ogg
 WWW=		https://wiki.xiph.org/index.php/OggKate
 
 LICENSE=	BSD3CLAUSE
 LICENSE_FILE=	${WRKSRC}/COPYING
+
+DEPRECATED=	Obsolete format that never got any traction and no development in over 10 years
+EXPIRATION_DATE=2022-12-31
 
 LIB_DEPENDS=	libogg.so:audio/libogg \
 		libpng.so:graphics/png

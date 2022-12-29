@@ -49,6 +49,7 @@
     SUBDIR += R-cran-combinat
     SUBDIR += R-cran-conf.design
     SUBDIR += R-cran-conquer
+    SUBDIR += R-cran-cvar
     SUBDIR += R-cran-date
     SUBDIR += R-cran-ddalpha
     SUBDIR += R-cran-deldir
@@ -62,6 +63,7 @@
     SUBDIR += R-cran-forcats
     SUBDIR += R-cran-forecast
     SUBDIR += R-cran-fracdiff
+    SUBDIR += R-cran-gbutils
     SUBDIR += R-cran-geepack
     SUBDIR += R-cran-geometry
     SUBDIR += R-cran-gmp
@@ -266,6 +268,7 @@
     SUBDIR += dbcsr
     SUBDIR += deal.ii
     SUBDIR += dieharder
+    SUBDIR += dihydrogen
     SUBDIR += dionysus
     SUBDIR += disco
     SUBDIR += djbfft
@@ -389,6 +392,7 @@
     SUBDIR += hs-penrose
     SUBDIR += hs-syfco
     SUBDIR += hsl
+    SUBDIR += hydrogen
     SUBDIR += ideep
     SUBDIR += ignition-math
     SUBDIR += igraph
@@ -473,6 +477,7 @@
     SUBDIR += mathlibtools
     SUBDIR += mathmod
     SUBDIR += mathomatic
+    SUBDIR += mathpresso
     SUBDIR += matio
     SUBDIR += matlab-installer
     SUBDIR += maxima
@@ -817,13 +822,10 @@
     SUBDIR += pear-Math_BigInteger
     SUBDIR += pear-Math_Combinatorics
     SUBDIR += pecl-bitset
-    SUBDIR += pecl-stats2
     SUBDIR += permlib
     SUBDIR += petanque
     SUBDIR += petiga
     SUBDIR += pffft
-    SUBDIR += php74-bcmath
-    SUBDIR += php74-gmp
     SUBDIR += php80-bcmath
     SUBDIR += php80-gmp
     SUBDIR += php81-bcmath
@@ -840,11 +842,13 @@
     SUBDIR += ploticus-nox11
     SUBDIR += plplot
     SUBDIR += poly2tri
+    SUBDIR += polyclipper
     SUBDIR += polylib
     SUBDIR += polymake
     SUBDIR += primecount
     SUBDIR += primegen
     SUBDIR += primesieve
+    SUBDIR += primesum
     SUBDIR += primme
     SUBDIR += prng
     SUBDIR += pspp
@@ -862,6 +866,8 @@
     SUBDIR += py-algopy
     SUBDIR += py-altgraph
     SUBDIR += py-amply
+    SUBDIR += py-animatplot
+    SUBDIR += py-animatplot-ng
     SUBDIR += py-apgl
     SUBDIR += py-arviz
     SUBDIR += py-arybo
@@ -899,6 +905,7 @@
     SUBDIR += py-fenics-ffcx
     SUBDIR += py-fenics-ufl
     SUBDIR += py-flax
+    SUBDIR += py-formulaic
     SUBDIR += py-fpylll
     SUBDIR += py-fraction
     SUBDIR += py-fvcore
@@ -925,6 +932,7 @@
     SUBDIR += py-kiwisolver
     SUBDIR += py-levmar
     SUBDIR += py-libpoly
+    SUBDIR += py-linearmodels
     SUBDIR += py-lmfit
     SUBDIR += py-luminol
     SUBDIR += py-mathics
@@ -973,6 +981,7 @@
     SUBDIR += py-pycosat
     SUBDIR += py-pygsl
     SUBDIR += py-pygslodeiv2
+    SUBDIR += py-pyhdfe
     SUBDIR += py-pyhull
     SUBDIR += py-pymc3
     SUBDIR += py-pynauty
@@ -1007,6 +1016,7 @@
     SUBDIR += py-secp256k1
     SUBDIR += py-seriate
     SUBDIR += py-simhash
+    SUBDIR += py-slepc4py
     SUBDIR += py-snuggs
     SUBDIR += py-spectral
     SUBDIR += py-spglm
@@ -1080,6 +1090,7 @@
     SUBDIR += scalapackfx
     SUBDIR += scilab
     SUBDIR += scilab-toolbox-swt
+    SUBDIR += scorec-core
     SUBDIR += scs
     SUBDIR += sdpa
     SUBDIR += secp256k1
@@ -1089,7 +1100,9 @@
     SUBDIR += sisl
     SUBDIR += slatec
     SUBDIR += sleef
+    SUBDIR += slepc
     SUBDIR += slgrace
+    SUBDIR += slicot
     SUBDIR += snns
     SUBDIR += solitaire
     SUBDIR += sound-of-sorting
@@ -1157,12 +1170,12 @@
     SUBDIR += universal
     SUBDIR += unuran
     SUBDIR += vampire
+    SUBDIR += vdt
     SUBDIR += verdict
     SUBDIR += viennacl
     SUBDIR += vinci
     SUBDIR += visualpolylib
     SUBDIR += vowpal_wabbit
-    SUBDIR += vtk6
     SUBDIR += vtk8
     SUBDIR += vtk9
     SUBDIR += wavelib
