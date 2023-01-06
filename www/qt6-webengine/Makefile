@@ -65,6 +65,15 @@ MAKE_ENV+=	CC="${CC}" CXX="${CXX}"			\
 		C_INCLUDE_PATH=${LOCALBASE}/include	\
 		CPLUS_INCLUDE_PATH=${LOCALBASE}/include	\
 		${CONFIGURE_ENV}
+# Avoid running multiple make(1) jobs, but only those.  Otherwise the build
+# fails intermittently due race conditions if multiple ninja instances are
+# running at the same time (mostly for the targets "WebEngineCore" and
+# "convert_dict").
+#
+# MAKE_JOBS_UNSAFE is too invasive because it also affects the number of jobs
+# for ninja(1) and would slow everything down which we don't want.  We pass the
+# real number of make jobs via MAKE_JOBS_NUMBER to ninja(1) to CONFIGURE_ENV.
+DO_MAKE_BUILD=	${SETENV} ${MAKE_ENV} ${MAKE_CMD} ${MAKE_FLAGS} ${MAKEFILE} -j1 ${MAKE_ARGS:N${DESTDIRNAME}=*}
 
 BINARY_ALIAS=	python=${PYTHON_CMD}
 
