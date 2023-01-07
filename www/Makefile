@@ -87,6 +87,7 @@
     SUBDIR += clearsilver
     SUBDIR += closure-compiler
     SUBDIR += cntlm
+    SUBDIR += cobalt
     SUBDIR += codeigniter
     SUBDIR += colly
     SUBDIR += coppermine
@@ -119,11 +120,13 @@
     SUBDIR += domoticz
     SUBDIR += dooble
     SUBDIR += dooble-qt6
+    SUBDIR += dot-http
+    SUBDIR += drill
+    SUBDIR += drupal10
     SUBDIR += drupal7
     SUBDIR += drupal7-wysiwyg
     SUBDIR += drupal8
     SUBDIR += drupal9
-    SUBDIR += drupal10
     SUBDIR += drush
     SUBDIR += dtse
     SUBDIR += dufs
@@ -1013,6 +1016,7 @@
     SUBDIR += p5-Mojolicious-Plugin-Database
     SUBDIR += p5-Mojolicious-Plugin-HamlRenderer
     SUBDIR += p5-Mojolicious-Plugin-Mongodb
+    SUBDIR += p5-Mojolicious-Plugin-OpenAPI
     SUBDIR += p5-Mojolicious-Plugin-SetUserGroup
     SUBDIR += p5-Mojolicious-Plugin-TtRenderer
     SUBDIR += p5-Mojolicious-Plugin-YamlConfig
@@ -1039,6 +1043,7 @@
     SUBDIR += p5-Newsletter
     SUBDIR += p5-Nginx-ReadBody
     SUBDIR += p5-Nginx-Simple
+    SUBDIR += p5-OpenAPI-Client
     SUBDIR += p5-PHP-Session
     SUBDIR += p5-POE-Component-Client-HTTP
     SUBDIR += p5-POE-Component-Client-UserAgent
@@ -1775,7 +1780,6 @@
     SUBDIR += py-tuir
     SUBDIR += py-turbogears2
     SUBDIR += py-tvdb_api
-    SUBDIR += py-txrequests
     SUBDIR += py-urlgrabber
     SUBDIR += py-urlman
     SUBDIR += py-urlobject
@@ -1792,7 +1796,6 @@
     SUBDIR += py-websocket-client
     SUBDIR += py-webunit
     SUBDIR += py-werkzeug
-    SUBDIR += py-werkzeug21
     SUBDIR += py-wfuzz
     SUBDIR += py-whitenoise
     SUBDIR += py-wikipedia
@@ -1819,10 +1822,11 @@
     SUBDIR += qutebrowser
     SUBDIR += radicale
     SUBDIR += rearx
+    SUBDIR += reddsaver
     SUBDIR += redmine42
     SUBDIR += redmine50
-    SUBDIR += remark42
     SUBDIR += rejik
+    SUBDIR += remark42
     SUBDIR += reportmagic
     SUBDIR += repos-style
     SUBDIR += reproxy
@@ -2239,6 +2243,7 @@
     SUBDIR += srg
     SUBDIR += srt
     SUBDIR += stagit
+    SUBDIR += stork
     SUBDIR += subsonic-standalone
     SUBDIR += suphp
     SUBDIR += surf
@@ -2344,7 +2349,6 @@
     SUBDIR += varnish-libvmod-redis
     SUBDIR += varnish-modules
     SUBDIR += varnish-nagios
-    SUBDIR += varnish4
     SUBDIR += varnish6
     SUBDIR += varnish7
     SUBDIR += varnish_exporter

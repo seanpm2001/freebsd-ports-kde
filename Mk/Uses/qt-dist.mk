@@ -59,6 +59,7 @@ IGNORE=			Unsupported qt-dist ${_QT_DIST} for qt:${_QT_VER}
 
 # Set standard bsd.port.mk variables.
 LICENSE?=		LGPL21
+WWW?=		https://www.qt.io/
 
 .  if !exists(${PKGDIR}/pkg-descr)
 DESCR?=			${PORTSDIR}/devel/${_QT_RELNAME}/pkg-descr
@@ -111,8 +112,8 @@ _KDE_location=		3
 _KDE_multimedia=	1
 _KDE_networkauth=	0
 _KDE_quick3d=		1
-_KDE_quickcontrols2=	7
 _KDE_quickcontrols=	0
+_KDE_quickcontrols2=	7
 _KDE_quicktimeline=	0
 _KDE_remoteobjects=	0
 _KDE_script=		0

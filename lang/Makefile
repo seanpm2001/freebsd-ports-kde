@@ -82,6 +82,7 @@
     SUBDIR += fpc-source
     SUBDIR += fpc-units
     SUBDIR += fpc-utils
+    SUBDIR += frawk
     SUBDIR += fsharp
     SUBDIR += fth
     SUBDIR += gambit-c
@@ -269,7 +270,7 @@
     SUBDIR += plexil
     SUBDIR += pocl
     SUBDIR += polyml
-    SUBDIR += ponyc
+    SUBDIR += pomsky
     SUBDIR += ptoc
     SUBDIR += purescript
     SUBDIR += py-hy

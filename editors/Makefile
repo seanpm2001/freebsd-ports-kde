@@ -199,7 +199,6 @@
     SUBDIR += linux-wps-office
     SUBDIR += lite
     SUBDIR += lite-xl
-    SUBDIR += madedit
     SUBDIR += marker
     SUBDIR += mg
     SUBDIR += micro
@@ -220,6 +219,7 @@
     SUBDIR += o
     SUBDIR += openoffice-4
     SUBDIR += openoffice-devel
+    SUBDIR += ox
     SUBDIR += p5-Proc-InvokeEditor
     SUBDIR += p5-Vimana
     SUBDIR += paredit-mode.el
