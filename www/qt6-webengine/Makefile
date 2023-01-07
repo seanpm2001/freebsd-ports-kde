@@ -85,7 +85,7 @@ EXTRA_PATCHES+=	${"${:!${GREP} mempcpy ${CROSS_SYSROOT}/usr/include/string.h \
 		|| ${TRUE}!}" == "":?${PATCHDIR}/extra-patch-no-mempcpy-nasm:}
 
 DISTINFO_FILE=	${.CURDIR}/distinfo
-QT6_VERSION=	6.4.1
+QT6_VERSION=	6.4.2
 
 OPTIONS_DEFAULT=	ALSA
 OPTIONS_SINGLE=		AUDIO
