@@ -112,6 +112,8 @@ post-extract:
 		${WRKSRC}/src/3rdparty/chromium/sandbox/policy/openbsd
 
 post-patch:
+	@${REINPLACE_CMD} -e 's|%%DISTVERSION%%|${DISTVERSION}|' \
+		${WRKSRC}/CMakeLists.txt
 	@${REINPLACE_CMD} -e 's|%%CPPFLAGS%%|${CPPFLAGS}|;s|%%CXXFLAGS%%|${CXXFLAGS}|;s|%%LDFLAGS%%|${LDFLAGS}|' \
 		${WRKSRC}/src/host/BUILD.toolchain.gn.in
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \
