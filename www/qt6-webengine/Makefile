@@ -106,6 +106,12 @@ SNDIO_LIB_DEPENDS=	libsndio.so:audio/sndio
 SNDIO_CMAKE_ON=		-DQT_FEATURE_webengine_system_sndio:BOOL=ON
 SNDIO_CMAKE_OFF=	-DQT_FEATURE_webengine_system_sndio:BOOL=OFF
 
+.include <bsd.port.pre.mk>
+
+.if ${ARCH} == i386
+EXTRA_PATCHES+=	${PATCHDIR}/extra-patch-i386-compress_files_js
+.endif
+
 post-extract:
 	@${MKDIR} ${WRKSRC}/src/3rdparty/chromium/media/audio/sndio \
 		${WRKSRC}/src/3rdparty/chromium/sandbox/policy/freebsd \
@@ -133,4 +139,4 @@ pre-configure:
 		./build/linux/unbundle/replace_gn_files.py --system-libraries \
 		fontconfig freetype harfbuzz-ng libdrm libevent libpng libxml libxslt openh264 opus || ${FALSE}
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
