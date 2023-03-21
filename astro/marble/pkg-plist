@@ -179,10 +179,10 @@ lib/cmake/Marble/MarbleTargets-%%CMAKE_BUILD_TYPE%%.cmake
 lib/cmake/Marble/MarbleTargets.cmake
 lib/libastro.so
 lib/libastro.so.1
-lib/libastro.so.%%KDE_APPLICATIONS_SHLIB_VER%%
+lib/libastro.so.%%KDE_APPLICATIONS_VERSION_SHORT%%.3.80
 lib/libmarbledeclarative.so
 lib/libmarblewidget-qt5.so
-lib/libmarblewidget-qt5.so.%%KDE_APPLICATIONS_SHLIB_VER%%
+lib/libmarblewidget-qt5.so.%%KDE_APPLICATIONS_VERSION_SHORT%%.3.80
 lib/libmarblewidget-qt5.so.28
 lib/marble/plugins/AnnotatePlugin.so
 lib/marble/plugins/AprsPlugin.so
@@ -267,7 +267,6 @@ share/icons/hicolor/22x22/apps/marble.png
 share/icons/hicolor/32x32/apps/marble.png
 share/icons/hicolor/48x48/apps/marble.png
 share/icons/hicolor/64x64/apps/marble.png
-share/knsrcfiles/marble.knsrc
 share/kservices5/marble_part.desktop
 share/kservices5/marble_thumbnail_geojson.desktop
 share/kservices5/marble_thumbnail_gpx.desktop
@@ -331,7 +330,9 @@ share/locale/en_GB/LC_MESSAGES/plasma_runner_marble.mo
 share/locale/en_GB/LC_MESSAGES/plasma_wallpaper_org.kde.plasma.worldmap.mo
 share/locale/eo/LC_MESSAGES/marble.mo
 share/locale/eo/LC_MESSAGES/marble_qt.qm
+share/locale/eo/LC_MESSAGES/plasma_applet_org.kde.plasma.worldclock.mo
 share/locale/eo/LC_MESSAGES/plasma_runner_marble.mo
+share/locale/eo/LC_MESSAGES/plasma_wallpaper_org.kde.plasma.worldmap.mo
 share/locale/es/LC_MESSAGES/marble.mo
 share/locale/es/LC_MESSAGES/marble_qt.qm
 share/locale/es/LC_MESSAGES/plasma_applet_org.kde.plasma.worldclock.mo
