@@ -1,4 +1,5 @@
 PORTNAME=	kalendar
+PORTREVISION=	1
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
 CATEGORIES=	deskutils kde kde-applications
 

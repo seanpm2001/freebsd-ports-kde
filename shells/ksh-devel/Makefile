@@ -10,17 +10,16 @@
 
 PORTNAME=	ksh
 PORTVERSION=	${AST_COMMIT_DATE}
+PORTREVISION=	1
 CATEGORIES=	shells
 PKGNAMESUFFIX=	-devel
 
 MAINTAINER=	cy@FreeBSD.org
-COMMENT=	Development branch of AT&T KornShell 93
+COMMENT=	ksh93u+m is the development branch ksh93 based on AT&T ksh93u+ (stable)
 WWW=		http://www.kornshell.com/
 
 LICENSE=	EPL
 
-BROKEN_aarch64=		Fails to link: missing sbrk
-BROKEN_riscv64=		Fails to link: missing sbrk
 BROKEN_FreeBSD_12=	exit code 139 making lib/libcmd
 
 HASH=		72d895d8
