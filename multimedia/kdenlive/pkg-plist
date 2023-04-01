@@ -1,6 +1,6 @@
 bin/kdenlive
 bin/kdenlive_render
-%%QT_PLUGINDIR%%/mltpreview.so
+%%QT_PLUGINDIR%%/kf5/thumbcreator/mltpreview.so
 man/man1/kdenlive.1.gz
 man/man1/kdenlive_render.1.gz
 share/applications/org.kde.kdenlive.desktop
@@ -516,7 +516,6 @@ share/knsrcfiles/kdenlive_luts.knsrc
 share/knsrcfiles/kdenlive_renderprofiles.knsrc
 share/knsrcfiles/kdenlive_titles.knsrc
 share/knsrcfiles/kdenlive_wipes.knsrc
-share/kservices5/mltpreview.desktop
 share/kxmlgui5/kdenlive/kdenliveui.rc
 share/locale/ar/LC_MESSAGES/kdenlive.mo
 share/locale/az/LC_MESSAGES/kdenlive.mo
