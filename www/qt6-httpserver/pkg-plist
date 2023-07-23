@@ -6,6 +6,7 @@
 %%QT_INCDIR%%/QtHttpServer/%%FULLVER%%/QtHttpServer/private/qhttpserverresponse_p.h
 %%QT_INCDIR%%/QtHttpServer/%%FULLVER%%/QtHttpServer/private/qhttpserverrouter_p.h
 %%QT_INCDIR%%/QtHttpServer/%%FULLVER%%/QtHttpServer/private/qhttpserverrouterrule_p.h
+%%QT_INCDIR%%/QtHttpServer/%%FULLVER%%/QtHttpServer/private/qhttpserverstream_p.h
 %%QT_INCDIR%%/QtHttpServer/QAbstractHttpServer
 %%QT_INCDIR%%/QtHttpServer/QHttpServer
 %%QT_INCDIR%%/QtHttpServer/QHttpServerAfterRequestViewTraits

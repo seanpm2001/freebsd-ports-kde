@@ -149,8 +149,8 @@ _USE_QT5_ONLY=		assistant buildtools concurrent connectivity core dbus \
 _USE_QT5_ONLY+=		sql-ibase
 .  endif
 
-_USE_QT6_ONLY=		5compat base httpserver languageserver lottie positioning shadertools \
-			tools translations \
+_USE_QT6_ONLY=		5compat base httpserver languageserver lottie positioning \
+			shadertools tools translations \
 			sqldriver-sqlite sqldriver-mysql sqldriver-psql sqldriver-odbc
 
 # Dependency tuples: _LIB should be preferred if possible.
