@@ -37,6 +37,7 @@ LIB_DEPENDS=	libavcodec.so:multimedia/ffmpeg \
 		libnspr4.so:devel/nspr \
 		libnss3.so:security/nss \
 		libopenh264.so:multimedia/openh264 \
+		libopenjp2.so:graphics/openjpeg \
 		libopus.so:audio/opus \
 		libpci.so:devel/libpci \
 		libpng.so:graphics/png \
