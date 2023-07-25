@@ -21,10 +21,10 @@ USES=		cmake gl llvm:${LLVM_DEFAULT},lib python qt:6 tar:xz
 USE_GL=		gl
 USE_LDCONFIG=	yes
 USE_PYTHON=	flavors
-USE_QT=		3d 5compat base declarative doc imageformats positioning \
-		quick3d quicktimeline multimedia networkauth remoteobjects \
-		sensors serialbus serialport shadertools svg tools \
-		translations wayland webchannel websockets
+USE_QT=		3d 5compat base charts declarative doc imageformats multimedia \
+		networkauth positioning quick3d quicktimeline remoteobjects \
+		sensors serialbus serialport shadertools svg tools translations \
+		wayland webchannel websockets
 
 CMAKE_ARGS+=	-DPYTHON_EXECUTABLE=${PYTHON_CMD}
 
