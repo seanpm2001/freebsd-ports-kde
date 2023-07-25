@@ -1,6 +1,5 @@
 PORTNAME=	networkauth
 PORTVERSION=	${PYQTNETWORKAUTH_VERSION}
-PORTREVISION=	2
 CATEGORIES=	net devel python
 MASTER_SITES=	${MASTER_SITES_PYQTNETWORKAUTH}
 PKGNAMEPREFIX=	${PYQT_PY_RELNAME}-
@@ -19,5 +18,7 @@ USE_GL=		gl
 USE_PYQT=	sip:build pyqt6 qtbuilder
 USE_PYTHON=	concurrent flavors py3kplist
 USE_QT=		base networkauth
+
+PLIST_SUB=	VERSION=${PYQTNETWORKAUTH_VERSION}
 
 .include <bsd.port.mk>
