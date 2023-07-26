@@ -21,11 +21,11 @@ qmake_ARGS?=	# empty
 .include "${USESDIR}/qmake.mk"
 
 # Supported distribution arguments
-_COMMON_DISTS=		3d base charts datavis3d declarative imageformats multimedia \
+_COMMON_DISTS=		3d base charts datavis3d declarative imageformats location multimedia \
 			networkauth quick3d quicktimeline remoteobjects scxml sensors \
 			serialbus serialport speech svg tools translations virtualkeyboard \
 			wayland webchannel webengine websockets
-_QT5_DISTS=		connectivity gamepad graphicaleffects location quickcontrols \
+_QT5_DISTS=		connectivity gamepad graphicaleffects quickcontrols \
 			quickcontrols2 script webglplugin webview \
 			x11extras xmlpatterns
 _QT6_DISTS=		5compat doc httpserver languageserver lottie positioning shadertools
