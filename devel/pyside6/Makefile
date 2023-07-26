@@ -11,20 +11,22 @@ WWW=		https://wiki.qt.io/Qt_for_Python
 
 LICENSE=	LGPL3
 
-LIB_DEPENDS=	libshiboken6.abi${PYTHON_MAJOR_VER}.so:devel/shiboken6@${PY_FLAVOR}
+LIB_DEPENDS=	libshiboken6.abi${PYTHON_MAJOR_VER}.so:devel/shiboken6@${PY_FLAVOR} \
+		libxkbcommon.so:x11/libxkbcommon
 
 USES=		cmake gl llvm:lib python qt:6 tar:xz
 USE_GL=		gl
 USE_LDCONFIG=	yes
 USE_PYTHON=	flavors
 USE_QT=		3d base charts datavis3d declarative doc httpserver \
-		imageformats multimedia networkauth positioning quick3d \
-		quicktimeline remoteobjects scxml sensors serialbus serialport \
-		shadertools svg tools translations wayland webchannel websockets
+		imageformats location multimedia networkauth positioning \
+		quick3d quicktimeline remoteobjects scxml sensors serialbus \
+		serialport shadertools speech svg tools translations wayland \
+		webchannel websockets
 
 CMAKE_ARGS=	-DPYTHON_EXECUTABLE=${PYTHON_CMD}
 
-WRKSRC=		${WRKDIR}/pyside-setup-everywhere-src-${DISTVERSION:R}/sources/pyside6
+WRKSRC=		${WRKDIR}/pyside-setup-everywhere-src-${PYSIDE6_VERSION}/sources/pyside6
 PLIST_SUB=	DISTVERSION=${DISTVERSION}
 
 .include <bsd.port.pre.mk>

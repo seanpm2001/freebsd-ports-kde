@@ -12,7 +12,6 @@ WWW=		http://qt-project.org
 LICENSE=	GPLv2 LGPL21 LGPL3
 LICENSE_COMB=	multi
 
-BUILD_DEPENDS=	git>0:devel/git
 LIB_DEPENDS=	libxslt.so:textproc/libxslt
 
 USES=		cmake compiler:c++17-lang gnome llvm:lib pathfix python qt:6 \
@@ -30,7 +29,7 @@ CMAKE_ARGS=	-DClang_DIR:PATH="${LLVM_PREFIX}/lib/cmake/clang" \
 		-DUSE_PYTHON_VERSION=${PYTHON_VER} \
 		-DBUILD_TESTS:BOOL=false
 
-WRKSRC=		${WRKDIR}/pyside-setup-everywhere-src-${DISTVERSION:R}/sources/shiboken6
+WRKSRC=		${WRKDIR}/pyside-setup-everywhere-src-${PYSIDE6_VERSION}/sources/shiboken6
 PLIST_SUB=	DISTVERSION=${DISTVERSION}
 
 OPTIONS_DEFINE=	DOCS
