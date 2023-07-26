@@ -133,7 +133,7 @@ _QT_MK_POST_INCLUDED=	qt.mk
 # The Qt components supported by qt.mk: list of shared, and version specific ones
 _USE_QT_COMMON=		3d charts datavis3d declarative doc examples imageformats \
 			multimedia networkauth quick3d quicktimeline remoteobjects scxml \
-			sensors serialbus serialport svg virtualkeyboard wayland \
+			sensors serialbus serialport speech svg virtualkeyboard wayland \
 			webchannel webengine websockets
 
 _USE_QT5_ONLY=		assistant buildtools concurrent connectivity core dbus \
@@ -141,7 +141,7 @@ _USE_QT5_ONLY=		assistant buildtools concurrent connectivity core dbus \
 			graphicaleffects gui help l10n linguist linguisttools location \
 			network opengl paths phonon4 pixeltool plugininfo printsupport \
 			qdbus qdbusviewer qdoc qdoc-data qev qmake quickcontrols \
-			quickcontrols2 script scripttools speech sql sql-mysql sql-odbc \
+			quickcontrols2 script scripttools sql sql-mysql sql-odbc \
 			sql-pgsql sql-sqlite2 sql-sqlite3 sql-tds testlib uiplugin \
 			uitools webglplugin webkit websockets-qml webview \
 			widgets x11extras xml xmlpatterns
