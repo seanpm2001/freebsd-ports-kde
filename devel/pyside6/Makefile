@@ -11,29 +11,23 @@ WWW=		https://wiki.qt.io/Qt_for_Python
 
 LICENSE=	LGPL3
 
-BUILD_DEPENDS=	${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers \
-		git>0:devel/git \
-		${PYTHON_PKGNAMEPREFIX}sphinx>0:textproc/py-sphinx
-LIB_DEPENDS=	libvulkan.so:graphics/vulkan-loader \
-		libshiboken6.abi${PYTHON_MAJOR_VER}.so:devel/shiboken6@${PY_FLAVOR}
+LIB_DEPENDS=	libshiboken6.abi${PYTHON_MAJOR_VER}.so:devel/shiboken6@${PY_FLAVOR}
 
-USES=		cmake gl llvm:${LLVM_DEFAULT},lib python qt:6 tar:xz
+USES=		cmake gl llvm:lib python qt:6 tar:xz
 USE_GL=		gl
 USE_LDCONFIG=	yes
 USE_PYTHON=	flavors
-USE_QT=		3d 5compat base charts declarative doc imageformats multimedia \
-		networkauth positioning quick3d quicktimeline remoteobjects \
-		sensors serialbus serialport shadertools svg tools translations \
-		wayland webchannel websockets
+USE_QT=		3d base charts datavis3d declarative doc httpserver \
+		imageformats multimedia networkauth positioning quick3d \
+		quicktimeline remoteobjects scxml sensors serialbus serialport \
+		shadertools svg tools translations wayland webchannel websockets
 
-CMAKE_ARGS+=	-DPYTHON_EXECUTABLE=${PYTHON_CMD}
-
-.include <bsd.port.pre.mk>
-
-PLIST_SUB+=	PYVERSTR=.cpython-${PYTHON_SUFFIX}${PYTHON_ABIVER}
-PLIST_SUB+=	DISTVERSION=${DISTVERSION}
+CMAKE_ARGS=	-DPYTHON_EXECUTABLE=${PYTHON_CMD}
 
 WRKSRC=		${WRKDIR}/pyside-setup-everywhere-src-${DISTVERSION:R}/sources/pyside6
+PLIST_SUB=	DISTVERSION=${DISTVERSION}
+
+.include <bsd.port.pre.mk>
 
 .if ${ARCH} == amd64 || ${ARCH} == i386
 PLIST_SUB+=	WEBENGINE=""
@@ -41,5 +35,13 @@ USE_QT+=	webengine
 .else
 PLIST_SUB+=	WEBENGINE="@comment "
 .endif
+
+post-install:
+	${PYTHON_CMD} ${PYTHON_LIBDIR}/compileall.py \
+		-f -d ${PYTHONPREFIX_SITELIBDIR}/PySide6 \
+		${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/PySide6
+	${PYTHON_CMD} -O ${PYTHON_LIBDIR}/compileall.py \
+		-f -d ${PYTHONPREFIX_SITELIBDIR}/PySide6 \
+		${STAGEDIR}${PYTHONPREFIX_SITELIBDIR}/PySide6
 
 .include <bsd.port.post.mk>
