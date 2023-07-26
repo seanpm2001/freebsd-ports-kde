@@ -150,7 +150,7 @@ _USE_QT5_ONLY+=		sql-ibase
 .  endif
 
 _USE_QT6_ONLY=		5compat base httpserver languageserver lottie positioning \
-			shadertools tools translations \
+			quickeffectmaker shadertools tools translations \
 			sqldriver-sqlite sqldriver-mysql sqldriver-psql sqldriver-odbc
 
 # Dependency tuples: _LIB should be preferred if possible.
@@ -299,6 +299,9 @@ qt-quickcontrols_PATH=	${LOCALBASE}/${QT_QMLDIR_REL}/QtQuick/Controls/qmldir
 
 qt-quickcontrols2_PORT=	x11-toolkits/${_QT_RELNAME}-quickcontrols2
 qt-quickcontrols2_LIB=	libQt${_QT_LIBVER}QuickControls2.so
+
+qt-quickeffectmaker_PORT=	graphics/${_QT_RELNAME}-quickeffectmaker
+qt-quickeffectmaker_PATH=	${LOCALBASE}/${QT_BINDIR_REL}/qqem
 
 qt-quicktimeline_PORT=	x11-toolkits/${_QT_RELNAME}-quicktimeline
 qt-quicktimeline_PATH=	${LOCALBASE}/${QT_QMLDIR_REL}/QtQuick/Timeline/libqtquicktimelineplugin.so
