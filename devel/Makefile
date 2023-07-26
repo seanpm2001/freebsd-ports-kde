@@ -7525,6 +7525,7 @@
     SUBDIR += sdl_console
     SUBDIR += sdlmm
     SUBDIR += sdlskk
+    SUBDIR += sdsl-lite
     SUBDIR += sdts++
     SUBDIR += sedsed
     SUBDIR += selene
@@ -7724,6 +7725,7 @@
     SUBDIR += undead
     SUBDIR += unibilium
     SUBDIR += universal-ctags
+    SUBDIR += unordered-dense
     SUBDIR += upnp
     SUBDIR += upp
     SUBDIR += upslug
