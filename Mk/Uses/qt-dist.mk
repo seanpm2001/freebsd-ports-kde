@@ -85,7 +85,8 @@ _QT5_MASTER_SITE_SUBDIR=	official_releases/qt/${_QT_VERSION:R}/${_QT_VERSION}/su
 _QT6_MASTER_SITES=		${MASTER_SITE_QT}
 # _QT6_MASTER_SITE_SUBDIR=	official_releases/qt/${_QT_VERSION:R}/${_QT_VERSION}/submodules \
 # 				official_releases/additional_libraries/${_QT_VERSION:R}/${_QT_VERSION}/
-_QT6_MASTER_SITE_SUBDIR=	development_releases/qt/${_QT_VERSION:R}/${_QT_VERSION}/submodules
+_QT6_MASTER_SITE_SUBDIR=	development_releases/qt/${_QT_VERSION:R}/${_QT_VERSION}/submodules \
+				official_releases/qt/${_QT_VERSION:R}/${_QT_VERSION}/submodules
 
 # Qt5 specific distnames
 .  if ${_QT_DIST} == webengine
