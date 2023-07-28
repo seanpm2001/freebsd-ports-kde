@@ -11,6 +11,7 @@ BUILD_DEPENDS=	${LOCALBASE}/include/vulkan/vulkan.h:graphics/vulkan-headers
 
 USES=		cmake compiler:c++17-lang \
 		qt-dist:6
+USE_LOCALE=	C.UTF-8
 USE_QT=		base declarative tools \
 		sqldriver-sqlite
 

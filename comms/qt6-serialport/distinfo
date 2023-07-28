@@ -1,3 +1,3 @@
-TIMESTAMP = 1689944134
-SHA256 (KDE/Qt/6.5.2/qtserialport-everywhere-src-6.5.2.tar.xz) = 063c54169aea6b303183b434637ad050e9f67d7f22bb3eff1ede1905eb2ccc9e
-SIZE (KDE/Qt/6.5.2/qtserialport-everywhere-src-6.5.2.tar.xz) = 279364
+TIMESTAMP = 1690514069
+SHA256 (KDE/Qt/6.6.0-beta2/qtserialport-everywhere-src-6.6.0-beta2.tar.xz) = 18e6b900d2dba3f844b4cb9fd435e7c04f25d6d95283a3d5f66c0fbf20447519
+SIZE (KDE/Qt/6.6.0-beta2/qtserialport-everywhere-src-6.6.0-beta2.tar.xz) = 279764

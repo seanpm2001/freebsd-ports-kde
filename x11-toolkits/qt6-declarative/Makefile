@@ -29,9 +29,6 @@ USE_QT=		base shadertools languageserver
 USE_XORG=	x11 xau xcb xdmcp
 USE_LDCONFIG=	${PREFIX}/${QT_LIBDIR_REL}
 
-post-patch:
-	${REINPLACE_CMD} -e "s#python3#${PYTHON_CMD}#g" ${WRKSRC}/cmake/QtDeclarativeSetup.cmake
-
 # TODO: do this cleaner
 post-install:
 	${RM} -vr ${STAGEDIR}${PREFIX}/${QT_LIBDIR_REL}/cmake
