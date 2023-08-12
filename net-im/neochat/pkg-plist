@@ -50,3 +50,4 @@ share/locale/uk/LC_MESSAGES/neochat.mo
 share/locale/zh_CN/LC_MESSAGES/neochat.mo
 share/locale/zh_TW/LC_MESSAGES/neochat.mo
 share/metainfo/org.kde.neochat.appdata.xml
+share/qlogging-categories5/neochat.categories
