@@ -144,6 +144,7 @@ bin/qmake6
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qsharedmemory_p.h
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qsimd_p.h
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qsimd_x86_p.h
+%%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qspan_p.h
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qstorageinfo_p.h
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qstringalgorithms_p.h
 %%QT_INCDIR%%/QtCore/%%FULLVER%%/QtCore/private/qstringconverter_p.h
@@ -607,7 +608,6 @@ bin/qmake6
 %%QT_INCDIR%%/QtCore/qatomic.h
 %%QT_INCDIR%%/QtCore/qatomic_cxx11.h
 %%QT_INCDIR%%/QtCore/qbasicatomic.h
-%%QT_INCDIR%%/QtCore/qbasicfuturewatcher.h
 %%QT_INCDIR%%/QtCore/qbasictimer.h
 %%QT_INCDIR%%/QtCore/qbindingstorage.h
 %%QT_INCDIR%%/QtCore/qbitarray.h

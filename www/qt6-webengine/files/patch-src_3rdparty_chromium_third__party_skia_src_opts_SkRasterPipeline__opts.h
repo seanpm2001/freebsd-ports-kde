@@ -1,6 +1,6 @@
---- src/3rdparty/chromium/third_party/skia/src/opts/SkRasterPipeline_opts.h.orig	2023-07-07 17:40:32 UTC
+--- src/3rdparty/chromium/third_party/skia/src/opts/SkRasterPipeline_opts.h.orig	2023-08-16 19:50:41 UTC
 +++ src/3rdparty/chromium/third_party/skia/src/opts/SkRasterPipeline_opts.h
-@@ -998,13 +998,8 @@ SI F from_half(U16 h) {
+@@ -1051,13 +1051,8 @@ SI F from_half(U16 h) {
  SI F from_half(U16 h) {
  #if defined(JUMPER_IS_NEON) && defined(SK_CPU_ARM64) \
      && !defined(SK_BUILD_FOR_GOOGLE3)  // Temporary workaround for some Google3 builds.
@@ -15,7 +15,7 @@
  #elif defined(JUMPER_IS_HSW) || defined(JUMPER_IS_SKX)
      return _mm256_cvtph_ps(h);
  
-@@ -1024,14 +1019,8 @@ SI U16 to_half(F f) {
+@@ -1077,14 +1072,8 @@ SI U16 to_half(F f) {
  SI U16 to_half(F f) {
  #if defined(JUMPER_IS_NEON) && defined(SK_CPU_ARM64) \
      && !defined(SK_BUILD_FOR_GOOGLE3)  // Temporary workaround for some Google3 builds.

@@ -35,7 +35,6 @@
 %%QT_DOCDIR%%/qtdoc/accessible.html
 %%QT_DOCDIR%%/qtdoc/activeqt-idc.html
 %%QT_DOCDIR%%/qtdoc/activeqt-testcon.html
-%%QT_DOCDIR%%/qtdoc/all-examples.html
 %%QT_DOCDIR%%/qtdoc/android-3rdparty-libs.html
 %%QT_DOCDIR%%/qtdoc/android-build-environment-variables.html
 %%QT_DOCDIR%%/qtdoc/android-building-user-projects.html
@@ -98,6 +97,7 @@
 %%QT_DOCDIR%%/qtdoc/images/BenchmarkDemoQt6.png
 %%QT_DOCDIR%%/qtdoc/images/CustomStyle_Dark.png
 %%QT_DOCDIR%%/qtdoc/images/CustomStyle_Light.png
+%%QT_DOCDIR%%/qtdoc/images/FX_Material_Showroom.png
 %%QT_DOCDIR%%/qtdoc/images/Material_Dark.png
 %%QT_DOCDIR%%/qtdoc/images/Material_Light.png
 %%QT_DOCDIR%%/qtdoc/images/Settings_CustomStyle.png
@@ -330,6 +330,7 @@
 %%QT_DOCDIR%%/qtdoc/qtdoc-demos-dice-example.html
 %%QT_DOCDIR%%/qtdoc/qtdoc-demos-documentviewer-example.html
 %%QT_DOCDIR%%/qtdoc/qtdoc-demos-documentviewer-plugins-txtviewer-example.html
+%%QT_DOCDIR%%/qtdoc/qtdoc-demos-fx-material-showroom-example.html
 %%QT_DOCDIR%%/qtdoc/qtdoc-demos-hangman-example.html
 %%QT_DOCDIR%%/qtdoc/qtdoc-demos-mediaplayer-example.html
 %%QT_DOCDIR%%/qtdoc/qtdoc-demos-photosurface-example.html

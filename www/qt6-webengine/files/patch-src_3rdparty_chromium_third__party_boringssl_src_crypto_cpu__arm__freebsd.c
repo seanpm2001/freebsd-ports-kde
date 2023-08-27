@@ -1,6 +1,6 @@
---- src/3rdparty/chromium/third_party/boringssl/src/crypto/cpu_arm_freebsd.c.orig	2023-06-03 08:17:28 UTC
+--- src/3rdparty/chromium/third_party/boringssl/src/crypto/cpu_arm_freebsd.c.orig	2023-08-16 19:50:41 UTC
 +++ src/3rdparty/chromium/third_party/boringssl/src/crypto/cpu_arm_freebsd.c
-@@ -0,0 +1,52 @@
+@@ -1,3 +1,55 @@
 +/* Copyright (c) 2016, Google Inc.
 + *
 + * Permission to use, copy, modify, and/or distribute this software for any
@@ -53,3 +53,6 @@
 +}
 +
 +#endif  // OPENSSL_ARM && OPENSSL_OPENBSD && !OPENSSL_STATIC_ARMCAP
+ /* Copyright (c) 2022, Google Inc.
+  *
+  * Permission to use, copy, modify, and/or distribute this software for any

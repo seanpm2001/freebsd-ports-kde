@@ -1,5 +1,5 @@
 PORTNAME=	examples
-PORTVERSION=	${QT6_VERSION}
+DISTVERSION=	${QT6_VERSION}
 CATEGORIES=	misc
 #MASTER_SITES=	QT/official_releases/qt/${QT6_VERSION:R}/${QT6_VERSION}/single
 MASTER_SITES=	QT/development_releases/qt/${QT6_VERSION:R}/${QT6_VERSION}/single
