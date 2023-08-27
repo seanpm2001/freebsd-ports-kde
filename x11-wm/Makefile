@@ -14,7 +14,6 @@
     SUBDIR += bspwm
     SUBDIR += bspwm-devel
     SUBDIR += cage
-    SUBDIR += cage-devel
     SUBDIR += cagebreak
     SUBDIR += chamfer
     SUBDIR += compiz
@@ -69,6 +68,7 @@
     SUBDIR += lxqt-panel
     SUBDIR += lxqt-session
     SUBDIR += lxsession
+    SUBDIR += magpie
     SUBDIR += marco
     SUBDIR += mcwm
     SUBDIR += metacity

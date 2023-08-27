@@ -82,6 +82,7 @@
     SUBDIR += freetds
     SUBDIR += freetds-devel
     SUBDIR += frontbase-jdbc
+    SUBDIR += futuresql
     SUBDIR += galera
     SUBDIR += galera26
     SUBDIR += gdbm
@@ -198,7 +199,7 @@
     SUBDIR += mydumper
     SUBDIR += mysql++
     SUBDIR += mysql-connector-c++
-    SUBDIR += mysql-connector-java
+    SUBDIR += mysql-connector-j
     SUBDIR += mysql-connector-java51
     SUBDIR += mysql-connector-odbc-80
     SUBDIR += mysql-udf
@@ -580,6 +581,7 @@
     SUBDIR += pgpool-II-41
     SUBDIR += pgpool-II-42
     SUBDIR += pgpool-II-43
+    SUBDIR += pgpool-II-44
     SUBDIR += pgreplay
     SUBDIR += pgroonga
     SUBDIR += pgrouting
@@ -670,6 +672,7 @@
     SUBDIR += postgresql-rum
     SUBDIR += postgresql-semver
     SUBDIR += postgresql-tds_fdw
+    SUBDIR += postgresql-wal2json
     SUBDIR += postgresql-zhparser
     SUBDIR += postgresql11-client
     SUBDIR += postgresql11-contrib
@@ -815,6 +818,7 @@
     SUBDIR += py-redis
     SUBDIR += py-redis2
     SUBDIR += py-redis3
+    SUBDIR += py-redis4
     SUBDIR += py-rrdtool
     SUBDIR += py-sispy
     SUBDIR += py-south
@@ -862,6 +866,7 @@
     SUBDIR += redis-devel
     SUBDIR += redis6
     SUBDIR += redis62
+    SUBDIR += redis70
     SUBDIR += redis_exporter
     SUBDIR += redisdesktopmanager
     SUBDIR += redisjson
@@ -906,6 +911,7 @@
     SUBDIR += rubygem-arel6
     SUBDIR += rubygem-arel7
     SUBDIR += rubygem-arel8
+    SUBDIR += rubygem-attr_json
     SUBDIR += rubygem-awesome_nested_set
     SUBDIR += rubygem-bdb1
     SUBDIR += rubygem-bigrecord
@@ -1056,7 +1062,6 @@
     SUBDIR += usql
     SUBDIR += vfront
     SUBDIR += virtualpg
-    SUBDIR += virtuoso
     SUBDIR += vsqlite
     SUBDIR += webdis
     SUBDIR += wfb2sql

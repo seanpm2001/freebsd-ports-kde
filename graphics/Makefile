@@ -80,7 +80,6 @@
     SUBDIR += blend2d
     SUBDIR += blender
     SUBDIR += blender-doc
-    SUBDIR += blender-lts29
     SUBDIR += bmeps
     SUBDIR += bmp2html
     SUBDIR += bonzomatic
@@ -522,6 +521,7 @@
     SUBDIR += libwmf
     SUBDIR += libwmf-nox11
     SUBDIR += libwpg03
+    SUBDIR += libxisf
     SUBDIR += libyuv
     SUBDIR += libzmf
     SUBDIR += lightzone
@@ -593,6 +593,9 @@
     SUBDIR += npretty
     SUBDIR += nsxiv
     SUBDIR += nurbs++
+    SUBDIR += nvidia-drm-510-kmod
+    SUBDIR += nvidia-drm-515-kmod
+    SUBDIR += nvidia-drm-kmod
     SUBDIR += nvidia-texture-tools
     SUBDIR += ocaml-cairo
     SUBDIR += ocaml-images
@@ -1159,6 +1162,7 @@
     SUBDIR += vapoursynth-waifu2x-w2xc
     SUBDIR += variety
     SUBDIR += vcg
+    SUBDIR += vhs
     SUBDIR += viewnior
     SUBDIR += vigra
     SUBDIR += vips

@@ -668,6 +668,7 @@
     SUBDIR += p5-Number-Format-Metric
     SUBDIR += p5-Number-Spell
     SUBDIR += p5-ODF-lpOD
+    SUBDIR += p5-ODF-lpOD-Helper
     SUBDIR += p5-OpenOffice-OODoc
     SUBDIR += p5-PDF-API2
     SUBDIR += p5-PDF-API2-Simple
@@ -1192,6 +1193,7 @@
     SUBDIR += p5-ack
     SUBDIR += p5-dTemplate
     SUBDIR += p5-docx2txt
+    SUBDIR += p5-excel2csv
     SUBDIR += p5-libsoldout
     SUBDIR += p5-libxml
     SUBDIR += p5-pod2pdf
@@ -1378,6 +1380,7 @@
     SUBDIR += py-humanfriendly
     SUBDIR += py-hunspell
     SUBDIR += py-ini2toml
+    SUBDIR += py-interegular
     SUBDIR += py-isbnlib
     SUBDIR += py-isbntools
     SUBDIR += py-iso-639
@@ -1387,6 +1390,7 @@
     SUBDIR += py-jc
     SUBDIR += py-jinja2-cli
     SUBDIR += py-jq
+    SUBDIR += py-json2html
     SUBDIR += py-jsonslicer
     SUBDIR += py-jsx-lexer
     SUBDIR += py-jtextfsm
@@ -1549,6 +1553,7 @@
     SUBDIR += py-sphinx-issues
     SUBDIR += py-sphinx-markdown-tables
     SUBDIR += py-sphinx-me
+    SUBDIR += py-sphinx-sitemap
     SUBDIR += py-sphinx-tabs
     SUBDIR += py-sphinx-theme-builder
     SUBDIR += py-sphinx_press_theme
@@ -1589,6 +1594,7 @@
     SUBDIR += py-texttable
     SUBDIR += py-textual
     SUBDIR += py-three-merge
+    SUBDIR += py-tiktoken
     SUBDIR += py-tinycss
     SUBDIR += py-tinycss2
     SUBDIR += py-toml
@@ -1628,9 +1634,6 @@
     SUBDIR += py-xmlschema
     SUBDIR += py-yapf
     SUBDIR += py-youseedee
-    SUBDIR += py-zope.i18nmessageid
-    SUBDIR += py-zope.structuredtext
-    SUBDIR += py-zope.tal
     SUBDIR += py-zpt
     SUBDIR += qprint
     SUBDIR += qr
@@ -1896,6 +1899,7 @@
     SUBDIR += rubygem-ya2yaml
     SUBDIR += rubygem-yard
     SUBDIR += rubygem-yard-chef
+    SUBDIR += rubygem-yarp
     SUBDIR += rubygem-zmq
     SUBDIR += rw-aspell
     SUBDIR += rxp

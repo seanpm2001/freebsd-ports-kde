@@ -1,5 +1,5 @@
 PORTNAME=	difftastic
-DISTVERSION=	0.48.0
+DISTVERSION=	0.50.0
 CATEGORIES=	textproc
 
 MAINTAINER=	amdmi3@FreeBSD.org
@@ -31,11 +31,11 @@ CARGO_CRATES=	ahash-0.7.6 \
 		clap_lex-0.2.0 \
 		const_format-0.2.23 \
 		const_format_proc_macros-0.2.22 \
-		crossbeam-channel-0.5.4 \
+		crossbeam-channel-0.5.8 \
 		crossbeam-deque-0.8.1 \
 		crossbeam-epoch-0.9.8 \
 		crossbeam-utils-0.8.8 \
-		crossterm-0.25.0 \
+		crossterm-0.26.1 \
 		crossterm_winapi-0.9.0 \
 		ctor-0.1.22 \
 		diff-0.1.12 \
@@ -52,11 +52,13 @@ CARGO_CRATES=	ahash-0.7.6 \
 		hashbrown-0.12.3 \
 		heck-0.4.1 \
 		hermit-abi-0.1.19 \
+		humansize-2.1.3 \
 		humantime-1.3.0 \
 		indexmap-1.7.0 \
 		itertools-0.10.3 \
 		lazy_static-1.4.0 \
 		libc-0.2.139 \
+		libm-0.2.7 \
 		libmimalloc-sys-0.1.24 \
 		lock_api-0.4.9 \
 		log-0.4.17 \
@@ -81,12 +83,12 @@ CARGO_CRATES=	ahash-0.7.6 \
 		predicates-tree-1.0.5 \
 		pretty_assertions-1.3.0 \
 		pretty_env_logger-0.4.0 \
-		proc-macro2-1.0.39 \
+		proc-macro2-1.0.66 \
 		quick-error-1.2.3 \
-		quote-1.0.18 \
+		quote-1.0.32 \
 		radix-heap-0.4.2 \
-		rayon-1.6.1 \
-		rayon-core-1.10.1 \
+		rayon-1.7.0 \
+		rayon-core-1.11.0 \
 		redox_syscall-0.2.16 \
 		regex-1.7.3 \
 		regex-automata-0.1.10 \
@@ -100,9 +102,10 @@ CARGO_CRATES=	ahash-0.7.6 \
 		signal-hook-registry-1.4.0 \
 		smallvec-1.10.0 \
 		strsim-0.10.0 \
-		strum-0.24.1 \
-		strum_macros-0.24.3 \
+		strum-0.25.0 \
+		strum_macros-0.25.1 \
 		syn-1.0.95 \
+		syn-2.0.27 \
 		termcolor-1.1.3 \
 		terminal_size-0.1.17 \
 		termtree-0.2.4 \

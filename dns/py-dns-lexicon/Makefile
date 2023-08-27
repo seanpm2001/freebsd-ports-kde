@@ -1,5 +1,5 @@
 PORTNAME=	dns-lexicon
-PORTVERSION=	3.12.0
+PORTVERSION=	3.14.1
 CATEGORIES=	dns python
 MASTER_SITES=	PYPI
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -19,7 +19,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}beautifulsoup>=4:www/py-beautifulsoup@${PY_F
 		${PYTHON_PKGNAMEPREFIX}requests>=2:www/py-requests@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}tldextract>=2:dns/py-tldextract@${PY_FLAVOR}
 
-USES=		python pycryptography:run
+USES=		pycryptography:run python
 USE_PYTHON=	autoplist concurrent pep517
 
 NO_ARCH=	yes
@@ -38,7 +38,7 @@ DUCKDNS_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}dnspython>=2,1:dns/py-dnspython@${PY
 GRANSY_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}zeep>=3:net/py-zeep@${PY_FLAVOR}
 LOCALZONE_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}localzone>=0.9.8:dns/py-localzone@${PY_FLAVOR}
 OCI_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}oci>=2:devel/py-oci@${PY_FLAVOR}
-ROUTE53_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}boto3>=1.25:www/py-boto3@${PY_FLAVOR}
+ROUTE53_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}boto3>=1.28:www/py-boto3@${PY_FLAVOR}
 SOFTLAYER_RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}softlayer>=5:net/py-softlayer@${PY_FLAVOR}
 
 .include <bsd.port.mk>

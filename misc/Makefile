@@ -396,7 +396,6 @@
     SUBDIR += py-SimpleSoapy
     SUBDIR += py-SoapySDR
     SUBDIR += py-alive-progress
-    SUBDIR += py-anndata
     SUBDIR += py-apache-beam
     SUBDIR += py-ascii-magic
     SUBDIR += py-boost-histogram
@@ -447,6 +446,7 @@
     SUBDIR += py-papermill
     SUBDIR += py-pexpect
     SUBDIR += py-placekey
+    SUBDIR += py-polars
     SUBDIR += py-powerline-status
     SUBDIR += py-progressbar
     SUBDIR += py-progressbar2

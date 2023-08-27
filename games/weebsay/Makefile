@@ -1,6 +1,6 @@
 PORTNAME=	weebsay
 PORTVERSION=	0.0.20210508
-PORTREVISION=	13
+PORTREVISION=	14
 CATEGORIES=	games
 
 MAINTAINER=	ports@FreeBSD.org
@@ -9,6 +9,9 @@ WWW=		https://github.com/irevenko/weebsay
 
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/LICENSE
+
+DEPRECATED=	API server is no longer functional
+EXPIRATION_DATE=	2023-09-26
 
 USES=		go:modules
 USE_GITHUB=	yes

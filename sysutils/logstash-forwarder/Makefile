@@ -1,6 +1,6 @@
 PORTNAME=	logstash-forwarder
 PORTVERSION=	0.4.0.20150507
-PORTREVISION=	14
+PORTREVISION=	15
 CATEGORIES=	sysutils
 
 MAINTAINER=	cheffo@freebsd-bg.org
@@ -9,7 +9,8 @@ WWW=		https://github.com/elasticsearch/logstash-forwarder
 
 LICENSE=	APACHE20
 
-DEPRECATED=	Migrate to sysutils/beats
+DEPRECATED=	Migrate to sysutils/beats8
+EXPIRATION_DATE=	2023-09-30
 
 USES=		go
 USE_GITHUB=	yes

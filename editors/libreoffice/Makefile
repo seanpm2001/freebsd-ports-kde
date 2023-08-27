@@ -1,4 +1,4 @@
-PORTREVISION=	1
+PORTREVISION=	2
 
 .include "${.CURDIR}/Makefile.common"
 
@@ -135,7 +135,7 @@ OPTIONS_DEFAULT=	CUPS DOCS JAVA MMEDIA PDFIUM QT5
 #OPTIONS_EXCLUDE=	GTK4
 
 COINMP_DESC=	Enable CoinMP (deprecated) math solver
-GTK4_DESC=	GTK+ 4 GUI toolkit support (experimental, broken)
+GTK4_DESC=	GTK 4 GUI toolkit support (experimental, broken)
 JAVA_DESC=	Add Java support (XML filters, macros, DB connections)
 KF5_DESC=	KF5/Qt5 GUI toolkit support (implies QT5)
 MMEDIA_DESC=	Enable multimedia backend for Impress
@@ -333,8 +333,6 @@ BINARY_ALIAS=	sed=gsed
 .include <bsd.port.pre.mk>
 
 .if ${OPSYS} == FreeBSD && ( \
-    (${OSVERSION} >= 1300525 && ${OSVERSION} < 1301000) || \
-    (${OSVERSION} >= 1301500 && ${OSVERSION} < 1301502) || \
     (${OSVERSION} >= 1400051 && ${OSVERSION} < 1400057))
 BROKEN=	please update FreeBSD base system first to fix an ABI incompatibility
 .endif

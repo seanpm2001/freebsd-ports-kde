@@ -91,6 +91,7 @@
     SUBDIR += bacula11-client
     SUBDIR += bacula11-client-static
     SUBDIR += bacula11-docs
+    SUBDIR += bacula11-libs3
     SUBDIR += bacula11-server
     SUBDIR += bacula13-client
     SUBDIR += bacula13-client-static
@@ -234,6 +235,10 @@
     SUBDIR += coreos-ct
     SUBDIR += coreutils
     SUBDIR += cpdup
+    SUBDIR += cpu-microcode
+    SUBDIR += cpu-microcode-amd
+    SUBDIR += cpu-microcode-intel
+    SUBDIR += cpu-microcode-rc
     SUBDIR += cpu-x
     SUBDIR += cpuburn
     SUBDIR += cpufetch
@@ -275,9 +280,6 @@
     SUBDIR += deltup
     SUBDIR += desktop-installer
     SUBDIR += detox
-    SUBDIR += devcpu-data
-    SUBDIR += devcpu-data-amd
-    SUBDIR += devcpu-data-intel
     SUBDIR += devctl-jail-kmod
     SUBDIR += devd-mount
     SUBDIR += devedeng
@@ -667,6 +669,7 @@
     SUBDIR += libretto-config
     SUBDIR += libsunacl
     SUBDIR += libsysstat
+    SUBDIR += libtpms
     SUBDIR += libtree
     SUBDIR += libudisks
     SUBDIR += liburcu
@@ -800,7 +803,6 @@
     SUBDIR += munin-contrib
     SUBDIR += munin-master
     SUBDIR += munin-node
-    SUBDIR += muse
     SUBDIR += mxkill
     SUBDIR += mybashburn
     SUBDIR += myrescue
@@ -1349,6 +1351,7 @@
     SUBDIR += signon-plugin-oauth2
     SUBDIR += signon-qt5
     SUBDIR += signon-ui
+    SUBDIR += sispmctl
     SUBDIR += skopeo
     SUBDIR += slack
     SUBDIR += sleuthkit
@@ -1390,6 +1393,7 @@
     SUBDIR += swapmon
     SUBDIR += swapusage
     SUBDIR += sweeper
+    SUBDIR += swtpm
     SUBDIR += symlinks
     SUBDIR += symon
     SUBDIR += synergy
@@ -1424,6 +1428,7 @@
     SUBDIR += testdisk
     SUBDIR += tflint
     SUBDIR += thefish
+    SUBDIR += tiempo
     SUBDIR += timelimit
     SUBDIR += timemon
     SUBDIR += tiramisu
@@ -1606,6 +1611,7 @@
     SUBDIR += xbatt
     SUBDIR += xbattbar
     SUBDIR += xcdroast
+    SUBDIR += xcp
     SUBDIR += xcpustate
     SUBDIR += xdu
     SUBDIR += xe
