@@ -24,8 +24,8 @@ EXAMPLESDIR=	${PREFIX}/share/examples/qt6
 # This way, the examples show up in qtcreator on the examples front page.
 
 _QT_DISTS=	3d 5compat activeqt base charts coap connectivity datavis3d \
-		declarative doc httpserver mqtt multimedia networkauth opcua \
-		positioning quick3d quick3dphysics remoteobjects scxml \
+		declarative doc graphs httpserver mqtt multimedia networkauth \
+		opcua positioning quick3d quick3dphysics remoteobjects scxml \
 		sensors serialbus serialport speech svg tools virtualkeyboard \
 		wayland webchannel webengine websockets webview
 EXAMPLES=		${_QT_DISTS:C/^/qt/}
