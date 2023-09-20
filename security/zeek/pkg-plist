@@ -2100,4 +2100,6 @@ share/btest/scripts/spicy/diff-sort
 %%ZEEKCTL%%@dir spool/brokerstore
 %%ZEEKCTL%%@dir spool
 %%ZEEKCTL%%@dir logs
+%%SPICY%%@dir lib/zeek/spicy
+@dir lib/zeek/plugins
 %%ZEEKCTL%%@postexec su -fm %%ZEEKUSER%% -c '%D/bin/zeekctl install; rm -f %D/spool/debug.log'

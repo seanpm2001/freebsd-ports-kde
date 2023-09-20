@@ -5,12 +5,15 @@ CATEGORIES=	devel
 PKGNAMEPREFIX=	bloomberg-
 
 MAINTAINER=	adridg@FreeBSD.org
-COMMENT=	foundational C++ libraries used at Bloomberg
+COMMENT=	Foundational C++ libraries used at Bloomberg
 WWW=		https://github.com/bloomberg/bde
 
 LICENSE=	APACHE20
 
-USES=		cmake python:3.8+,build pkgconfig
+ONLY_FOR_ARCHS=	amd64 i386
+ONLY_FOR_ARCHS_REASON=	Build uses -march=westmere
+
+USES=		cmake python:build pkgconfig
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	bloomberg
@@ -42,7 +45,7 @@ post-stage:
 _test_label=	bsla.t
 
 do-test:
-		cd ${TEST_WRKSRC} && ninja `ctest -N -L ${_test_label} | awk '/Test *#/{print $$3}'`
+		cd ${TEST_WRKSRC} && ninja `ctest -N -L ${_test_label} | ${AWK} '/Test *#/{print $$3}'`
 		cd ${TEST_WRKSRC} && ctest -L ${_test_label}
 
 .include <bsd.port.mk>

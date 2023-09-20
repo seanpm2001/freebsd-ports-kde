@@ -1,5 +1,6 @@
 PORTNAME=	gstreamer1-plugins-rust
 DISTVERSION=	0.11.0
+PORTREVISION=	1
 CATEGORIES=	multimedia
 
 MAINTAINER=	jbeich@FreeBSD.org
@@ -30,6 +31,7 @@ CARGO_TEST=	no
 .if ${MACHINE_ARCH} == i386
 # https://github.com/rust-lang/rust/issues/85598
 LTO_UNSAFE=	yes
+CARGO_ENV+=	CARGO_PROFILE_RELEASE_LTO=false
 .endif
 
 OPTIONS_DEFINE=	ASM CAIRO CSOUND DAV1D GTK4 PANGO SODIUM WEBP

@@ -1,7 +1,11 @@
 PORTNAME=	sdbus-cpp
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.3.0
+PORTREVISION=	2
 CATEGORIES=	devel
+
+PATCH_SITES=	https://github.com/${GH_ACCOUNT}/${GH_PROJECT}/commit/
+PATCHFILES+=	1e2d13a04a98.patch:-p1 # https://github.com/Kistler-Group/sdbus-cpp/pull/358
 
 MAINTAINER=	jbeich@FreeBSD.org
 COMMENT=	High-level C++ D-Bus library
@@ -22,9 +26,9 @@ CMAKE_ON=	BUILD_CODE_GEN
 CMAKE_OFF=	BUILD_DOC
 CMAKE_TESTING_ON=	BUILD_TESTS
 
-.include <bsd.port.options.mk>
-
-.if ${OPSYS} != FreeBSD || ${OSVERSION} < 1300134
+# XXX Drop after FreeBSD 12.4 EOL around 2023-12-31
+# https://cgit.freebsd.org/src/commit/?id=7a202823aa54
+.if !exists(/usr/include/sys/eventfd.h)
 LIB_DEPENDS+=	libepoll-shim.so:devel/libepoll-shim
 CFLAGS+=	`pkg-config --cflags epoll-shim`
 LDFLAGS+=	`pkg-config --libs epoll-shim`

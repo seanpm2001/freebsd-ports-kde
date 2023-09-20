@@ -714,6 +714,14 @@
     SUBDIR += postgresql15-plpython
     SUBDIR += postgresql15-pltcl
     SUBDIR += postgresql15-server
+    SUBDIR += postgresql16-client
+    SUBDIR += postgresql16-contrib
+    SUBDIR += postgresql16-docs
+    SUBDIR += postgresql16-pgtcl
+    SUBDIR += postgresql16-plperl
+    SUBDIR += postgresql16-plpython
+    SUBDIR += postgresql16-pltcl
+    SUBDIR += postgresql16-server
     SUBDIR += powa-archivist
     SUBDIR += powa-web
     SUBDIR += powerarchitect
@@ -800,6 +808,7 @@
     SUBDIR += py-psycopg2
     SUBDIR += py-psycopg2cffi
     SUBDIR += py-pum
+    SUBDIR += py-pyarrow
     SUBDIR += py-pycql
     SUBDIR += py-pylibmc
     SUBDIR += py-pymemcache
@@ -951,6 +960,7 @@
     SUBDIR += rubygem-familia
     SUBDIR += rubygem-flipper-active_record
     SUBDIR += rubygem-flipper-active_record-rails61
+    SUBDIR += rubygem-flipper-active_record-rails70
     SUBDIR += rubygem-gdbm
     SUBDIR += rubygem-globalid
     SUBDIR += rubygem-globalid-rails5
@@ -988,7 +998,6 @@
     SUBDIR += rubygem-red-arrow-dataset
     SUBDIR += rubygem-red-gandiva
     SUBDIR += rubygem-red-parquet
-    SUBDIR += rubygem-red-plasma
     SUBDIR += rubygem-redis
     SUBDIR += rubygem-redis-actionpack
     SUBDIR += rubygem-redis-actionpack-rails5
@@ -996,6 +1005,7 @@
     SUBDIR += rubygem-redis-actionpack-rails52
     SUBDIR += rubygem-redis-actionpack-rails60
     SUBDIR += rubygem-redis-actionpack-rails61
+    SUBDIR += rubygem-redis-actionpack-rails70
     SUBDIR += rubygem-redis-client
     SUBDIR += rubygem-redis-cluster-client
     SUBDIR += rubygem-redis-clustering
@@ -1009,6 +1019,7 @@
     SUBDIR += rubygem-sqlite3-ruby
     SUBDIR += rubygem-state_machines-activemodel
     SUBDIR += rubygem-state_machines-activerecord
+    SUBDIR += rubygem-state_machines-activerecord08
     SUBDIR += rubygem-tarantool
     SUBDIR += sequeler
     SUBDIR += sfcgal

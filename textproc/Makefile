@@ -487,6 +487,7 @@
     SUBDIR += ml-aspell
     SUBDIR += ml1
     SUBDIR += mn-aspell
+    SUBDIR += moar
     SUBDIR += modlogan
     SUBDIR += mp_doccer
     SUBDIR += mr-aspell
@@ -1369,6 +1370,7 @@
     SUBDIR += py-googletrans
     SUBDIR += py-grako
     SUBDIR += py-grapheme
+    SUBDIR += py-griffe
     SUBDIR += py-guess-language
     SUBDIR += py-hashids
     SUBDIR += py-hexdump
@@ -1408,6 +1410,7 @@
     SUBDIR += py-m2r
     SUBDIR += py-mako
     SUBDIR += py-markdown
+    SUBDIR += py-markdown-callouts
     SUBDIR += py-markdown-include
     SUBDIR += py-markdown-it-py
     SUBDIR += py-markdown2
@@ -1434,6 +1437,9 @@
     SUBDIR += py-mkdocs-redirects
     SUBDIR += py-mkdocs-simple-hooks
     SUBDIR += py-mkdocstrings
+    SUBDIR += py-mkdocstrings-crystal
+    SUBDIR += py-mkdocstrings-python
+    SUBDIR += py-mkdocstrings-python-legacy
     SUBDIR += py-morse3
     SUBDIR += py-mwparserfromhell
     SUBDIR += py-myst-parser
@@ -1451,6 +1457,7 @@
     SUBDIR += py-os-api-ref
     SUBDIR += py-packageurl-python
     SUBDIR += py-pager
+    SUBDIR += py-paginate
     SUBDIR += py-pallets-sphinx-themes
     SUBDIR += py-pandocfilters
     SUBDIR += py-paragrep
@@ -1460,6 +1467,7 @@
     SUBDIR += py-parsimonious
     SUBDIR += py-parso
     SUBDIR += py-patiencediff
+    SUBDIR += py-pdf2docx
     SUBDIR += py-pdfminer.six
     SUBDIR += py-pdfminer3k
     SUBDIR += py-pdfrw
@@ -1518,6 +1526,7 @@
     SUBDIR += py-qrcode
     SUBDIR += py-rdflib
     SUBDIR += py-readchar
+    SUBDIR += py-readtime
     SUBDIR += py-recommonmark
     SUBDIR += py-regex
     SUBDIR += py-reindent
@@ -1614,6 +1623,7 @@
     SUBDIR += py-ufal.udpipe
     SUBDIR += py-unicodeitplus
     SUBDIR += py-untangle
+    SUBDIR += py-wavedrom
     SUBDIR += py-wcmatch
     SUBDIR += py-whatthepatch
     SUBDIR += py-whoosh
@@ -1634,6 +1644,7 @@
     SUBDIR += py-xmlschema
     SUBDIR += py-yapf
     SUBDIR += py-youseedee
+    SUBDIR += py-zope.i18nmessageid
     SUBDIR += py-zpt
     SUBDIR += qprint
     SUBDIR += qr
@@ -1664,6 +1675,7 @@
     SUBDIR += resume
     SUBDIR += resume-extensions
     SUBDIR += rfcdiff
+    SUBDIR += riffdiff
     SUBDIR += ripgrep
     SUBDIR += ripgrep-all
     SUBDIR += ripole
@@ -1720,13 +1732,12 @@
     SUBDIR += rubygem-css_parser
     SUBDIR += rubygem-cssmin
     SUBDIR += rubygem-cucumber-gherkin
-    SUBDIR += rubygem-cucumber-gherkin23
     SUBDIR += rubygem-cucumber-html-formatter
-    SUBDIR += rubygem-cucumber-html-formatter19
     SUBDIR += rubygem-diff-lcs
     SUBDIR += rubygem-diff_match_patch
     SUBDIR += rubygem-diffy
     SUBDIR += rubygem-docdiff
+    SUBDIR += rubygem-elastic-apm
     SUBDIR += rubygem-elastic-transport
     SUBDIR += rubygem-elasticsearch
     SUBDIR += rubygem-elasticsearch-api

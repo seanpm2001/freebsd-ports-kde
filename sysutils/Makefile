@@ -88,10 +88,10 @@
     SUBDIR += backuppc-devel
     SUBDIR += backuppc4
     SUBDIR += backupuser
+    SUBDIR += bacula-libs3
     SUBDIR += bacula11-client
     SUBDIR += bacula11-client-static
     SUBDIR += bacula11-docs
-    SUBDIR += bacula11-libs3
     SUBDIR += bacula11-server
     SUBDIR += bacula13-client
     SUBDIR += bacula13-client-static
@@ -136,6 +136,9 @@
     SUBDIR += bksh
     SUBDIR += bkt
     SUBDIR += blisp
+    SUBDIR += bmd
+    SUBDIR += bmd-plugin-avahi
+    SUBDIR += bmd-plugin-hookcmd
     SUBDIR += boot-extract
     SUBDIR += bottom
     SUBDIR += bpytop
@@ -280,6 +283,7 @@
     SUBDIR += deltup
     SUBDIR += desktop-installer
     SUBDIR += detox
+    SUBDIR += devcpu-data
     SUBDIR += devctl-jail-kmod
     SUBDIR += devd-mount
     SUBDIR += devedeng
@@ -685,7 +689,6 @@
     SUBDIR += linux-rkbin
     SUBDIR += linuxfdisk
     SUBDIR += lizardfs
-    SUBDIR += llama
     SUBDIR += lmmon
     SUBDIR += lmon
     SUBDIR += lnav
@@ -1080,6 +1083,7 @@
     SUBDIR += py-croniter
     SUBDIR += py-dict-toolbox
     SUBDIR += py-diffoscope
+    SUBDIR += py-director
     SUBDIR += py-dirsync
     SUBDIR += py-distro
     SUBDIR += py-dlipower
@@ -1295,6 +1299,7 @@
     SUBDIR += rubygem-winrm-elevated
     SUBDIR += rubygem-winrm-fs
     SUBDIR += rubygem-yell
+    SUBDIR += runas
     SUBDIR += rundeck3
     SUBDIR += runiq
     SUBDIR += runit
@@ -1397,6 +1402,7 @@
     SUBDIR += symlinks
     SUBDIR += symon
     SUBDIR += synergy
+    SUBDIR += syngesture
     SUBDIR += sysctlbyname-improved-kmod
     SUBDIR += sysctlinfo-kmod
     SUBDIR += sysgather
@@ -1582,6 +1588,7 @@
     SUBDIR += vttest
     SUBDIR += vzvol
     SUBDIR += wait_on
+    SUBDIR += walk
     SUBDIR += watchfolder
     SUBDIR += watchman
     SUBDIR += watchmen

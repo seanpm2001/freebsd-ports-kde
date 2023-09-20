@@ -1,6 +1,5 @@
 PORTNAME=	kasts
 DISTVERSION=	${KDE_APPLICATIONS_VERSION}
-PORTREVISION=	1
 CATEGORIES=	multimedia kde kde-applications
 
 MAINTAINER=	kde@FreeBSD.org
@@ -23,7 +22,7 @@ USE_KDE=	config coreaddons i18n kirigami2 syndication threadweaver \
 		ecm:build
 USE_QT=		core dbus declarative gui multimedia network quickcontrols2 \
 		sql svg widgets xml \
-		buildtools:build qmake:build
+		buildtools:build qmake:build testlib:build
 USE_XORG=	x11
 
 .include <bsd.port.mk>

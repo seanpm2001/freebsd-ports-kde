@@ -14,6 +14,7 @@ LICENSE_FILE_LGPL21+ =	${WRKSRC}/COPYING.LIB
 
 DEPRECATED=	Will not be part of KDE Gear 23.08 in August
 EXPIRATION_DATE=	2023-09-30
+KDE_APPLICATIONS_VERSION=	23.04.3
 
 LIB_DEPENDS=	libKTpCommonInternals.so:net-im/ktp-common-internals \
 		libQt5GStreamer-1.0.so:multimedia/gstreamer1-qt \
@@ -30,7 +31,7 @@ USE_KDE=	auth codecs config configwidgets coreaddons iconthemes \
 		i18n kcmutils kdeclarative notifications package service \
 		wallet widgetsaddons xmlgui \
 		ecm:build
-USE_QT=		core dbus declarative gui network widgets xml \
+USE_QT=		core dbus declarative gui network phonon4 widgets xml \
 		buildtools:build qmake:build
 USE_LDCONFIG=	yes
 

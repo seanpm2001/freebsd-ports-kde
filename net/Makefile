@@ -1225,6 +1225,7 @@
     SUBDIR += rfbproxy
     SUBDIR += rinetd
     SUBDIR += ripe-whois
+    SUBDIR += rosenpass
     SUBDIR += rospo
     SUBDIR += routinator
     SUBDIR += rp-pppoe
@@ -1335,6 +1336,7 @@
     SUBDIR += rubygem-mqtt
     SUBDIR += rubygem-nats-pure
     SUBDIR += rubygem-net-ldap
+    SUBDIR += rubygem-net-ldap017
     SUBDIR += rubygem-net-netrc
     SUBDIR += rubygem-net-ntp
     SUBDIR += rubygem-net-ping

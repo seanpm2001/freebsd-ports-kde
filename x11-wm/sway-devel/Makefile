@@ -1,6 +1,6 @@
 PORTNAME=	sway
-DISTVERSION?=	1.8.1-188 # git rev-list --count 1.8.1..
-DISTVERSIONSUFFIX?=	-gbf44690ee
+DISTVERSION?=	1.8.1-194 # git rev-list --count 1.8.1..
+DISTVERSIONSUFFIX?=	-g8edc48f6d
 CATEGORIES=	x11-wm wayland
 PKGNAMESUFFIX?=	-devel
 

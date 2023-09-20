@@ -1,7 +1,7 @@
 PORTNAME=	massif-visualizer
 DISTVERSION=	0.7.0
 PORTREVISION=	1
-CATEGORIES=	devel kde kde-applications
+CATEGORIES=	devel kde
 
 MAINTAINER=	rodrigo@FreeBSD.org
 COMMENT=	Graphical viewer for Massif data
@@ -23,7 +23,7 @@ USE_KDE= 	archive  auth  auth  codecs  completion  config  config  \
 			solid sonnet texteditor textwidgets  widgetsaddons  windowsystem  \
 			xmlgui \
 			ecm:build
-USE_QT=		concurrent core dbus gui network printsupport svg widgets xml \
+USE_QT=		concurrent core dbus gui network printsupport svg widgets xml xmlpatterns \
 			buildtools:build qmake:build testlib:build
 USE_XORG=	x11
 
