@@ -132,7 +132,6 @@
 %%QT_DOCDIR%%/qtdoc/images/dice-screenshot.webp
 %%QT_DOCDIR%%/qtdoc/images/documentviewer_open.png
 %%QT_DOCDIR%%/qtdoc/images/dprgadget.png
-%%QT_DOCDIR%%/qtdoc/images/draganddrop-examples.png
 %%QT_DOCDIR%%/qtdoc/images/dynamic-loaded-pro.png
 %%QT_DOCDIR%%/qtdoc/images/dynamic-pro.png
 %%QT_DOCDIR%%/qtdoc/images/fastboot-mode.png
@@ -222,6 +221,7 @@
 %%QT_DOCDIR%%/qtdoc/images/threadsandobjects.png
 %%QT_DOCDIR%%/qtdoc/images/threadvisual-example.png
 %%QT_DOCDIR%%/qtdoc/images/tool-examples.png
+%%QT_DOCDIR%%/qtdoc/images/txtviewer_screenshot.png
 %%QT_DOCDIR%%/qtdoc/images/wayland-multi-process.png
 %%QT_DOCDIR%%/qtdoc/images/wayland-single-process-develop.png
 %%QT_DOCDIR%%/qtdoc/images/wayland-single-process-eglfs.png

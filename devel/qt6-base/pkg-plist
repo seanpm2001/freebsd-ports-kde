@@ -2524,6 +2524,7 @@ lib/cmake/Qt6/Qt6VersionlessTargets.cmake
 lib/cmake/Qt6/QtAndroidHelpers.cmake
 lib/cmake/Qt6/QtAppHelpers.cmake
 lib/cmake/Qt6/QtAutogenHelpers.cmake
+lib/cmake/Qt6/QtBaseTopLevelHelpers.cmake
 lib/cmake/Qt6/QtBuild.cmake
 lib/cmake/Qt6/QtBuildInformation.cmake
 lib/cmake/Qt6/QtCMakeHelpers.cmake

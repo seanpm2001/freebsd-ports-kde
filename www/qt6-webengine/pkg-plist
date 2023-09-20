@@ -65,7 +65,6 @@
 %%QT_INCDIR%%/QtWebEngineCore/%%FULLVER%%/QtWebEngineCore/private/qwebengineprofile_p.h
 %%QT_INCDIR%%/QtWebEngineCore/%%FULLVER%%/QtWebEngineCore/private/qwebenginescriptcollection_p.h
 %%QT_INCDIR%%/QtWebEngineCore/%%FULLVER%%/QtWebEngineCore/private/qwebengineurlrequestinfo_p.h
-%%QT_INCDIR%%/QtWebEngineCore/%%FULLVER%%/QtWebEngineCore/private/qwebengineurlresponseinfo_p.h
 %%QT_INCDIR%%/QtWebEngineCore/QWebEngineCertificateError
 %%QT_INCDIR%%/QtWebEngineCore/QWebEngineClientCertificateSelection
 %%QT_INCDIR%%/QtWebEngineCore/QWebEngineClientCertificateStore
@@ -94,8 +93,6 @@
 %%QT_INCDIR%%/QtWebEngineCore/QWebEngineUrlRequestInfo
 %%QT_INCDIR%%/QtWebEngineCore/QWebEngineUrlRequestInterceptor
 %%QT_INCDIR%%/QtWebEngineCore/QWebEngineUrlRequestJob
-%%QT_INCDIR%%/QtWebEngineCore/QWebEngineUrlResponseInfo
-%%QT_INCDIR%%/QtWebEngineCore/QWebEngineUrlResponseInterceptor
 %%QT_INCDIR%%/QtWebEngineCore/QWebEngineUrlScheme
 %%QT_INCDIR%%/QtWebEngineCore/QWebEngineUrlSchemeHandler
 %%QT_INCDIR%%/QtWebEngineCore/QtWebEngineCore
@@ -130,8 +127,6 @@
 %%QT_INCDIR%%/QtWebEngineCore/qwebengineurlrequestinfo.h
 %%QT_INCDIR%%/QtWebEngineCore/qwebengineurlrequestinterceptor.h
 %%QT_INCDIR%%/QtWebEngineCore/qwebengineurlrequestjob.h
-%%QT_INCDIR%%/QtWebEngineCore/qwebengineurlresponseinfo.h
-%%QT_INCDIR%%/QtWebEngineCore/qwebengineurlresponseinterceptor.h
 %%QT_INCDIR%%/QtWebEngineCore/qwebengineurlscheme.h
 %%QT_INCDIR%%/QtWebEngineCore/qwebengineurlschemehandler.h
 %%QT_INCDIR%%/QtWebEngineQuick/%%FULLVER%%/QtWebEngineQuick/private/qquickwebengineaction_p.h
