@@ -213,7 +213,7 @@ qt-graphicaleffects_PORT=	graphics/${_QT_RELNAME}-graphicaleffects
 qt-graphicaleffects_PATH=	${LOCALBASE}/${QT_QMLDIR_REL}/QtGraphicalEffects/qmldir
 
 qt-graphs_PORT=		x11-toolkits/${_QT_RELNAME}-graphs
-qt-graphs_PATH=		libQt${_QT_LIBVER}Graphs.so
+qt-graphs_LIB=		libQt${_QT_LIBVER}Graphs.so
 
 qt-gui_PORT=		x11-toolkits/${_QT_RELNAME}-gui
 qt-gui_LIB=		libQt${_QT_LIBVER}Gui.so
