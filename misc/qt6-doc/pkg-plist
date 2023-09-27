@@ -66,7 +66,6 @@
 %%QT_DOCDIR%%/qtdoc/deployment.html
 %%QT_DOCDIR%%/qtdoc/desktop-integration.html
 %%QT_DOCDIR%%/qtdoc/embedded-linux.html
-%%QT_DOCDIR%%/qtdoc/examples-android.html
 %%QT_DOCDIR%%/qtdoc/examples-animation.html
 %%QT_DOCDIR%%/qtdoc/examples-draganddrop.html
 %%QT_DOCDIR%%/qtdoc/examples-gestures.html

@@ -1,3 +1,3 @@
-TIMESTAMP = 1695070792
-SHA256 (KDE/Qt/6.6.0-beta4/qtremoteobjects-everywhere-src-6.6.0-beta4.tar.xz) = a265936f97be386d02eb199ae69c4897dd0161c7b4a5cb0ca4a983106b466a81
-SIZE (KDE/Qt/6.6.0-beta4/qtremoteobjects-everywhere-src-6.6.0-beta4.tar.xz) = 528292
+TIMESTAMP = 1695764964
+SHA256 (KDE/Qt/6.6.0-rc/qtremoteobjects-everywhere-src-6.6.0-rc.tar.xz) = 0218ac9eb8f32cf00ee22acad85a3ef9a68d5f51742b947bc835ef1b7f8394eb
+SIZE (KDE/Qt/6.6.0-rc/qtremoteobjects-everywhere-src-6.6.0-rc.tar.xz) = 528048

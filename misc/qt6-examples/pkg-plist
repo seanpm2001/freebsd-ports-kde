@@ -582,6 +582,8 @@
 %%QT_EXAMPLEDIR%%/corelib/serialization/convert/converter.h
 %%QT_EXAMPLEDIR%%/corelib/serialization/convert/datastreamconverter.cpp
 %%QT_EXAMPLEDIR%%/corelib/serialization/convert/datastreamconverter.h
+%%QT_EXAMPLEDIR%%/corelib/serialization/convert/debugtextdumper.cpp
+%%QT_EXAMPLEDIR%%/corelib/serialization/convert/debugtextdumper.h
 %%QT_EXAMPLEDIR%%/corelib/serialization/convert/doc/images/convert.png
 %%QT_EXAMPLEDIR%%/corelib/serialization/convert/doc/src/convert.qdoc
 %%QT_EXAMPLEDIR%%/corelib/serialization/convert/jsonconverter.cpp

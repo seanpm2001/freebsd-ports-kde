@@ -1,3 +1,3 @@
-TIMESTAMP = 1695071207
-SHA256 (KDE/Qt/6.6.0-beta4/qtnetworkauth-everywhere-src-6.6.0-beta4.tar.xz) = aca586ef764c20c456470df318060c8699a02e923b295e3308301d4fe655b65c
-SIZE (KDE/Qt/6.6.0-beta4/qtnetworkauth-everywhere-src-6.6.0-beta4.tar.xz) = 152912
+TIMESTAMP = 1695765383
+SHA256 (KDE/Qt/6.6.0-rc/qtnetworkauth-everywhere-src-6.6.0-rc.tar.xz) = e60ce41c3c4606c19bfd63a74861e99331219ca51ce0d0896d11a9534c464937
+SIZE (KDE/Qt/6.6.0-rc/qtnetworkauth-everywhere-src-6.6.0-rc.tar.xz) = 152764

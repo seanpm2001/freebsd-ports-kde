@@ -1,4 +1,4 @@
---- src/core/api/configure.cmake.orig	2023-07-07 20:07:32 UTC
+--- src/core/api/configure.cmake.orig	2023-09-21 14:52:09 UTC
 +++ src/core/api/configure.cmake
 @@ -10,6 +10,7 @@ if(NOT QT_CONFIGURE_RUNNING)
      if(PkgConfig_FOUND)
@@ -23,7 +23,7 @@
 @@ -163,7 +169,7 @@ qt_feature("webengine-vaapi" PRIVATE
      LABEL "VA-API support"
      PURPOSE "Enables support for VA-API hardware acceleration"
-     AUTODETECT GBM_FOUND AND LIBVA_FOUND
+     AUTODETECT GBM_FOUND AND LIBVA_FOUND AND QT_FEATURE_vulkan
 -    CONDITION LINUX
 +    CONDITION UNIX
  )
